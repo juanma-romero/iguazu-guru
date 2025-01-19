@@ -6,6 +6,7 @@ import {routing} from '@/i18n/routing';
 import { Raleway   } from "next/font/google"
 import './globals.css'
 import Footer from './Footer';
+import Header from './Header';
 
 type Params = Promise<{ locale: string }>;
 
@@ -15,8 +16,8 @@ const raleway = Raleway({
 })
 
 export const metadata = {
-  title: "Iguazu Info",
-  description: "Cataratas del Iguazu, Puerto Iguazu, Foz do Iguacu, Ciudad del Este",
+  title: "Iguazu Guru",
+  description: "Cataratas del Iguazu, Puerto Iguazu, Foz do Iguaçu, Ciudad del Este",
 }
 
 
@@ -46,8 +47,9 @@ export default async function LocaleLayout({
         <NextIntlClientProvider
          messages={messages}
         >
-         {children}
-         <Footer />
+          <Header />
+          {children}
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

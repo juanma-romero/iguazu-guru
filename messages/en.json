@@ -2,5 +2,9 @@
     "HomePage": {
       "title": "Hello world!",
       "about": "Go to the about page"
+    },
+    "Metadata": {
+      "title": "Iguazu Guru",
+      "description": "All the information you need for your days in Cataratas, Puerto Iguazu, Foz do Iguaçu and Ciudad del Este."
     }
   }
