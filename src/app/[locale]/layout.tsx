@@ -1,12 +1,12 @@
 
 import {NextIntlClientProvider} from 'next-intl';
-import {getMessages} from 'next-intl/server';
+import {getMessages, getTranslations} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
 import { Raleway   } from "next/font/google"
 import './globals.css'
-import Footer from './Footer';
-import Header from './Header';
+import Footer from './components/Footer';
+import Header from './components/Header';
 
 type Params = Promise<{ locale: string }>;
 
@@ -15,11 +15,16 @@ const raleway = Raleway({
   subsets: ["latin"],
 })
 
-export const metadata = {
-  title: "Iguazu Guru",
-  description: "Cataratas del Iguazu, Puerto Iguazu, Foz do Iguaçu, Ciudad del Este",
+ 
+export async function generateMetadata({ params }: { params: Params }) {
+  const { locale } = await params;
+  const t = await getTranslations({locale, namespace: 'Metadata'});
+ 
+  return {
+    title: t('title'),
+    description: t('description'),
+  };
 }
-
 
 export default async function LocaleLayout({
   children,

@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react';
+import LocaleSwitcher from './LocaleSwitcher';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -19,6 +20,7 @@ export default function Header() {
       <div className="flex items-center justify-between mb-4">
         <p className="text-xl text-gray-300">Iguazu Guru</p>
         <div className="flex items-center space-x-4">
+  {/* 
           <div className="relative inline-block">
             <button
               onClick={toggleDropdown}
@@ -73,6 +75,9 @@ export default function Header() {
               </div>
             )}
           </div>
+ */}
+
+      <LocaleSwitcher />
         </div>
       </div>
       

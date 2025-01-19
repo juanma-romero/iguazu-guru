@@ -6,5 +6,9 @@
     "Metadata": {
       "title": "Iguazu Guru",
       "description": "Todas as informações que você precisa para seus dias em Cataratas, Puerto Iguazú, Foz do Iguaçu e Ciudad del Este."
+    },
+    "LocaleSwitcher": {
+      "label": "Mudar idioma",
+      "locale": "{locale, select, es {es Español} en {🇺🇸 English} pt {br Português} other {Idioma desconocido}}"
     }
   }

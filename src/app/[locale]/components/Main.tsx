@@ -1,17 +1,3 @@
-/*
-import {useTranslations} from 'next-intl';
-import {Link} from '@/i18n/routing';
-
-export default function Main ()  {
-    const t = useTranslations('HomePage');
-    return (
-        <div>
-            <h1 className='text-yellow-600'>{t('title')}</h1>
-            <Link href="/about">{t('about')}</Link>
-        </div>
-    )}
-
-*/
 'use client'
 import { useState } from 'react';
 import {useTranslations} from 'next-intl';
@@ -136,10 +122,12 @@ export default function Main() {
           </div>
         </div>
       </main>
-
+    
       <h1 className='text-yellow-600'>{t('title')}</h1>
             <Link href="/about">{t('about')}</Link>
+            
     </div>
+    
   );
 }
 
