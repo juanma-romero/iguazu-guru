@@ -15,6 +15,7 @@ const raleway = Raleway({
   subsets: ["latin"],
 })
 
+
  
 export async function generateMetadata({ params }: { params: Params }) {
   const { locale } = await params;
@@ -29,9 +30,11 @@ export async function generateMetadata({ params }: { params: Params }) {
 export default async function LocaleLayout({
   children,
   params
+  
 }: {
   children: React.ReactNode;
   params: Params;
+  
 }) {
   const { locale } = await params;
 
