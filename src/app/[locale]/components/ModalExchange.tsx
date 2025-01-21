@@ -1,10 +1,10 @@
 'use client'
-import { useState, useEffect } from "react";
-
+import { useState} from "react";
+import { useExchangeRate } from '@/context/ExchangeRateContext';
 
 function ModalExchange() {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [exchangeRate, setExchangeRate] = useState(null);
+    const exchangeRate = useExchangeRate();
 
     const handleOpenModal = () => {
         setIsModalOpen(true);
@@ -14,22 +14,7 @@ function ModalExchange() {
         setIsModalOpen(false);
     };
 
-    useEffect(() => {
-        const fetchExchangeRate = async () => {
-          try {
-            const response = await fetch('https://v6.exchangerate-api.com/v6/c2ab4d5b96925ef0b46ca794/latest/BRL');
-            if (!response.ok) {
-              throw new Error(`Response status: ${response.status}`);
-            }
-            const json = await response.json();
-            setExchangeRate(json);
-          } catch (error) {
-            console.error('Error fetching exchange rate:', error);
-          }
-        };
     
-        fetchExchangeRate();
-      }, []);
 
     return (
         <>
@@ -62,7 +47,13 @@ function ModalExchange() {
                     <div className="modal-body" style={{ height: 'calc(100% - 40px)' }}>
                     <span className="close" onClick={handleCloseModal} style={{ cursor: 'pointer' }}>&times;</span>
                         <div className="modal-body">
+                        <div>
+                        {exchangeRate ? (
                             <p>Exchange Rate: {JSON.stringify(exchangeRate)}</p>
+                        ) : (
+                            <p>Loading...</p>
+                        )}
+                        </div>
                         </div>
                     </div>
                     </div>

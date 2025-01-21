@@ -1,7 +1,8 @@
 {
     "HomePage": {
       "title": "Hello world!",
-      "about": "Go to the about page"
+      "about": "Go to the about page",
+      "Button-More": "More"
     },
     "Metadata": {
       "title": "Iguazu Guru",
@@ -10,5 +11,18 @@
     "LocaleSwitcher": {
     "label": "Change language",
     "locale": "{locale, select, es {Español} en {🇺🇸 English} pt {Português} other {Idioma desconocido}}"
-  }
+    },  
+    "cde": {
+      "title": "Ciudad del Este",
+      "description": "Ciudad del Este is a city in Paraguay, located in the Alto Paraná Department, on the border with Brazil and Argentina. It is part of the Tri-Border Area, which is considered one of the most important commercial and tourist centers in South America."
+    },
+    "puerto": {
+      "title": "Puerto Iguazu",
+      "description": "Puerto Iguazú is a city in the province of Misiones, Argentina. It is located in the northeastern region of the country, on the border with Brazil and Paraguay. It is known for being the gateway to the Iguazú Falls, one of the most important natural attractions in the world."
+    },
+    "foz": {
+      "title": "Foz do Iguaçu",
+      "description": "Foz do Iguaçu is a city in the state of Paraná, Brazil. It is located in the southwestern region of the country, on the border with Argentina and Paraguay. It is known for being the gateway to the Iguaçu Falls, one of the most important natural attractions in the world."
+    }
+    
   }

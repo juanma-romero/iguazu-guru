@@ -45,7 +45,7 @@ export default function Main() {
         
       </aside>
 
-      {/* Recommendations */}
+      {/* Ciudades */}
       <main className="flex-grow overflow-x-auto py-4">
         <div className="flex space-x-4 pr-6">
           <div className="w-[20rem] h-[40rem] bg-gray-700 rounded-2xl relative overflow-hidden p-4">       
@@ -55,10 +55,15 @@ export default function Main() {
               <h2 className="text-xl font-bold text-white mb-1">
                 {cards[currentIndex].title}
               </h2>
-              <div className="flex items-center space-x-1 text-xs text-gray-400">
+                <div className="flex items-center space-x-1 text-xs text-gray-400">
                 <div className="w-4 h-4 bg-red-500 rounded-full"></div>
                 <p>{cards[currentIndex].location}</p>
-              </div>
+                </div>
+                {/*<Link href={`/details/${currentIndex}`}></Link>*/}
+                <button className="mt-4 bg-yellow-600 text-white py-2 px-4 rounded-full">
+                  {t('Button-More')}
+                </button>
+                
             
             <button onClick={handlePrev} className="absolute bottom-4 left-4 bg-gray-800 rounded-full p-2">
               <svg

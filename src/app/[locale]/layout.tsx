@@ -3,10 +3,12 @@ import {NextIntlClientProvider} from 'next-intl';
 import {getMessages, getTranslations} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
+import { ExchangeRateProvider } from '@/context/ExchangeRateContext'
 import { Raleway   } from "next/font/google"
 import './globals.css'
 import Footer from './components/Footer';
 import Header from './components/Header';
+
 
 type Params = Promise<{ locale: string }>;
 
@@ -55,9 +57,11 @@ export default async function LocaleLayout({
         <NextIntlClientProvider
          messages={messages}
         >
+          <ExchangeRateProvider>
           <Header />
           {children}
           <Footer />
+          </ExchangeRateProvider>
         </NextIntlClientProvider>
       </body>
     </html>
