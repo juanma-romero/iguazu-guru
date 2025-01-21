@@ -1,10 +1,9 @@
 'use client'
 import { useState } from "react";
-import {AdvancedMarker, APIProvider, Map} from '@vis.gl/react-google-maps';
+import { APIProvider, Map} from '@vis.gl/react-google-maps';
 
 const ModalMapa = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const position = {lat: 53.54992, lng: 10.00678}
     const handleOpenModal = () => {
         setIsModalOpen(true);
     };
