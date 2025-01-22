@@ -18,7 +18,9 @@ function ModalExchange() {
 
     return (
         <>
-            <button onClick={handleOpenModal}>
+            <button 
+                className="rounded-full p-2 bg-[#1f3838] border-[1px] hover:bg-gray-200"
+                onClick={handleOpenModal}>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6 text-gray-400"
@@ -42,8 +44,20 @@ function ModalExchange() {
             </button>
 
             {isModalOpen && (
-                <div className="modal" style={{ position: 'fixed', top: '75vh', left: 0, width: '100%', height: '25vh', backgroundColor: 'white', zIndex: 1000 }}>
-                <div className="modal-content" style={{ padding: '20px' }}>                        
+                <div className="modal" 
+                style={{
+                    position: 'fixed',
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)',
+                    width: '100vw',
+                    height: 'auto',
+                    backgroundColor: '#1A3131',
+                    zIndex: 1000,
+                    padding: '20px',
+                    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                }}>
+                <div className="modal-content" >                        
                     <div className="modal-body" style={{ height: 'calc(100% - 40px)' }}>
                     <span className="close" onClick={handleCloseModal} style={{ cursor: 'pointer' }}>&times;</span>
                         <div className="modal-body">

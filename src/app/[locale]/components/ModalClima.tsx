@@ -37,21 +37,25 @@ const ModalClima = () => {
 
     return (
         <div>
-            <button onClick={handleOpenModal}>
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6 text-gray-400"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                >
-                    <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-                    />
-                </svg>
+            <button 
+                onClick={handleOpenModal}
+                className="rounded-full p-2 bg-[#1f3838] border-[1px] hover:bg-gray-200"
+            >
+                
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-6 w-6 text-gray-400"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                        />
+                    </svg>
             </button>
 
             {isModalOpen && (
@@ -65,7 +69,7 @@ const ModalClima = () => {
                             transform: 'translate(-50%, -50%)',
                             width: '100vw',
                             height: 'auto',
-                            backgroundColor: 'white',
+                            backgroundColor: '#1A3131',
                             zIndex: 1000,
                             padding: '20px',
                             boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
