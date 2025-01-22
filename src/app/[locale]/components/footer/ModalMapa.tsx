@@ -14,7 +14,9 @@ const FuncionalidadMapa: React.FC = () => {
       };
 
     useEffect(() => {
+
         if (placesLib) {
+            
             const autocomplete = new placesLib.Autocomplete(inputRef.current as HTMLInputElement, {
                 bounds: new google.maps.LatLngBounds(
                     new google.maps.LatLng(-25.591374, -54.591418), // Suroeste
@@ -30,6 +32,8 @@ const FuncionalidadMapa: React.FC = () => {
             // Listener para cuando el usuario selecciona un lugar
             autocomplete.addListener('place_changed', () => {
                 const place = autocomplete.getPlace();
+                console.log(place);
+
                 if (!place.geometry || !place.geometry.location) {
                     console.log('No details available for input: ' + place.name);
                     return;
@@ -38,13 +42,13 @@ const FuncionalidadMapa: React.FC = () => {
                     map.setCenter(place.geometry.location);
                     map.setZoom(15)
                 }
-                const request = {
+                /*const request = {
                     location: place.geometry.location,
                     radius: 500,
                     type: 'All', // Puedes cambiar el tipo de lugar según tus necesidades
-                }
+                }*/
                 // no imprime el marker pero es por aca y falta el place service
-                if(map) {
+                /*if(map) {
                     const service = new placesLib.PlacesService(map)
                     service.nearbySearch(request, (results, status) => {
                         if (status === placesLib.PlacesServiceStatus.OK) {
@@ -52,16 +56,20 @@ const FuncionalidadMapa: React.FC = () => {
                                 if (result.geometry) {
                                     new google.maps.marker.AdvancedMarkerElement({
                                         map,
+                                        
                                         position: result.geometry.location,
                                     });
+                                    console.log(result)
                                 }
                             });
                         }
                 });
-                }
+                }*/
                 
-            });
+            }
+        );
     }
+
         
     }, [placesLib, map]);
 

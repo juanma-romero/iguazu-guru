@@ -6,8 +6,8 @@ import {routing} from '@/i18n/routing';
 import { ExchangeRateProvider } from '@/context/ExchangeRateContext'
 import { Raleway   } from "next/font/google"
 import './globals.css'
-import Footer from './components/Footer';
-import Header from './components/Header';
+import Footer from './components/footer/Footer';
+import Header from './components/header/Header';
 
 
 type Params = Promise<{ locale: string }>;
