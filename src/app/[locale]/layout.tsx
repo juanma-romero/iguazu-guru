@@ -8,7 +8,7 @@ import { Raleway   } from "next/font/google"
 import './globals.css'
 import Footer from './components/footer/Footer';
 import Header from './components/header/Header'
-
+import { CurrencyProvider } from '@/context/CurrencyContext';
 
 
 type Params = Promise<{ locale: string }>;
@@ -58,13 +58,13 @@ export default async function LocaleLayout({
         <NextIntlClientProvider
          messages={messages}
         >
-          
+          <CurrencyProvider >
             <ExchangeRateProvider>
               <Header />
               {children}
               <Footer />
             </ExchangeRateProvider>
-          
+            </CurrencyProvider>
         </NextIntlClientProvider>
       </body>
     </html>
