@@ -1,6 +1,7 @@
-
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages, getTranslations} from 'next-intl/server';
+import {notFound} from 'next/navigation';
+import {routing} from '@/i18n/routing';
 import { ExchangeRateProvider } from '@/context/ExchangeRateContext'
 import { Raleway   } from "next/font/google"
 import './globals.css'
