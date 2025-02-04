@@ -11,10 +11,11 @@ export default function CurrencySwitcher() {
     const key = Object.keys(data)[0] as keyof typeof data
     return {
       nombre: key,
-      valor: data[key]
+      valor: data[key],
+      codPais: data['cod_pais']
     }
   })
-
+  
   return (
     <div className="relative">
       <label>
@@ -28,7 +29,7 @@ export default function CurrencySwitcher() {
               key={index}
               value={opcion.valor}
             >
-              {opcion.nombre}
+              {opcion.codPais} {opcion.nombre} 
             </option>
           ))}
         </select>

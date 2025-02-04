@@ -1,29 +1,38 @@
 {
     "Uruguay": {
-        "Peso Uruguayo": "UYU"
+        "Peso Uruguayo": "UYU",
+        "cod_pais": "ᴜʀʏ"
     },
     "Chile": {
-        "Peso Chileno": "CLP"
+        "Peso Chileno": "CLP",
+        "cod_pais": "ᴄʜʟ"
     },
     "Argentina": {
-        "Peso Argentino": "ARS"
+        "Peso Argentino": "ARS",
+        "cod_pais": "ᴀʀɢ"
     },
     "EEUU": {
-        "Dólar": "USD"
+        "Dólar": "USD",
+        "cod_pais": "ᴜꜱᴀ"
     },
     "Brasil": {
-        "Real": "BRL"
+        "Real": "BRL",
+        "cod_pais": "ʙʀᴀ"
     },
     "Paraguay": {
-        "Guaraní": "PYG"
+        "Guaraní": "PYG",
+        "cod_pais": "ᴘʀʏ"
     },
     "Europa": {
-        "Euro": "EUR"
+        "Euro": "EUR",
+        "cod_pais": "ᴇᴜɴ"
     },
     "Perú": {
-        "Sol": "PEN"
+        "Sol": "PEN",
+        "cod_pais": "ᴘᴄɴ"
     },
     "Colombia": {
-        "Peso Colombiano": "COP"
+        "Peso Colombiano": "COP",
+        "cod_pais": "ᴄᴏʟ"
     }
 }
