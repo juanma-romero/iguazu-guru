@@ -1,13 +1,22 @@
 'use client'
-import { useState, useContext } from "react"
-import { useCurrencyContext } from '@/context/CurrencyContext'
+import { useState } from "react"
 import { useExchangeRate} from '@/context/ExchangeRateContext'
 import monedas from '../header/monedas.json'
+
+interface ExchangeRateResult {
+    conversion_rates: {
+        [key: string]: number;
+    };
+}
+
+// Define el tipo de las keys de conversion_rates
+type ConversionRateKeys = keyof ExchangeRateResult['conversion_rates'];
+
 
 function ModalExchange() {
     const [isModalOpen, setIsModalOpen] = useState(false)
     const [amount, setAmount] = useState<string>('')
-    const [fromCurrency, setFromCurrency] = useState('ARS')
+    const [fromCurrency, setFromCurrency] = useState('BRL')
     const [toCurrency, setToCurrency] = useState('USD')
     const [result, setResult] = useState<{
         amount: number;
@@ -17,7 +26,10 @@ function ModalExchange() {
         convertedAmount: number;
     } | null>(null);
     
-    const { exchangeRate } = useCurrencyContext()
+    const exchangeRateResult = useExchangeRate();
+    
+    //console.log((exchangeRateResult as unknown as ExchangeRateResult)?.conversion_rates);
+    
 
     const handleOpenModal = () => {
         setIsModalOpen(true)
@@ -28,17 +40,41 @@ function ModalExchange() {
         setAmount('')
         setResult(null)
     }
+    
+    
+    const getExchangeRate = (fromCurrency: string, toCurrency: string): number => {
+        
+        if (!exchangeRateResult) return 1; // Si no hay tasas de cambio, devuelve 1
+        
+        if (fromCurrency === toCurrency) {
+            return 1;
+        }
+        
+        // Si la moneda base es BRL, usamos directamente la tasa de conversión
+        
+        if (fromCurrency === "BRL") {
+            return (
+                exchangeRateResult as unknown as ExchangeRateResult
+            ).conversion_rates[toCurrency as ConversionRateKeys] || 1;
+        }
 
-    const getExchangeRate = (fromCurrency: string, toCurrency: string) => {
-        if (fromCurrency === 'BRL') {
-            return exchangeRate[toCurrency]
+        // Si la moneda a convertir es BRL, usamos la tasa inversa
+        if (toCurrency === "BRL") {
+            return 1 / (
+                exchangeRateResult as unknown as ExchangeRateResult
+            ).conversion_rates[fromCurrency as ConversionRateKeys] || 1;
         }
-        if (toCurrency === 'BRL') {
-            return 1 / exchangeRate[fromCurrency]
-        }
-        return exchangeRate[toCurrency] / exchangeRate[fromCurrency]
+
+        // Si ambas monedas no son BRL, convertimos a través de BRL
+        const fromRate = (
+            exchangeRateResult as unknown as ExchangeRateResult
+        ).conversion_rates[fromCurrency as ConversionRateKeys] || 1;
+        const toRate = (
+            exchangeRateResult as unknown as ExchangeRateResult
+        ).conversion_rates[toCurrency as ConversionRateKeys] || 1;
+
+        return toRate / fromRate;
     }
-
     const calculateExchange = () => {
         // Convertimos explicitamente el monto a número
         const amountNumber = parseFloat(amount);
@@ -113,36 +149,41 @@ function ModalExchange() {
 
                             <div className="space-y-2">
                                 <label className="block text-sm font-medium text-gray-300">De</label>
-                                <select
-                                    value={fromCurrency}
-                                    onChange={(e) => setFromCurrency(e.target.value)}
-                                    className="w-full bg-gray-700 text-white rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                    {Object.entries(monedas).map(([pais, moneda]) => {
-                                    const currencyName = Object.keys(moneda)[0]; // Obtiene el nombre de la moneda
+                               
+                            <select
+                                value={fromCurrency}
+                                onChange={(e) => setFromCurrency(e.target.value)}
+                                className="w-full bg-gray-700 text-white rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                {Object.entries(monedas).map(([pais, moneda]) => {
+                                    // Obtiene el nombre de la moneda del objeto
+                                    const currencyName = Object.keys(moneda)[0];
+                                    // Obtiene el código de la moneda
+                                    const currencyCode = moneda[currencyName as keyof typeof moneda];
                                     return (
-                                        <option key={pais} value={pais}>
-                                            {currencyName} ({pais})
+                                        <option key={pais} value={currencyCode}>
+                                            {currencyName}
                                         </option>
                                     );
                                 })}
-                                </select>
+                            </select>
                             </div>
 
                             <div className="space-y-2">
                                 <label className="block text-sm font-medium text-gray-300">A</label>
                                 <select
-                                    value={toCurrency}
-                                    onChange={(e) => setToCurrency(e.target.value)}
-                                    className="w-full bg-gray-700 text-white rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                    {Object.entries(monedas).map(([pais, moneda]) => {
-                                    const currencyName = Object.keys(moneda)[0]; // Obtiene el nombre de la moneda
+                                value={toCurrency}
+                                onChange={(e) => setToCurrency(e.target.value)}
+                                className="w-full bg-gray-700 text-white rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                {Object.entries(monedas).map(([pais, moneda]) => {
+                                    const currencyName = Object.keys(moneda)[0];
+                                    const currencyCode = moneda[currencyName as keyof typeof moneda];
                                     return (
-                                        <option key={pais} value={pais}>
-                                            {currencyName} ({pais})
+                                        <option key={pais} value={currencyCode}>
+                                            {currencyName}
                                         </option>
                                     );
                                 })}
-                                </select>
+                            </select>
                             </div>
 
                             <button

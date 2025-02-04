@@ -5,8 +5,7 @@ import { createContext, useContext, useReducer } from 'react'
 // Definir tipos
 type CurrencyContextType = {
   selectedCurrency: string;
-  setSelectedCurrency: (currency: string) => void;
-  exchangeRate: Record<string, number>;
+  setSelectedCurrency: (currency: string) => void  
 }
 
 type CurrencyAction = {
@@ -43,12 +42,7 @@ export function CurrencyProvider({ children }: { children: React.ReactNode }) {
       value={{
         selectedCurrency,
         setSelectedCurrency,
-        exchangeRate: {
-          USD: 1.0,
-          EUR: 0.88,
-          GBP: 0.76,
-          // Añade más divisas según sea necesario
-        }
+        
       }}
     >
       {children}

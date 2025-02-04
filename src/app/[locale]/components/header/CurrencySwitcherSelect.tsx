@@ -17,21 +17,23 @@ export default function CurrencySwitcher() {
 
   return (
     <div className="relative">
-      <select 
-        className="w-full appearance-none bg-transparent py-2 px-4 text-gray-400"
-        value={selectedCurrency}
-        onChange={(e) => setSelectedCurrency(e.target.value)}
-      >
-        {opciones.map((opcion, index) => (
-          <option 
-            key={index}
-            value={opcion.valor}
-          >
-            {opcion.nombre}
-          </option>
-        ))}
-      </select>
-      <span className="absolute right-2 top-2.5 text-gray-400">▼</span>
+      <label>
+        <select 
+          className="w-full appearance-none bg-transparent py-2 px-4 text-gray-400"
+          value={selectedCurrency}
+          onChange={(e) => setSelectedCurrency(e.target.value)}
+        >
+          {opciones.map((opcion, index) => (
+            <option 
+              key={index}
+              value={opcion.valor}
+            >
+              {opcion.nombre}
+            </option>
+          ))}
+        </select>
+        <span className="absolute right-2 top-2.5 text-gray-400">▼</span>
+      </label>
     </div>
   )
 }
