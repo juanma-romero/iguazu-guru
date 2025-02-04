@@ -10,7 +10,7 @@
     },
     "LocaleSwitcher": {
     "label": "Change language",
-    "locale": "{locale, select, es {Español} en {🇺🇸 English} pt {Português} other {Idioma desconocido}}"
+    "locale": "{locale, select, es {🇪🇸 Español} en {🇺🇸 English} pt {🇧🇷 Português} other {Idioma desconocido}}"
     },  
     "cde": {
       "title": "Ciudad del Este",

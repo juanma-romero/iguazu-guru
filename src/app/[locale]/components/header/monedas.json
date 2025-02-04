@@ -1,0 +1,29 @@
+{
+    "Uruguay": {
+        "Peso Uruguayo": "UYU"
+    },
+    "Chile": {
+        "Peso Chileno": "CLP"
+    },
+    "Argentina": {
+        "Peso Argentino": "ARS"
+    },
+    "EEUU": {
+        "Dólar": "USD"
+    },
+    "Brasil": {
+        "Real": "BRL"
+    },
+    "Paraguay": {
+        "Guaraní": "PYG"
+    },
+    "Europa": {
+        "Euro": "EUR"
+    },
+    "Perú": {
+        "Sol": "PEN"
+    },
+    "Colombia": {
+        "Peso Colombiano": "COP"
+    }
+}

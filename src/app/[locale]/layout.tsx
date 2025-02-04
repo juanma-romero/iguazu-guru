@@ -4,8 +4,9 @@ import {getMessages, getTranslations} from 'next-intl/server';
 import { ExchangeRateProvider } from '@/context/ExchangeRateContext'
 import { Raleway   } from "next/font/google"
 import './globals.css'
-import Footer from './components/Footer';
-import Header from './components/Header';
+import Footer from './components/footer/Footer';
+import Header from './components/header/Header'
+import { CurrencyProvider } from '@/context/CurrencyContext';
 
 
 type Params = Promise<{ locale: string }>;
@@ -39,9 +40,9 @@ export default async function LocaleLayout({
   const { locale } = await params;
 
   // Ensure that the incoming `locale` is valid
-  /*if (!routing.locales.includes(locale as any)) {
+  if (!routing.locales.includes(locale as any)) {
     notFound();
-  }*/
+  }
 
   // Providing all messages to the client
   // side is the easiest way to get started
@@ -55,11 +56,13 @@ export default async function LocaleLayout({
         <NextIntlClientProvider
          messages={messages}
         >
-          <ExchangeRateProvider>
-          <Header />
-          {children}
-          <Footer />
-          </ExchangeRateProvider>
+          <CurrencyProvider >
+            <ExchangeRateProvider>
+              <Header />
+              {children}
+              <Footer />
+            </ExchangeRateProvider>
+            </CurrencyProvider>
         </NextIntlClientProvider>
       </body>
     </html>
