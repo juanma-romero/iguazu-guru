@@ -1,6 +1,7 @@
 'use client'
 import { JSXElementConstructor, Key, ReactElement, ReactNode, ReactPortal, useState } from 'react';
 import {useTranslations} from 'next-intl';
+import Image from 'next/image';
 
 interface CategoryData {
   dondeIr: string[];
@@ -92,7 +93,7 @@ export default function Main() {
 
       {/* Ciudades */}
       <main className="flex-grow overflow-x-auto py-4">
-          <div className="w-[20rem] h-[40rem] bg-gray-700 rounded-2xl relative overflow-hidden p-4 grid">
+          <div className="w-[20rem] h-[40rem] bg-gray-700 rounded-2xl relative overflow-hidden p-4 grid grid-rows-7">
             <h1 className='text-yellow-600'>{t('Main.title')}</h1>              
             <h2 className="text-xl font-bold text-white mb-1">
               {cards[currentIndex].title}
@@ -101,9 +102,13 @@ export default function Main() {
               <div className="w-4 h-4 bg-red-500 rounded-full"></div>
               <p>{cards[currentIndex].location}</p>
             </div>
-                <button className="mt-4 bg-yellow-600 text-white py-2 px-4 rounded-full">
-                  {t('Main.Button-More')}
-                </button>
+            <Image 
+              src={'/costadoDerecho.jpg'}
+              width={320}
+              height={280}
+              alt="Cataratas do Iguaçu, Brasil"
+            />
+                
       {/* Contenido dinámico basado en la sección activa */}
                 <div className="mt-6 text-white">
                     <h3 className="font-bold mb-2">{t(`Main.sections.${currentSection}`)}</h3> {/* Título de la sección */}
@@ -116,7 +121,9 @@ export default function Main() {
                         )}
                     </ul>
                 </div>
-
+                <button className="mt-4 bg-yellow-600 text-white py-2 px-4 rounded-full">
+                  {t('Main.Button-More')}
+                </button>         
 
             <button onClick={handlePrev} className="absolute bottom-4 left-4 bg-gray-800 rounded-full p-2">
               <svg

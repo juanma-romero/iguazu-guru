@@ -3,11 +3,11 @@
       "title": "Tudo o que você precisa saber para seus dias em Cataratas",      
       "Button-More": "Mais",
       "side1":"Onde ir",
-      "side2": "Alojamento",
+      "side2": "Acomodação",
       "side3": "O que facer",
       "sections": {
-        "dondeIr": "onde ir",
-        "alojamiento": "ospedaje",
+        "dondeIr": "Onde ir",
+        "alojamiento": "Acomodação",
         "gastronomia": "O que facer"
       } 
     },
