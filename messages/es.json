@@ -1,8 +1,32 @@
 {
-    "HomePage": {
-      "title": "hola mundo!",
-      "about": "ir pagina about",
-      "Button-More": "Ver más"
+    "Main": {
+      "title": "Todo lo que necesitas saber para tus dias en Cataratas",      
+      "Button-More": "Ver más",
+      "side1":"Adonde ir",
+      "side2": "Hospedaje",
+      "side3": "Que hacer",
+      "sections": {
+        "dondeIr": "Adonde ir",
+        "alojamiento": "Hospedaje",
+        "gastronomia": "Que hacer"
+      } 
+    },
+    "cards": {
+      "foz":{
+      "title": "Foz do Iguaçu",
+      "location": "Paraná, Brasil",
+      "description": "Foz do Iguaçu es una ciudad en el estado de Paraná, Brasil. Está ubicada en la región suroeste del país, en la frontera con Argentina y Paraguay. Es conocida por ser la puerta de entrada a las Cataratas del Iguaçu, una de las atracciones naturales más importantes del mundo."  
+      },
+      "puerto":{
+      "title": "Puerto Iguazú",
+      "location": "Misiones, Argentina",
+      "description": "Puerto Iguazú es una ciudad en la provincia de Misiones, Argentina. Está ubicada en la región noreste del país, en la frontera con Brasil y Paraguay. Es conocida por ser la puerta de entrada a las Cataratas del Iguazú, una de las atracciones naturales más importantes del mundo."  
+      },
+      "cde":{
+      "title": "Ciudad del Este",
+      "location": "Alto Paraná, Paraguay",
+      "description": "Ciudad del Este es una ciudad en Paraguay, ubicada en el Departamento de Alto Paraná, en la frontera con Brasil y Argentina. Es parte del Área de la Triple Frontera, que se considera uno de los centros comerciales y turísticos más importantes de América del Sur."       
+      }
     },
     "Metadata": {
       "title": "Iguazu Guru",
@@ -11,18 +35,15 @@
     "LocaleSwitcher": {
       "label": "Cambiar idioma",
       "locale": "{locale, select, es {🇪🇸 Español} en {🇺🇸 English} pt {🇧🇷 Português} other {Idioma desconocido}}"
-    },
-    "cde": {
-      "title": "Ciudad del Este",
-      "description": "Ciudad del Este es una ciudad en Paraguay, ubicada en el Departamento de Alto Paraná, en la frontera con Brasil y Argentina. Es parte del Área de la Triple Frontera, que se considera uno de los centros comerciales y turísticos más importantes de América del Sur."
-    },
-    "puerto": {
-      "title": "Puerto Iguazu",
-      "description": "Puerto Iguazú es una ciudad en la provincia de Misiones, Argentina. Está ubicada en la región noreste del país, en la frontera con Brasil y Paraguay. Es conocida por ser la puerta de entrada a las Cataratas del Iguazú, una de las atracciones naturales más importantes del mundo."
-    },
-    "foz": {
-      "title": "Foz do Iguaçu",
-      "description": "Foz do Iguaçu es una ciudad en el estado de Paraná, Brasil. Está ubicada en la región suroeste del país, en la frontera con Argentina y Paraguay. Es conocida por ser la puerta de entrada a las Cataratas del Iguaçu, una de las atracciones naturales más importantes del mundo."
+    },    
+    "conversor": {
+      "title": "Conversor de Monedas",
+      "label 1": "Monto",
+      "label 1 input": "Ingrese el monto",
+      "label 2": "De",
+      "label 3": "A",
+      "button": "Convertir",
+      "tasaCambio": "Tasa de cambio"
     }
     
   }

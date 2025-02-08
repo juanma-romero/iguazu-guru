@@ -1,4 +1,3 @@
-
 'use client'
 import { useState } from "react";
 import MapaVis from "./mapavis/page";
@@ -13,9 +12,7 @@ const ModalMapa = () => {
 
     const handleCloseModal = () => {
         setIsModalOpen(false);
-    }
-
-    
+    }    
 
     return (
         <>
@@ -47,21 +44,25 @@ const ModalMapa = () => {
 
             {isModalOpen && (
             <div 
-                className="modal" style={{
-                position: 'fixed',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-                width: '100vw',
-                height: 'auto',
-                backgroundColor: '#1A3131',
-                zIndex: 1000,
-                padding: '20px',
-                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-            }}>
+                className="modal" 
+                style={{
+                    position: 'fixed',
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)',
+                    width: '100vw',
+                    height: 'auto',
+                    backgroundColor: '#1A3131',
+                    zIndex: 1000,
+                    padding: '20px',
+                    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)'                  
+                    }}>
+
                 <div className="modal-content">                        
                     <div className="modal-body" style={{ height: 'calc(100% - 40px)' }}>
-                        <span className="close" onClick={handleCloseModal} style={{ cursor: 'pointer' }}>&times;</span>
+                        <span className="close text-[#D6A266] font-bold text-xl" onClick={handleCloseModal}>
+                            ✕
+                        </span>
                         <div style={{ height: '80vh', width: '100%' }}>
                             <MapaVis />
                         </div>
@@ -70,7 +71,7 @@ const ModalMapa = () => {
             </div>
 )}
         </>
-    );
-};
+    )
+}
 
-export default ModalMapa;
+export default ModalMapa

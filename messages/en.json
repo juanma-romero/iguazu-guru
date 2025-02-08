@@ -1,9 +1,33 @@
 {
-    "HomePage": {
-      "title": "Hello world!",
-      "about": "Go to the about page",
-      "Button-More": "More"
+    "Main": {
+      "title": "Everything you need to know for your days in Cataratas",      
+      "Button-More": "More",
+      "side1":"Where to go",
+      "side2": "Accommodation",
+      "side3": "Things to do",
+      "sections": {
+        "dondeIr": "Where to go",
+        "alojamiento": "Accommodation",
+        "gastronomia": "Gastronomy"
+      }      
     },
+    "cards": {
+  "foz":{
+    "title": "Foz do Iguaçu",
+    "location": "Paraná, Brasil",
+    "description": "Foz do Iguaçu is a city in the state of Paraná, Brazil. It is located in the southwestern region of the country, on the border with Argentina and Paraguay. It is known for being the gateway to the Iguazu Falls, one of the most important natural attractions in the world."
+  },
+  "puerto":{
+    "title": "Puerto Iguazú",
+    "location": "Misiones, Argentina",
+    "description": "Puerto Iguazú is a city in the province of Misiones, Argentina. It is located in the northeastern region of the country, on the border with Brazil and Paraguay. It is known for being the gateway to the Iguazu Falls, one of the most important natural attractions in the world."
+  },
+  "cde":{
+    "title": "Ciudad del Este",
+    "location": "Alto Paraná, Paraguay",
+    "description": "Ciudad del Este is a city in Paraguay, located in the Alto Paraná Department, on the border with Brazil and Argentina. It is part of the Triple Frontier Area, which is considered one of the most important commercial and tourist centers in South America."
+  }
+  },
     "Metadata": {
       "title": "Iguazu Guru",
       "description": "All the information you need for your days in Cataratas, Puerto Iguazu, Foz do Iguaçu and Ciudad del Este."
@@ -23,6 +47,15 @@
     "foz": {
       "title": "Foz do Iguaçu",
       "description": "Foz do Iguaçu is a city in the state of Paraná, Brazil. It is located in the southwestern region of the country, on the border with Argentina and Paraguay. It is known for being the gateway to the Iguaçu Falls, one of the most important natural attractions in the world."
+    },
+    "conversor": {
+      "title": "Currency Converter",
+      "label 1": "Amount",
+      "label 1 input": "Enter the amount",
+      "label 2": "From",
+      "label 3": "To",
+      "button": "Convert",
+      "tasaCambio": "Exchange Rate"
     }
     
   }

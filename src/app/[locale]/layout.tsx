@@ -52,6 +52,14 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
+      <head>
+      <link
+          rel="icon"
+          href="/favicon.png"
+          type="image/png"
+          sizes="32"
+        />
+      </head>
       <body
         className={`${raleway.className}  bg-[#1A3131] flex flex-col justify-between min-h-screen`}
       >
