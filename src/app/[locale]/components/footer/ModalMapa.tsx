@@ -1,6 +1,8 @@
 'use client'
+
 import { useState } from "react";
 import MapaVis from "./mapavis/page";
+
 
 const ModalMapa = () => {
 
@@ -73,5 +75,4 @@ const ModalMapa = () => {
         </>
     )
 }
-
 export default ModalMapa
