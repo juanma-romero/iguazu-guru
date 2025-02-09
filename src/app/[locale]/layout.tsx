@@ -8,7 +8,7 @@ import './globals.css'
 import Footer from './components/footer/Footer';
 import Header from './components/header/Header'
 import { CurrencyProvider } from '@/context/CurrencyContext';
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleTagManager } from '@next/third-parties/google'
 
 
 type Params = Promise<{ locale: string }>;
@@ -60,6 +60,7 @@ export default async function LocaleLayout({
           sizes="32"
         />
       </head>
+      <GoogleTagManager gtmId="GTM-MF9ZBXB2" />
       <body
         className={`${raleway.className}  bg-[#1A3131] flex flex-col justify-between min-h-screen`}
       >
@@ -74,8 +75,7 @@ export default async function LocaleLayout({
             </ExchangeRateProvider>
             </CurrencyProvider>
         </NextIntlClientProvider>
-      </body>
-      <GoogleAnalytics gaId="G-SX2D0LWPGG" />
+      </body>      
     </html>
-  );
+  )
 }
