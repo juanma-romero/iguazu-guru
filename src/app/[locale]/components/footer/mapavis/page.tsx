@@ -12,7 +12,7 @@ const MapaVis = () => {
     useState<google.maps.places.PlaceResult | null>(null);
 
   return (
-    <div className='w-full h-[100vh]'>
+    
       <APIProvider apiKey={API_KEY}>
         <Map
           defaultZoom={14}
@@ -26,9 +26,9 @@ const MapaVis = () => {
         />      
         <MapHandler place={selectedPlace} />
       </APIProvider>
-    </div>
-  );
-};
+    
+  )
+}
 export default MapaVis;
 
 /*

@@ -9,12 +9,14 @@ export default function CurrencySwitcher() {
   // Convertimos el objeto JSON en un array de opciones
   const opciones = Object.entries(monedas).map(([pais, data]) => {
     const key = Object.keys(data)[0] as keyof typeof data
+    pais= pais
     return {
       nombre: key,
-      valor: data[key]
+      valor: data[key],
+      codPais: data['cod_pais']
     }
   })
-
+  
   return (
     <div className="relative">
       <label>
@@ -28,7 +30,7 @@ export default function CurrencySwitcher() {
               key={index}
               value={opcion.valor}
             >
-              {opcion.nombre}
+              {opcion.codPais} {opcion.nombre} 
             </option>
           ))}
         </select>

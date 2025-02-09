@@ -75,7 +75,9 @@ const ModalClima = () => {
                             boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
                         }}
                     >
-                        <span className="close" onClick={handleCloseModal}>&times;</span>
+                        <span className="close text-[#D6A266] font-bold text-xl" onClick={handleCloseModal}>
+                        ✕
+                        </span>
                         <div
                             className="tomorrow"
                             data-location-id="011871"

@@ -1,24 +1,59 @@
 'use client'
-import { useState } from 'react';
+import { JSXElementConstructor, Key, ReactElement, ReactNode, ReactPortal, useState } from 'react';
 import {useTranslations} from 'next-intl';
+import Image from 'next/image';
+
+interface CategoryData {
+  dondeIr: string[];
+  alojamiento: string[];
+  gastronomia: string[];
+}
+
+interface CityData {
+  foz: CategoryData;
+  puerto: CategoryData;
+  cde: CategoryData;
+}
 
 export default function Main() {
-    const t = useTranslations('HomePage');    
+    const t = useTranslations();    
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [currentSection, setCurrentSection] = useState<'dondeIr' | 'alojamiento' | 'gastronomia'>('dondeIr');
     const cards = [
-        {
-        title: "Foz do Iguaçu",
-        location: "Paraná, Brasil"        
-        },
-        {
-        title: "Puerto Iguazú",
-        location: "Misiones, Argentina"        
-        },
-        {
-        title: "Ciudad del Este",
-        location: "Alto Paraná, Paraguay"        
-        },
-    ];
+      {
+      title: t('cards.foz.title'),
+      location: t('cards.foz.location'),
+      key: 'foz' as const 
+      },
+      {
+      title: t('cards.puerto.title'),
+      location: t('cards.puerto.location'),
+      key: 'puerto' as const
+      },
+      {
+      title: t('cards.cde.title'),
+      location: t('cards.cde.location'),
+      key: 'cde' as const
+      },
+  ];
+
+  const citySectionsContent = {
+    foz: {
+        dondeIr: ['Cataratas do Iguaçu', 'Parque das Aves'],
+        alojamiento: ['Hotel Belmond Das Cataratas'],
+        gastronomia: ['Restaurante Porto Canoas'] 
+    },
+    puerto: {
+        dondeIr: ['Cataratas del Iguazu', 'Hito Tres Fronteras'],
+        alojamiento: ['Hotel Casino Acaray'],
+        gastronomia: ['Restaurant El Rodizio']
+    },
+    cde: {
+        dondeIr: ['Saltos del Monday', 'Shopping China'],
+        alojamiento: ['Gran Nobile Hotel'],
+        gastronomia: ['Voraz']
+    }
+  };
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % cards.length);
@@ -28,42 +63,68 @@ export default function Main() {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + cards.length) % cards.length);
   };
 
+  const handleDondeIrClick = () => setCurrentSection('dondeIr');
+  const handleAlojamientoClick = () => setCurrentSection('alojamiento');
+  const handleGastronomiaClick = () => setCurrentSection('gastronomia');
   return (
     <div className="flex flex-grow">
       {/* Categories */}
       <aside className="w-[15%] flex flex-col justify-evenly ">
-        <button className="pt-8 transform -rotate-90 text-sm text-gray-400 hover:underline hover:text-[#D6A266]">
-          Atracciones
+        <button
+            onClick={handleDondeIrClick} // Asigna el handler al botón
+            className={`pt-8 transform -rotate-90 text-sm  hover:underline hover:text-[#D6A266] ${currentSection === 'dondeIr' ? 'text-[#D6A266]' : 'text-gray-400'}`} // Resalta el botón activo
+        >
+          {t('Main.side1')} {/* Donde ir */}
         </button>
-        <button className="pt-8 transform -rotate-90 text-sm text-gray-400 hover:underline hover:text-[#D6A266]">
-          Alojamiento
+        <button
+            onClick={handleAlojamientoClick} // Asigna el handler al botón
+            className={`pt-8 transform -rotate-90 text-sm  hover:underline hover:text-[#D6A266] ${currentSection === 'alojamiento' ? 'text-[#D6A266]' : 'text-gray-400'}`} // Resalta el botón activo
+        >
+        {t('Main.side2')} {/* Alojamiento */}
         </button>
-        <button className="pt-8 transform -rotate-90 text-sm text-gray-400 hover:underline hover:text-[#D6A266]">
-          Restaurantes
+        <button
+            onClick={handleGastronomiaClick} // Asigna el handler al botón
+            className={`pt-8 transform -rotate-90 text-sm  hover:underline hover:text-[#D6A266] ${currentSection === 'gastronomia' ? 'text-[#D6A266]' : 'text-gray-400'}`} // Resalta el botón activo
+        >
+        {t('Main.side3')} {/* Gastronomía (ejemplo, puedes cambiar este texto) */}
         </button>
-        
+
       </aside>
 
       {/* Ciudades */}
       <main className="flex-grow overflow-x-auto py-4">
-        <div className="flex space-x-4 pr-6">
-          <div className="w-[20rem] h-[40rem] bg-gray-700 rounded-2xl relative overflow-hidden p-4">       
-            
-            <h1 className='text-yellow-600'>{t('title')}</h1>
-              <p className="text-xs text-gray-400 mb-1">Recommended</p>
-              <h2 className="text-xl font-bold text-white mb-1">
-                {cards[currentIndex].title}
-              </h2>
-                <div className="flex items-center space-x-1 text-xs text-gray-400">
-                <div className="w-4 h-4 bg-red-500 rounded-full"></div>
-                <p>{cards[currentIndex].location}</p>
-                </div>
-                {/*<Link href={`/details/${currentIndex}`}></Link>*/}
-                <button className="mt-4 bg-yellow-600 text-white py-2 px-4 rounded-full">
-                  {t('Button-More')}
-                </button>
+          <div className="w-[20rem] h-[40rem] bg-gray-700 rounded-2xl relative overflow-hidden p-4 grid grid-rows-7">
+            <h1 className='text-yellow-600'>{t('Main.title')}</h1>              
+            <h2 className="text-xl font-bold text-white mb-1">
+              {cards[currentIndex].title}
+            </h2>
+            <div className="flex items-center space-x-1 text-xs text-gray-400">
+              <div className="w-4 h-4 bg-red-500 rounded-full"></div>
+              <p>{cards[currentIndex].location}</p>
+            </div>
+            <Image 
+              src={'/costadoDerecho.jpg'}
+              width={320}
+              height={280}
+              alt="Cataratas do Iguaçu, Brasil"
+            />
                 
-            
+      {/* Contenido dinámico basado en la sección activa */}
+                <div className="mt-6 text-white">
+                    <h3 className="font-bold mb-2">{t(`Main.sections.${currentSection}`)}</h3> {/* Título de la sección */}
+                    <ul>
+                        {citySectionsContent[cards[currentIndex].key]?.[currentSection as keyof typeof citySectionsContent['foz']]?.map((item: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined, index: Key | null | undefined) => ( // Renderiza la lista de contenido
+                            <li key={index} className="mb-1">{item}</li>
+                        ))}
+                        {!citySectionsContent[cards[currentIndex].key]?.[currentSection as keyof typeof citySectionsContent['foz']] && ( // Mensaje si no hay contenido para la sección
+                            <li>{t('Main.noContent')}</li> // Asegúrate de tener esta traducción en tus archivos JSON
+                        )}
+                    </ul>
+                </div>
+                <button className="mt-4 bg-yellow-600 text-white py-2 px-4 rounded-full">
+                  {t('Main.Button-More')}
+                </button>         
+
             <button onClick={handlePrev} className="absolute bottom-4 left-4 bg-gray-800 rounded-full p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -97,14 +158,8 @@ export default function Main() {
               </svg>
             </button>
           </div>
-        </div>
       </main>
-    
-      
-            
-            
-    </div>
-    
-  );
+    </div>    
+  )
 }
 

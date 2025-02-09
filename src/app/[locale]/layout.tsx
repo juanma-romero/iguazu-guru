@@ -8,6 +8,7 @@ import './globals.css'
 import Footer from './components/footer/Footer';
 import Header from './components/header/Header'
 import { CurrencyProvider } from '@/context/CurrencyContext';
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 
 type Params = Promise<{ locale: string }>;
@@ -51,6 +52,14 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
+      <head>
+      <link
+          rel="icon"
+          href="/favicon.png"
+          type="image/png"
+          sizes="32"
+        />
+      </head>
       <body
         className={`${raleway.className}  bg-[#1A3131] flex flex-col justify-between min-h-screen`}
       >
@@ -66,6 +75,7 @@ export default async function LocaleLayout({
             </CurrencyProvider>
         </NextIntlClientProvider>
       </body>
+      <GoogleAnalytics gaId="G-SX2D0LWPGG" />
     </html>
   );
 }

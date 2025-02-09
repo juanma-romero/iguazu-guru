@@ -1,9 +1,36 @@
 {
-    "HomePage": {
-      "title": "Olá mundo!",
-      "about": "Ir para a página sobre",
-      "Button-More": "Mais"
+    "Main": {
+      "title": "Tudo o que você precisa saber para seus dias em Cataratas",      
+      "Button-More": "Mais",
+      "side1":"Onde ir",
+      "side2": "Acomodação",
+      "side3": "O que facer",
+      "sections": {
+        "dondeIr": "Onde ir",
+        "alojamiento": "Acomodação",
+        "gastronomia": "O que facer"
+      } 
     },
+    "cards": {
+  "foz":{
+    "title": "Foz do Iguaçu",
+    "location": "Paraná, Brasil",
+    "description": "Foz do Iguaçu é uma cidade no estado do Paraná, Brasil. Está localizada na região sudoeste do país, na fronteira com a Argentina e o Paraguai. É conhecida por ser a porta de entrada para as Cataratas do Iguaçu, uma das atrações naturais mais importantes do mundo."
+     
+  },
+  "puerto":{
+    "title": "Puerto Iguazú",
+    "location": "Misiones, Argentina",
+    "description": "Puerto Iguazú é uma cidade na província de Misiones, Argentina. Está localizada na região nordeste do país, na fronteira com o Brasil e o Paraguai. É conhecida por ser a porta de entrada para as Cataratas do Iguaçu, uma das atrações naturais mais importantes do mundo."
+    
+  },
+  "cde":{
+    "title": "Ciudad del Este",
+    "location": "Alto Paraná, Paraguay",
+    "description": "Ciudad del Este é uma cidade no Paraguai, localizada no Departamento de Alto Paraná, na fronteira com o Brasil e a Argentina. Faz parte da Área da Tríplice Fronteira, que é considerada um dos centros comerciais e turísticos mais importantes da América do Sul."
+    
+  }
+},
     "Metadata": {
       "title": "Iguazu Guru",
       "description": "Todas as informações que você precisa para seus dias em Cataratas, Puerto Iguazú, Foz do Iguaçu e Ciudad del Este."
@@ -23,5 +50,14 @@
     "foz": {
       "title": "Foz do Iguaçu",
       "description": "Foz do Iguaçu é uma cidade no estado do Paraná, Brasil. Está localizada na região sudoeste do país, na fronteira com a Argentina e o Paraguai. É conhecida por ser a porta de entrada para as Cataratas do Iguaçu, uma das atrações naturais mais importantes do mundo."
-    }
+    },
+    "conversor": {
+      "title": "Conversor de Moedas",
+      "label 1": "Valor",
+      "label 1 input": "Insira o valor",
+      "label 2": "De",
+      "label 3": "Para",
+      "button": "Converter",
+      "tasaCambio": "Taxa de câmbio"
+}
   }
