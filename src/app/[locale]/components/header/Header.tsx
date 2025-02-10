@@ -1,6 +1,6 @@
-import LocaleSwitcher from './LocaleSwitcher';
-import CurrencySwitcher from './CurrencySwitcherSelect';
-import Image from 'next/image';
+import LocaleSwitcher from './LocaleSwitcher'
+import CurrencySwitcher from './CurrencySwitcherSelect'
+import Image from 'next/image'
 
 export default function Header() {  
   return (
