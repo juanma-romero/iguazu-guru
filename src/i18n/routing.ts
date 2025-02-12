@@ -7,13 +7,11 @@ export const routing = defineRouting({
  
   // A list of all pathnames that are supported
   pathnames: {
-    '/': '/'
-    
+    '/': '/'    
   },
   // Used when no locale matches
   defaultLocale: 'en'
-});
- 
+}) 
 
 export type Locale = (typeof routing.locales)[number]
 

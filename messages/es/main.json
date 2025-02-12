@@ -1,0 +1,383 @@
+{
+    "Main": {
+      "title": "Todo lo que necesitas saber para tus dias en Cataratas",      
+      "Button-More": "Ver más",
+      "side1":"Adonde ir",
+      "side2": "Hospedaje",
+      "side3": "Que hacer",
+      "sections": {
+        "dondeIr": "Adonde ir",
+        "alojamiento": "Hospedaje",
+        "gastronomia": "Que hacer"
+      } 
+    },
+    "cards": {
+      "foz":{
+      "title": "Foz do Iguaçu",
+      "location": "Paraná, Brasil",
+      "description": "Foz do Iguaçu es una ciudad en el estado de Paraná, Brasil. Está ubicada en la región suroeste del país, en la frontera con Argentina y Paraguay. Es conocida por ser la puerta de entrada a las Cataratas del Iguaçu, una de las atracciones naturales más importantes del mundo."  
+      },
+      "puerto":{
+      "title": "Puerto Iguazú",
+      "location": "Misiones, Argentina",
+      "description": "Puerto Iguazú es una ciudad en la provincia de Misiones, Argentina. Está ubicada en la región noreste del país, en la frontera con Brasil y Paraguay. Es conocida por ser la puerta de entrada a las Cataratas del Iguazú, una de las atracciones naturales más importantes del mundo."  
+      },
+      "cde":{
+      "title": "Ciudad del Este",
+      "location": "Alto Paraná, Paraguay",
+      "description": "Ciudad del Este es una ciudad en Paraguay, ubicada en el Departamento de Alto Paraná, en la frontera con Brasil y Argentina. Es parte del Área de la Triple Frontera, que se considera uno de los centros comerciales y turísticos más importantes de América del Sur."       
+      }
+    },
+    "Metadata": {
+      "title": "Iguazu Guru",
+      "description": "Toda la informacion que necesitas para tus dias en Cataratas, Puerto Iguazu, Foz do Iguaçu y Ciudad del Este."
+    },
+    "LocaleSwitcher": {
+      "label": "Cambiar idioma",
+      "locale": "{locale, select, es {🇪🇸 Español} en {🇺🇸 English} pt {🇧🇷 Português} other {Idioma desconocido}}"
+    },    
+    "conversor": {
+      "title": "Conversor de Monedas",
+      "label 1": "Monto",
+      "label 1 input": "Ingrese el monto",
+      "label 2": "De",
+      "label 3": "A",
+      "button": "Convertir",
+      "tasaCambio": "Tasa de cambio"
+    },
+    "ArgCatfaqs": [
+        {
+            "pregunta": "Tarifas",
+            "respuesta": {
+                "descuento": "El segundo día consecutivo de visita, da derecho al 50% de descuento.",
+                "tarifas": [
+                    {
+                        "concepto": "Tarifa General",
+                        "descripcion": "VISITANTES NO RESIDENTES EN ARGENTINA",
+                        "precio": 45000
+                    },
+                    {
+                        "concepto": "Residentes Nacionales",
+                        "descripcion": null,
+                        "precio": 15000
+                    },
+                    {
+                        "concepto": "Residentes Provinciales",
+                        "descripcion": "ADULTOS Y NIÑOS",
+                        "precio": 5000
+                    },
+                    {
+                        "concepto": "Exentos",
+                        "descripcion": "Personas jubiladas y pensionados nacionales, Menores de 6 años, Visitantes con discapacidad, Veteranos de Guerra de Malvinas, Residentes Locales.",
+                        "precio": "Gratis"
+                    },
+                    {
+                        "concepto": "Paseo de Luna Llena - Adulto",
+                        "descripcion": null,
+                        "precio": 90000
+                    },
+                    {
+                        "concepto": "Paseo de Luna Llena - Niños",
+                        "descripcion": "DE 6 A 12 AÑOS",
+                        "precio": 45000
+                    },
+                    {
+                        "concepto": "Paseo de Luna Llena - Niños",
+                        "descripcion": "HASTA 5 AÑOS",
+                        "precio": "Gratis"
+                    },
+                    {
+                        "concepto": "Estudiantes",
+                        "descripcion": "Se requiere constancia de alumno regular.",
+                        "precio": 7000
+                    }
+                ],
+                "info_adicional": "Al finalizar el primer día de visita revalida tu ticket para obtener un descuento del 50% para el segundo día consecutivo. Es necesario presentar el DNI o Pasaporte válido. El domicilio de residencia que figure en el documento de identidad determina el valor de la entrada. Para estudiantes, jubilados y discapacitados, se deberá presentar la documentación válida y vigente, respaldatoria.",
+                "compra_entrada": "https://www.argentina.gob.ar/parquesnacionales/iguazu/tickets",
+                "boleteria": "También puedes adquirir el ticket de ingreso en las boleterías de la entrada del Parque en efectivo (en pesos argentinos), con tarjeta de crédito o débito.",
+                "estacionamiento": {
+                    "titulo": "Estacionamiento por día",
+                    "precios": [
+                        {
+                            "concepto": "Ciclomotores y Motos",
+                            "precio": 3000
+                        },
+                        {
+                            "concepto": "Automotores",
+                            "precio": 6000
+                        },
+                        {
+                            "concepto": "Combis",
+                            "precio": 10000
+                        },
+                        {
+                            "concepto": "Buses y Autoportantes",
+                            "precio": 12000
+                        },
+                        {
+                            "concepto": "Vehículos Locales",
+                            "precio": 3000
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "pregunta": "Info práctica",
+            "respuesta": {
+                "preguntas_frecuentes": [
+                    {
+                        "numero": "1",
+                        "pregunta": "¿Cómo llegar a Puerto Iguazú?",
+                        "respuesta": {
+                            "desde_buenos_aires": [
+                                "Aeroparque Jorge Newbery > Aeropuerto Internacional Cataratas Del Iguazú",
+                                "Aeropuerto Internacional Ezeiza > Aeropuerto Internacional Cataratas Del Iguazú",
+                                "Aeropuerto El Palomar > Aeropuerto Internacional Cataratas Del Iguazú",
+                                "Buses desde Terminal de Ómnibus de Retiro > Terminal de ómnibus de ciudad de Puerto Iguazú",
+                                "Vehículos particulares por RN 14"
+                            ],
+                            "desde_foz_do_iguacu": [
+                                "Terminal Rodoviário Internacional de Foz do Iguaçu > Terminal de ómnibus de ciudad de Puerto Iguazú",
+                                "Vehículos particulares por Puente Internacional Tancredo Neves"
+                            ],
+                            "desde_ciudad_del_este": [
+                                "Terminal de Ómnibus Ciudad del Este > Terminal de ómnibus de ciudad de Puerto Iguazú",
+                                "Vehículos particulares por Puente Internacional de la Amistad"
+                            ]
+                        }
+                    },
+                    {
+                        "numero": "2",
+                        "pregunta": "Días y horarios de apertura",
+                        "respuesta": "El Parque abre todos los días en temporada de verano de 7 a 18 h, incluyendo días feriados y de lluvia."
+                    },
+                    {
+                        "numero": "3",
+                        "pregunta": "Cómo llegar al Parque",
+                        "respuesta": "Dirección: Parque Nacional Iguazú: Ruta 101 Km 142, N3370 Puerto Iguazú, Misiones, Argentina. Coordenadas: 25°31′05″S 54°08′00″O / -25.518056, -54.133333. Transporte público: La empresa Río Uruguay ofrece servicios que parten desde el Hito Tres Fronteras y la Terminal de Ómnibus de Puerto Iguazú (se anuncia en el letrero como Cataratas). Los traslados están disponibles cada 20 minutos, todos los días del año. También se puede optar por venir en auto particular o en taxi. En las noches del Paseo de Luna Llena, los buses ofrecen un servicio especial que parte de la Terminal de ómnibus de Iguazú. Consultar horarios y tarifas allí. Automóvil: Se puede llegar desde Puerto Iguazú a través de  la Av. Victoria Aguirre, RN 12, RN 101, Acceso a Cataratas. ¡Recordá siempre respetar los límites de velocidad y la vida silvestre al ingresar en el área protegida!"
+                    },
+                    {
+                        "numero": "4",
+                        "pregunta": "¿Cómo compro el ticket para ingresar?",
+                        "respuesta": "Actualmente las entradas se adquieren únicamente de forma anticipada a través de la web, en https://iguazuargentina.com/tickets/es/ Allí eliges el horario y el día en el que deseas venir."
+                    },
+                    {
+                        "numero": "5",
+                        "pregunta": "¿Es obligatorio que contrate un guía para visitar el Parque?",
+                        "respuesta": "No, no es obligatorio contratar un guía para visitar el Parque. De todas formas, te recomendamos solicitar un guía en la entrada al Parque al llegar, para disfrutar más de tu visita."
+                    },
+                    {
+                        "numero": "6",
+                        "pregunta": "¿Qué protocolos o medidas obligatorias debo cumplir durante mi visita?",
+                        "respuesta": "• ¡No alimentar a los animales del Parque ni tocarlos! • Seguir las indicaciones del personal del parque, señalética y respetar las normas de seguridad. Prestar atención al caminar. • Circular sólo en recorridos habilitados. • Ser respetuoso con el medio ambiente y no dejar residuos en el parque."
+                    },
+                    {
+                        "numero": "7",
+                        "pregunta": "Perdí un objeto en el Parque, ¿cómo puedo encontrarlo?",
+                        "respuesta": "Si perdiste un objeto en el Parque, debes comunicarte con Objetos Perdidos del Centro Operativo Cataratas (COC), ubicado en el acceso. También puedes comunicarte llamando al +543757420180 o enviando un email a coc@apn.gob.ar"
+                    },
+                    {
+                        "numero": "8",
+                        "pregunta": "¿Cuáles son las formas de recorrer el parque?",
+                        "respuesta": "Desde Iguazú Argentina te recomendamos organizar tu visita al Parque con un mínimo de dos días, para aprovechar las actividades y atractivos que te ofrece el Parque. Día 1 Circuito Superior + Garganta del Diablo + Tren Ecológico de la Selva + Restaurant La Selva Tiempo promedio de recorrido: 5hs. Día 2 Para tu segundo día de visita, te recomendamos las siguientes opciones: 1) Circuito Inferior Este recorrido te permite adentrarte a lo más profundo de la selva paranaense para vivir momentos únicos. Tiempo promedio de recorrido: 1hs. 30min. 2) Paseo de la Gran Aventura Para contratar esta excursión, debes consultar con iguazujungle.com Tiempo promedio de recorrido: 2hs. 30 min. Día 3 1) Sendero Macuco + Salto Arrechea. Tiempo promedio de recorrido: 2hs. 30 min. 2) Paseo Ecológico Para realizar esta excursión, debes consultar con iguazujungle.com Tiempo promedio de recorrido: 30 min. Aclaración: podés realizar los recorridos con o sin el guía y elegir los paseos que querés realizar cada día. Paseo de Luna Llena Si tu visita coincide con los días de luna llena, te invitamos a vivir las Cataratas y la selva de una manera única con nuestro Paseo de Luna Llena. Este recorrido dura aproximadamente 3 horas y tenés la opción de contratar aparte el servicio de cena, que se brinda en el Restaurante de la Selva del Parque."
+                    },
+                    {
+                        "numero": "9",
+                        "pregunta": "¿Puedo programar mi viaje un día feriado o un día de lluvia?",
+                        "respuesta": "El Parque se encuentra abierto todos los días, inclusive si llueve o es feriado."
+                    },
+                    {
+                        "numero": "10",
+                        "pregunta": "¿Existe algún tipo de asistencia médica?",
+                        "respuesta": "El parque cuenta con un servicio de asistencia médica y enfermería para primeros auxilios, con servicio de ambulancia en la Estación Central y Estación Garganta."
+                    },
+                    {
+                        "numero": "11",
+                        "pregunta": "¿Cómo es el clima en la ciudad de Puerto Iguazú?",
+                        "respuesta": "La ciudad de Puerto Iguazú posee un clima subtropical sin estación seca, lo que incentiva a visitarla todo el año por sus cálidas temperaturas. El mes más caluroso es diciembre, mientras que las temperaturas más bajas se dan en junio y julio, durante la temporada invernal."
+                    },
+                    {
+                        "numero": "12",
+                        "pregunta": "¿Debo llevar alguna protección en particular?",
+                        "respuesta": "Para realizar tu visita te recomendamos: - Usar repelente de mosquitos, protector solar y gorra para protegerte del sol y los insectos. - Llevar calzado cómodo y ropa adecuada para caminar (un piloto de lluvia puede ser útil para proteger tus pertenencias) - Mantenerte hidratado durante todo el recorrido para evitar fatiga y posibles desmayos."
+                    },
+                    {
+                        "numero": "13",
+                        "pregunta": "¿Cómo debo adaptarme a la vida dentro del Parque?",
+                        "respuesta": "Es importante que no toques ni alimentes a los animales del Parque, ya que son especies salvajes y debemos respetar sus hábitos. Sigue las indicaciones del guía que te acompaña durante el recorrido y circula exclusivamente por lugares habilitados al público (pasarelas y senderos). Te recomendamos leer la cartelería indicativa del Parque para disfrutar de una mejor visita y conocer información sobre la flora y fauna del lugar."
+                    },
+                    {
+                        "numero": "14",
+                        "pregunta": "¿Puedo retirar efectivo (pesos argentinos) en el Parque?",
+                        "respuesta": "Existe un cajero automático de la red Link en el Parque."
+                    }
+                ],
+                "caracteristicas": {
+                    "horario": "Todos los días del año de 7:30 a 18hs.",
+                    "atracciones": "Centro de Visitantes |Tren Ecológico de la Selva | Sendero Verde |Paseo Inferior |Paseo Superior |Garganta del Diablo |Sendero Macuco",
+                    "documentacion": "Es necesario presentar el DNI o Pasaporte válido. El domicilio de residencia que figure en el documento de identidad determina el valor de la entrada.",
+                    "descuento_segundo_dia": "Al finalizar el primer día de visita revalide su ticket, para obtener un descuento del 50% en el valor de su entrada para el segundo día consecutivo."
+                }
+            }
+        },
+        {
+            "pregunta": "Servicios",
+            "respuesta": {
+                "transporte": [
+                    {
+                        "titulo": "Transporte",
+                        "servicios": [
+                            {
+                                "descripcion": "Estacionamiento con servicio de recarga de batería y servicio mecánico ligero",
+                                "ubicacion": "Frente al Portal de Acceso"
+                            },
+                            {
+                                "descripcion": "Transporte público: colectivos de línea Río Uruguay y servicio de taxis Atti",
+                                "ubicacion": "Portal de Acceso"
+                            }
+                        ]
+                    },
+                    {
+                        "titulo": "Otro",
+                        "servicios": [
+                            {
+                                "descripcion": "Tren Ecológico de la Selva (con vagones adaptados para sillas de ruedas y cochecitos)",
+                                "ubicacion": "Estaciones del Tren"
+                            },
+                            {
+                                "descripcion": "Servicio de transporte gratuito para personas mayores o con discapacidad",
+                                "ubicacion": "Portal de Acceso | Estación Central y Cataratas"
+                            }
+                        ]
+                    }
+                ],
+                "ninos": [
+                    {
+                        "titulo": "Niños",
+                        "servicios": [
+                            {
+                                "descripcion": "Alquileres de cochecitos para bebés de 0 a 2 años",
+                                "ubicacion": "Portal de Acceso | Estación Central | Estación Cataratas"
+                            }
+                        ]
+                    },
+                    {
+                        "titulo": "Otro",
+                        "servicios": [
+                            {
+                                "descripcion": "Plaza de juegos",
+                                "ubicacion": "Frente al Restaurante La Selva"
+                            }
+                        ]
+                    }
+                ],
+                "seguridad": [
+                    {
+                        "titulo": "Seguridad",
+                        "servicios": [
+                            {
+                                "descripcion": "Alquiler de Lockers",
+                                "ubicacion": "Portal de Acceso"
+                            },
+                            {
+                                "descripcion": "Caniles gratuitos para mascotas",
+                                "ubicacion": "Frente al Portal de Acceso"
+                            }
+                        ]
+                    },
+                    {
+                        "titulo": "Otro",
+                        "servicios": [
+                            {
+                                "descripcion": "Cajero automático (LINK)",
+                                "ubicacion": "Portal de Acceso"
+                            },
+                            {
+                                "descripcion": "Objetos perdidos COC (Centro Operativo Cataratas)",
+                                "ubicacion": "tel: +543757420180/ email: coc@apn.gob.ar"
+                            }
+                        ]
+                    }
+                ],
+                "personal": [
+                    {
+                        "titulo": "Personal",
+                        "servicios": [
+                            {
+                                "descripcion": "Sanitarios accesibles",
+                                "ubicacion": "Portal de Acceso | Patio de Servicios | Estaciones del Tren | Bar 2 Hermanas"
+                            },
+                            {
+                                "descripcion": "Duchas al aire libre",
+                                "ubicacion": "Estaciones del Tren"
+                            }
+                        ]
+                    },
+                    {
+                        "titulo": "Otro",
+                        "servicios": [
+                            {
+                                "descripcion": "Atención médica y enfermería para primeros auxilios, con servicio de ambulancia",
+                                "ubicacion": "Estación Central | Estación Cataratas"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "pregunta": "Consejos",
+            "respuesta": {
+                "avisos": [
+                    "No toques ni alimentes a los animales del Parque, son animales silvestres.",
+                    "Circula exclusivamente por lugares habilitados al público (pasarelas y senderos).",
+                    "El Parque dispone de servicio wifi gratuito y recarga de celulares.",
+                    "Bebe mucha agua durante todo el día.",
+                    "Usa repelente de insectos y protector solar en todo momento.",
+                    "Lee y respeta la cartelería indicativa del Parque para disfrutar de una mejor visita.",
+                    "Usa ropa y calzado cómodos para realizar caminatas.",
+                    "Se recomienda la utilización de gorras, anteojos de sol y pilotines, para hacer más placentera tu visita."
+                ],
+                "parrafo_avisos": "Descubrir el Parque a cada paso es vivir intensas emociones. Para que tu visita sea segura, agradable y llena de vivencias inolvidables, aquí encontrarás algunos consejos útiles",
+                "consejos": [
+                    {
+                        "titulo": "Planificar tu visita en dos días",
+                        "descripcion": "El Paseo más conocido es Garganta del Diablo, pero hay otros paseos emocionantes en el Parque como el Paseo Inferior o el Sendero Macuco, para tomarte el tiempo y recorrer, disfrutando de cada detalle de la naturaleza.",
+                        "link": "https://iguazuargentina.com/es/travesias",
+                        "link_text": "Travesías sugeridas"
+                    },
+                    {
+                        "titulo": "Empezar tu día recorriendo el Paseo Inferior",
+                        "descripcion": "Disfruta de la brisa refrescante del Salto Bossetti, es una experiencia emocionante: una caminata las primeras horas del día con todas las energías disponibles para vivir los saltos y cascadas de agua desde cerca.",
+                        "link": "https://iguazuargentina.com/es/paseoinferior",
+                        "link_text": "Paseo Inferior"
+                    },
+                    {
+                        "titulo": "Tomarte una pausa para almorzar, disfrutar de un refrigerio o hidratarte",
+                        "descripcion": "Aprovechar las zonas de descanso del Parque, rodeadas de verde (un entorno natural único, en un paisaje maravilloso para respirar aire puro y descansar)."
+                    },
+                    {
+                        "titulo": "Visitar el Centro de Visitantes",
+                        "descripcion": "Para conocer sobre la flora, la fauna y la historia de las Cataratas del Iguazú, antes de realizar los paseos en vivo y en directo, para vivir más intensamente la magia del Parque.",
+                        "link": "https://iguazuargentina.com/es/centrodevisitante",
+                        "link_text": "Centro de Visitantes"
+                    },
+                    {
+                        "titulo": "Prestar atención a todo lo que te rodea en el Parque",
+                        "descripcion": "Con los sentidos agudizados para experimentar la vida como nunca antes. El Parque es el hábitat de variedad de especies de flora y fauna: entre las ramas de árboles de gran porte puedes encontrar aves únicas en el mundo, ver monos caí o agutíes entre la vegetación, entre muchas otras especies.",
+                        "link": "https://iguazuargentina.com/es/paseoalaluzdelaluna",
+                        "link_text": "Travesías sugeridas"
+                    },
+                    {
+                        "titulo": "Si tu viaje coincide con el plenilunio, disfruta del Paseo de Luna llena",
+                        "descripcion": "La luna y las estrellas te guiarán hasta el Balcón de la Garganta del Diablo, donde podrás maravillarte frente a un manto de agua plateada que cae con un caudal de 2.000 m3 por minuto.",
+                        "link": "https://iguazuargentina.com/es/paseoalaluzdelaluna",
+                        "link_text": "Paseo a la Luz de la Luna"
+                    }
+                ]
+            }
+        }
+    ]
+    
+  }

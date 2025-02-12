@@ -1,0 +1,383 @@
+{
+  "Main": {
+    "title": "Everything you need to know for your days in Cataratas",
+    "Button-More": "More",
+    "side1": "Where to go",
+    "side2": "Accommodation",
+    "side3": "Things to do",
+    "sections": {
+      "dondeIr": "Where to go",
+      "alojamiento": "Accommodation",
+      "gastronomia": "Gastronomy"
+    }
+  },
+  "cards": {
+    "foz": {
+      "title": "Foz do Iguaçu",
+      "location": "Paraná, Brasil",
+      "description": "Foz do Iguaçu is a city in the state of Paraná, Brazil. It is located in the southwestern region of the country, on the border with Argentina and Paraguay. It is known for being the gateway to the Iguazu Falls, one of the most important natural attractions in the world."
+    },
+    "puerto": {
+      "title": "Puerto Iguazú",
+      "location": "Misiones, Argentina",
+      "description": "Puerto Iguazú is a city in the province of Misiones, Argentina. It is located in the northeastern region of the country, on the border with Brazil and Paraguay. It is known for being the gateway to the Iguazu Falls, one of the most important natural attractions in the world."
+    },
+    "cde": {
+      "title": "Ciudad del Este",
+      "location": "Alto Paraná, Paraguay",
+      "description": "Ciudad del Este is a city in Paraguay, located in the Alto Paraná Department, on the border with Brazil and Argentina. It is part of the Triple Frontier Area, which is considered one of the most important commercial and tourist centers in South America."
+    }
+  },
+  "Metadata": {
+    "title": "Iguazu Guru",
+    "description": "All the information you need for your days in Cataratas, Puerto Iguazu, Foz do Iguaçu and Ciudad del Este."
+  },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, es {🇪🇸 Español} en {🇺🇸 English} pt {🇧🇷 Português} other {Idioma desconocido}}"
+  },
+  "conversor": {
+    "title": "Currency Converter",
+    "label 1": "Amount",
+    "label 1 input": "Enter the amount",
+    "label 2": "From",
+    "label 3": "To",
+    "button": "Convert",
+    "tasaCambio": "Exchange Rate"
+  },
+  "ArgCatfaqs": [
+    {
+      "pregunta": "Rates",
+      "respuesta": {
+        "descuento": "The second consecutive day of visit entitles you to a 50% discount.",
+        "tarifas": [
+          {
+            "concepto": "General Rate",
+            "descripcion": "VISITORS NOT RESIDENT IN ARGENTINA",
+            "precio": 45000
+          },
+          {
+            "concepto": "National Residents",
+            "descripcion": null,
+            "precio": 15000
+          },
+          {
+            "concepto": "Provincial Residents",
+            "descripcion": "ADULTS AND CHILDREN",
+            "precio": 5000
+          },
+          {
+            "concepto": "Exempt",
+            "descripcion": "National retirees and pensioners, Children under 6 years old, Visitors with disabilities, Malvinas War Veterans, Local Residents.",
+            "precio": "Free"
+          },
+          {
+            "concepto": "Full Moon Walk - Adult",
+            "descripcion": null,
+            "precio": 90000
+          },
+          {
+            "concepto": "Full Moon Walk - Children",
+            "descripcion": "FROM 6 TO 12 YEARS OLD",
+            "precio": 45000
+          },
+          {
+            "concepto": "Full Moon Walk - Children",
+            "descripcion": "UP TO 5 YEARS OLD",
+            "precio": "Free"
+          },
+          {
+            "concepto": "Students",
+            "descripcion": "Proof of regular student status is required.",
+            "precio": 7000
+          }
+        ],
+        "info_adicional": "At the end of the first day of your visit, revalidate your ticket to obtain a 50% discount for the second consecutive day. You must present a valid ID or Passport. The address of residence on the identity document determines the value of the ticket. For students, retirees and disabled people, valid and current supporting documentation must be presented.",
+        "compra_entrada": "https://www.argentina.gob.ar/parquesnacionales/iguazu/tickets",
+        "boleteria": "You can also purchase the entrance ticket at the Park's entrance ticket offices in cash (in Argentine pesos), with a credit or debit card.",
+        "estacionamiento": {
+          "titulo": "Parking per day",
+          "precios": [
+            {
+              "concepto": "Mopeds and Motorcycles",
+              "precio": 3000
+            },
+            {
+              "concepto": "Automobiles",
+              "precio": 6000
+            },
+            {
+              "concepto": "Vans",
+              "precio": 10000
+            },
+            {
+              "concepto": "Buses and Self-supporting",
+              "precio": 12000
+            },
+            {
+              "concepto": "Local Vehicles",
+              "precio": 3000
+            }
+          ]
+        }
+      }
+    },
+    {
+      "pregunta": "Practical Info",
+      "respuesta": {
+        "preguntas_frecuentes": [
+          {
+            "numero": "1",
+            "pregunta": "How to get to Puerto Iguazú?",
+            "respuesta": {
+              "desde_buenos_aires": [
+                "Aeroparque Jorge Newbery > Cataratas Del Iguazú International Airport",
+                "Ezeiza International Airport > Cataratas Del Iguazú International Airport",
+                "El Palomar Airport > Cataratas Del Iguazú International Airport",
+                "Buses from Retiro Bus Terminal > Puerto Iguazú city bus terminal",
+                "Private vehicles on RN 14"
+              ],
+              "desde_foz_do_iguacu": [
+                "Terminal Rodoviário Internacional de Foz do Iguaçu > Puerto Iguazú city bus terminal",
+                "Private vehicles via Tancredo Neves International Bridge"
+              ],
+              "desde_ciudad_del_este": [
+                "Ciudad del Este Bus Terminal > Puerto Iguazú city bus terminal",
+                "Private vehicles via Friendship International Bridge"
+              ]
+            }
+          },
+          {
+            "numero": "2",
+            "pregunta": "Opening days and hours",
+            "respuesta": "The Park is open every day in the summer season from 7 a.m. to 6 p.m., including holidays and rainy days."
+          },
+          {
+            "numero": "3",
+            "pregunta": "How to get to the Park",
+            "respuesta": "Address: Iguazú National Park: Route 101 Km 142, N3370 Puerto Iguazú, Misiones, Argentina. Coordinates: 25°31′05″S 54°08′00″W / -25.518056, -54.133333. Public transport: The Río Uruguay company offers services that depart from Hito Tres Fronteras and the Puerto Iguazú Bus Terminal (announced on the sign as Cataratas). Transfers are available every 20 minutes, every day of the year. You can also choose to come by private car or taxi. On Full Moon Walk nights, buses offer a special service that departs from the Iguazú bus terminal. Consult schedules and rates there. Automobile: You can arrive from Puerto Iguazú via Av. Victoria Aguirre, RN 12, RN 101, Cataratas Access. Always remember to respect speed limits and wildlife when entering the protected area!"
+          },
+          {
+            "numero": "4",
+            "pregunta": "How do I buy a ticket to enter?",
+            "respuesta": "Currently tickets are purchased only in advance through the web, at https://iguazuargentina.com/tickets/es/ There you choose the time and day you want to come."
+          },
+          {
+            "numero": "5",
+            "pregunta": "Is it mandatory to hire a guide to visit the Park?",
+            "respuesta": "No, it is not mandatory to hire a guide to visit the Park. In any case, we recommend that you request a guide at the Park entrance upon arrival, to enjoy your visit more."
+          },
+          {
+            "numero": "6",
+            "pregunta": "What mandatory protocols or measures must I comply with during my visit?",
+            "respuesta": "• Do not feed or touch the animals in the Park! • Follow the instructions of the park staff, signage and respect safety regulations. Pay attention when walking. • Circulate only on authorized routes. • Be respectful of the environment and do not leave waste in the park."
+          },
+          {
+            "numero": "7",
+            "pregunta": "I lost an object in the Park, how can I find it?",
+            "respuesta": "If you lost an object in the Park, you should contact Lost Objects of the Cataratas Operations Center (COC), located at the entrance. You can also contact us by calling +543757420180 or sending an email to coc@apn.gob.ar"
+          },
+          {
+            "numero": "8",
+            "pregunta": "What are the ways to tour the park?",
+            "respuesta": "From Iguazú Argentina we recommend organizing your visit to the Park with a minimum of two days, to take advantage of the activities and attractions that the Park offers you. Day 1 Upper Circuit + Devil's Throat + Ecological Jungle Train + La Selva Restaurant Average tour time: 5 hours. Day 2 For your second day of visit, we recommend the following options: 1) Lower Circuit This tour allows you to enter the depths of the Paraná jungle to experience unique moments. Average tour time: 1 hour 30 minutes. 2) Great Adventure Ride To hire this excursion, you must consult with iguazujungle.com Average tour time: 2 hours 30 minutes. Day 3 1) Macuco Trail + Arrechea Falls. Average tour time: 2 hours 30 minutes. 2) Ecological Walk To take this excursion, you must consult with iguazujungle.com Average tour time: 30 min. Clarification: you can take the tours with or without a guide and choose the rides you want to take each day. Full Moon Walk If your visit coincides with the days of the full moon, we invite you to experience the Falls and the jungle in a unique way with our Full Moon Walk. This tour lasts approximately 3 hours and you have the option of hiring the dinner service separately, which is provided in the Park's La Selva Restaurant."
+          },
+          {
+            "numero": "9",
+            "pregunta": "Can I schedule my trip on a holiday or a rainy day?",
+            "respuesta": "The Park is open every day, even if it rains or is a holiday."
+          },
+          {
+            "numero": "10",
+            "pregunta": "Is there any type of medical assistance?",
+            "respuesta": "The park has a medical and nursing assistance service for first aid, with an ambulance service at the Central Station and Garganta Station."
+          },
+          {
+            "numero": "11",
+            "pregunta": "What is the climate like in the city of Puerto Iguazú?",
+            "respuesta": "The city of Puerto Iguazú has a subtropical climate without a dry season, which encourages you to visit it all year round due to its warm temperatures. The hottest month is December, while the lowest temperatures occur in June and July, during the winter season."
+          },
+          {
+            "numero": "12",
+            "pregunta": "Should I bring any particular protection?",
+            "respuesta": "To make your visit we recommend: - Use mosquito repellent, sunscreen and a hat to protect you from the sun and insects. - Wear comfortable shoes and clothing suitable for walking (a rain suit can be useful to protect your belongings) - Stay hydrated throughout the tour to avoid fatigue and possible fainting."
+          },
+          {
+            "numero": "13",
+            "pregunta": "How should I adapt to life inside the Park?",
+            "respuesta": "It is important that you do not touch or feed the animals in the Park, as they are wild species and we must respect their habits. Follow the instructions of the guide that accompanies you during the tour and circulate exclusively through places open to the public (walkways and trails). We recommend that you read the Park's informative signs to enjoy a better visit and learn information about the flora and fauna of the place."
+          },
+          {
+            "numero": "14",
+            "pregunta": "Can I withdraw cash (Argentine pesos) in the Park?",
+            "respuesta": "There is a Link ATM in the Park."
+          }
+        ],
+        "caracteristicas": {
+          "horario": "Every day of the year from 7:30 a.m. to 6 p.m.",
+          "atracciones": "Visitors Center | Ecological Jungle Train | Green Path | Lower Walk | Upper Walk | Devil's Throat | Macuco Path",
+          "documentacion": "You must present a valid ID or Passport. The address of residence on the identity document determines the value of the ticket.",
+          "descuento_segundo_dia": "At the end of the first day of your visit, revalidate your ticket to obtain a 50% discount on the value of your ticket for the second consecutive day."
+        }
+      }
+    },
+    {
+      "pregunta": "Services",
+      "respuesta": {
+        "transporte": [
+          {
+            "titulo": "Transportation",
+            "servicios": [
+              {
+                "descripcion": "Parking with battery charging service and light mechanical service",
+                "ubicacion": "In front of the Access Portal"
+              },
+              {
+                "descripcion": "Public transport: Río Uruguay line buses and Atti taxi service",
+                "ubicacion": "Access Portal"
+              }
+            ]
+          },
+          {
+            "titulo": "Other",
+            "servicios": [
+              {
+                "descripcion": "Ecological Jungle Train (with wagons adapted for wheelchairs and strollers)",
+                "ubicacion": "Train Stations"
+              },
+              {
+                "descripcion": "Free transportation service for seniors or people with disabilities",
+                "ubicacion": "Access Portal | Central and Cataratas Station"
+              }
+            ]
+          }
+        ],
+        "ninos": [
+          {
+            "titulo": "Children",
+            "servicios": [
+              {
+                "descripcion": "Stroller rentals for babies from 0 to 2 years",
+                "ubicacion": "Access Portal | Central Station | Cataratas Station"
+              }
+            ]
+          },
+          {
+            "titulo": "Other",
+            "servicios": [
+              {
+                "descripcion": "Playground",
+                "ubicacion": "In front of La Selva Restaurant"
+              }
+            ]
+          }
+        ],
+        "seguridad": [
+          {
+            "titulo": "Security",
+            "servicios": [
+              {
+                "descripcion": "Locker rentals",
+                "ubicacion": "Access Portal"
+              },
+              {
+                "descripcion": "Free kennels for pets",
+                "ubicacion": "In front of the Access Portal"
+              }
+            ]
+          },
+          {
+            "titulo": "Other",
+            "servicios": [
+              {
+                "descripcion": "ATM (LINK)",
+                "ubicacion": "Access Portal"
+              },
+              {
+                "descripcion": "Lost objects COC (Cataratas Operations Center)",
+                "ubicacion": "tel: +543757420180/ email: coc@apn.gob.ar"
+              }
+            ]
+          }
+        ],
+        "personal": [
+          {
+            "titulo": "Personal",
+            "servicios": [
+              {
+                "descripcion": "Accessible restrooms",
+                "ubicacion": "Access Portal | Service Yard | Train Stations | Bar 2 Hermanas"
+              },
+              {
+                "descripcion": "Outdoor showers",
+                "ubicacion": "Train Stations"
+              }
+            ]
+          },
+          {
+            "titulo": "Other",
+            "servicios": [
+              {
+                "descripcion": "Medical and nursing care for first aid, with ambulance service",
+                "ubicacion": "Central Station | Cataratas Station"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "pregunta": "Tips",
+      "respuesta": {
+        "avisos": [
+          "Do not touch or feed the animals in the Park, they are wild animals.",
+          "Circulate exclusively through places open to the public (walkways and trails).",
+          "The Park offers free Wi-Fi service and cell phone charging.",
+          "Drink plenty of water throughout the day.",
+          "Use insect repellent and sunscreen at all times.",
+          "Read and respect the Park's informative signs to enjoy a better visit.",
+          "Wear comfortable clothing and shoes for walking.",
+          "The use of caps, sunglasses and raincoats is recommended to make your visit more pleasant."
+        ],
+        "parrafo_avisos": "Discovering the Park at every step is living intense emotions. To make your visit safe, pleasant and full of unforgettable experiences, here you will find some useful tips",
+        "consejos": [
+          {
+            "titulo": "Plan your visit in two days",
+            "descripcion": "The best-known ride is Garganta del Diablo, but there are other exciting rides in the Park such as Paseo Inferior or Sendero Macuco, to take the time and tour, enjoying every detail of nature.",
+            "link": "https://iguazuargentina.com/es/travesias",
+            "link_text": "Suggested crossings"
+          },
+          {
+            "titulo": "Start your day touring the Paseo Inferior",
+            "descripcion": "Enjoy the refreshing breeze of Salto Bossetti, it is an exciting experience: a walk in the early hours of the day with all the energy available to experience the jumps and waterfalls up close.",
+            "link": "https://iguazuargentina.com/es/paseoinferior",
+            "link_text": "Lower Walk"
+          },
+          {
+            "titulo": "Take a break for lunch, enjoy a snack or hydrate",
+            "descripcion": "Take advantage of the Park's rest areas, surrounded by green (a unique natural environment, in a wonderful landscape to breathe fresh air and rest)."
+          },
+          {
+            "titulo": "Visit the Visitor Center",
+            "descripcion": "To learn about the flora, fauna and history of the Iguazú Falls, before taking live and direct walks, to experience the magic of the Park more intensely.",
+            "link": "https://iguazuargentina.com/es/centrodevisitante",
+            "link_text": "Visitor center"
+          },
+          {
+            "titulo": "Pay attention to everything around you in the Park",
+            "descripcion": "With sharpened senses to experience life like never before. The Park is the habitat of a variety of species of flora and fauna: among the branches of large trees you can find unique birds in the world, see capuchin monkeys or agoutis among the vegetation, among many other species.",
+            "link": "https://iguazuargentina.com/es/paseoalaluzdelaluna",
+            "link_text": "Suggested crossings"
+          },
+          {
+            "titulo": "If your trip coincides with the full moon, enjoy the Full Moon Walk",
+            "descripcion": "The moon and the stars will guide you to the Balcony of the Devil's Throat, where you can marvel at a blanket of silver water that falls with a flow of 2,000 m3 per minute.",
+            "link": "https://iguazuargentina.com/es/paseoalaluzdelaluna",
+            "link_text": "Moonlight Ride"
+          }
+        ]
+      }
+    }
+  ]
+  
+}

@@ -23,17 +23,20 @@ export default function Main() {
       {
       title: t('cards.foz.title'),
       location: t('cards.foz.location'),
-      key: 'foz' as const 
+      key: 'foz' as const ,
+      country: 'br'
       },
       {
       title: t('cards.puerto.title'),
       location: t('cards.puerto.location'),
-      key: 'puerto' as const
+      key: 'puerto' as const,
+      country: 'ar'
       },
       {
       title: t('cards.cde.title'),
       location: t('cards.cde.location'),
-      key: 'cde' as const
+      key: 'cde' as const,
+      country: 'py'
       },
   ];
 
@@ -93,15 +96,9 @@ export default function Main() {
 
       {/* Ciudades */}
       <main className="flex-grow overflow-x-auto py-4">
-          <div className="w-[20rem] h-[40rem] bg-gray-700 rounded-2xl relative overflow-hidden p-4 grid grid-rows-7">
+          <div className="w-[20rem] h-[40rem] bg-gray-700 rounded-2xl relative overflow-hidden p-4 grid-rows-[auto auto 1fr ...]">
             <h1 className='text-yellow-600'>{t('Main.title')}</h1>              
-            <h2 className="text-xl font-bold text-white mb-1">
-              {cards[currentIndex].title}
-            </h2>
-            <div className="flex items-center space-x-1 text-xs text-gray-400">
-              <div className="w-4 h-4 bg-red-500 rounded-full"></div>
-              <p>{cards[currentIndex].location}</p>
-            </div>
+            
             <Image 
               src={'/costadoDerecho.jpg'}
               width={320}
@@ -117,14 +114,28 @@ export default function Main() {
                             <li key={index} className="mb-1">{item}</li>
                         ))}
                         {!citySectionsContent[cards[currentIndex].key]?.[currentSection as keyof typeof citySectionsContent['foz']] && ( // Mensaje si no hay contenido para la sección
-                            <li>{t('Main.noContent')}</li> // Asegúrate de tener esta traducción en tus archivos JSON
+                            <li>Sin contenido</li> 
                         )}
                     </ul>
                 </div>
                 <button className="mt-4 bg-yellow-600 text-white py-2 px-4 rounded-full">
                   {t('Main.Button-More')}
                 </button>         
-
+                <h2 className="text-xl font-bold text-white mb-1">
+              {cards[currentIndex].title}
+            </h2>
+            <div className="flex space-x-1 text-xs text-gray-400">
+            <img
+              src={`/paises/${cards[currentIndex].country}.svg`}
+              alt={`Bandera de ${cards[currentIndex].country}`}
+              className="w-4 h-4 rounded-full"
+              style={{
+                width: '1rem',
+                height: '1rem',
+              }}
+            />
+              <p>{cards[currentIndex].location}</p>
+            </div>
             <button onClick={handlePrev} className="absolute bottom-4 left-4 bg-gray-800 rounded-full p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -141,6 +152,7 @@ export default function Main() {
                 />
               </svg>
             </button>
+            
             <button onClick={handleNext} className="absolute bottom-4 right-4 bg-gray-800 rounded-full p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
