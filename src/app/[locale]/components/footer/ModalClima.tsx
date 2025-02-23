@@ -1,5 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react';
+import Loader from './loader';
 
 declare global {
     interface Window {
@@ -11,13 +12,16 @@ declare global {
 
 const ModalClima = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isLoading, setIsLoading] = useState(false)
 
     const handleOpenModal = () => {
         setIsModalOpen(true);
+        setIsLoading(true)
     };
 
     const handleCloseModal = () => {
-        setIsModalOpen(false);
+        setIsModalOpen(false)
+        setIsLoading(false)
     };
 
     useEffect(() => {
@@ -27,11 +31,16 @@ const ModalClima = () => {
             script.src = 'https://www.tomorrow.io/v1/widget/sdk/sdk.bundle.min.js';
             script.async = true;
             script.onload = () => {
-                if (window.__TOMORROW__) {
-                    window.__TOMORROW__.renderWidget();
-                }
+                window.__TOMORROW__?.renderWidget();
+                 setIsLoading(false); 
             };
             document.body.appendChild(script);
+            return () => {
+                const existingScript = document.getElementById('tomorrow-sdk');
+                if (existingScript) {
+                    document.body.removeChild(existingScript);
+                }
+            };
         }
     }, [isModalOpen]);
 
@@ -78,6 +87,9 @@ const ModalClima = () => {
                         <span className="close text-[#D6A266] font-bold text-xl" onClick={handleCloseModal}>
                         ✕
                         </span>
+                        {isLoading ? (
+                             <Loader />  
+                         ) : (
                         <div
                             className="tomorrow"
                             data-location-id="011871"
@@ -95,7 +107,7 @@ const ModalClima = () => {
                             >
                                 
                             </a>
-                        </div>
+                        </div>)}
                     </div>
                 </div>
             )}
