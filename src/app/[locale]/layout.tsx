@@ -10,15 +10,12 @@ import Header from './components/header/Header'
 import { CurrencyProvider } from '@/context/CurrencyContext';
 import { GoogleTagManager } from '@next/third-parties/google'
 
-
 type Params = Promise<{ locale: string }>;
 
 const raleway = Raleway({
   variable: "--font-raleway",
   subsets: ["latin"],
 })
-
-
  
 export async function generateMetadata({ params }: { params: Params }) {
   const { locale } = await params;

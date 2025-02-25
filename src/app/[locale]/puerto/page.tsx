@@ -1,28 +1,26 @@
 'use client'
 import {useTranslations} from 'next-intl'
-import React from 'react'
 import AdondeIr from './AdondeIr'
-import Alojamiento from './Alojamiento'
 import Gastro from './Gastro'
 import Transporte from './Transporte'
 
 import DefaultHotelList from './HotelList'
 
 
-const PuertoPage: React.FC = () => {
-  
+const PuertoPage: React.FC = () => { 
 
-  const t = useTranslations()
-
+  const t = useTranslations('cards')
+ const p = useTranslations('name1')
   return (
     <div>
-      <h2>{t('cards.puerto.title')}</h2>
-      <p>{t('cards.puerto.description')}</p>
+      <h2>{t('puerto.title')}</h2>
+      <p>{t('puerto.description')}</p>
+      <p>{p('cosas')}</p>
       
       <DefaultHotelList />
       {/*
-      <AdondeIr/>
-      <Alojamiento />
+      //<p>{t(name1)}</p>
+      <AdondeIr/>      
       <Gastro />
       <Transporte />
       */}

@@ -1,4 +1,4 @@
-import hotelesData from './dataAlojaPuerto.json';
+import hotelesData from './dataAlojaFoz.json';
 import HotelItem from './HotelItem';
 import { HotelType } from './HotelItem';
 

@@ -1,9 +1,9 @@
-import {useTranslations} from 'next-intl';
-import React from 'react';
-import AdondeIr from './AdondeIr';
-import Alojamiento from './Alojamiento';
-import Gastro from './Gastro';
-import Transporte from './Transporte';
+import {useTranslations} from 'next-intl'
+//import AdondeIr from './AdondeIr'
+//import Gastro from './Gastro'
+//import Transporte from './Transporte'
+
+import DefaultHotelList from './HotelList'
 
 const FozPage: React.FC = () => {
   const t = useTranslations()
@@ -11,10 +11,13 @@ const FozPage: React.FC = () => {
     <div>
       <h2>{t('cards.foz.title')}</h2>
       <p>{t('cards.foz.description')}</p>
+
+      <DefaultHotelList />
+      {/*
       <AdondeIr />
-      <Alojamiento />
       <Gastro />
       <Transporte />
+      */}
     </div>
   );
 };

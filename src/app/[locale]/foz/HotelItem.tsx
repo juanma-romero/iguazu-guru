@@ -45,13 +45,13 @@ const HotelItem: React.FC<HotelProps> = ({ hotel }) => {
             <p className="mb-2"><strong>Calificación Google: </strong> {hotel.rating}</p>
             <p className="mb-4"><strong>Resumen: </strong> {hotel.editorialSummary?.text ?? 'Sin resumen'}</p>
             <p className="mb-4"><strong>Link: </strong> 
-            <a
-              className='hover:underline hover:text-green-300'
-              href={hotel.link}
-              target="_blank"
-            >
-              {hotel.link}
-            </a>
+<a
+  className='hover:underline hover:text-green-300'
+  href={hotel.link}
+  target="_blank"
+>
+  {hotel.link}
+</a>
             </p>
             <div className="flex flex-wrap">
                 {Object.entries(hotel.photos).map(([key, imgPath]) => {

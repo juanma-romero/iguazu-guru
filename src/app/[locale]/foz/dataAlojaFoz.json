@@ -1,6 +1,6 @@
 [
     {
-        "name": "places/ChIJFxvb93CR9pQR0_3XG1UtHhM", 
+        "name": "places/ChIJFxvb93CR9pQR0_3XG1UtHhM",
         "formattedAddress": "Av. das Cataratas, 3175 - Vila Yolanda, Foz do Iguaçu - PR, 85853-000, Brazil",
         "location": {
             "latitude": -25.567712699999998,
@@ -383,7 +383,7 @@
         ],
         "photos": {
             "1":"/images/hotels/bra/tarobaExt1.jpeg",
-            "2":"/images/hotels/bra/tarobaExt1.jpg",
+            "2":"/images/hotels/bratarobaExt1.jpg",
             "3":"/images/hotels/bra/tarobaInt1.webp",
             "4":"/images/hotels/bra/tarobaInt2.jpeg"
 
