@@ -1,6 +1,8 @@
 {
   "Main": {
-    "title": "Everything you need to know for your days in Cataratas",
+    "title": "Information about Iguazu Falls, maps, weather, hotels and more",
+    "Text": "All about Foz do Iguaçu, Puerto Iguazú and Ciudad del Este. Accommodations, gastronomy, activities, transportation",
+    "Show welcome":"Show welcome",
     "Button-More": "More",
     "side1": "Where to go",
     "side2": "Accommodation",

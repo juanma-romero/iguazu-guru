@@ -1,7 +1,9 @@
 {
-    "Main": {
-      "title": "Tudo o que você precisa saber para seus dias em Cataratas",      
-      "Button-More": "Mais",
+"Main": {
+    "title": "Informações sobre Cataratas do Iguaçu, mapas, clima, hotéis e mais",
+    "Text": "Tudo sobre Foz do Iguaçu, Puerto Iguazú e Ciudad del Este. Acomodações, gastronomia, atividades, transporte",     
+    "Show welcome":"Mostrar bem-vindo",
+    "Button-More": "Mais",
       "side1":"Onde ir",
       "side2": "Acomodação",
       "side3": "O que facer",

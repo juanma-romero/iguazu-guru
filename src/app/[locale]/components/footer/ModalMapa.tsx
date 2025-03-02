@@ -62,7 +62,7 @@ const ModalMapa = () => {
 
                 <div className="modal-content">                        
                     <div className="modal-body" style={{ height: 'calc(100% - 40px)' }}>
-                        <span className="close text-[#D6A266] font-bold text-xl" onClick={handleCloseModal}>
+                        <span className="close text-[#D6A266] font-bold text-xl hover:cursor-pointer" onClick={handleCloseModal}>
                             ✕
                         </span>
                         <div style={{ height: '80vh', width: '100%' }}>

@@ -84,7 +84,7 @@ const ModalClima = () => {
                             boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
                         }}
                     >
-                        <span className="close text-[#D6A266] font-bold text-xl" onClick={handleCloseModal}>
+                        <span className="close text-[#D6A266] font-bold text-xl hover:cursor-pointer" onClick={handleCloseModal}>
                         ✕
                         </span>
                         {isLoading ? (
