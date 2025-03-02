@@ -4,6 +4,7 @@ import { useState } from "react";
 import Aviso from "./AvisoLegal";
 import Cookies from "./Cookies";
 import Privacidad from "./Privacidad";
+import {Link} from '../../../i18n/routing';
 
 import { useTranslations } from 'next-intl';
 
@@ -78,12 +79,12 @@ export default function Legal() {
       </CollapsibleSection>
     </div>
     <div className="flex justify-center mt-8">
-      <a href="/" className="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors flex items-center">
+      <Link href="/" className="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors flex items-center">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
         </svg>
         {t('botonHome')}
-      </a>
+      </Link>
     </div>
     </div>
   );

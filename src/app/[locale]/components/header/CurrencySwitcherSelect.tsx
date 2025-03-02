@@ -6,7 +6,6 @@ import { useCurrencyContext } from '../../../../context/CurrencyContext'
 export default function CurrencySwitcher() {
   const { selectedCurrency, setSelectedCurrency } = useCurrencyContext()
 
-  // Convertimos el objeto JSON en un array de opciones
   const opciones = Object.entries(monedas).map(([pais, data]) => {
     const key = Object.keys(data)[0] as keyof typeof data
     pais= pais
@@ -18,80 +17,54 @@ export default function CurrencySwitcher() {
   })
   
   return (
-    <div className="relative">
+    <div className="relative inline-block w-full">
       <style jsx global>{`
-        .select-option {
-          display: flex;
-          align-items: center;
-          padding: 8px;
+        .currency-select-wrapper {
+          position: relative;
+          cursor: pointer;
         }
-        .flag-br {
-          background-image: url('/paises/br.svg');
+        
+        .currency-select {
+          appearance: none;
+          width: 100%;
+          background-color: transparent;
+          padding: 8px 24px 8px 8px;
+          cursor: pointer;
+          color: #9ca3af; /* text-gray-400 */
+        }
+        
+        .dropdown-arrow {
+          position: absolute;
+          right: 8px;
+          top: 50%;
+          transform: translateY(-50%);
+          pointer-events: none;
+          color: #9ca3af; /* text-gray-400 */
+        }
+        
+        /* Flag classes */
+        .flag-br, .flag-py, .flag-ar, .flag-uy, .flag-co, .flag-cl, .flag-eu, .flag-pe, .flag-us {
           background-size: 1rem;
           background-repeat: no-repeat;
           background-position: left center;
           padding-left: 1.5rem;
         }
-        .flag-py {
-          background-image: url('/paises/py.svg');
-          background-size: 1rem;
-          background-repeat: no-repeat;
-          background-position: left center;
-          padding-left: 1.5rem;
-        }
-        .flag-ar {
-          background-image: url('/paises/ar.svg');
-          background-size: 1rem;
-          background-repeat: no-repeat;
-          background-position: left center;
-          padding-left: 1.5rem;
-        }
-        .flag-uy {
-          background-image: url('/paises/uy.svg');
-          background-size: 1rem;
-          background-repeat: no-repeat;
-          background-position: left center;
-          padding-left: 1.5rem;
-        }
-        .flag-co {
-          background-image: url('/paises/co.svg');
-          background-size: 1rem;
-          background-repeat: no-repeat;
-          background-position: left center;
-          padding-left: 1.5rem;
-        }
-        .flag-cl {
-          background-image: url('/paises/cl.svg');
-          background-size: 1rem;
-          background-repeat: no-repeat;
-          background-position: left center;
-          padding-left: 1.5rem;
-        }
-        .flag-eu {
-          background-image: url('/paises/eu.svg');
-          background-size: 1rem;
-          background-repeat: no-repeat;
-          background-position: left center;
-          padding-left: 1.5rem;
-        }
-        .flag-pe {
-          background-image: url('/paises/pe.svg');
-          background-size: 1rem;
-          background-repeat: no-repeat;
-          background-position: left center;
-          padding-left: 1.5rem;
-        }
-        .flag-us{
-          background-image: url('/paises/us.svg');
-          background-size: 1rem;
-          background-repeat: no-repeat;
-          background-position: left center;
-          padding-left: 1.5rem;
-        }
+        
+        .flag-br { background-image: url('/paises/br.svg'); }
+        .flag-py { background-image: url('/paises/py.svg'); }
+        .flag-ar { background-image: url('/paises/ar.svg'); }
+        .flag-uy { background-image: url('/paises/uy.svg'); }
+        .flag-co { background-image: url('/paises/co.svg'); }
+        .flag-cl { background-image: url('/paises/cl.svg'); }
+        .flag-eu { background-image: url('/paises/eu.svg'); }
+        .flag-pe { background-image: url('/paises/pe.svg'); }
+        .flag-us { background-image: url('/paises/us.svg'); }
       `}</style>
-      <label>
+      
+      <div className="currency-select-wrapper">
+      <span className="dropdown-arrow">▼</span>
         <select 
-          className="w-full appearance-none bg-transparent py-2 px-4 text-gray-400"
+          className="currency-select"
           value={selectedCurrency}
           onChange={(e) => setSelectedCurrency(e.target.value)}
         >
@@ -99,14 +72,14 @@ export default function CurrencySwitcher() {
             <option 
               key={index}
               value={opcion.valor}
-              className={`select-option flag-${opcion.codPais}`}
+              className={`flag-${opcion.codPais}`}
             >
               {opcion.nombre} 
             </option>
           ))}
         </select>
-        <span className="absolute right-2 top-2.5 text-gray-400">▼</span>
-      </label>
+        
+      </div>
     </div>
   )
 }

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface Photo {
   1: string;
   2: string;
@@ -55,11 +57,13 @@ const HotelItem: React.FC<HotelProps> = ({ hotel }) => {
             </p>
             <div className="flex flex-wrap">
                 {Object.entries(hotel.photos).map(([key, imgPath]) => {
-                    return <img
+                    return <Image
                         key={key}
                         src={imgPath}
                         alt={`Photo ${key}`}
                         className="w-72 h-auto object-cover m-2 rounded-lg"
+                        width={200}
+                        
                     />;
                 })}
             </div>

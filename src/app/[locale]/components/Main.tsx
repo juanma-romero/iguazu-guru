@@ -1,7 +1,7 @@
 'use client'
-import { JSXElementConstructor, Key, ReactElement, ReactNode, ReactPortal, useState, useEffect } from 'react';
-import {useTranslations} from 'next-intl';
-import Image from 'next/image';
+import { JSXElementConstructor, Key, ReactElement, ReactNode, ReactPortal, useState, useEffect } from 'react'
+import {useTranslations} from 'next-intl'
+import Image from 'next/image'
 
 interface CategoryData {
   dondeIr: string[];
@@ -39,7 +39,7 @@ export default function Main() {
       key: 'cde' as const,
       country: 'py'
       },
-  ];
+  ]
 
   const citySectionsContent = {
     foz: {
@@ -57,15 +57,15 @@ export default function Main() {
         alojamiento: ['Gran Nobile Hotel'],
         gastronomia: ['Voraz']
     }
-  };
+  }
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % cards.length);
-  };
+  }
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + cards.length) % cards.length);
-  };
+  }
 
   const toggleWelcome = () => {
     setShowWelcome(!showWelcome)
@@ -111,7 +111,7 @@ export default function Main() {
         window.removeEventListener('scroll', handleScroll);
       };
     }
-  }, []); // Empty dependency array means this runs once on component mount
+  }, [])
 
   return (
     <>
@@ -146,7 +146,7 @@ export default function Main() {
       )}
       <div className="flex flex-grow">       
       {/* Categories */}
-      <aside className="w-[15%] flex flex-col justify-evenly ">
+      <aside className="w-[15%] flex flex-col justify-evenly mr-2">
         <button
             onClick={handleDondeIrClick} // Asigna el handler al botón
             className={`pt-8 transform -rotate-90 text-sm  hover:underline hover:text-[#D6A266] ${currentSection === 'dondeIr' ? 'text-[#D6A266]' : 'text-gray-400'}`} // Resalta el botón activo
@@ -216,14 +216,12 @@ export default function Main() {
               {cards[currentIndex].title}
             </h2>
             <div className="flex space-x-1 text-xs text-gray-400">
-            <img
+            <Image
               src={`/paises/${cards[currentIndex].country}.svg`}
               alt={`Bandera de ${cards[currentIndex].country}`}
               className="w-4 h-4 rounded-full"
-              style={{
-                width: '1rem',
-                height: '1rem',
-              }}
+              width={16}
+              height={16}              
             />
               <p>{cards[currentIndex].location}</p>
             </div>
