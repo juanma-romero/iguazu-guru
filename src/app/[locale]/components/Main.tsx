@@ -170,30 +170,33 @@ export default function Main() {
 
       {/* Ciudades */}
       <main className="flex-grow overflow-x-auto py-4">
-          <div className="w-[20rem] h-[40rem] bg-gray-700 rounded-2xl relative overflow-hidden p-4 grid grid-rows-[auto auto 1fr ...]">                  
-            <Image 
-              src={'/costadoDerecho.jpg'}
-              width={320}
-              height={280}
-              alt="Cataratas do Iguaçu, Brasil"
-            />
+      <div className="w-[20rem] h-[40rem] bg-gray-700 rounded-2xl relative overflow-hidden p-4 flex flex-col">                  
+        <Image 
+          src={'/costadoDerecho.jpg'}
+          width={320}
+          height={280}
+          alt="Cataratas do Iguaçu, Brasil"
+          className="mb-4"
+        />
       {/* Contenido dinámico basado en la sección activa */}
-                <div className="mt-6 text-white">
-                    <h3 className="font-bold mb-2">{t(`Main.sections.${currentSection}`)}</h3> {/* Título de la sección */}
-                    <ul>
-                        {citySectionsContent[cards[currentIndex].key]?.[currentSection as keyof typeof citySectionsContent['foz']]?.map((item: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined, index: Key | null | undefined) => ( // Renderiza la lista de contenido
-                            <li key={index} className="mb-1">{item}</li>
-                        ))}
-                        {!citySectionsContent[cards[currentIndex].key]?.[currentSection as keyof typeof citySectionsContent['foz']] && ( // Mensaje si no hay contenido para la sección
-                            <li>Sin contenido</li> 
-                        )}
-                    </ul>
-                </div>
-                <button className="mt-4 bg-yellow-600 text-white py-2 px-4 rounded-full">
-                  {t('Main.Button-More')}
-                </button>   
+      <div className="text-white flex-grow overflow-y-auto">
+        <h3 className="font-bold mb-2">{t(`Main.sections.${currentSection}`)}</h3>
+        <ul>
+          {citySectionsContent[cards[currentIndex].key]?.[currentSection as keyof typeof citySectionsContent['foz']]?.map((item: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined, index: Key | null | undefined) => (
+            <li key={index} className="mb-1">{item}</li>
+          ))}
+          {!citySectionsContent[cards[currentIndex].key]?.[currentSection as keyof typeof citySectionsContent['foz']] && (
+            <li>Sin contenido</li>
+          )}
+        </ul>
+      </div>
+      <div className="flex justify-end mt-4">
+        <button className="bg-yellow-600 text-white h-12 w-20 rounded-full hover:bg-yellow-700">
+          {t('Main.Button-More')}
+        </button>
+      </div>
 
-          <div className='flex flex-row justify-between items-center'>
+      <div className='flex flex-row justify-between items-center mt-4'>
             <button onClick={handlePrev} className=" bg-gray-800 rounded-full p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

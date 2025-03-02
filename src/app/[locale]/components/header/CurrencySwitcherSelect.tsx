@@ -35,7 +35,7 @@ export default function CurrencySwitcher() {
         
         .dropdown-arrow {
           position: absolute;
-          right: 8px;
+          right: 7px;
           top: 50%;
           transform: translateY(-50%);
           pointer-events: none;
@@ -64,7 +64,7 @@ export default function CurrencySwitcher() {
       <div className="currency-select-wrapper">
       <span className="dropdown-arrow">▼</span>
         <select 
-          className="currency-select"
+          className="currency-select text-right" 
           value={selectedCurrency}
           onChange={(e) => setSelectedCurrency(e.target.value)}
         >
