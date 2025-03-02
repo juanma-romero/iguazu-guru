@@ -1,19 +1,8 @@
 'use client'
-import { JSXElementConstructor, Key, ReactElement, ReactNode, ReactPortal, useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import {useTranslations} from 'next-intl'
+import AttractionPreview from './AttractionPreview'
 import Image from 'next/image'
-
-interface CategoryData {
-  dondeIr: string[];
-  alojamiento: string[];
-  gastronomia: string[];
-}
-
-interface CityData {
-  foz: CategoryData;
-  puerto: CategoryData;
-  cde: CategoryData;
-}
 
 export default function Main() {
     const t = useTranslations();    
@@ -171,30 +160,11 @@ export default function Main() {
       {/* Ciudades */}
       <main className="flex-grow overflow-x-auto py-4">
       <div className="w-[20rem] h-[40rem] bg-gray-700 rounded-2xl relative overflow-hidden p-4 flex flex-col">                  
-        <Image 
-          src={'/costadoDerecho.jpg'}
-          width={320}
-          height={280}
-          alt="Cataratas do Iguaçu, Brasil"
-          className="mb-4"
-        />
-      {/* Contenido dinámico basado en la sección activa */}
-      <div className="text-white flex-grow overflow-y-auto">
-        <h3 className="font-bold mb-2">{t(`Main.sections.${currentSection}`)}</h3>
-        <ul>
-          {citySectionsContent[cards[currentIndex].key]?.[currentSection as keyof typeof citySectionsContent['foz']]?.map((item: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined, index: Key | null | undefined) => (
-            <li key={index} className="mb-1">{item}</li>
-          ))}
-          {!citySectionsContent[cards[currentIndex].key]?.[currentSection as keyof typeof citySectionsContent['foz']] && (
-            <li>Sin contenido</li>
-          )}
-        </ul>
-      </div>
-      <div className="flex justify-end mt-4">
-        <button className="bg-yellow-600 text-white h-12 w-20 rounded-full hover:bg-yellow-700">
-          {t('Main.Button-More')}
-        </button>
-      </div>
+             
+      <AttractionPreview 
+        cityKey={cards[currentIndex].key} 
+        currentSection={currentSection}
+      />  
 
       <div className='flex flex-row justify-between items-center mt-4'>
             <button onClick={handlePrev} className=" bg-gray-800 rounded-full p-2">

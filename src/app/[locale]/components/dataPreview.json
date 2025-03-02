@@ -1,0 +1,260 @@
+{
+    "puerto": {
+      "dondeIr": [
+        {
+          "name": "Cataratas del Iguazú",
+          "image": "/attractions/puerto-cataratas.jpg",
+          "description": "Una de las maravillas naturales del mundo con impresionantes cascadas.",
+          "price": {
+            "value": 45000,
+            "currency": "ARS",
+            "notes": "Tarifa básica para extranjeros. Residentes argentinos pagan menos."
+          },
+          "openingHours": "8:00 - 18:00",
+          "location": "Parque Nacional Iguazú",
+          "rating": 5
+        },
+        {
+          "name": "Hito Tres Fronteras",
+          "image": "/attractions/puerto-hito.jpg",
+          "description": "Punto donde se encuentran las fronteras de Argentina, Brasil y Paraguay.",
+          "price": {
+            "value": 0,
+            "currency": "ARS",
+            "notes": "Acceso gratuito"
+          },
+          "openingHours": "24 horas",
+          "location": "Puerto Iguazú",
+          "rating": 4
+        }
+      ],
+      "alojamiento": [
+        {
+          "name": "Gran Meliá Iguazú",
+          "image": "/hotels/melia-iguazu.jpg",
+          "description": "Lujoso hotel con vistas a las Cataratas del Iguazú.",
+          "price": {
+            "value": 95000,
+            "currency": "ARS",
+            "notes": "Precio por noche, habitación estándar"
+          },
+          "amenities": ["Piscina", "Spa", "Wi-Fi", "Restaurante"],
+          "location": "Parque Nacional Iguazú",
+          "rating": 5
+        },
+        {
+          "name": "Loi Suites Iguazú Hotel",
+          "image": "/hotels/loisuites-iguazu.jpg",
+          "description": "Resort de lujo rodeado de la selva subtropical.",
+          "price": {
+            "value": 75000,
+            "currency": "ARS",
+            "notes": "Precio por noche, habitación estándar"
+          },
+          "amenities": ["Piscinas", "Spa", "Restaurantes", "Bar"],
+          "location": "Selva Iryapú, Puerto Iguazú",
+          "rating": 4.5
+        }
+      ],
+      "gastronomia": [
+        {
+          "name": "La Rueda 1975",
+          "image": "/restaurants/la-rueda.jpg",
+          "description": "Restaurante tradicional argentino con excelentes carnes y pescados.",
+          "price": {
+            "value": 15000,
+            "currency": "ARS",
+            "notes": "Precio promedio por persona"
+          },
+          "cuisine": "Argentina",
+          "location": "Centro de Puerto Iguazú",
+          "rating": 4.7
+        },
+        {
+          "name": "Aqva Restaurant",
+          "image": "/restaurants/aqva.jpg",
+          "description": "Cocina contemporánea con productos locales y vistas al río.",
+          "price": {
+            "value": 12000,
+            "currency": "ARS",
+            "notes": "Precio promedio por persona"
+          },
+          "cuisine": "Internacional/Fusion",
+          "location": "Costanera, Puerto Iguazú",
+          "rating": 4.5
+        }
+      ]
+    },
+    "foz": {
+      "dondeIr": [
+        {
+          "name": "Cataratas do Iguaçu",
+          "image": "/attractions/foz-cataratas.jpg",
+          "description": "El lado brasileño ofrece vistas panorámicas de las cataratas.",
+          "price": {
+            "value": 90,
+            "currency": "BRL",
+            "notes": "Precio para adultos extranjeros"
+          },
+          "openingHours": "9:00 - 16:00",
+          "location": "Parque Nacional do Iguaçu",
+          "rating": 5
+        },
+        {
+          "name": "Parque das Aves",
+          "image": "/attractions/parque-aves.jpg",
+          "description": "Santuario natural con más de 150 especies de aves.",
+          "price": {
+            "value": 65,
+            "currency": "BRL",
+            "notes": "Entrada general"
+          },
+          "openingHours": "8:30 - 16:30",
+          "location": "Av. das Cataratas, Foz do Iguaçu",
+          "rating": 4.8
+        }
+      ],
+      "alojamiento": [
+        {
+          "name": "Belmond Hotel das Cataratas",
+          "image": "/hotels/belmond-cataratas.jpg",
+          "description": "Hotel de lujo dentro del Parque Nacional, con acceso exclusivo a las cataratas.",
+          "price": {
+            "value": 2000,
+            "currency": "BRL",
+            "notes": "Precio por noche, habitación estándar"
+          },
+          "amenities": ["Piscina", "Spa", "Restaurante gourmet", "Acceso VIP a las cataratas"],
+          "location": "Dentro del Parque Nacional do Iguaçu",
+          "rating": 4.9
+        },
+        {
+          "name": "Wish Foz do Iguaçu",
+          "image": "/hotels/wish-foz.jpg",
+          "description": "Hotel moderno con excelentes instalaciones y servicio.",
+          "price": {
+            "value": 650,
+            "currency": "BRL",
+            "notes": "Precio por noche, habitación estándar"
+          },
+          "amenities": ["Piscina", "Gimnasio", "Restaurante", "Wi-Fi"],
+          "location": "Centro de Foz do Iguaçu",
+          "rating": 4.6
+        }
+      ],
+      "gastronomia": [
+        {
+          "name": "Restaurante Porto Canoas",
+          "image": "/restaurants/porto-canoas.jpg",
+          "description": "Restaurante dentro del Parque Nacional con vistas espectaculares.",
+          "price": {
+            "value": 120,
+            "currency": "BRL",
+            "notes": "Precio promedio por persona"
+          },
+          "cuisine": "Brasileña/Internacional",
+          "location": "Parque Nacional do Iguaçu",
+          "rating": 4.5
+        },
+        {
+          "name": "Churrascaria do Gaúcho",
+          "image": "/restaurants/churrascaria-gaucho.jpg", 
+          "description": "Auténtica churrascaria brasileña con carnes a la parrilla.",
+          "price": {
+            "value": 95,
+            "currency": "BRL",
+            "notes": "Buffet por persona"
+          },
+          "cuisine": "Brasileña/Churrasco",
+          "location": "Centro de Foz do Iguaçu",
+          "rating": 4.6
+        }
+      ]
+    },
+    "cde": {
+      "dondeIr": [
+        {
+          "name": "Saltos del Monday",
+          "image": "/attractions/saltos-monday.jpg",
+          "description": "Impresionantes cataratas rodeadas de exuberante vegetación.",
+          "price": {
+            "value": 25000,
+            "currency": "PYG",
+            "notes": "Entrada general"
+          },
+          "openingHours": "8:00 - 16:00",
+          "location": "Presidente Franco, cerca de Ciudad del Este",
+          "rating": 4.3
+        },
+        {
+          "name": "Shopping del Este",
+          "image": "/attractions/shopping-este.jpg",
+          "description": "El centro comercial más grande de Ciudad del Este con marcas internacionales.",
+          "price": {
+            "value": 0,
+            "currency": "PYG",
+            "notes": "Entrada gratuita"
+          },
+          "openingHours": "9:00 - 21:00",
+          "location": "Centro de Ciudad del Este",
+          "rating": 4
+        }
+      ],
+      "alojamiento": [
+        {
+          "name": "Río Hotel by Bourbon Ciudad del Este",
+          "image": "/hotels/rio-hotel-cde.jpg",
+          "description": "Moderno hotel de negocios con excelente ubicación.",
+          "price": {
+            "value": 650000,
+            "currency": "PYG",
+            "notes": "Precio por noche, habitación estándar"
+          },
+          "amenities": ["Piscina", "Gimnasio", "Restaurante", "Wi-Fi"],
+          "location": "Centro de Ciudad del Este",
+          "rating": 4.4
+        },
+        {
+          "name": "Howard Johnson Ciudad del Este",
+          "image": "/hotels/howard-johnson-cde.jpg",
+          "description": "Hotel confortable ideal para viajeros de negocios y turistas.",
+          "price": {
+            "value": 550000,
+            "currency": "PYG",
+            "notes": "Precio por noche, habitación estándar"
+          },
+          "amenities": ["Piscina", "Restaurante", "Wi-Fi", "Aparcamiento"],
+          "location": "Centro de Ciudad del Este",
+          "rating": 4.2
+        }
+      ],
+      "gastronomia": [
+        {
+          "name": "Paulista Grill",
+          "image": "/restaurants/paulista-grill.jpg",
+          "description": "Restaurante de estilo brasileño con excelentes carnes a la parrilla.",
+          "price": {
+            "value": 150000,
+            "currency": "PYG",
+            "notes": "Precio promedio por persona"
+          },
+          "cuisine": "Brasileña/Parrillada",
+          "location": "Centro de Ciudad del Este",
+          "rating": 4.3
+        },
+        {
+          "name": "Restaurante Matsuri",
+          "image": "/restaurants/matsuri.jpg",
+          "description": "Auténtica cocina japonesa, popular por su sushi fresco.",
+          "price": {
+            "value": 130000,
+            "currency": "PYG",
+            "notes": "Precio promedio por persona"
+          },
+          "cuisine": "Japonesa/Sushi",
+          "location": "Shopping del Este",
+          "rating": 4.5
+        }
+      ]
+    }
+  }
