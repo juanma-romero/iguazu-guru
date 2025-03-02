@@ -70,7 +70,10 @@ export default function Main() {
   const handleAlojamientoClick = () => setCurrentSection('alojamiento');
   const handleGastronomiaClick = () => setCurrentSection('gastronomia');
   return (
-    <div className="flex flex-grow">
+    <>
+      <h1 className='text-yellow-600 px-4'>{t('Main.title')}</h1>
+      <div className="flex flex-grow">
+       
       {/* Categories */}
       <aside className="w-[15%] flex flex-col justify-evenly ">
         <button
@@ -96,16 +99,13 @@ export default function Main() {
 
       {/* Ciudades */}
       <main className="flex-grow overflow-x-auto py-4">
-          <div className="w-[20rem] h-[40rem] bg-gray-700 rounded-2xl relative overflow-hidden p-4 grid-rows-[auto auto 1fr ...]">
-            <h1 className='text-yellow-600'>{t('Main.title')}</h1>              
-            
+          <div className="w-[20rem] h-[40rem] bg-gray-700 rounded-2xl relative overflow-hidden p-4 grid grid-rows-[auto auto 1fr ...]">                  
             <Image 
               src={'/costadoDerecho.jpg'}
               width={320}
               height={280}
               alt="Cataratas do Iguaçu, Brasil"
             />
-                
       {/* Contenido dinámico basado en la sección activa */}
                 <div className="mt-6 text-white">
                     <h3 className="font-bold mb-2">{t(`Main.sections.${currentSection}`)}</h3> {/* Título de la sección */}
@@ -120,23 +120,10 @@ export default function Main() {
                 </div>
                 <button className="mt-4 bg-yellow-600 text-white py-2 px-4 rounded-full">
                   {t('Main.Button-More')}
-                </button>         
-                <h2 className="text-xl font-bold text-white mb-1">
-              {cards[currentIndex].title}
-            </h2>
-            <div className="flex space-x-1 text-xs text-gray-400">
-            <img
-              src={`/paises/${cards[currentIndex].country}.svg`}
-              alt={`Bandera de ${cards[currentIndex].country}`}
-              className="w-4 h-4 rounded-full"
-              style={{
-                width: '1rem',
-                height: '1rem',
-              }}
-            />
-              <p>{cards[currentIndex].location}</p>
-            </div>
-            <button onClick={handlePrev} className="absolute bottom-4 left-4 bg-gray-800 rounded-full p-2">
+                </button>   
+
+          <div className='flex flex-row justify-between items-center'>
+            <button onClick={handlePrev} className=" bg-gray-800 rounded-full p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-4 w-4 text-white"
@@ -153,7 +140,24 @@ export default function Main() {
               </svg>
             </button>
             
-            <button onClick={handleNext} className="absolute bottom-4 right-4 bg-gray-800 rounded-full p-2">
+            <div>
+            <h2 className="text-xl font-bold text-white mb-1">
+              {cards[currentIndex].title}
+            </h2>
+            <div className="flex space-x-1 text-xs text-gray-400">
+            <img
+              src={`/paises/${cards[currentIndex].country}.svg`}
+              alt={`Bandera de ${cards[currentIndex].country}`}
+              className="w-4 h-4 rounded-full"
+              style={{
+                width: '1rem',
+                height: '1rem',
+              }}
+            />
+              <p>{cards[currentIndex].location}</p>
+            </div>
+            </div>
+            <button onClick={handleNext} className=" bg-gray-800 rounded-full p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-4 w-4 text-white"
@@ -169,9 +173,12 @@ export default function Main() {
                 />
               </svg>
             </button>
+            </div>
           </div>
       </main>
-    </div>    
+    </div>
+    </>
+        
   )
 }
 

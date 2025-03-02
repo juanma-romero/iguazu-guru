@@ -378,6 +378,179 @@
                 ]
             }
         }
-    ]
-    
+    ],
+    "footer":{
+      "boton1":"Clima",
+      "boton2":"Cambio",
+      "boton3":"Mapa"
+    },    
+    "legal": {
+          "h1": "Política de Privacidad",
+          "h2-1": "1. Responsable del Tratamiento",
+          "h2-1-p1": "Nombre:",
+          "h2-1-p2": "Contacto:",
+          "h2-1-p3": "Somos responsables del tratamiento de los datos personales que nos proporcionas.",
+          
+          "h2-2": "2. Datos que Recopilamos",
+          "h2-2-p1": "Recopilamos los siguientes tipos de datos personales:",
+          "h2-2-li-1": "Datos de navegación: dirección IP, tipo de dispositivo, navegador, páginas visitadas, tiempo de permanencia.",
+          
+          "h2-3": "3. Finalidades del Tratamiento",
+          "h2-3-p1": "Utilizamos la información recopilada para las siguientes finalidades:",
+          "h2-3-li-1-strong": "Marketing:",
+          "h2-3-li-1": "Analizar las páginas visitadas por los usuarios para comprender sus intereses y ofrecer contenido y publicidad relevantes.",
+          "h2-3-li-2-strong": "Mejora de Servicios:",
+          "h2-3-li-2": "Utilizar los datos de navegación para identificar áreas de mejora en nuestro sitio web y optimizar la experiencia del usuario.",
+          "h2-3-li-3-strong": "Estadísticas:",
+          "h2-3-li-3": "Generar informes estadísticos agregados sobre el uso del sitio web para evaluar su rendimiento y planificar futuras mejoras.",
+          "h2-3-li-4-strong": "Obligación Legal:",
+          "h2-3-li-4": "Cumplir con las obligaciones legales que nos sean aplicables.",
+          
+          "h2-4": "4. Base Legal para el Tratamiento",
+          "h2-4-p1": "La base legal para el tratamiento de tus datos personales es el consentimiento. Al visitar nuestro sitio web, aceptas que recopilemos y utilicemos tus datos de navegación de acuerdo con esta política de privacidad.",
+          
+          "h2-5": "5. Destinatarios de los Datos",
+          "h2-5-p1": "Compartimos tus datos con los siguientes destinatarios:",
+          "h2-5-li-1-strong": "Servicios de análisis web:",
+          "h2-5-li-1": "Utilizamos proveedores de servicios de análisis web para analizar el tráfico de nuestro sitio web y comprender cómo interactúan los usuarios con él. Estos proveedores pueden tener acceso a tus datos de navegación.",
+          
+          "h2-6": "6. Transferencias Internacionales de Datos",
+          "h2-6-p1": "No realizamos transferencias internacionales de datos fuera del Espacio Económico Europeo (EEE).",
+          
+          "h2-7": "7. Período de Conservación de los Datos",
+          "h2-7-p1": "Conservaremos los datos de contacto para marketing durante el tiempo que sea necesario para cumplir con las finalidades descritas en esta política, o hasta que retires tu consentimiento. Una vez retirado tu consentimiento, eliminaremos tus datos de contacto de nuestros sistemas.",
+          
+          "h2-8": "8. Derechos de los Usuarios",
+          "h2-8-p1": "Tienes los siguientes derechos en relación con tus datos personales:",
+          "h2-8-li-1-strong": "Derecho de acceso:",
+          "h2-8-li-1": "Derecho a obtener confirmación de si estamos tratando tus datos y a acceder a ellos.",
+          "h2-8-li-2-strong": "Derecho de rectificación:",
+          "h2-8-li-2": "Derecho a corregir datos inexactos o incompletos.",
+          "h2-8-li-3-strong": "Derecho de supresión (derecho al olvido):",
+          "h2-8-li-3": "Derecho a solicitar la eliminación de tus datos en determinadas circunstancias.",
+          "h2-8-li-4-strong": "Derecho de limitación del tratamiento:",
+          "h2-8-li-4": "Derecho a restringir el tratamiento de tus datos en determinadas circunstancias.",
+          "h2-8-li-5-strong": "Derecho de oposición:",
+          "h2-8-li-5": "Derecho a oponerte al tratamiento de tus datos en determinadas circunstancias.",
+          "h2-8-li-6-strong": "Derecho a retirar el consentimiento:",
+          "h2-8-li-6": "Derecho a retirar tu consentimiento en cualquier momento, cuando el tratamiento se base en el consentimiento.",
+          "h2-8-p2": "Puedes ejercer tus derechos enviando un correo electrónico a manager@iguazu.guru.",
+          "h2-8-p3": "También tienes derecho a presentar una reclamación ante la Agencia Española de Protección de Datos (AEPD) si consideras que hemos infringido tus derechos en materia de protección de datos.",
+          
+          "h2-9": "9. Medidas de Seguridad",
+          "h2-9-p1": "Hemos implementado medidas de seguridad técnicas y organizativas apropiadas para proteger tus datos personales contra accesos no autorizados, pérdidas, alteraciones o destrucciones.",
+          
+          "h2-10": "10. Actualización de la Política de Privacidad",
+          "h2-10-p1": "Nos reservamos el derecho a modificar esta política de privacidad en cualquier momento. Los cambios serán publicados en nuestro sitio web. Te recomendamos que revises esta política periódicamente para estar al tanto de cualquier actualización."
+    },        
+    "cookies": {
+              "h1": "Política de Cookies de Iguazu Guru",
+              "intro": "Esta política de cookies explica qué son las cookies, cómo las utilizamos en nuestro sitio web Iguazu Guru (en adelante, \"el sitio web\"), y cómo puedes gestionarlas.",
+              
+              "h2-1": "1. ¿Qué son las cookies?",
+              "h2-1-p1": "Las cookies son pequeños archivos de texto que se almacenan en tu ordenador o dispositivo móvil cuando visitas un sitio web. Las cookies se utilizan ampliamente para que los sitios web funcionen de manera más eficiente, así como para proporcionar información a los propietarios del sitio.",
+              
+              "h2-2": "2. ¿Cómo utilizamos las cookies?",
+              "h2-2-p1": "Utilizamos cookies por las siguientes razones:",
+              "h2-2-li-1-strong": "Cookies esenciales/necesarias:",
+              "h2-2-li-1": "Estas cookies son esenciales para que puedas navegar por el sitio web y utilizar sus funciones, como acceder a áreas seguras del sitio. Sin estas cookies, no podríamos proporcionar ciertos servicios que solicitas.",
+              "h2-2-li-2-strong": "Cookies de rendimiento/análisis:",
+              "h2-2-li-2": "Estas cookies recopilan información sobre cómo utilizas nuestro sitio web, por ejemplo, qué páginas visitas con más frecuencia y si recibes mensajes de error de las páginas web. Estos datos nos ayudan a mejorar el funcionamiento de nuestro sitio web. Utilizamos Google Analytics para este propósito. Estas cookies suelen ser anónimas y no identifican a un usuario individual.",
+              "h2-2-li-3-strong": "Cookies de funcionalidad:",
+              "h2-2-li-3": "Estas cookies permiten que el sitio web recuerde las elecciones que haces (como tu idioma o la región en la que te encuentras) y proporcione funciones mejoradas y más personalizadas.",
+              "h2-2-li-4-strong": "Cookies de publicidad/marketing:",
+              "h2-2-li-4": "Estas cookies se utilizan para mostrarte anuncios que son más relevantes para ti y tus intereses. También se utilizan para limitar la cantidad de veces que ves un anuncio y para ayudar a medir la eficacia de una campaña publicitaria.",
+              
+              "h2-3": "3. Tipos de Cookies que Utilizamos:",
+              "h2-3-p1": "A continuación, se muestra una lista de las cookies que utilizamos en nuestro sitio web, junto con su finalidad y duración:",
+              "table-header-1": "Cookie",
+              "table-header-2": "Nombre del Proveedor",
+              "table-header-3": "Propósito",
+              "table-header-4": "Duración",
+              "table-header-5": "Tipo",
+              
+              "cookie-1-purpose": "Se utiliza para distinguir a los usuarios.",
+              "cookie-1-duration": "2 años",
+              "cookie-1-type": "Rendimiento",
+              
+              "cookie-2-purpose": "Se utiliza para distinguir a los usuarios.",
+              "cookie-2-duration": "24 horas",
+              "cookie-2-type": "Rendimiento",
+              
+              "cookie-3-purpose": "Se utiliza para limitar el porcentaje de solicitudes. Si Google Analytics se implementa mediante Google Tag Manager, esta cookie se llamará dc_gtm.",
+              "cookie-3-duration": "1 minuto",
+              "cookie-3-type": "Rendimiento",
+              
+              "h2-4": "4. Cookies de Terceros:",
+              "h2-4-p1": "Además de nuestras propias cookies, también podemos utilizar cookies de terceros. Estas cookies son establecidas por un dominio diferente al de nuestro sitio web. Por ejemplo, utilizamos Google Analytics para ayudarnos a analizar el uso de nuestro sitio web. Estas cookies de terceros están sujetas a las políticas de privacidad de sus respectivos proveedores.",
+              
+              "h2-5": "5. ¿Cómo puedes gestionar las cookies?",
+              "h2-5-p1": "Tienes varias opciones para gestionar las cookies:",
+              "h2-5-li-1-strong": "Configuración del Navegador:",
+              "h2-5-li-1": "La mayoría de los navegadores web te permiten controlar las cookies a través de su configuración. Puedes bloquear todas las cookies, aceptar solo cookies de origen, o borrar las cookies existentes. Consulta la documentación de tu navegador para obtener instrucciones sobre cómo gestionar las cookies. Aquí tienes enlaces a las instrucciones para algunos navegadores comunes:",
+              "h2-5-li-2-strong": "Herramientas de Consentimiento de Cookies:",
+              "h2-5-li-2": "Implementamos herramientas de gestión de cookies para que puedas elegir qué categorías de cookies aceptas o rechazas.",
+              "h2-5-li-3-strong": "Herramientas de Exclusión Voluntaria (Opt-out):",
+              "h2-5-li-3": "Algunos proveedores de cookies de terceros ofrecen herramientas de exclusión voluntaria que te permiten evitar que recopilen información sobre ti. Por ejemplo, puedes excluirte de Google Analytics aquí:",
+              
+              "h2-6": "6. Consecuencias de Deshabilitar las Cookies:",
+              "h2-6-p1": "Si decides deshabilitar las cookies, es posible que algunas partes de nuestro sitio web no funcionen correctamente o que tu experiencia de usuario se vea afectada.",
+              
+              "h2-7": "7. Cambios en esta Política de Cookies:",
+              "h2-7-p1": "Podemos actualizar esta política de cookies periódicamente. Te notificaremos cualquier cambio importante publicando la nueva política en nuestro sitio web. Te recomendamos que revises esta política periódicamente para estar al tanto de cualquier actualización.",
+              
+              "h2-8": "8. Más Información:",
+              "h2-8-p1": "Si tienes alguna pregunta sobre nuestra política de cookies, puedes ponerte en contacto con nosotros en manager@iguazu.guru."
+    },
+    "ModalInicio": {
+        "title": "Políticas de Privacidad y Cookies",
+        "description": "Este sitio utiliza cookies para mejorar su experiencia. Al continuar navegando, acepta nuestra política de privacidad y el uso de cookies.",
+        "reject": "Rechazar",
+        "accept": "Aceptar",
+    "legalInfo": "Ver Information Legal Completa"
+    },
+    "PaginaLegal": {
+    "title": "Informacion Legal",
+    "subtitle": "Politica de Privacidad",
+    "preview1":"Información sobre cómo recopilamos, utilizamos y protegemos sus datos personales cuando utiliza nuestros servicios.",
+    "subtitle2": "Política de Cookies",
+    "preview2":"Información sobre cómo utilizamos cookies y tecnologías similares en nuestro sitio web.",
+    "subtitle3": "Términos y Condiciones",
+    "preview3":"Información sobre los términos y condiciones generales que regulan el uso de nuestros servicios.",
+    "botonHome": "Volver a la página de inicio"
+    },
+    "Aviso": {
+        "h1": "Aviso Legal",
+        "intro": "Este aviso legal regula el uso del sitio web Iguazu Guru, que ofrece información turística sobre la zona de Cataratas del Iguazú y la Triple Frontera entre Argentina, Brasil y Paraguay.",
+        
+        "h2-1": "1. Información del Titular",
+        "h2-1-p1": "Iguazu Guru es una empresa dedicada a brindar información turística sobre la zona de Cataratas del Iguazú y la Triple Frontera. Estamos ubicados en Ciudad del Este, Paraguay.",
+        
+        "h2-2": "2. Finalidad del Sitio Web",
+        "h2-2-p1": "Este sitio web tiene como finalidad:",
+        "h2-2-li-1": "Proporcionar información turística actualizada sobre la zona de Cataratas del Iguazú.",
+        "h2-2-li-2": "Ofrecer guías y consejos para visitantes de la Triple Frontera entre Argentina, Brasil y Paraguay.",
+        "h2-2-li-3": "Facilitar herramientas útiles para turistas como conversores de moneda y pronósticos del clima.",
+        
+        "h2-3": "3. Condiciones de Uso",
+        "h2-3-p1": "El acceso a este sitio web es gratuito. La información proporcionada tiene carácter informativo y no constituye asesoramiento profesional o legal. No nos responsabilizamos por decisiones tomadas en base a la información proporcionada en este sitio.",
+        
+        "h2-4": "4. Propiedad Intelectual",
+        "h2-4-p1": "Todos los contenidos del sitio web (textos, fotografías, gráficos, imágenes, tecnología, software, enlaces, etc.) son propiedad de Iguazu Guru o han sido cedidos por sus legítimos propietarios. Queda prohibida su reproducción, distribución o modificación sin autorización expresa.",
+        
+        "h2-5": "5. Enlaces a Terceros",
+        "h2-5-p1": "Este sitio puede contener enlaces a sitios web de terceros. No tenemos control sobre el contenido de dichos sitios y no asumimos responsabilidad por pérdidas o daños que pudieran derivarse del uso de esos enlaces.",
+        "h2-5-p2": "La inclusión de estos enlaces no implica recomendación, aprobación o asociación con sus operadores.",
+        
+        "h2-6": "6. Modificaciones",
+        "h2-6-p1": "Iguazu Guru se reserva el derecho de modificar este aviso legal en cualquier momento.",
+        "h2-6-p2": "Los cambios entrarán en vigor desde el momento de su publicación en el sitio web, siendo responsabilidad del usuario revisar periódicamente su contenido.",
+        
+        "h2-7": "7. Contacto",
+        "h2-7-p1": "Para cualquier consulta relacionada con este aviso legal, puedes contactarnos a través de:",
+        "h2-7-contact": "Correo electrónico:"
+}
   }
+      
+    
+  

@@ -9,7 +9,7 @@ export default function Header() {
       <div className="flex items-center justify-between mb-4">
         <Link href="/">
       <Image
-          src="/favicon.png" // Reemplaza con la ruta correcta a tu logo en la carpeta 'public'
+          src="/logoCirc.png" // Reemplaza con la ruta correcta a tu logo en la carpeta 'public'
           alt="Logo de Iguazu Guru"
           width={50} // Ajusta el ancho según necesites
           height={50}  // Ajusta la altura según necesites

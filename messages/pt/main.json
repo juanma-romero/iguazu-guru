@@ -10,8 +10,8 @@
         "alojamiento": "Acomodação",
         "gastronomia": "O que facer"
       } 
-    },
-    "cards": {
+},
+"cards": {
   "foz":{
     "title": "Foz do Iguaçu",
     "location": "Paraná, Brasil",
@@ -31,16 +31,15 @@
     
   }
 },
-    "Metadata": {
+"Metadata": {
       "title": "Iguazu Guru",
       "description": "Todas as informações que você precisa para seus dias em Cataratas, Puerto Iguazú, Foz do Iguaçu e Ciudad del Este."
-    },
-    "LocaleSwitcher": {
+},
+"LocaleSwitcher": {
       "label": "Mudar idioma",
       "locale": "{locale, select, es {🇪🇸 Español} en {🇺🇸 English} pt {🇧🇷 Português} other {Idioma desconocido}}"
-    },
-    
-    "conversor": {
+},    
+"conversor": {
       "title": "Conversor de Moedas",
       "label 1": "Valor",
       "label 1 input": "Insira o valor",
@@ -49,7 +48,7 @@
       "button": "Converter",
       "tasaCambio": "Taxa de câmbio"
 },
-  "ArgCatfaqs": [
+"ArgCatfaqs": [
         {
             "pregunta": "Tarifas",
             "respuesta": {
@@ -382,5 +381,177 @@
                 ]
             }
         }
-    ]
-  }
+    ],
+"footer":{
+      "boton1":"Tempo",
+      "boton2":"Troca",
+      "boton3":"Mapa"
+},
+    "legal": {
+      "h1": "Política de Privacidade",
+      "h2-1": "1. Responsável pelo Tratamento",
+      "h2-1-p1": "Nome:",
+      "h2-1-p2": "Contato:",
+      "h2-1-p3": "Somos responsáveis pelo tratamento dos dados pessoais que você nos fornece.",
+      
+      "h2-2": "2. Dados que Coletamos",
+      "h2-2-p1": "Coletamos os seguintes tipos de dados pessoais:",
+      "h2-2-li-1": "Dados de navegação: endereço IP, tipo de dispositivo, navegador, páginas visitadas, tempo de permanência.",
+      
+      "h2-3": "3. Finalidades do Tratamento",
+      "h2-3-p1": "Utilizamos as informações coletadas para as seguintes finalidades:",
+      "h2-3-li-1-strong": "Marketing:",
+      "h2-3-li-1": "Analisar as páginas visitadas pelos usuários para compreender seus interesses e oferecer conteúdo e publicidade relevantes.",
+      "h2-3-li-2-strong": "Melhoria de Serviços:",
+      "h2-3-li-2": "Utilizar os dados de navegação para identificar áreas de melhoria em nosso site e otimizar a experiência do usuário.",
+      "h2-3-li-3-strong": "Estatísticas:",
+      "h2-3-li-3": "Gerar relatórios estatísticos agregados sobre o uso do site para avaliar seu desempenho e planejar futuras melhorias.",
+      "h2-3-li-4-strong": "Obrigação Legal:",
+      "h2-3-li-4": "Cumprir com as obrigações legais que nos sejam aplicáveis.",
+      
+      "h2-4": "4. Base Legal para o Tratamento",
+      "h2-4-p1": "A base legal para o tratamento dos seus dados pessoais é o consentimento. Ao visitar nosso site, você concorda que coletemos e utilizemos seus dados de navegação de acordo com esta política de privacidade.",
+      
+      "h2-5": "5. Destinatários dos Dados",
+      "h2-5-p1": "Compartilhamos seus dados com os seguintes destinatários:",
+      "h2-5-li-1-strong": "Serviços de análise web:",
+      "h2-5-li-1": "Utilizamos provedores de serviços de análise web para analisar o tráfego do nosso site e entender como os usuários interagem com ele. Esses provedores podem ter acesso aos seus dados de navegação.",
+      
+      "h2-6": "6. Transferências Internacionais de Dados",
+      "h2-6-p1": "Não realizamos transferências internacionais de dados para fora do Espaço Econômico Europeu (EEE).",
+      
+      "h2-7": "7. Período de Conservação dos Dados",
+      "h2-7-p1": "Conservaremos os dados de contato para marketing pelo tempo necessário para cumprir as finalidades descritas nesta política, ou até que você retire seu consentimento. Uma vez retirado o seu consentimento, eliminaremos seus dados de contato dos nossos sistemas.",
+      
+      "h2-8": "8. Direitos dos Usuários",
+      "h2-8-p1": "Você tem os seguintes direitos em relação aos seus dados pessoais:",
+      "h2-8-li-1-strong": "Direito de acesso:",
+      "h2-8-li-1": "Direito de obter confirmação de que estamos tratando seus dados e de acessá-los.",
+      "h2-8-li-2-strong": "Direito de retificação:",
+      "h2-8-li-2": "Direito de corrigir dados inexatos ou incompletos.",
+      "h2-8-li-3-strong": "Direito de exclusão (direito ao esquecimento):",
+      "h2-8-li-3": "Direito de solicitar a eliminação dos seus dados em determinadas circunstâncias.",
+      "h2-8-li-4-strong": "Direito à limitação do tratamento:",
+      "h2-8-li-4": "Direito de restringir o tratamento dos seus dados em determinadas circunstâncias.",
+      "h2-8-li-5-strong": "Direito de oposição:",
+      "h2-8-li-5": "Direito de se opor ao tratamento dos seus dados em determinadas circunstâncias.",
+      "h2-8-li-6-strong": "Direito de retirar o consentimento:",
+      "h2-8-li-6": "Direito de retirar seu consentimento a qualquer momento, quando o tratamento se basear no consentimento.",
+      "h2-8-p2": "Você pode exercer seus direitos enviando um e-mail para manager@iguazu.guru.",
+      "h2-8-p3": "Você também tem o direito de apresentar uma reclamação à autoridade de proteção de dados local se acreditar que violamos seus direitos de proteção de dados.",
+      
+      "h2-9": "9. Medidas de Segurança",
+      "h2-9-p1": "Implementamos medidas de segurança técnicas e organizacionais apropriadas para proteger seus dados pessoais contra acessos não autorizados, perdas, alterações ou destruições.",
+      
+      "h2-10": "10. Atualização da Política de Privacidade",
+      "h2-10-p1": "Reservamo-nos o direito de modificar esta política de privacidade a qualquer momento. As alterações serão publicadas em nosso site. Recomendamos que você revise esta política periodicamente para estar ciente de quaisquer atualizações."
+},
+    
+"cookies": {
+          "h1": "Política de Cookies da Iguazu Guru",
+          "intro": "Esta política de cookies explica o que são cookies, como os utilizamos em nosso site Iguazu Guru (doravante, \"o site\"), e como você pode gerenciá-los.",
+          
+          "h2-1": "1. O que são cookies?",
+          "h2-1-p1": "Cookies são pequenos arquivos de texto que são armazenados em seu computador ou dispositivo móvel quando você visita um site. Os cookies são amplamente utilizados para que os sites funcionem de maneira mais eficiente, bem como para fornecer informações aos proprietários do site.",
+          
+          "h2-2": "2. Como utilizamos os cookies?",
+          "h2-2-p1": "Utilizamos cookies pelas seguintes razões:",
+          "h2-2-li-1-strong": "Cookies essenciais/necessários:",
+          "h2-2-li-1": "Estes cookies são essenciais para que você possa navegar pelo site e usar suas funcionalidades, como acessar áreas seguras do site. Sem estes cookies, não poderíamos fornecer certos serviços que você solicita.",
+          "h2-2-li-2-strong": "Cookies de desempenho/análise:",
+          "h2-2-li-2": "Estes cookies coletam informações sobre como você usa nosso site, por exemplo, quais páginas visita com mais frequência e se recebe mensagens de erro das páginas da web. Estes dados nos ajudam a melhorar o funcionamento do nosso site. Utilizamos o Google Analytics para este propósito. Estes cookies geralmente são anônimos e não identificam um usuário individual.",
+          "h2-2-li-3-strong": "Cookies de funcionalidade:",
+          "h2-2-li-3": "Estes cookies permitem que o site lembre as escolhas que você faz (como seu idioma ou a região em que você está) e forneça recursos aprimorados e mais personalizados.",
+          "h2-2-li-4-strong": "Cookies de publicidade/marketing:",
+          "h2-2-li-4": "Estes cookies são usados para mostrar anúncios que sejam mais relevantes para você e seus interesses. Eles também são usados para limitar o número de vezes que você vê um anúncio e para ajudar a medir a eficácia de uma campanha publicitária.",
+          
+          "h2-3": "3. Tipos de Cookies que Utilizamos:",
+          "h2-3-p1": "A seguir, está uma lista dos cookies que utilizamos em nosso site, junto com sua finalidade e duração:",
+          "table-header-1": "Cookie",
+          "table-header-2": "Nome do Provedor",
+          "table-header-3": "Propósito",
+          "table-header-4": "Duração",
+          "table-header-5": "Tipo",
+          
+          "cookie-1-purpose": "Usado para distinguir usuários.",
+          "cookie-1-duration": "2 anos",
+          "cookie-1-type": "Desempenho",
+          
+          "cookie-2-purpose": "Usado para distinguir usuários.",
+          "cookie-2-duration": "24 horas",
+          "cookie-2-type": "Desempenho",
+          
+          "cookie-3-purpose": "Usado para limitar a taxa de solicitação. Se o Google Analytics for implementado através do Google Tag Manager, este cookie será chamado dc_gtm.",
+          "cookie-3-duration": "1 minuto",
+          "cookie-3-type": "Desempenho",
+          
+          "h2-4": "4. Cookies de Terceiros:",
+          "h2-4-p1": "Além de nossos próprios cookies, também podemos usar cookies de terceiros. Estes cookies são estabelecidos por um domínio diferente do nosso site. Por exemplo, utilizamos o Google Analytics para nos ajudar a analisar o uso do nosso site. Estes cookies de terceiros estão sujeitos às políticas de privacidade de seus respectivos provedores.",
+          
+          "h2-5": "5. Como você pode gerenciar os cookies?",
+          "h2-5-p1": "Você tem várias opções para gerenciar cookies:",
+          "h2-5-li-1-strong": "Configurações do Navegador:",
+          "h2-5-li-1": "A maioria dos navegadores da web permite que você controle os cookies através de suas configurações. Você pode bloquear todos os cookies, aceitar apenas cookies próprios ou excluir cookies existentes. Consulte a documentação do seu navegador para obter instruções sobre como gerenciar cookies. Aqui estão links para instruções para alguns navegadores comuns:",
+          "h2-5-li-2-strong": "Ferramentas de Consentimento de Cookies:",
+          "h2-5-li-2": "Implementamos ferramentas de gerenciamento de cookies para que você possa escolher quais categorias de cookies aceita ou rejeita.",
+          "h2-5-li-3-strong": "Ferramentas de Exclusão Voluntária (Opt-out):",
+          "h2-5-li-3": "Alguns provedores de cookies de terceiros oferecem ferramentas de exclusão voluntária que permitem evitar que eles coletem informações sobre você. Por exemplo, você pode se excluir do Google Analytics aqui:",
+          
+          "h2-6": "6. Consequências de Desabilitar os Cookies:",
+          "h2-6-p1": "Se você optar por desabilitar os cookies, é possível que algumas partes do nosso site não funcionem corretamente ou que sua experiência de usuário seja afetada.",
+          
+          "h2-7": "7. Alterações nesta Política de Cookies:",
+          "h2-7-p1": "Podemos atualizar esta política de cookies periodicamente. Notificaremos você sobre quaisquer alterações significativas publicando a nova política em nosso site. Recomendamos que você revise esta política periodicamente para estar ciente de quaisquer atualizações.",
+          
+          "h2-8": "8. Mais Informações:",
+          "h2-8-p1": "Se você tiver alguma dúvida sobre nossa política de cookies, pode entrar em contato conosco pelo e-mail manager@iguazu.guru."
+},
+"ModalInicio": {
+    "title": "Políticas de Privacidade e Cookies",
+    "description": "Este site utiliza cookies para melhorar sua experiência. Ao continuar navegando, você aceita nossa política de privacidade e o uso de cookies.",
+    "reject": "Recusar",
+    "accept": "Aceitar",
+    "legalInfo": "Ver Informação Legal Completa"
+},
+"PaginaLegal": {
+    "title": "Informação Legal",
+    "subtitle": "Política de Privacidade",
+    "preview1":"Informações sobre como coletamos, utilizamos e protegemos seus dados pessoais quando utiliza nossos serviços.",
+    "subtitle2": "Política de Cookies",
+    "preview2":"Informações sobre como utilizamos cookies e tecnologias semelhantes em nosso site.",
+    "subtitle3": "Termos e Condições",
+    "preview3":"Informações sobre os termos e condições gerais que regulam o uso dos nossos serviços.",
+    "botonHome": "Voltar ao Início"
+  },
+  "Aviso": {
+  "h1": "Aviso Legal",
+  "intro": "Este aviso legal regula o uso do site Iguazu Guru, que oferece informações turísticas sobre a área das Cataratas do Iguaçu e a Tríplice Fronteira entre Argentina, Brasil e Paraguai.",
+  
+  "h2-1": "1. Informações do Titular",
+  "h2-1-p1": "Iguazu Guru é uma empresa dedicada a fornecer informações turísticas sobre a área das Cataratas do Iguaçu e a Tríplice Fronteira. Estamos localizados em Ciudad del Este, Paraguai.",
+  
+  "h2-2": "2. Finalidade do Site",
+  "h2-2-p1": "Este site tem as seguintes finalidades:",
+  "h2-2-li-1": "Fornecer informações turísticas atualizadas sobre a área das Cataratas do Iguaçu.",
+  "h2-2-li-2": "Oferecer guias e dicas para visitantes da Tríplice Fronteira entre Argentina, Brasil e Paraguai.",
+  "h2-2-li-3": "Fornecer ferramentas úteis para turistas, como conversores de moeda e previsões meteorológicas.",
+  
+  "h2-3": "3. Termos de Uso",
+  "h2-3-p1": "O acesso a este site é gratuito. As informações fornecidas são apenas para fins informativos e não constituem aconselhamento profissional ou jurídico. Não nos responsabilizamos por decisões tomadas com base nas informações fornecidas neste site.",
+  
+  "h2-4": "4. Propriedade Intelectual",
+  "h2-4-p1": "Todos os conteúdos do site (textos, fotografias, gráficos, imagens, tecnologia, software, links, etc.) são propriedade do Iguazu Guru ou foram cedidos pelos seus legítimos proprietários. É proibida sua reprodução, distribuição ou modificação sem autorização expressa.",
+  
+  "h2-5": "5. Links para Terceiros",
+  "h2-5-p1": "Este site pode conter links para sites de terceiros. Não temos controle sobre o conteúdo de tais sites e não assumimos responsabilidade por quaisquer perdas ou danos que possam resultar do uso desses links.",
+  "h2-5-p2": "A inclusão destes links não implica recomendação, aprovação ou associação com seus operadores.",
+  
+  "h2-6": "6. Modificações",
+  "h2-6-p1": "Iguazu Guru se reserva o direito de modificar este aviso legal a qualquer momento.",
+  "h2-6-p2": "As alterações entrarão em vigor a partir do momento em que forem publicadas no site, sendo responsabilidade do usuário revisar periodicamente seu conteúdo.",
+  
+  "h2-7": "7. Contato",
+  "h2-7-p1": "Para qualquer questão relacionada a este aviso legal, você pode nos contatar através de:",
+  "h2-7-contact": "E-mail:"
+}
+}

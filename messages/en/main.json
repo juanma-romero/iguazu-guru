@@ -378,6 +378,180 @@
         ]
       }
     }
-  ]
+  ],
+  "footer": {
+    "boton1": "Weather",
+    "boton2": "Change",
+    "boton3": "Map"
+  },
   
+"legal": {
+      "h1": "Privacy Policy",
+      "h2-1": "1. Data Controller",
+      "h2-1-p1": "Name:",
+      "h2-1-p2": "Contact:",
+      "h2-1-p3": "We are responsible for the processing of personal data you provide to us.",
+      
+      "h2-2": "2. Data We Collect",
+      "h2-2-p1": "We collect the following types of personal data:",
+      "h2-2-li-1": "Browsing data: IP address, device type, browser, visited pages, time spent on site.",
+      
+      "h2-3": "3. Purposes of Processing",
+      "h2-3-p1": "We use the collected information for the following purposes:",
+      "h2-3-li-1-strong": "Marketing:",
+      "h2-3-li-1": "Analyzing the pages visited by users to understand their interests and provide relevant content and advertising.",
+      "h2-3-li-2-strong": "Service Improvement:",
+      "h2-3-li-2": "Using browsing data to identify areas for improvement on our website and optimize user experience.",
+      "h2-3-li-3-strong": "Statistics:",
+      "h2-3-li-3": "Generating aggregated statistical reports about website usage to evaluate its performance and plan future improvements.",
+      "h2-3-li-4-strong": "Legal Obligation:",
+      "h2-3-li-4": "Complying with applicable legal obligations.",
+      
+      "h2-4": "4. Legal Basis for Processing",
+      "h2-4-p1": "The legal basis for processing your personal data is consent. By visiting our website, you agree to the collection and use of your browsing data in accordance with this privacy policy.",
+      
+      "h2-5": "5. Data Recipients",
+      "h2-5-p1": "We share your data with the following recipients:",
+      "h2-5-li-1-strong": "Web analytics services:",
+      "h2-5-li-1": "We use web analytics service providers to analyze website traffic and understand how users interact with it. These providers may have access to your browsing data.",
+      
+      "h2-6": "6. International Data Transfers",
+      "h2-6-p1": "We do not perform international data transfers outside the European Economic Area (EEA).",
+      
+      "h2-7": "7. Data Retention Period",
+      "h2-7-p1": "We will retain contact data for marketing purposes for as long as necessary to fulfill the purposes described in this policy, or until you withdraw your consent. Once you withdraw your consent, we will delete your contact data from our systems.",
+      
+      "h2-8": "8. User Rights",
+      "h2-8-p1": "You have the following rights regarding your personal data:",
+      "h2-8-li-1-strong": "Right of access:",
+      "h2-8-li-1": "The right to obtain confirmation of whether we are processing your data and to access it.",
+      "h2-8-li-2-strong": "Right to rectification:",
+      "h2-8-li-2": "The right to correct inaccurate or incomplete data.",
+      "h2-8-li-3-strong": "Right to erasure (right to be forgotten):",
+      "h2-8-li-3": "The right to request the deletion of your data under certain circumstances.",
+      "h2-8-li-4-strong": "Right to restriction of processing:",
+      "h2-8-li-4": "The right to restrict the processing of your data under certain circumstances.",
+      "h2-8-li-5-strong": "Right to object:",
+      "h2-8-li-5": "The right to object to the processing of your data under certain circumstances.",
+      "h2-8-li-6-strong": "Right to withdraw consent:",
+      "h2-8-li-6": "The right to withdraw your consent at any time when processing is based on consent.",
+      "h2-8-p2": "You can exercise your rights by sending an email to manager@iguazu.guru.",
+      "h2-8-p3": "You also have the right to lodge a complaint with your local data protection authority if you believe we have violated your data protection rights.",
+      
+      "h2-9": "9. Security Measures",
+      "h2-9-p1": "We have implemented appropriate technical and organizational security measures to protect your personal data against unauthorized access, loss, alteration, or destruction.",
+      
+      "h2-10": "10. Privacy Policy Updates",
+      "h2-10-p1": "We reserve the right to modify this privacy policy at any time. Changes will be published on our website. We recommend that you review this policy periodically to stay informed of any updates."
+},
+    
+"cookies": {
+        "h1": "Iguazu Guru Cookie Policy",
+        "intro": "This cookie policy explains what cookies are, how we use them on our Iguazu Guru website (hereinafter, \"the website\"), and how you can manage them.",
+        
+        "h2-1": "1. What are cookies?",
+        "h2-1-p1": "Cookies are small text files that are stored on your computer or mobile device when you visit a website. Cookies are widely used to make websites work more efficiently, as well as to provide information to the site owners.",
+        
+        "h2-2": "2. How do we use cookies?",
+        "h2-2-p1": "We use cookies for the following reasons:",
+        "h2-2-li-1-strong": "Essential/necessary cookies:",
+        "h2-2-li-1": "These cookies are essential for you to browse the website and use its features, such as accessing secure areas of the site. Without these cookies, we could not provide certain services you request.",
+        "h2-2-li-2-strong": "Performance/analytics cookies:",
+        "h2-2-li-2": "These cookies collect information about how you use our website, for example, which pages you visit most often and if you receive error messages from web pages. This data helps us improve the functioning of our website. We use Google Analytics for this purpose. These cookies are usually anonymous and do not identify an individual user.",
+        "h2-2-li-3-strong": "Functionality cookies:",
+        "h2-2-li-3": "These cookies allow the website to remember choices you make (such as your language or the region you are in) and provide enhanced, more personalized features.",
+        "h2-2-li-4-strong": "Advertising/marketing cookies:",
+        "h2-2-li-4": "These cookies are used to show you ads that are more relevant to you and your interests. They are also used to limit the number of times you see an ad and to help measure the effectiveness of an advertising campaign.",
+        
+        "h2-3": "3. Types of Cookies We Use:",
+        "h2-3-p1": "Below is a list of the cookies we use on our website, along with their purpose and duration:",
+        "table-header-1": "Cookie",
+        "table-header-2": "Provider Name",
+        "table-header-3": "Purpose",
+        "table-header-4": "Duration",
+        "table-header-5": "Type",
+        
+        "cookie-1-purpose": "Used to distinguish users.",
+        "cookie-1-duration": "2 years",
+        "cookie-1-type": "Performance",
+        
+        "cookie-2-purpose": "Used to distinguish users.",
+        "cookie-2-duration": "24 hours",
+        "cookie-2-type": "Performance",
+        
+        "cookie-3-purpose": "Used to throttle request rate. If Google Analytics is implemented through Google Tag Manager, this cookie will be called dc_gtm.",
+        "cookie-3-duration": "1 minute",
+        "cookie-3-type": "Performance",
+        
+        "h2-4": "4. Third-Party Cookies:",
+        "h2-4-p1": "In addition to our own cookies, we may also use third-party cookies. These cookies are set by a different domain than our website. For example, we use Google Analytics to help us analyze the use of our website. These third-party cookies are subject to the privacy policies of their respective providers.",
+        
+        "h2-5": "5. How can you manage cookies?",
+        "h2-5-p1": "You have several options for managing cookies:",
+        "h2-5-li-1-strong": "Browser Settings:",
+        "h2-5-li-1": "Most web browsers allow you to control cookies through their settings. You can block all cookies, accept only first-party cookies, or delete existing cookies. Check your browser documentation for instructions on how to manage cookies. Here are links to instructions for some common browsers:",
+        "h2-5-li-2-strong": "Cookie Consent Tools:",
+        "h2-5-li-2": "We implement cookie management tools so that you can choose which categories of cookies you accept or reject.",
+        "h2-5-li-3-strong": "Opt-out Tools:",
+        "h2-5-li-3": "Some third-party cookie providers offer opt-out tools that allow you to prevent them from collecting information about you. For example, you can opt out of Google Analytics here:",
+        
+        "h2-6": "6. Consequences of Disabling Cookies:",
+        "h2-6-p1": "If you choose to disable cookies, some parts of our website may not work properly, or your user experience may be affected.",
+        
+        "h2-7": "7. Changes to this Cookie Policy:",
+        "h2-7-p1": "We may update this cookie policy periodically. We will notify you of any significant changes by posting the new policy on our website. We recommend that you review this policy periodically to stay informed of any updates.",
+        
+        "h2-8": "8. More Information:",
+        "h2-8-p1": "If you have any questions about our cookie policy, you can contact us at manager@iguazu.guru."
+},
+"ModalInicio": {
+    "title": "Privacy and Cookie Policies",
+    "description": "This site uses cookies to enhance your experience. By continuing to browse, you accept our privacy policy and the use of cookies.",
+    "reject": "Reject",
+    "accept": "Accept",
+    "legalInfo": "View Complete Legal Information"
+},
+
+"PaginaLegal": {
+    "title": "Legal Information",
+    "subtitle": "Privacy Policy",
+    "preview1":"Information about how we collect, use, and protect your personal data when you use our services.",
+    "subtitle2": "Cookie Policy",
+    "preview2":"Information about how we use cookies and similar technologies on our website.",
+    "subtitle3": "Terms and Conditions",
+    "preview3":"Information about the general terms and conditions that govern the use of our services.",
+    "botonHome": "Back to Home"
+  },
+  "Aviso": {
+  "h1": "Legal Notice",
+  "intro": "This legal notice regulates the use of the Iguazu Guru website, which offers tourist information about the Iguazu Falls area and the Triple Border between Argentina, Brazil and Paraguay.",
+  
+  "h2-1": "1. Owner Information",
+  "h2-1-p1": "Iguazu Guru is a company dedicated to providing tourist information about the Iguazu Falls area and the Triple Border. We are located in Ciudad del Este, Paraguay.",
+  
+  "h2-2": "2. Purpose of the Website",
+  "h2-2-p1": "This website has the following purposes:",
+  "h2-2-li-1": "To provide updated tourist information about the Iguazu Falls area.",
+  "h2-2-li-2": "To offer guides and tips for visitors to the Triple Border between Argentina, Brazil and Paraguay.",
+  "h2-2-li-3": "To provide useful tools for tourists such as currency converters and weather forecasts.",
+  
+  "h2-3": "3. Terms of Use",
+  "h2-3-p1": "Access to this website is free. The information provided is for informational purposes only and does not constitute professional or legal advice. We are not responsible for decisions made based on the information provided on this site.",
+  
+  "h2-4": "4. Intellectual Property",
+  "h2-4-p1": "All contents of the website (texts, photographs, graphics, images, technology, software, links, etc.) are the property of Iguazu Guru or have been assigned by their legitimate owners. Reproduction, distribution, or modification without express authorization is prohibited.",
+  
+  "h2-5": "5. Third-Party Links",
+  "h2-5-p1": "This site may contain links to third-party websites. We have no control over the content of such sites and assume no responsibility for any losses or damages that may result from the use of these links.",
+  "h2-5-p2": "The inclusion of these links does not imply recommendation, approval, or association with their operators.",
+  
+  "h2-6": "6. Modifications",
+  "h2-6-p1": "Iguazu Guru reserves the right to modify this legal notice at any time.",
+  "h2-6-p2": "Changes will take effect from the moment they are published on the website, and it is the user's responsibility to periodically review its content.",
+  
+  "h2-7": "7. Contact",
+  "h2-7-p1": "For any questions related to this legal notice, you can contact us through:",
+  "h2-7-contact": "Email:"
+}
+    
 }
