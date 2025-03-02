@@ -63,6 +63,7 @@ const HotelItem: React.FC<HotelProps> = ({ hotel }) => {
                         alt={`Photo ${key}`}
                         className="w-72 h-auto object-cover m-2 rounded-lg"
                         width={200}
+                        height={200}
                     />;
                 })}
             </div>
