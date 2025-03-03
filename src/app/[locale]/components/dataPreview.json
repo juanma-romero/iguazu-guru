@@ -3,20 +3,21 @@
       "dondeIr": [
         {
           "name": "Cataratas del Iguazú",
-          "image": "/attractions/puerto-cataratas.jpg",
+          "image": "/attractions/cataArriba1100.jpg",
           "description": "Una de las maravillas naturales del mundo con impresionantes cascadas.",
           "price": {
             "value": 45000,
+            "residents": 15000,
             "currency": "ARS",
-            "notes": "Tarifa básica para extranjeros. Residentes argentinos pagan menos."
+            "notes": "El segundo día consecutivo de visita, da derecho al 50% de descuento."
           },
-          "openingHours": "8:00 - 18:00",
+          "openingHours": "7:00 - 18:00",
           "location": "Parque Nacional Iguazú",
           "rating": 5
         },
         {
           "name": "Hito Tres Fronteras",
-          "image": "/attractions/puerto-hito.jpg",
+          "image": "/attractions/hitoArg.jpg",
           "description": "Punto donde se encuentran las fronteras de Argentina, Brasil y Paraguay.",
           "price": {
             "value": 0,
@@ -31,38 +32,38 @@
       "alojamiento": [
         {
           "name": "Gran Meliá Iguazú",
-          "image": "/hotels/melia-iguazu.jpg",
+          "image": "/attractions/melia.avif",
           "description": "Lujoso hotel con vistas a las Cataratas del Iguazú.",
           "price": {
-            "value": 95000,
-            "currency": "ARS",
+            "value": 613,
+            "currency": "USD",
             "notes": "Precio por noche, habitación estándar"
           },
-          "amenities": ["Piscina", "Spa", "Wi-Fi", "Restaurante"],
+          "amenities": ["Gimnasio", "Spa", "Piscina infinita", "Restaurante"],
           "location": "Parque Nacional Iguazú",
           "rating": 5
         },
         {
-          "name": "Loi Suites Iguazú Hotel",
-          "image": "/hotels/loisuites-iguazu.jpg",
-          "description": "Resort de lujo rodeado de la selva subtropical.",
+          "name": "O2 Hotel Iguazú",
+          "image": "/images/hotels/arg/o2Ext1.jpg",
+          "description": "Stylish rooms in a polished hotel with a restaurant & a rooftop pool, plus a spa, a gym & a bar.",
           "price": {
-            "value": 75000,
-            "currency": "ARS",
+            "value": 149,
+            "currency": "USD",
             "notes": "Precio por noche, habitación estándar"
           },
-          "amenities": ["Piscinas", "Spa", "Restaurantes", "Bar"],
-          "location": "Selva Iryapú, Puerto Iguazú",
+          "amenities": ["Gimnasio", "Piscina", "Spa", "Desayuno Buffet"],
+          "location": "Paraguay 546, N3370 Puerto Iguazú, Misiones, Argentina",
           "rating": 4.5
         }
       ],
       "gastronomia": [
         {
           "name": "La Rueda 1975",
-          "image": "/restaurants/la-rueda.jpg",
+          "image": "/attractions/laRueda1975.jpg",
           "description": "Restaurante tradicional argentino con excelentes carnes y pescados.",
           "price": {
-            "value": 15000,
+            "value": 20000,
             "currency": "ARS",
             "notes": "Precio promedio por persona"
           },
@@ -72,10 +73,10 @@
         },
         {
           "name": "Aqva Restaurant",
-          "image": "/restaurants/aqva.jpg",
+          "image": "/attractions/aqva.jpg",
           "description": "Cocina contemporánea con productos locales y vistas al río.",
           "price": {
-            "value": 12000,
+            "value": 20000,
             "currency": "ARS",
             "notes": "Precio promedio por persona"
           },
@@ -89,10 +90,10 @@
       "dondeIr": [
         {
           "name": "Cataratas do Iguaçu",
-          "image": "/attractions/foz-cataratas.jpg",
+          "image": "/arribaBrasil.avif",
           "description": "El lado brasileño ofrece vistas panorámicas de las cataratas.",
           "price": {
-            "value": 90,
+            "value": 117,
             "currency": "BRL",
             "notes": "Precio para adultos extranjeros"
           },
@@ -102,12 +103,13 @@
         },
         {
           "name": "Parque das Aves",
-          "image": "/attractions/parque-aves.jpg",
+          "image": "/attractions/parque-640w.webp",
           "description": "Santuario natural con más de 150 especies de aves.",
           "price": {
-            "value": 65,
+            "value": 90,
             "currency": "BRL",
-            "notes": "Entrada general"
+            "notes": "Entrada general",
+            "residents": 45
           },
           "openingHours": "8:30 - 16:30",
           "location": "Av. das Cataratas, Foz do Iguaçu",
@@ -117,11 +119,11 @@
       "alojamiento": [
         {
           "name": "Belmond Hotel das Cataratas",
-          "image": "/hotels/belmond-cataratas.jpg",
+          "image": "/attractions/belmond.webp",
           "description": "Hotel de lujo dentro del Parque Nacional, con acceso exclusivo a las cataratas.",
           "price": {
-            "value": 2000,
-            "currency": "BRL",
+            "value": 760,
+            "currency": "USD",
             "notes": "Precio por noche, habitación estándar"
           },
           "amenities": ["Piscina", "Spa", "Restaurante gourmet", "Acceso VIP a las cataratas"],
@@ -130,11 +132,11 @@
         },
         {
           "name": "Wish Foz do Iguaçu",
-          "image": "/hotels/wish-foz.jpg",
+          "image": "/attractions/iguassu-resort-jacuzzi.jpg",
           "description": "Hotel moderno con excelentes instalaciones y servicio.",
           "price": {
-            "value": 650,
-            "currency": "BRL",
+            "value": 167,
+            "currency": "USD",
             "notes": "Precio por noche, habitación estándar"
           },
           "amenities": ["Piscina", "Gimnasio", "Restaurante", "Wi-Fi"],
@@ -145,7 +147,7 @@
       "gastronomia": [
         {
           "name": "Restaurante Porto Canoas",
-          "image": "/restaurants/porto-canoas.jpg",
+          "image": "/attractions/portoCanoas.png",
           "description": "Restaurante dentro del Parque Nacional con vistas espectaculares.",
           "price": {
             "value": 120,
@@ -158,7 +160,7 @@
         },
         {
           "name": "Churrascaria do Gaúcho",
-          "image": "/restaurants/churrascaria-gaucho.jpg", 
+          "image": "/attractions/doGaucho.jpg", 
           "description": "Auténtica churrascaria brasileña con carnes a la parrilla.",
           "price": {
             "value": 95,
