@@ -5,7 +5,7 @@ import { useRouter, usePathname } from 'next/navigation';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
-// Import the data
+// Import the base data
 import attractionData from './dataPreview.json';
 
 type SectionType = 'dondeIr' | 'alojamiento' | 'gastronomia';
@@ -21,7 +21,7 @@ interface AttractionItem {
     notes: string;
   };
   openingHours?: string;
-  location: string;
+  location: string | string[];
   rating: number;
   amenities?: string[];
   cuisine?: string;
@@ -67,6 +67,19 @@ export default function AttractionPreview({
     router.push(`/${locale}/${cityKey}`);
   };
   
+  // Helper function to get translated content
+  const getTranslatedContent = (itemIndex: number, field: string) => {
+    const translationKey = `${cityKey}.${currentSection}.${itemIndex}.${field}`;
+    
+    try {
+      // Try to get the translation, fall back to original data if not found
+      return t(translationKey);
+    } catch (error) {
+      // If translation key doesn't exist, return null so we can use the original data
+      return null;
+    }
+  };
+  
   // Render star rating
   const renderStars = (rating: number) => {
     return (
@@ -86,8 +99,12 @@ export default function AttractionPreview({
   };
   
   // Format price with currency
-  const formatPrice = (price: { value?: number, currency: string, notes: string }) => {
-    if (!price.value) return price.notes;
+  const formatPrice = (price: { value?: number, currency: string, notes: string }, itemIndex: number) => {
+    if (!price.value) {
+      // Try to get translated notes
+      const translatedNotes = getTranslatedContent(itemIndex, 'price.notes');
+      return translatedNotes || price.notes;
+    }
     
     // Format based on currency
     let formattedPrice = '';
@@ -119,77 +136,93 @@ export default function AttractionPreview({
         
         {attractions.length > 0 ? (
           <div className="space-y-6">
-            {attractions.map((item, index) => (
-              <div key={index} className="bg-gray-800 rounded-lg p-3">
-                <Image 
-                  src={item.image || '/placeholder.jpg'}
-                  width={280}
-                  height={160}
-                  alt={item.name}
-                  className="mb-2 rounded-md w-full h-40 object-cover"
-                />
-                
-                <h4 className="font-semibold text-lg mb-1">{item.name}</h4>
-                {renderStars(item.rating)}
-                
-                <p className="text-gray-300 text-sm my-2">{item.description}</p>
-                
-                <div className="mt-2 text-xs text-gray-400">
-                  <div className="flex items-center mb-1">
-                    <svg className="w-3 h-3 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    {item.location}
-                  </div>
+            {attractions.map((item, index) => {
+              // Try to get translated values for key fields
+              const translatedDescription = getTranslatedContent(index, 'description');
+              const translatedName = getTranslatedContent(index, 'name');
+              const translatedCuisine = item.cuisine ? getTranslatedContent(index, 'cuisine') : null;
+              
+              // For amenities, try to get each one translated or use original
+              let translatedAmenities: string[] | undefined;
+              if (item.amenities) {
+                translatedAmenities = item.amenities.map((amenity, amenityIndex) => {
+                  const translatedAmenity = getTranslatedContent(index, `amenities.${amenityIndex}`);
+                  return translatedAmenity || amenity;
+                });
+              }
+              
+              return (
+                <div key={index} className="bg-gray-800 rounded-lg p-3">
+                  <Image 
+                    src={item.image || '/placeholder.jpg'}
+                    width={280}
+                    height={160}
+                    alt={translatedName || item.name}
+                    className="mb-2 rounded-md w-full h-40 object-cover"
+                  />
                   
-                  {item.openingHours && (
+                  <h4 className="font-semibold text-lg mb-1">{translatedName || item.name}</h4>
+                  {renderStars(item.rating)}
+                  
+                  <p className="text-gray-300 text-sm my-2">{translatedDescription || item.description}</p>
+                  
+                  <div className="mt-2 text-xs text-gray-400">
                     <div className="flex items-center mb-1">
                       <svg className="w-3 h-3 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                       </svg>
-                      {item.openingHours}
+                      {Array.isArray(item.location) ? item.location.join(', ') : item.location}
+                    </div>
+                    
+                    {item.openingHours && (
+                      <div className="flex items-center mb-1">
+                        <svg className="w-3 h-3 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        {item.openingHours}
+                      </div>
+                    )}
+                    
+                    <div className="flex items-center">
+                      <svg className="w-3 h-3 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      {formatPrice(item.price, index)}
+                    </div>
+                  </div>
+                  
+                  {/* Conditional section for amenities or cuisine */}
+                  {translatedAmenities && translatedAmenities.length > 0 && (
+                    <div className="mt-2 flex flex-wrap gap-1">
+                      {translatedAmenities.slice(0, 3).map((amenity, i) => (
+                        <span key={i} className="bg-gray-700 text-xs px-2 py-1 rounded-full">
+                          {amenity}
+                        </span>
+                      ))}
+                      {translatedAmenities.length > 3 && (
+                        <span className="bg-gray-700 text-xs px-2 py-1 rounded-full">
+                          +{translatedAmenities.length - 3}
+                        </span>
+                      )}
                     </div>
                   )}
                   
-                  <div className="flex items-center">
-                    <svg className="w-3 h-3 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    {formatPrice(item.price)}
-                  </div>
+                  {item.cuisine && (
+                    <div className="mt-2 bg-gray-700 text-xs px-2 py-1 rounded-full inline-block">
+                      {translatedCuisine || item.cuisine}
+                    </div>
+                  )}
                 </div>
-                
-                {/* Conditional section for amenities or cuisine */}
-                {item.amenities && item.amenities.length > 0 && (
-                  <div className="mt-2 flex flex-wrap gap-1">
-                    {item.amenities.slice(0, 3).map((amenity, i) => (
-                      <span key={i} className="bg-gray-700 text-xs px-2 py-1 rounded-full">
-                        {amenity}
-                      </span>
-                    ))}
-                    {item.amenities.length > 3 && (
-                      <span className="bg-gray-700 text-xs px-2 py-1 rounded-full">
-                        +{item.amenities.length - 3}
-                      </span>
-                    )}
-                  </div>
-                )}
-                
-                {item.cuisine && (
-                  <div className="mt-2 bg-gray-700 text-xs px-2 py-1 rounded-full inline-block">
-                    {item.cuisine}
-                  </div>
-                )}
-              </div>
-            ))}
+              );
+            })}
           </div>
         ) : (
           <div className="text-gray-400 text-center py-12">
             <svg className="mx-auto h-12 w-12 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            <p>Sin contenido para esta sección</p>
+            <p>{t('Common.noContent') || 'Sin contenido para esta sección'}</p>
           </div>
         )}
       </div>

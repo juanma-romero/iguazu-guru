@@ -1,7 +1,7 @@
 {
     "puerto": {
-      "dondeIr": [
-        {
+      "dondeIr": {
+        "0":{
           "name": "Cataratas del Iguazú",
           "image": "/attractions/cataArriba1100.jpg",
           "description": "Una de las maravillas naturales del mundo con impresionantes cascadas.",
@@ -15,7 +15,7 @@
           "location": "Parque Nacional Iguazú",
           "rating": 5
         },
-        {
+        "1": {
           "name": "Hito Tres Fronteras",
           "image": "/attractions/hitoArg.jpg",
           "description": "Punto donde se encuentran las fronteras de Argentina, Brasil y Paraguay.",
@@ -28,9 +28,9 @@
           "location": "Puerto Iguazú",
           "rating": 4
         }
-      ],
-      "alojamiento": [
-        {
+      },
+      "alojamiento": {
+        "0": {
           "name": "Gran Meliá Iguazú",
           "image": "/attractions/melia.avif",
           "description": "Lujoso hotel con vistas a las Cataratas del Iguazú.",
@@ -43,10 +43,11 @@
           "location": "Parque Nacional Iguazú",
           "rating": 5
         },
+        "1":
         {
           "name": "O2 Hotel Iguazú",
           "image": "/images/hotels/arg/o2Ext1.jpg",
-          "description": "Stylish rooms in a polished hotel with a restaurant & a rooftop pool, plus a spa, a gym & a bar.",
+          "description": "Habitaciones elegantes en un hotel sofisticado con un restaurante y una piscina en la azotea, además de un spa, un gimnasio y un bar.",
           "price": {
             "value": 149,
             "currency": "USD",
@@ -56,9 +57,9 @@
           "location": "Paraguay 546, N3370 Puerto Iguazú, Misiones, Argentina",
           "rating": 4.5
         }
-      ],
-      "gastronomia": [
-        {
+    },
+      "gastronomia": {
+        "0": {
           "name": "La Rueda 1975",
           "image": "/attractions/laRueda1975.jpg",
           "description": "Restaurante tradicional argentino con excelentes carnes y pescados.",
@@ -71,7 +72,7 @@
           "location": "Centro de Puerto Iguazú",
           "rating": 4.7
         },
-        {
+        "1": {
           "name": "Aqva Restaurant",
           "image": "/attractions/aqva.jpg",
           "description": "Cocina contemporánea con productos locales y vistas al río.",
@@ -84,11 +85,11 @@
           "location": "Costanera, Puerto Iguazú",
           "rating": 4.5
         }
-      ]
+    }
     },
     "foz": {
-      "dondeIr": [
-        {
+      "dondeIr": {
+        "0":{
           "name": "Cataratas do Iguaçu",
           "image": "/arribaBrasil.avif",
           "description": "El lado brasileño ofrece vistas panorámicas de las cataratas.",
@@ -101,7 +102,7 @@
           "location": "Parque Nacional do Iguaçu",
           "rating": 5
         },
-        {
+        "1": {
           "name": "Parque das Aves",
           "image": "/attractions/parque-640w.webp",
           "description": "Santuario natural con más de 150 especies de aves.",
@@ -115,9 +116,9 @@
           "location": "Av. das Cataratas, Foz do Iguaçu",
           "rating": 4.8
         }
-      ],
-      "alojamiento": [
-        {
+    },
+      "alojamiento": {
+        "0": {
           "name": "Belmond Hotel das Cataratas",
           "image": "/attractions/belmond.webp",
           "description": "Hotel de lujo dentro del Parque Nacional, con acceso exclusivo a las cataratas.",
@@ -130,7 +131,7 @@
           "location": "Dentro del Parque Nacional do Iguaçu",
           "rating": 4.9
         },
-        {
+        "1": {
           "name": "Wish Foz do Iguaçu",
           "image": "/attractions/iguassu-resort-jacuzzi.jpg",
           "description": "Hotel moderno con excelentes instalaciones y servicio.",
@@ -143,8 +144,9 @@
           "location": "Centro de Foz do Iguaçu",
           "rating": 4.6
         }
-      ],
-      "gastronomia": [
+    },
+      "gastronomia": {
+        "0":
         {
           "name": "Restaurante Porto Canoas",
           "image": "/attractions/portoCanoas.png",
@@ -158,9 +160,10 @@
           "location": "Parque Nacional do Iguaçu",
           "rating": 4.5
         },
+        "1":
         {
           "name": "Churrascaria do Gaúcho",
-          "image": "/attractions/doGaucho.jpg", 
+          "image": "/attractions/doGaucho.jpg",
           "description": "Auténtica churrascaria brasileña con carnes a la parrilla.",
           "price": {
             "value": 95,
@@ -171,10 +174,11 @@
           "location": "Centro de Foz do Iguaçu",
           "rating": 4.6
         }
-      ]
+    }
     },
     "cde": {
-      "dondeIr": [
+      "dondeIr": {
+        "0":
         {
           "name": "Saltos del Monday",
           "image": "/attractions/monday.jpg",
@@ -189,10 +193,11 @@
           "location": "Presidente Franco, cerca de Ciudad del Este",
           "rating": 4.3
         },
+        "1":
         {
           "name": "Shopping Paris",
           "image": "/attractions/shoParis.jpg",
-          "description": "Contemporary shopping center with 4 floors of shops & restaurants, plus a high-tech, game arcade.",
+          "description": "Centro comercial contemporáneo con 4 pisos de tiendas y restaurantes, además de una sala de juegos de alta tecnología.",
           "price": {
             "value": 0,
             "currency": "PYG",
@@ -202,8 +207,9 @@
           "location": "Centro de Ciudad del Este",
           "rating": 4
         }
-      ],
-      "alojamiento": [
+    },
+      "alojamiento": {
+        "0":
         {
           "name": "Río Hotel by Bourbon Ciudad del Este",
           "image": "/attractions/hotelBourbonCDE.jpg",
@@ -217,6 +223,7 @@
           "location": "Centro de Ciudad del Este",
           "rating": 4.4
         },
+        "1":
         {
           "name": "Howard Johnson Ciudad del Este",
           "image": "/attractions/howardCDE.avif",
@@ -230,8 +237,9 @@
           "location": "Centro de Ciudad del Este",
           "rating": 4.2
         }
-      ],
-      "gastronomia": [
+    },
+      "gastronomia": {
+        "0":
         {
           "name": "Sushi Hokkai CDE",
           "image": "/attractions/hakkoi.jpg",
@@ -245,6 +253,7 @@
           "location": ["Shopping Mona Lisa","Capitão Bar"],
           "rating": 4.3
         },
+        "1":
         {
           "name": "Beirute Restaurante Libanes",
           "image": "/attractions/beirut.jpg",
@@ -258,6 +267,9 @@
           "location": "F9MQ+GV8, Abay, Cd. del Este 100135",
           "rating": 4.5
         }
-      ]
     }
+    },
+    "Common": {
+    "noContent": "Sin contenido para esta sección"
+  }
   }
