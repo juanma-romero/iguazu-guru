@@ -11,17 +11,17 @@ function Footer() {
             <nav className="py-4">
                 <div className="flex justify-around text-sm text-gray-400">
                 {/* clima */}
-                <div>
+                <div className="flex flex-col items-center">
                     <ModalClima />
                     <p>{t('boton1')}</p>
                 </div>
                 {/* cotizacion */}
-                <div>
+                <div className="flex flex-col items-center">
                 <ModalExchange />
                 <p>{t('boton2')}</p>
                 </div>
                 {/* ubicacion */}
-                <div>
+                <div className="flex flex-col items-center">
                 <ModalMapa />
                 <p>{t('boton3')}</p>
                 </div>

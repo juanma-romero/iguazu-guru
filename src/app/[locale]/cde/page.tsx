@@ -37,7 +37,7 @@ const VerticalTabItem = ({
       </div>
     </div>
   )
-};
+}
 
 const CdePage = () => {
   
