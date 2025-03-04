@@ -91,7 +91,7 @@
     "dondeIr": {
       "0":{
         "name": "Cataratas do Iguaçu",
-        "image": "/arribaBrasil.avif",
+        "image": "/arribaBrasil.webp",
         "description": "The Brazilian side offers panoramic views of the falls.",
         "price": {
           "value": 117,
@@ -255,7 +255,7 @@
       },
       "1":
       {
-        "name": "Beirute Restaurante Libanes",
+        "name": "Beirut Restaurante Libanes",
         "image": "/attractions/beirut.jpg",
         "description": "An explosion of flavors that will transport you to the Middle East.",
         "price": {

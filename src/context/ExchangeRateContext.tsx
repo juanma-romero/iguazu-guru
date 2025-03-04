@@ -1,16 +1,31 @@
 'use client'
 import React, { createContext, useContext, useState, useEffect } from 'react';
-
-const ExchangeRateContext = createContext(null);
-
 import { ReactNode } from 'react';
+
+// Definir la interfaz para los datos de tasas de cambio
+interface ExchangeRateData {
+  result: string;
+  documentation: string;
+  terms_of_use: string;
+  time_last_update_unix: number;
+  time_last_update_utc: string;
+  time_next_update_unix: number;
+  time_next_update_utc: string;
+  base_code: string;
+  conversion_rates: {
+    [currencyCode: string]: number;
+  };
+}
+
+// Crear el contexto con un tipo apropiado (ExchangeRateData o null)
+const ExchangeRateContext = createContext<ExchangeRateData | null>(null);
 
 interface ExchangeRateProviderProps {
   children: ReactNode;
 }
 
 export const ExchangeRateProvider = ({ children }: ExchangeRateProviderProps) => {
-  const [exchangeRate, setExchangeRate] = useState(null);
+  const [exchangeRate, setExchangeRate] = useState<ExchangeRateData | null>(null);
 
   useEffect(() => {
     const fetchExchangeRate = async () => {
@@ -19,7 +34,7 @@ export const ExchangeRateProvider = ({ children }: ExchangeRateProviderProps) =>
         if (!response.ok) {
           throw new Error(`Response status: ${response.status}`);
         }
-        const json = await response.json();
+        const json: ExchangeRateData = await response.json();
         setExchangeRate(json);
       } catch (error) {
         console.error('Error fetching exchange rate:', error);

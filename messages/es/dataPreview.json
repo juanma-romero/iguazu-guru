@@ -91,7 +91,7 @@
       "dondeIr": {
         "0":{
           "name": "Cataratas do Iguaçu",
-          "image": "/arribaBrasil.avif",
+          "image": "/arribaBrasil.webp",
           "description": "El lado brasileño ofrece vistas panorámicas de las cataratas.",
           "price": {
             "value": 117,
@@ -178,8 +178,7 @@
     },
     "cde": {
       "dondeIr": {
-        "0":
-        {
+        "0": {
           "name": "Saltos del Monday",
           "image": "/attractions/monday.jpg",
           "description": "Impresionantes cataratas rodeadas de exuberante vegetación.",
@@ -193,8 +192,7 @@
           "location": "Presidente Franco, cerca de Ciudad del Este",
           "rating": 4.3
         },
-        "1":
-        {
+        "1": {
           "name": "Shopping Paris",
           "image": "/attractions/shoParis.jpg",
           "description": "Centro comercial contemporáneo con 4 pisos de tiendas y restaurantes, además de una sala de juegos de alta tecnología.",
@@ -209,8 +207,7 @@
         }
     },
       "alojamiento": {
-        "0":
-        {
+        "0": {
           "name": "Río Hotel by Bourbon Ciudad del Este",
           "image": "/attractions/hotelBourbonCDE.jpg",
           "description": "Moderno hotel de negocios con excelente ubicación.",
@@ -223,8 +220,7 @@
           "location": "Centro de Ciudad del Este",
           "rating": 4.4
         },
-        "1":
-        {
+        "1": {
           "name": "Howard Johnson Ciudad del Este",
           "image": "/attractions/howardCDE.avif",
           "description": "Hotel confortable ideal para viajeros de negocios y turistas.",

@@ -4,6 +4,8 @@ import { useTranslations } from 'next-intl';
 import { useRouter, usePathname } from 'next/navigation';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import { useCurrencyContext } from '../../../context/CurrencyContext';
+import { useExchangeRate } from '../../../context/ExchangeRateContext';
 
 // Import the base data
 import attractionData from './dataPreview.json';
@@ -42,6 +44,10 @@ export default function AttractionPreview({
   const locale = pathname.split('/')[1]; // Extract locale from pathname
   const [attractions, setAttractions] = useState<AttractionItem[]>([]);
   
+  // Get currency and exchange rate contexts
+  const { selectedCurrency } = useCurrencyContext();
+  const exchangeRateData = useExchangeRate();
+  
   // Load attractions data when component mounts or dependencies change
   useEffect(() => {
     try {
@@ -67,17 +73,135 @@ export default function AttractionPreview({
     router.push(`/${locale}/${cityKey}`);
   };
   
-  // Helper function to get translated content
+  // Helper function to get translated content safely, without throwing errors
   const getTranslatedContent = (itemIndex: number, field: string) => {
-    const translationKey = `${cityKey}.${currentSection}.${itemIndex}.${field}`;
-    
     try {
-      // Try to get the translation, fall back to original data if not found
-      return t(translationKey);
+      // Skip translation attempts for fields that don't apply to the current section
+      if ((currentSection === 'gastronomia' && field.startsWith('amenities')) ||
+          (currentSection === 'alojamiento' && field === 'cuisine') ||
+          (currentSection === 'dondeIr' && (field === 'cuisine' || field.startsWith('amenities')))) {
+        return null;
+      }
+      
+      const translationKey = `${cityKey}.${currentSection}.${itemIndex}.${field}`;
+      
+      // First check if the translation exists to avoid throwing errors
+      try {
+        const translation = t(translationKey);
+        return translation !== translationKey ? translation : null;
+      } catch (error) {
+        return null;
+      }
     } catch (error) {
-      // If translation key doesn't exist, return null so we can use the original data
       return null;
     }
+  };
+  
+  // Convert currency based on exchange rates
+  const convertCurrency = (amount: number, fromCurrency: string, toCurrency: string): number | null => {
+    if (!exchangeRateData || !exchangeRateData.conversion_rates) {
+      return null; // Exchange rates not loaded yet
+    }
+
+    try {
+      const rates = exchangeRateData.conversion_rates;
+      
+      // If currencies are the same, no conversion needed
+      if (fromCurrency === toCurrency) {
+        return amount;
+      }
+      
+      // First convert to the base currency (BRL in this case)
+      let amountInBaseCurrency;
+      
+      if (fromCurrency === exchangeRateData.base_code) {
+        amountInBaseCurrency = amount; // Already in base currency
+      } else {
+        // Convert from source currency to base currency
+        const rateFromSourceToBase = 1 / rates[fromCurrency];
+        amountInBaseCurrency = amount * rateFromSourceToBase;
+      }
+      
+      // Then convert from base to target currency
+      if (toCurrency === exchangeRateData.base_code) {
+        return amountInBaseCurrency; // Already converted to base
+      } else {
+        const rateFromBaseToTarget = rates[toCurrency];
+        return amountInBaseCurrency * rateFromBaseToTarget;
+      }
+    } catch (error) {
+      console.error('Error converting currency:', error);
+      return null;
+    }
+  };
+  
+  // Format price with currency symbol and notation
+  const formatCurrencyDisplay = (amount: number, currencyCode: string): string => {
+    try {
+      // Define formatting for different currencies
+      const formatOptions: { [key: string]: Intl.NumberFormatOptions } = {
+        USD: { style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0 },
+        BRL: { style: 'currency', currency: 'BRL', minimumFractionDigits: 0, maximumFractionDigits: 0 },
+        ARS: { style: 'currency', currency: 'ARS', minimumFractionDigits: 0, maximumFractionDigits: 0 },
+        PYG: { style: 'currency', currency: 'PYG', minimumFractionDigits: 0, maximumFractionDigits: 0 },
+        EUR: { style: 'currency', currency: 'EUR', minimumFractionDigits: 0, maximumFractionDigits: 0 },
+        UYU: { style: 'currency', currency: 'UYU', minimumFractionDigits: 0, maximumFractionDigits: 0 },
+        CLP: { style: 'currency', currency: 'CLP', minimumFractionDigits: 0, maximumFractionDigits: 0 },
+        PEN: { style: 'currency', currency: 'PEN', minimumFractionDigits: 0, maximumFractionDigits: 0 },
+        COP: { style: 'currency', currency: 'COP', minimumFractionDigits: 0, maximumFractionDigits: 0 }
+      };
+      
+      // Get appropriate locale for the currency
+      const localeMap: { [key: string]: string } = {
+        USD: 'en-US',
+        BRL: 'pt-BR',
+        ARS: 'es-AR',
+        PYG: 'es-PY',
+        EUR: 'de-DE',
+        UYU: 'es-UY',
+        CLP: 'es-CL',
+        PEN: 'es-PE',
+        COP: 'es-CO'
+      };
+      
+      // Use the locale and options to format the amount
+      const locale = localeMap[currencyCode] || 'en-US';
+      const options = formatOptions[currencyCode] || { style: 'currency', currency: currencyCode };
+      
+      return new Intl.NumberFormat(locale, options).format(amount);
+    } catch (error) {
+      console.error('Error formatting currency:', error);
+      return `${amount} ${currencyCode}`; // Fallback format
+    }
+  };
+  
+  // Format price with all necessary logic
+  const formatPrice = (price: { value?: number, currency: string, notes: string }, itemIndex: number) => {
+    if (!price) {
+      return 'Price not available';
+    }
+    
+    // If no value, show notes
+    if (!price.value) {
+      // Try to get translated notes if they exist
+      const translatedNotes = price.notes ? getTranslatedContent(itemIndex, 'price.notes') : null;
+      return translatedNotes || price.notes || 'Price not available';
+    }
+    
+    // If we have a value, try to convert and format it
+    const sourceCurrency = price.currency || 'USD';
+    const targetCurrency = selectedCurrency;
+    
+    // Try to convert the currency
+    const convertedAmount = convertCurrency(price.value, sourceCurrency, targetCurrency);
+    
+    if (convertedAmount === null) {
+      // Conversion failed, show original price
+      return formatCurrencyDisplay(price.value, sourceCurrency);
+    }
+    
+    // Format the converted price with the target currency
+    return formatCurrencyDisplay(convertedAmount, targetCurrency);
   };
   
   // Render star rating
@@ -98,36 +222,6 @@ export default function AttractionPreview({
     );
   };
   
-  // Format price with currency
-  const formatPrice = (price: { value?: number, currency: string, notes: string }, itemIndex: number) => {
-    if (!price.value) {
-      // Try to get translated notes
-      const translatedNotes = getTranslatedContent(itemIndex, 'price.notes');
-      return translatedNotes || price.notes;
-    }
-    
-    // Format based on currency
-    let formattedPrice = '';
-    switch(price.currency) {
-      case 'USD':
-        formattedPrice = `$${price.value}`;
-        break;
-      case 'BRL':
-        formattedPrice = `R$${price.value}`;
-        break;
-      case 'ARS':
-        formattedPrice = `AR$${price.value}`;
-        break;
-      case 'PYG':
-        formattedPrice = `₲${price.value.toLocaleString()}`;
-        break;
-      default:
-        formattedPrice = `${price.value} ${price.currency}`;
-    }
-    
-    return formattedPrice;
-  };
-  
   return (
     <div className="flex flex-col h-full overflow-hidden">
       {/* Main content - now with max height to prevent pushing down navigation */}
@@ -140,26 +234,42 @@ export default function AttractionPreview({
               // Try to get translated values for key fields
               const translatedDescription = getTranslatedContent(index, 'description');
               const translatedName = getTranslatedContent(index, 'name');
-              const translatedCuisine = item.cuisine ? getTranslatedContent(index, 'cuisine') : null;
               
-              // For amenities, try to get each one translated or use original
+              // Determine which section-specific content to show
+              const showCuisine = currentSection === 'gastronomia' && item.cuisine;
+              const showAmenities = currentSection === 'alojamiento' && item.amenities && item.amenities.length > 0;
+              
+              // Only get translations for section-specific fields
+              let translatedCuisine = null;
               let translatedAmenities: string[] | undefined;
-              if (item.amenities) {
-                translatedAmenities = item.amenities.map((amenity, amenityIndex) => {
-                  const translatedAmenity = getTranslatedContent(index, `amenities.${amenityIndex}`);
-                  return translatedAmenity || amenity;
-                });
+              
+              if (showCuisine) {
+                translatedCuisine = getTranslatedContent(index, 'cuisine');
+              }
+              
+              if (showAmenities && item.amenities) {
+                translatedAmenities = [...item.amenities]; // Start with a copy of original amenities
+                
+                // Only try to translate amenities for alojamiento section
+                for (let i = 0; i < item.amenities.length; i++) {
+                  const translated = getTranslatedContent(index, `amenities.${i}`);
+                  if (translated) {
+                    translatedAmenities[i] = translated;
+                  }
+                }
               }
               
               return (
                 <div key={index} className="bg-gray-800 rounded-lg p-3">
-                  <Image 
-                    src={item.image || '/placeholder.jpg'}
-                    width={280}
-                    height={160}
-                    alt={translatedName || item.name}
-                    className="mb-2 rounded-md w-full h-40 object-cover"
-                  />
+                  <div className="mb-2 rounded-md w-full h-40 relative">
+                    <Image 
+                      src={item.image || '/placeholder.jpg'}
+                      alt={translatedName || item.name}
+                      fill
+                      style={{ objectFit: 'cover' }}
+                      className="rounded-md"
+                    />
+                  </div>
                   
                   <h4 className="font-semibold text-lg mb-1">{translatedName || item.name}</h4>
                   {renderStars(item.rating)}
@@ -192,8 +302,8 @@ export default function AttractionPreview({
                     </div>
                   </div>
                   
-                  {/* Conditional section for amenities or cuisine */}
-                  {translatedAmenities && translatedAmenities.length > 0 && (
+                  {/* Only show amenities in alojamiento section */}
+                  {showAmenities && translatedAmenities && (
                     <div className="mt-2 flex flex-wrap gap-1">
                       {translatedAmenities.slice(0, 3).map((amenity, i) => (
                         <span key={i} className="bg-gray-700 text-xs px-2 py-1 rounded-full">
@@ -208,7 +318,8 @@ export default function AttractionPreview({
                     </div>
                   )}
                   
-                  {item.cuisine && (
+                  {/* Only show cuisine in gastronomia section */}
+                  {showCuisine && (
                     <div className="mt-2 bg-gray-700 text-xs px-2 py-1 rounded-full inline-block">
                       {translatedCuisine || item.cuisine}
                     </div>
@@ -222,7 +333,7 @@ export default function AttractionPreview({
             <svg className="mx-auto h-12 w-12 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            <p>{t('Common.noContent') || 'Sin contenido para esta sección'}</p>
+            <p>{t('Common.noContent')}</p>
           </div>
         )}
       </div>
