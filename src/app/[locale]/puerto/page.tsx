@@ -1,13 +1,16 @@
 'use client'
-import { useState } from 'react';
-
+import { useState } from 'react'
 import AdondeIr from './AdondeIr'
 import Alojamiento from './Alojamiento'
 import Transporte from './Transporte'
 import Compras from './Compras'
 import Gastro from './Gastro'
 import Vuelos from './Vuelos'
-import { FaMapMarkedAlt, FaBed, FaBus, FaShoppingBag, FaUtensils, FaPlane } from 'react-icons/fa';
+import Info from './Info'
+
+import { useTranslations } from 'next-intl';
+
+import { FaMapMarkedAlt, FaBed, FaBus, FaShoppingBag, FaUtensils, FaPlane, FaInfo } from 'react-icons/fa';
 
 const VerticalTabItem = ({
   icon,
@@ -39,16 +42,17 @@ const VerticalTabItem = ({
   )
 }
 
-
-
-
 const PuertoPage: React.FC = () => { 
-  const [activeTab, setActiveTab] = useState<string>('adondeir');
+
+  const t = useTranslations('')
+
+  const [activeTab, setActiveTab] = useState<string>('info');
   
   const tabItems = [
-      { id: 'adondeir', icon: <FaMapMarkedAlt />, component: <AdondeIr />, title: 'atraccion' },
-      { id: 'alojamiento', icon: <FaBed />, component: <Alojamiento />, title: 'hotel' },
-      { id: 'transporte', icon: <FaBus />, component: <Transporte />, title: 'bondi' },
+      { id: 'info', icon: <FaInfo />, component: <Info />, title: {t('Info.title')} },
+      { id: 'adondeir', icon: <FaMapMarkedAlt />, component: <AdondeIr />, title: 'Atracciones Turisticas' },
+      { id: 'alojamiento', icon: <FaBed />, component: <Alojamiento />, title: 'Hospedajes' },
+      { id: 'transporte', icon: <FaBus />, component: <Transporte />, title: 'Moverse en Puerto Iguazu' },
       { id: 'compras', icon: <FaShoppingBag />, component: <Compras />, title: 'shoping' },
       { id: 'gastro', icon: <FaUtensils />, component: <Gastro />, title: 'gastro' },
       {id: 'vuelos', icon: <FaPlane />, component: <Vuelos />, title: 'vuelos'}
@@ -63,9 +67,7 @@ const PuertoPage: React.FC = () => {
 
   
   return (
-    <div>
-      
-      
+    <div>     
       
       <div className="w-11/12 mx-auto pt-4">
         <button 
@@ -75,7 +77,7 @@ const PuertoPage: React.FC = () => {
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
         <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
           </svg>
-          Volver a inicio
+          {t('ciudad.botonBack')}
         </button>
       </div>
       <div className="flex w-11/12 mx-auto my-5 bg-white  rounded-lg shadow-md overflow-hidden min-h-[600px]">

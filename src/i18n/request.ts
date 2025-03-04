@@ -13,7 +13,7 @@ export default getRequestConfig(async ({requestLocale}) => {
    // Load and merge messages from multiple files
    const messages = {
     ...(await import(`../../messages/${locale}/main.json`)).default,
-    ...(await import(`../../messages/${locale}/puerto.json`)).default,
+    ...(await import(`../../messages/${locale}/ciudades.json`)).default,
     ...(await import(`../../messages/${locale}/dataPreview.json`)).default,
   }
 

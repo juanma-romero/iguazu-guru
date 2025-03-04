@@ -41,6 +41,8 @@ const VerticalTabItem = ({
 
 const CdePage = () => {
   
+  const t = useTranslations('')
+
   const [activeTab, setActiveTab] = useState<string>('adondeir');
 
   const tabItems = [
@@ -69,7 +71,7 @@ const CdePage = () => {
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
         <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
           </svg>
-          Volver a inicio
+          {t('ciudad.botonBack')}
         </button>
       </div>
       <div className="flex w-11/12 mx-auto my-5 bg-white  rounded-lg shadow-md overflow-hidden min-h-[600px]">

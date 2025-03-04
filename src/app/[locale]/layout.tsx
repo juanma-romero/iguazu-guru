@@ -52,7 +52,7 @@ export default async function LocaleLayout({
       <head>
       <link
           rel="icon"
-          href="/favicon.png"
+          href="/pelaoFdoBco.png"
           type="image/png"
           sizes="32"
         />

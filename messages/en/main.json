@@ -561,6 +561,9 @@
   },
   "Currency": {
     "select-currency": "Select currency"
+  },
+  "ciudad":{
+    "botonBack": "To Home"
   }
     
 }

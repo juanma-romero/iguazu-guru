@@ -558,6 +558,9 @@
   },
   "Currency": {
     "select-currency": "Seleccionar moneda"
+  },
+  "ciudad":{
+    "botonBack": "Volver a Inicio"
   }
   }
       

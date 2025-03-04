@@ -562,5 +562,8 @@
   },
   "Currency": {
     "select-currency": "Selecione a moeda"
+  },
+  "ciudad":{
+    "botonBack": "Voltar"
   }
 }

@@ -9,7 +9,7 @@ export default function Header() {
       <div className="flex items-center justify-between mb-4">
         <Link href="/">
           <Image
-              src="/pelao.png"
+              src="/pelaoFdoBco.png"
               alt="Logo de Iguazu Guru"
               width={50}
               height={50}         
