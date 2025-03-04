@@ -260,8 +260,8 @@ export default function AttractionPreview({
               }
               
               return (
-                <div key={index} className="bg-gray-800 rounded-lg p-3">
-                  <div className="mb-2 rounded-md w-full h-40 relative">
+                <div key={index} className="bg-gray-800 rounded-lg p-3 md:p-4">
+                  <div className="mb-2 rounded-md w-full h-40 md:h-48 relative">
                     <Image 
                       src={item.image || '/placeholder.jpg'}
                       alt={translatedName || item.name}
@@ -271,10 +271,22 @@ export default function AttractionPreview({
                     />
                   </div>
                   
-                  <h4 className="font-semibold text-lg mb-1">{translatedName || item.name}</h4>
-                  {renderStars(item.rating)}
-                  
-                  <p className="text-gray-300 text-sm my-2">{translatedDescription || item.description}</p>
+                  <div className="md:flex md:justify-between md:items-start">
+          <div>
+            <h4 className="font-semibold text-lg mb-1">{translatedName || item.name}</h4>
+            {renderStars(item.rating)}
+          </div>
+          <div className="md:text-right mt-1 md:mt-0">
+            <div className="flex items-center md:justify-end">
+              <svg className="w-3 h-3 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              {formatPrice(item.price, index)}
+            </div>
+          </div>
+        </div>
+        
+        <p className="text-gray-300 text-sm my-2 md:my-3">{translatedDescription || item.description}</p>
                   
                   <div className="mt-2 text-xs text-gray-400">
                     <div className="flex items-center mb-1">
