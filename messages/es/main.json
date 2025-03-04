@@ -551,7 +551,14 @@
         "h2-7": "7. Contacto",
         "h2-7-p1": "Para cualquier consulta relacionada con este aviso legal, puedes contactarnos a través de:",
         "h2-7-contact": "Correo electrónico:"
-}
+},
+"Navigation": {
+    "previous": "Ciudad anterior",
+    "next": "Próxima ciudad"
+  },
+  "Currency": {
+    "select-currency": "Seleccionar moneda"
+  }
   }
       
     

@@ -554,6 +554,13 @@
   "h2-7": "7. Contact",
   "h2-7-p1": "For any questions related to this legal notice, you can contact us through:",
   "h2-7-contact": "Email:"
-}
+},
+"Navigation": {
+    "previous": "Previous city",
+    "next": "Next city"
+  },
+  "Currency": {
+    "select-currency": "Select currency"
+  }
     
 }

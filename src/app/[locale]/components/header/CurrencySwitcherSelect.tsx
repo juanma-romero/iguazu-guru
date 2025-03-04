@@ -2,8 +2,10 @@
 
 import monedas from '../header/monedas.json'
 import { useCurrencyContext } from '../../../../context/CurrencyContext'
+import {useTranslations} from 'next-intl'
 
 export default function CurrencySwitcher() {
+  const t = useTranslations()
   const { selectedCurrency, setSelectedCurrency } = useCurrencyContext()
 
   const opciones = Object.entries(monedas).map(([pais, data]) => {
@@ -62,11 +64,16 @@ export default function CurrencySwitcher() {
       `}</style>
       
       <div className="currency-select-wrapper">
-      <span className="dropdown-arrow">▼</span>
+        <label htmlFor="currency-select" className="sr-only">
+          {t('Currency.select-currency') || 'Select currency'}
+        </label>
+        <span className="dropdown-arrow">▼</span>
         <select 
+          id="currency-select"
           className="currency-select text-right" 
           value={selectedCurrency}
           onChange={(e) => setSelectedCurrency(e.target.value)}
+          aria-label={t('Currency.select-currency') || 'Select currency'}
         >
           {opciones.map((opcion, index) => (
             <option 
@@ -78,7 +85,6 @@ export default function CurrencySwitcher() {
             </option>
           ))}
         </select>
-        
       </div>
     </div>
   )

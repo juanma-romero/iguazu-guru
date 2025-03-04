@@ -354,6 +354,7 @@ export default function AttractionPreview({
         {attractions.length > 0 && (
           <button 
             onClick={handleMoreClick}
+            aria-label={t('Main.Button-More')} 
             className="bg-yellow-600 text-white h-12 w-20 rounded-full hover:bg-yellow-700 flex items-center justify-center"
           >
             {t('Main.Button-More')}

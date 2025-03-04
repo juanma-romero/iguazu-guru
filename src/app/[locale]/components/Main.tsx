@@ -212,13 +212,18 @@ export default function Main() {
       />  
 
       <div className='flex flex-row justify-between items-center mt-4'>
-            <button onClick={handlePrev} className=" bg-gray-800 rounded-full p-2 md:p-3 hover:bg-gray-700 transition">
+            <button 
+              onClick={handlePrev} 
+              className=" bg-gray-800 rounded-full p-2 md:p-3 hover:bg-gray-700 transition"
+              aria-label={t('Navigation.previous')}
+              >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-4 w-4 md:h-5 md:w-5 text-white"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
+                aria-hidden="true"
               >
                 <path
                   strokeLinecap="round"
@@ -244,13 +249,18 @@ export default function Main() {
               <p>{cards[currentIndex].location}</p>
             </div>
             </div>
-            <button onClick={handleNext} className=" bg-gray-800 rounded-full p-2 md:p-3 hover:bg-gray-700 transition">
+            <button 
+              onClick={handleNext} 
+              className=" bg-gray-800 rounded-full p-2 md:p-3 hover:bg-gray-700 transition"
+              aria-label={t('Navigation.next')}
+              >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-4 w-4 text-white"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
+                aria-hidden="true"
               >
                 <path
                   strokeLinecap="round"

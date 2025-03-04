@@ -6,6 +6,7 @@ import Alojamiento from './Alojamiento'
 import Transporte from './Transporte'
 import Compras from './Compras'
 import Gastro from './Gastro'
+import Vuelos from './Vuelos'
 import { FaMapMarkedAlt, FaBed, FaBus, FaShoppingBag, FaUtensils, FaPlane } from 'react-icons/fa';
 
 const VerticalTabItem = ({
@@ -48,7 +49,7 @@ const CdePage = () => {
     { id: 'transporte', icon: <FaBus />, component: <Transporte />, title: 'bondi' },
     { id: 'compras', icon: <FaShoppingBag />, component: <Compras />, title: 'shoping' },
     { id: 'gastro', icon: <FaUtensils />, component: <Gastro />, title: 'gastro' },
-    {id: 'vuelos', icon: <FaPlane />, component: <Gastro />, title: 'vuelos'}
+    {id: 'vuelos', icon: <FaPlane />, component: <Vuelos />, title: 'vuelos'}
   ];
 
   const handleTabClick = (id: string) => {

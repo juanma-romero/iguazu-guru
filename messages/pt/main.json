@@ -555,5 +555,12 @@
   "h2-7": "7. Contato",
   "h2-7-p1": "Para qualquer questão relacionada a este aviso legal, você pode nos contatar através de:",
   "h2-7-contact": "E-mail:"
-}
+},
+"Navigation": {
+    "previous": "Cidade anterior",
+    "next": "Próxima cidade"
+  },
+  "Currency": {
+    "select-currency": "Selecione a moeda"
+  }
 }
