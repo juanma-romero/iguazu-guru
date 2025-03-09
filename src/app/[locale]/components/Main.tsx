@@ -144,28 +144,27 @@ export default function Main() {
   return (
     <div className="max-w-7xl mx-auto">
       {showWelcome ? (
-        <div className='mx-2 px-4 py-4 bg-gray-100 rounded-lg mb-3 relative'
-          id="welcome-modal"
-          role="dialog"
-          aria-labelledby="welcome-title"
-          aria-modal="true">
-          <button 
-            onClick={toggleWelcome}
-            className='absolute top-2 right-2 text-gray-500 hover:text-gray-700'
-            aria-label='Close welcome message'
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="18" y1="6" x2="6" y2="18"></line>
-              <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg>
-          </button>
-          <h1 className='text-yellow-600 text-2xl'
-              id="welcome-title"
-          >{t('Main.title')}</h1>
-          <br />
-          <p>{t('Main.Text')}</p>
-        </div>
-      ) : (
+  <div className='mx-2 px-3 py-3 bg-gray-100 rounded-lg mb-3 relative max-w-full overflow-hidden'
+    id="welcome-modal"
+    role="dialog"
+    aria-labelledby="welcome-title"
+    aria-modal="true">
+    <button 
+      onClick={toggleWelcome}
+      className='absolute top-2 right-2 text-gray-500 hover:text-gray-700'
+      aria-label='Close welcome message'
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <h1 className='text-xl sm:text-2xl text-yellow-600 pr-8'
+        id="welcome-title"
+    >{t('Main.title')}</h1>
+    <p className="text-sm sm:text-base mt-2">{t('Main.Text')}</p>
+  </div>
+) : (
         <button 
           onClick={toggleWelcome}
           className='ml-4 mb-3 text-yellow-600 hover:text-yellow-700 flex items-center'
@@ -204,8 +203,7 @@ export default function Main() {
 
       {/* Ciudades */}
       <main role="main" className="flex-grow overflow-x-auto py-4 md:flex md:justify-center">
-    <div className="w-[20rem] md:w-[28rem] lg:w-[32rem] h-[40rem] md:h-[42rem] bg-gray-700 rounded-2xl relative overflow-hidden p-4 md:p-6 flex flex-col">                                   
-             
+    <div className="w-[calc(100vw-5rem)] sm:w-[20rem] md:w-[28rem] lg:w-[32rem] h-[40rem] md:h-[42rem] bg-gray-700 rounded-2xl relative overflow-hidden p-4 md:p-6 flex flex-col">                                       
       <AttractionPreview 
         cityKey={cards[currentIndex].key} 
         currentSection={currentSection}

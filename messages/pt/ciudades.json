@@ -1,11 +1,11 @@
 {
-    "puerto": {
+    "CiudadPuerto": {
         "Info": {
             "title": "Sobre Puerto Iguazu"
         
         },
         "AdondeIr": {
-    
+             "AdondeIrTitle": "Atrações turísticas em Puerto Iguazu"
         },
         "Alojamiento": {
     
@@ -24,7 +24,7 @@
     
         }
     },
-    "foz": {
+    "CiudadFoz": {
         "Info": {
             "title": "About Foz do Iguacu"
         
@@ -49,7 +49,7 @@
     
         }
     },
-    "cde": {
+    "CiudadCDE": {
         "Info": {
             "title": "About Ciudad del Este"
         

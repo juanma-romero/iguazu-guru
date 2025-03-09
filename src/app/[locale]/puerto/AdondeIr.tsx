@@ -1,13 +1,16 @@
 import { useTranslations } from 'next-intl';
 
 export default function AdondeIr () {
-    const t = useTranslations('cards')
-    const p = useTranslations('name1')
+    const t = useTranslations('');
+    
     return (
         <div>
-        <h2>{t('puerto.title')}</h2>
-        <p>{t('puerto.description')}</p>
-        <p>{p('cosas')}</p>
+            <ul>
+                <li>Cataratas</li>
+                <li>Hito 3 fronteras</li>
+                <li>La feriña</li>
+            </ul>
+        
         </div>
     );
 }

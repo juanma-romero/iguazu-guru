@@ -1,11 +1,19 @@
 {
-    "puerto": {
+    "CiudadPuerto": {
         "Info": {
             "title": "Sobre Puerto Iguazu"
         
         },
         "AdondeIr": {
-    
+            "AdondeIrTitle": "Atracciones turisticas en Puerto Iguazu",
+            "op1": {
+                "nombre":"Cataratas del Iguazu"
+            },
+            "op2": {
+                "nombre": "Hito Tres Fronteras"
+            },
+            "op3": {
+                "nombre": "La feriña"}
         },
         "Alojamiento": {
     
@@ -24,7 +32,7 @@
     
         }
     },
-    "foz": {
+    "CiudadFoz": {
         "Info": {
             "title": "Sobre Foz do Iguacu"
         
@@ -49,7 +57,7 @@
     
         }
     },
-    "cde": {
+    "CiudadCDE": {
         "Info": {
             "title": "Sobre Ciudad del Este"
         

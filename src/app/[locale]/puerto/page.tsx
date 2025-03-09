@@ -21,6 +21,7 @@ const VerticalTabItem = ({
   isSelected: boolean;
   onClick: () => void;
 }) => {
+  
   return (
     <div
       onClick={onClick}
@@ -49,13 +50,13 @@ const PuertoPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>('info');
   
   const tabItems = [
-      { id: 'info', icon: <FaInfo />, component: <Info />, title: {t('Info.title')} },
-      { id: 'adondeir', icon: <FaMapMarkedAlt />, component: <AdondeIr />, title: 'Atracciones Turisticas' },
+      { id: 'info', icon: <FaInfo />, component: <Info />, title: t('CiudadPuerto.Info.title') },
+      { id: 'adondeir', icon: <FaMapMarkedAlt />, component: <AdondeIr />, title: t('CiudadPuerto.AdondeIr.AdondeIrTitle') },
       { id: 'alojamiento', icon: <FaBed />, component: <Alojamiento />, title: 'Hospedajes' },
       { id: 'transporte', icon: <FaBus />, component: <Transporte />, title: 'Moverse en Puerto Iguazu' },
       { id: 'compras', icon: <FaShoppingBag />, component: <Compras />, title: 'shoping' },
-      { id: 'gastro', icon: <FaUtensils />, component: <Gastro />, title: 'gastro' },
-      {id: 'vuelos', icon: <FaPlane />, component: <Vuelos />, title: 'vuelos'}
+      //{ id: 'gastro', icon: <FaUtensils />, component: <Gastro />, title: 'gastro' },
+      //{id: 'vuelos', icon: <FaPlane />, component: <Vuelos />, title: 'vuelos'}
   ]
   
   const handleTabClick = (id: string) => {
