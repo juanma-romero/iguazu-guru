@@ -1,8 +1,8 @@
-import AlternativeHome from '../components/Home';
+import Home from '../Home';
  
-export default function AlternativeHomePage() {
+export default function HomePage() {
   
   return (        
-      <AlternativeHome />     
+      <Home />     
   )
 }
