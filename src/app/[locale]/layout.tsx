@@ -52,7 +52,7 @@ export default async function LocaleLayout({
       <head>
       <link
           rel="icon"
-          href="/pelaoFdoBco.png"
+          href="/oldYaguarSinBackground.png"
           type="image/png"
           sizes="32"
         />

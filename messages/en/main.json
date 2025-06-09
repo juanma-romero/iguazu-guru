@@ -1,12 +1,15 @@
 {
   "Main": {
     "title": "Information about Iguazu Falls, maps, weather, hotels and more",
+    "subTitle": "Discover the three cities that make up the tourist heart of Iguazu Falls.",      
     "Text": "All about Foz do Iguaçu, Puerto Iguazú and Ciudad del Este. Accommodations, gastronomy, activities, transportation",
     "Show welcome":"Show welcome",
     "Button-More": "More",
     "side1": "Where to go",
     "side2": "Accommodation",
     "side3": "Things to do",
+    "copyFootH2": "Three Countries, One Unique Experience",
+    "copyFootP": "Explore the trinational region of Iguazu Falls, where Argentina, Brazil, and Paraguay meet to offer you an incomparable tourist experience. Each city has its own personality and unique attractions that complement the majesty of the falls.",
     "sections": {
       "dondeIr": "Where to go",
       "alojamiento": "Accommodation",

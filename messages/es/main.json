@@ -1,12 +1,15 @@
 {
     "Main": {
-      "title": "Informacion de Cataratas de Iguazu, mapas, clima, hoteles y mas", 
+      "title": "Informacion de Cataratas de Iguazu, mapas, clima, hoteles y mas",
+      "subTitle": "Descubre las tres ciudades que conforman el corazón turístico de las Cataratas del Iguazú",   
       "Text":"Todo sobre Foz do Iguaçu, Puerto Iguazú y Ciudad del Este. Alojamientos, gastronomía, actividades, transporte",     
       "Show welcome":"Mostrar bienvenida",
       "Button-More": "Ver más",
       "side1":"Adonde ir",
       "side2": "Hospedaje",
       "side3": "Que hacer",
+      "copyFootH2": "Tres Países, Una Experiencia Única",
+      "copyFootP": "Explora la región trinacional de las Cataratas del Iguazú, donde Argentina, Brasil y Paraguay se encuentran para ofrecerte una experiencia turística incomparable. Cada ciudad tiene su propia personalidad y atractivos únicos que complementan la majestuosidad de las cataratas.",
       "sections": {
         "dondeIr": "Adonde ir",
         "alojamiento": "Hospedaje",
