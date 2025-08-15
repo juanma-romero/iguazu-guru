@@ -1,7 +1,9 @@
 'use client'
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
+import Image from 'next/image'
+//import {Link} from '../../../i18n/navigation'
+import {Link} from '../../../i18n/routing'
 
 interface CategoryData {
   dondeIr: string[];
@@ -30,21 +32,24 @@ export default function Home() {
       key: 'foz' as const,
       title: t('cards.foz.title'),
       location: t('cards.foz.location'),
-      image: '/costadoDerecho.jpg',
+      flag: '/paises/br.svg',
+      image: '/attractions/Cataratas-do-Iguacu-1024x683.jpeg',
       color: 'from-green-600 to-green-800'
     },
     {
       key: 'puerto' as const,
       title: t('cards.puerto.title'),
       location: t('cards.puerto.location'),
-      image: '/costadoDerecho.jpg',
+      flag: '/paises/ar.svg',
+      image: '/attractions/garganta.jpg',
       color: 'from-blue-600 to-blue-800'
     },
     {
       key: 'cde' as const,
       title: t('cards.cde.title'),
       location: t('cards.cde.location'),
-      image: '/costadoDerecho.jpg',
+      flag: '/paises/py.svg',
+      image: '/attractions/ShoParis.jpg',
       color: 'from-red-600 to-red-800'
     }
   ];
@@ -93,9 +98,16 @@ export default function Home() {
             <div className={`bg-gradient-to-r ${city.color} p-4 sm:p-5 lg:p-6 text-white`}>
               <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-1 sm:mb-2">{city.title}</h2>
               <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 sm:w-3 sm:h-3 bg-red-500 rounded-full"></div>
+                <Image
+
+                  src={city.flag}
+                  alt={`${city.location} flag`}
+                  width={20} // Tamaño base para optimización (corresponde a sm:w-5)
+                  height={20} // Tamaño base para optimización (corresponde a sm:h-5)
+                  className="w-4 h-4 sm:w-5 sm:h-5 rounded-full border-2 border-white" // Clases para tamaño responsivo y forma redonda
+                />
                 <p className="text-xs sm:text-sm opacity-90">{city.location}</p>
-              </div>
+              </div> 
             </div>
 
             {/* Imagen */}
@@ -160,9 +172,12 @@ export default function Home() {
               </div>
 
               {/* Botón de explorar */}
-              <button className="w-full mt-4 sm:mt-6 bg-gradient-to-r from-yellow-600 to-yellow-700 text-white py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg text-sm sm:text-base font-semibold hover:from-yellow-700 hover:to-yellow-800 transition-all duration-300 transform hover:scale-105">
-                {t('Main.Button-More')} {city.title}
-              </button>
+              <Link href={`/${city.key}`}>
+                <button className="w-full mt-4 sm:mt-6 bg-gradient-to-r from-yellow-600 to-yellow-700 text-white py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg text-sm sm:text-base font-semibold hover:from-yellow-700 hover:to-yellow-800 transition-all duration-300 transform hover:scale-105">
+                  {t('Main.Button-More')} {city.title}
+                </button>
+              </Link>
+              
             </div>
           </div>
         ))}

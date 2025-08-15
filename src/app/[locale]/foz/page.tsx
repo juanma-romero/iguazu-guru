@@ -1,13 +1,16 @@
 'use client'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import AdondeIr from './AdondeIr'
 import Alojamiento from './Alojamiento'
-import Transporte from './Transporte'
-import Compras from './Compras'
+//import Transporte from './Transporte'
+//import Compras from './Compras'
 import Gastro from './Gastro'
-import Vuelos from './Vuelos'
+//import Vuelos from './Vuelos'
 import { FaMapMarkedAlt, FaBed, FaBus, FaShoppingBag, FaUtensils, FaPlane } from 'react-icons/fa';
+
+
+
 
 const VerticalTabItem = ({
   icon,
@@ -40,15 +43,64 @@ const VerticalTabItem = ({
 }
 
 const FozPage: React.FC = () => {
+
+  useEffect(() => {
+    // Función asíncrona para obtener los datos del clima
+    const fetchOpenWeatherData = async () => {
+      const apiKey = process.env.NEXT_PUBLIC_WEATHER_API_KEY;
+
+      if (!apiKey) {
+        console.error('API key de OpenWeatherMap no configurada. Revisa tus variables de entorno.');
+        return;
+      }
+
+      // Coordenadas para Foz do Iguaçu (puedes cambiarlas o obtenerlas dinámicamente)
+      const lat = -25.5478;
+      const lon = -54.5882;
+      const units = 'metric'; // Para obtener la temperatura en Celsius
+
+      // Endpoint de la API de OpenWeatherMap para el clima actual
+      const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`;
+      
+            
+      try {
+        console.log('Realizando llamada a la API de OpenWeatherMap...');
+        const response = await fetch(apiUrl);
+
+        if (!response.ok) {
+          // Si la respuesta no es exitosa, intenta obtener más detalles del error
+          const errorData = await response.json().catch(() => ({ message: "No se pudo parsear el error como JSON." })); // Evita error si el cuerpo no es JSON
+          console.error(`Error de la API OpenWeatherMap: ${response.status} ${response.statusText}`, errorData);
+          throw new Error(`Error al obtener datos del clima de OpenWeatherMap: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log('Respuesta de la API de OpenWeatherMap:', data);
+
+        // Ejemplo de cómo acceder a datos específicos:
+        // if (data && data.main && data.weather) {
+        //   console.log(`Temperatura actual en ${data.name}: ${data.main.temp}°C`);
+        //   console.log(`Condición: ${data.weather[0].description}`);
+        // }
+
+      } catch (error) {
+        console.error('Hubo un problema al realizar la solicitud a la API de OpenWeatherMap:', error);
+      }
+    };
+
+    // Llama a la función para obtener los datos cuando el componente se monta
+    fetchOpenWeatherData();
+
+  }, [])
   const [activeTab, setActiveTab] = useState<string>('adondeir');
   
     const tabItems = [
       { id: 'adondeir', icon: <FaMapMarkedAlt />, component: <AdondeIr />, title: 'atraccion' },
       { id: 'alojamiento', icon: <FaBed />, component: <Alojamiento />, title: 'hotel' },
-      { id: 'transporte', icon: <FaBus />, component: <Transporte />, title: 'bondi' },
-      { id: 'compras', icon: <FaShoppingBag />, component: <Compras />, title: 'shoping' },
+      //{ id: 'transporte', icon: <FaBus />, component: <Transporte />, title: 'bondi' },
+      //{ id: 'compras', icon: <FaShoppingBag />, component: <Compras />, title: 'shoping' },
       { id: 'gastro', icon: <FaUtensils />, component: <Gastro />, title: 'gastro' },
-      {id: 'vuelos', icon: <FaPlane />, component: <Vuelos />, title: 'vuelos'}
+      //{id: 'vuelos', icon: <FaPlane />, component: <Vuelos />, title: 'vuelos'}
     ];
   
     const handleTabClick = (id: string) => {

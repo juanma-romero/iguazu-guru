@@ -3,10 +3,10 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import AdondeIr from './AdondeIr'
 import Alojamiento from './Alojamiento'
-import Transporte from './Transporte'
-import Compras from './Compras'
+//import Transporte from './Transporte'
+//import Compras from './Compras'
 import Gastro from './Gastro'
-import Vuelos from './Vuelos'
+//import Vuelos from './Vuelos'
 import { FaMapMarkedAlt, FaBed, FaBus, FaShoppingBag, FaUtensils, FaPlane } from 'react-icons/fa';
 
 const VerticalTabItem = ({
@@ -48,10 +48,10 @@ const CdePage = () => {
   const tabItems = [
     { id: 'adondeir', icon: <FaMapMarkedAlt />, component: <AdondeIr />, title: 'atraccion' },
     { id: 'alojamiento', icon: <FaBed />, component: <Alojamiento />, title: 'hotel' },
-    { id: 'transporte', icon: <FaBus />, component: <Transporte />, title: 'bondi' },
-    { id: 'compras', icon: <FaShoppingBag />, component: <Compras />, title: 'shoping' },
+    //{ id: 'transporte', icon: <FaBus />, component: <Transporte />, title: 'bondi' },
+    //{ id: 'compras', icon: <FaShoppingBag />, component: <Compras />, title: 'shoping' },
     { id: 'gastro', icon: <FaUtensils />, component: <Gastro />, title: 'gastro' },
-    {id: 'vuelos', icon: <FaPlane />, component: <Vuelos />, title: 'vuelos'}
+    //{id: 'vuelos', icon: <FaPlane />, component: <Vuelos />, title: 'vuelos'}
   ];
 
   const handleTabClick = (id: string) => {

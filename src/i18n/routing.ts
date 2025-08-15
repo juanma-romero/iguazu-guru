@@ -9,6 +9,9 @@ export const routing = defineRouting({
   pathnames: {
     '/': '/',
     '/legal': '/legal', 
+    '/foz': '/foz',
+    '/puerto': '/puerto',
+    '/cde': '/cde'
   },
   // Used when no locale matches
   defaultLocale: 'en'
