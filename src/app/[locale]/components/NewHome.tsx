@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image'
 import {Link} from '../../../i18n/routing'
-
+import Home from './Ciudades';
 
 export default function NewHome () {
     const t = useTranslations();
@@ -41,7 +41,9 @@ export default function NewHome () {
                 </div>
             </div>
         </section>
-        
+        <section id='ciudades' className='cities-section bg-iguazu-light py-12 md:py-16'>
+        <Home />
+            </section>
         <section id="atracciones" className="main-attraction bg-white py-12 md:py-16">
              <div className="container mx-auto px-4">
                 <h2 className="text-3xl font-bold text-center text-iguazu-dark mb-2">El Corazón de la Maravilla</h2>

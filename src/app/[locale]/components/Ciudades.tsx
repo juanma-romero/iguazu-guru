@@ -16,7 +16,7 @@ interface CityData {
   cde: CategoryData;
 } 
 
-export default function Home() {
+export default function Ciudades() {
   const t = useTranslations();
   
   // Estado para controlar qué pestaña está activa en cada ciudad
