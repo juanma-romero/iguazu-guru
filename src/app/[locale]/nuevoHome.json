@@ -1,0 +1,129 @@
+{
+  "header": {
+    "span1": "Iguazu",
+    "span2": ".guru",
+    "nav": {
+      "li1": "Atracciones",
+      "li2": "✨ Itinerario IA",
+      "li3": "Datos Clave",
+      "li4": "Blog"
+    }
+  },
+  "hero": {
+    "h1": "Tu Guía Experta de las Cataratas del Iguazú",
+    "p": "Pregúntale a nuestro asistente de IA cualquier duda sobre tu viaje.",
+    "inputPlaceholder": "Ej: ¿Necesito pasaporte para cruzar a Brasil?",
+    "button": "✨ Preguntar"
+  },
+  "itinerarioIA": {
+    "h2": "Crea tu Itinerario Personalizado con IA",
+    "p": "Dinos tus preferencias y nuestra IA diseñará un plan de viaje único para ti en segundos.",
+    "labelDays": "Nº de Días",
+    "labelBudget": "Presupuesto",
+    "budgetOptions": {
+      "op1": "Económico",
+      "op2": "Moderado",
+      "op3": "Lujoso"
+    },
+    "labelInterests": "Intereses",
+    "inputInterestsPlaceholder": "Ej: Aventura, fotografía",
+    "button": "Generar Mi Itinerario"
+  },
+  "datosClave": {
+    "h2": "Datos Clave para tu Viaje",
+    "cards": [
+      {
+        "icon": "☀️",
+        "title": "Clima",
+        "desc": "Ver pronóstico"
+      },
+      {
+        "icon": "💲",
+        "title": "Moneda",
+        "desc": "Tipo de cambio"
+      },
+      {
+        "icon": "🗺️",
+        "title": "Mapas",
+        "desc": "Mapas interactivos"
+      },
+      {
+        "icon": "🎟️",
+        "title": "Entradas",
+        "desc": "Precios y compra"
+      }
+    ]
+  },
+  "atracciones": {
+    "h2": "El Corazón de la Maravilla",
+    "p": "Descubre los dos parques nacionales que albergan esta joya. ¿Qué ver en cada lado?",
+    "cards": [
+      {
+        "imgAlt": "Cataratas del lado argentino",
+        "imgText": "Lado Argentino",
+        "h3": "Lado Argentino 🇦🇷",
+        "desc": "Circuitos, Garganta del Diablo y paseos en lancha. La experiencia inmersiva.",
+        "button": "Ver más del lado argentino"
+      },
+      {
+        "imgAlt": "Cataratas del lado brasileño",
+        "imgText": "Lado Brasileño",
+        "h3": "Lado Brasileño 🇧🇷",
+        "desc": "Las mejores vistas panorámicas y el contacto cercano con la naturaleza.",
+        "button": "Ver más del lado brasileño"
+      }
+    ]
+  },
+  "blog": {
+    "h2": "Blog y Consejos de Viaje",
+    "p": "Artículos, guías y tips para aprovechar al máximo tu visita.",
+    "cards": [
+      {
+        "h3": "Cómo llegar",
+        "desc": "Opciones de transporte desde Argentina, Brasil y Paraguay.",
+        "button": "Leer más"
+      },
+      {
+        "h3": "Mejores épocas",
+        "desc": "Clima, multitudes y precios según la temporada.",
+        "button": "Leer más"
+      },
+      {
+        "h3": "Consejos de seguridad",
+        "desc": "Recomendaciones para disfrutar sin preocupaciones.",
+        "button": "Leer más"
+      }
+    ]
+  },
+  "faq": {
+    "h2": "Preguntas Frecuentes",
+    "p": "Respuestas a las dudas más comunes de los viajeros.",
+    "items": [
+      {
+        "q": "¿Necesito visa para visitar las Cataratas del Iguazú?",
+        "a": "Depende de tu nacionalidad. Consulta los requisitos específicos para Argentina, Brasil y Paraguay."
+      },
+      {
+        "q": "¿Cuál es la mejor época para visitar?",
+        "a": "La primavera (septiembre a noviembre) y el otoño (marzo a mayo) ofrecen un clima agradable y menos multitudes."
+      },
+      {
+        "q": "¿Qué actividades no me puedo perder?",
+        "a": "El paseo en lancha cerca de la Garganta del Diablo, las caminatas por los senderos y las vistas panorámicas desde ambos lados."
+      }
+    ]
+  },
+  "modal": {
+    "title": "Respuesta del Asistente IA",
+    "itineraryTitle": "Tu Itinerario Personalizado",
+    "error": "Lo siento, ha ocurrido un error al contactar al asistente de IA. Por favor, intenta de nuevo más tarde."
+  },
+  "footer": {
+    "copyright": "© 2025 Iguazu.guru - Todos los derechos reservados.",
+    "links": {
+      "about": "Sobre Nosotros",
+      "contact": "Contacto",
+      "privacy": "Política de Privacidad"
+    }
+  }
+}

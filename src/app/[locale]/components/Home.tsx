@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image'
-//import {Link} from '../../../i18n/navigation'
 import {Link} from '../../../i18n/routing'
 
 interface CategoryData {

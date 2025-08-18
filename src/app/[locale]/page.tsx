@@ -1,11 +1,11 @@
-import Home from './components/Home'
+import NewHome from './components/NewHome'
 import ModalInicio from './components/ModalInicio'
 
 export default function HomePage() {  
   return (   
     <>   
       <ModalInicio />  
-      <Home/>  
+      <NewHome/>  
     </>     
   )
 }

@@ -154,7 +154,7 @@ export default function Main() {
       className='absolute top-2 right-2 text-gray-500 hover:text-gray-700'
       aria-label='Close welcome message'
     >
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokewith="2" strokeLinecap="round" strokeLinejoin="round">
         <line x1="18" y1="6" x2="6" y2="18"></line>
         <line x1="6" y1="6" x2="18" y2="18"></line>
       </svg>
@@ -169,7 +169,7 @@ export default function Main() {
           onClick={toggleWelcome}
           className='ml-4 mb-3 text-yellow-600 hover:text-yellow-700 flex items-center'
         >
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokewith="2" strokeLinecap="round" strokeLinejoin="round" className="mr-1">
             <circle cx="12" cy="12" r="10"></circle>
             <line x1="12" y1="8" x2="12" y2="16"></line>
             <line x1="8" y1="12" x2="16" y2="12"></line>
@@ -226,7 +226,7 @@ export default function Main() {
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth={2}
+                  strokewith={2}
                   d="M15 19l-7-7 7-7"
                 />
               </svg>
@@ -263,7 +263,7 @@ export default function Main() {
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth={2}
+                  strokewith={2}
                   d="M9 5l7 7-7 7"
                 />
               </svg>

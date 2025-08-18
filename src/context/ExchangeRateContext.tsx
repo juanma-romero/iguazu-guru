@@ -1,4 +1,4 @@
-'use client'
+/*'use client'
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { ReactNode } from 'react';
 
@@ -50,5 +50,4 @@ export const ExchangeRateProvider = ({ children }: ExchangeRateProviderProps) =>
     </ExchangeRateContext.Provider>
   );
 };
-
-export const useExchangeRate = () => useContext(ExchangeRateContext);
+*/

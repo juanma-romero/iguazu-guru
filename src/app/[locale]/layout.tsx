@@ -2,12 +2,12 @@ import {NextIntlClientProvider} from 'next-intl';
 import {getMessages, getTranslations} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
-import { ExchangeRateProvider } from '@/context/ExchangeRateContext'
+//import { ExchangeRateProvider } from '@/context/ExchangeRateContext'
 import { Raleway   } from "next/font/google"
 import './globals.css'
 import Footer from './components/footer/Footer';
 import Header from './components/header/Header'
-import { CurrencyProvider } from '@/context/CurrencyContext';
+//import { CurrencyProvider } from '@/context/CurrencyContext';
 import { GoogleTagManager } from '@next/third-parties/google'
 
 type Params = Promise<{ locale: string }>;
@@ -59,18 +59,18 @@ export default async function LocaleLayout({
       </head>
       <GoogleTagManager gtmId="GTM-MF9ZBXB2" />
       <body
-        className={`${raleway.className}  bg-[#1A3131] flex flex-col justify-between min-h-screen`}
+        className={`${raleway.className}  "bg-iguazu-light text-iguazu-dark"`}
       >
         <NextIntlClientProvider
          messages={messages}
         >
-          <CurrencyProvider >
-            <ExchangeRateProvider>
+          
+            
               <Header />
               {children}
               <Footer />
-            </ExchangeRateProvider>
-            </CurrencyProvider>
+            
+           
         </NextIntlClientProvider>
       </body>      
     </html>

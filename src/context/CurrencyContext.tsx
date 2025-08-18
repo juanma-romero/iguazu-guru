@@ -1,4 +1,4 @@
-'use client'
+/*'use client'
 
 import { createContext, useContext, useReducer } from 'react'
 
@@ -53,4 +53,4 @@ export function CurrencyProvider({ children }: { children: React.ReactNode }) {
 // Custom hook para usar el contexto
 export function useCurrencyContext() {
   return useContext(CurrencyContext)
-}
+}*/

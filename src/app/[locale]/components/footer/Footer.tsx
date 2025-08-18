@@ -1,33 +1,18 @@
-import ModalClima from "./ModalClima";
-import ModalExchange from "./ModalExchange";
-import ModalMapa from "./ModalMapa"
 import {useTranslations} from 'next-intl'
-
 
 function Footer() {
     const t = useTranslations('footer');
     return (
-        <footer>
-            <nav className="py-4">
-                <div className="flex justify-around text-sm text-gray-400">
-                {/* clima */}
-                <div className="flex flex-col items-center">
-                    <ModalClima />
-                    <p>{t('boton1')}</p>
-                </div>
-                {/* cotizacion */}
-                <div className="flex flex-col items-center">
-                <ModalExchange />
-                <p>{t('boton2')}</p>
-                </div>
-                {/* ubicacion */}
-                <div className="flex flex-col items-center">
-                <ModalMapa />
-                <p>{t('boton3')}</p>
-                </div>
-                </div>
-            </nav>
-        </footer>
+        <footer className="bg-iguazu-dark text-iguazu-light">
+        <div className="container mx-auto px-4 py-8 text-center">
+            <p>&copy; 2025 Iguazu.guru - Todos los derechos reservados.</p>
+            <div className="mt-4">
+                <a href="#" className="px-2 hover:text-white">Sobre Nosotros</a> |
+                <a href="#" className="px-2 hover:text-white">Contacto</a> |
+                <a href="#" className="px-2 hover:text-white">Política de Privacidad</a>
+            </div>
+        </div>
+    </footer>
     );
 }
 
