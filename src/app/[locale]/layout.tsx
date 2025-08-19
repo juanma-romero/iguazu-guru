@@ -2,12 +2,10 @@ import {NextIntlClientProvider} from 'next-intl';
 import {getMessages, getTranslations} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
-//import { ExchangeRateProvider } from '@/context/ExchangeRateContext'
 import { Raleway   } from "next/font/google"
 import './globals.css'
 import Footer from './components/footer/Footer';
 import Header from './components/header/Header'
-//import { CurrencyProvider } from '@/context/CurrencyContext';
 import { GoogleTagManager } from '@next/third-parties/google'
 
 type Params = Promise<{ locale: string }>;
