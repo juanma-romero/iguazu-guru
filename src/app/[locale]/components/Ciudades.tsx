@@ -78,19 +78,14 @@ export default function Ciudades() {
     }));
   };
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-2 sm:p-4 lg:p-6">
-      {/* Título principal */}
-      <div className="text-center mb-6 sm:mb-8 lg:mb-12 px-2">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-2 sm:mb-4 leading-tight">
-          {t('Main.title')}
-        </h1>
-        <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-xs sm:max-w-lg md:max-w-2xl mx-auto px-2">
+    <div className="min-h-screen p-2 sm:p-4 lg:p-6">
+      
+    <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-xs sm:max-w-lg md:max-w-2xl mx-auto px-2">
           {t('Main.subTitle')}
         </p>
-      </div>
-
       {/* Grid de ciudades */}
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-7xl mx-auto px-2 sm:px-4">
+        
         {cities.map((city) => (
           <div key={city.key} className="bg-gray-800 rounded-xl sm:rounded-2xl overflow-hidden shadow-xl sm:shadow-2xl hover:transform hover:scale-105 transition-all duration-300 mx-auto w-full max-w-sm md:max-w-none">
             {/* Header de la tarjeta */}
@@ -98,7 +93,6 @@ export default function Ciudades() {
               <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-1 sm:mb-2">{city.title}</h2>
               <div className="flex items-center space-x-2">
                 <Image
-
                   src={city.flag}
                   alt={`${city.location} flag`}
                   width={20} // Tamaño base para optimización (corresponde a sm:w-5)

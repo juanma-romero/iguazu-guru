@@ -3,7 +3,8 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image'
 import {Link} from '../../../i18n/routing'
-import Home from './Ciudades';
+import Home from './Ciudades'
+import ModalInicio from './ModalInicio';
 
 export default function NewHome () {
     const t = useTranslations();
