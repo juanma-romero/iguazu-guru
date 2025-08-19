@@ -28,7 +28,7 @@ const CollapsibleSection = ({ title, preview, children }: CollapsibleSectionProp
           >
             <span>Mostrar menos</span>
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokewith={2} d="M5 15l7-7 7 7" />
+              <path strokeLinecap="round" strokeLinejoin="round" className="strocke-2" d="M5 15l7-7 7 7" />
             </svg>
           </button>
         </>
@@ -41,7 +41,7 @@ const CollapsibleSection = ({ title, preview, children }: CollapsibleSectionProp
           >
             <span>Leer más</span>
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokewith={2} d="M19 9l-7 7-7-7" />
+              <path strokeLinecap="round" strokeLinejoin="round" className="strocke-2" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
         </>
@@ -81,7 +81,7 @@ export default function Legal() {
     <div className="flex justify-center mt-8">
       <Link href="/" className="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors flex items-center">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokewith={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          <path strokeLinecap="round" strokeLinejoin="round" className="strocke-2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
         </svg>
         {t('botonHome')}
       </Link>
