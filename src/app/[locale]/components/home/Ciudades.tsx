@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image'
-import {Link} from '../../../i18n/routing'
+import {Link} from '../../../../i18n/routing'
 
 interface CategoryData {
   dondeIr: string[];
@@ -78,12 +78,17 @@ export default function Ciudades() {
     }));
   };
   return (
-    <div className="min-h-screen p-2 sm:p-4 lg:p-6">
-      
-    <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-xs sm:max-w-lg md:max-w-2xl mx-auto px-2">
-          {t('Main.subTitle')}
-        </p>
-      {/* Grid de ciudades */}
+    <div >    
+      {/* Sección adicional con información general */}
+      {/* <div className="mt-8 sm:mt-12 lg:mt-16 text-center px-2 sm:px-4"> */}
+        <div className="bg-iguazu-dark sm: p-4 sm:p-6 lg:p-8 max-w-4xl mx-auto">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-3 sm:mb-4 leading-tight">
+            {t('Main.copyFootH2')}
+          </h2>
+          <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
+            {t('Main.copyFootP')}
+          </p>
+          {/* Grid de ciudades */}
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-7xl mx-auto px-2 sm:px-4">
         
         {cities.map((city) => (
@@ -175,18 +180,12 @@ export default function Ciudades() {
           </div>
         ))}
       </div>
-
-      {/* Sección adicional con información general */}
-      <div className="mt-8 sm:mt-12 lg:mt-16 text-center px-2 sm:px-4">
-        <div className="bg-gray-800 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 max-w-4xl mx-auto">
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-3 sm:mb-4 leading-tight">
-            {t('Main.copyFootH2')}
-          </h2>
-          <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
-            {t('Main.copyFootP')}
-          </p>
         </div>
-      </div>
+      {/* </div> */}
+
+      
+
+      
     </div>
   );
 }

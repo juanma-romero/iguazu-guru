@@ -1,5 +1,5 @@
 {
-    "Main": {
+    "Main": { 
       "title": "Informacion de Cataratas de Iguazu, mapas, clima, hoteles y mas",
       "subTitle": "Descubre las tres ciudades que conforman el corazón turístico de las Cataratas del Iguazú",   
       "Text":"Todo sobre Foz do Iguaçu, Puerto Iguazú y Ciudad del Este. Alojamientos, gastronomía, actividades, transporte",     
@@ -564,8 +564,51 @@
   },
   "ciudad":{
     "botonBack": "Volver a Inicio"
+  },
+    "MainNewHome": {
+    "h1": "Tu Guia en Iguazú",
+    "pregunta-a-ia": "Preguntale al Guru!",
+    "ai-search-input": "Ej: ¿Necesito pasaporte para cruzar a Brasil?",
+    "ai-search-button": "Preguntar",
+    "titulo-infaltables":"Info Clave",
+    "clima-titulo": "Clima",
+    "clima-descripcion": "Ver pronóstico",
+    "moneda-titulo": "Moneda",
+    "moneda-descripcion": "Tipo de cambio",
+    "mapas-titulo": "Mapas",
+    "mapas-descripcion": "Mapas interactivos",
+    "entradas-titulo": "Entradas",
+    "entradas-descripcion": "Precios y compra",
+    "transporte-titulo": "Transporte",
+    "transporte-descripcion": "Buses y servicios de transporte",
+    "seguridad-titulo": "Seguridad",
+    "seguridad-descripcion": "Tips",
+    "atracciones-titulo": "La Maravilla Natural",
+    "atracciones-descripcion": "Podes acceder desde los 2 lados de las cataratas",
+    "lado-argentino-titulo": "Lado Argentino 🇦🇷",
+    "lado-argentino-descripcion": "Circuitos, Garganta del Diablo y paseos en lancha. La experiencia inmersiva.",
+    "lado-brasileno-titulo": "Lado Brasileño 🇧🇷",
+    "lado-brasileno-descripcion": "Las mejores vistas panorámicas y el contacto cercano con la naturaleza.",
+    "ver-mas": "Ver más",
+    "blog-titulo": "Blog y Consejos de Viaje",
+    "blog-descripcion": "Artículos, guías y tips para aprovechar al máximo tu visita.",
+    "como-llegar-titulo": "Cómo llegar",
+    "como-llegar-descripcion": "Opciones de transporte desde Argentina, Brasil y Paraguay.",
+    "mejores-epocas-titulo": "Mejores épocas",
+    "mejores-epocas-descripcion": "Clima, multitudes y precios según la temporada.",
+    "consejos-seguridad-titulo": "Consejos de seguridad",
+    "consejos-seguridad-descripcion": "Recomendaciones para disfrutar sin preocupaciones.",
+    "leer-mas": "Leer más",
+    "faq-titulo": "Preguntas Frecuentes",
+    "faq-descripcion": "Respuestas a las dudas más comunes de los viajeros.",
+    "faq-visa-pregunta": "¿Necesito visa para visitar las Cataratas del Iguazú?",
+    "faq-visa-respuesta": "Depende de tu nacionalidad. Consulta los requisitos específicos para Argentina, Brasil y Paraguay.",
+    "faq-epoca-pregunta": "¿Cuál es la mejor época para visitar?",
+    "faq-epoca-respuesta": "La primavera (septiembre a noviembre) y el otoño (marzo a mayo) ofrecen un clima agradable y menos multitudes.",
+    "faq-actividades-pregunta": "¿Qué actividades no me puedo perder?",
+    "faq-actividades-respuesta": "El paseo en lancha cerca de la Garganta del Diablo, las caminatas por los senderos y las vistas panorámicas desde ambos lados."
   }
-  }
-      
+  
     
   
+  }
