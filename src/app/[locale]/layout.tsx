@@ -4,9 +4,9 @@ import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
 import { Raleway   } from "next/font/google"
 import './globals.css'
-import Footer from './components/footer/Footer';
 import Header from './components/header/Header'
 import { GoogleTagManager } from '@next/third-parties/google'
+import Footer from './components/footer/Footer';
 
 type Params = Promise<{ locale: string }>;
 

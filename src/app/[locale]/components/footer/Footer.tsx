@@ -1,19 +1,77 @@
-import {useTranslations} from 'next-intl'
+'use client'
+import { useTranslations } from 'next-intl';
 
-function Footer() {
-    const t = useTranslations('footer');
-    return (
-        <footer className="bg-iguazu-dark text-iguazu-light">
-        <div className="container mx-auto px-4 py-8 text-center">
-            <p>&copy; 2025 Iguazu.guru - Todos los derechos reservados.</p>
-            <div className="mt-4">
-                <a href="#" className="px-2 hover:text-white">Sobre Nosotros</a> |
-                <a href="#" className="px-2 hover:text-white">Contacto</a> |
-                <a href="#" className="px-2 hover:text-white">Política de Privacidad</a>
-            </div>
-        </div>
-    </footer>
-    );
+interface FooterProps {
+    isSticky?: boolean;
+    showTitle?: boolean;
 }
 
-export default Footer;
+export default function Footer({ isSticky = true, showTitle = false }: FooterProps) {
+    const t = useTranslations('MainNewHome');
+
+    const containerClasses = isSticky
+        ? "fixed bottom-0 left-0 right-0 bg-white shadow-lg border-t border-gray-200 z-50 py-4"
+        : "quick-info py-12 md:py-16";
+
+    const gridClasses = isSticky
+        ? "grid grid-cols-3 md:grid-cols-6 gap-2 md:gap-4 max-w-6xl mx-auto"
+        : "grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6";
+
+    const cardClasses = isSticky
+        ? "card bg-iguazu-light p-3 rounded-lg shadow-sm text-center hover:shadow-md hover:bg-iguazu-teal hover:text-white transition-all duration-300 text-xs"
+        : "card bg-white p-6 rounded-lg shadow-sm text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300";
+
+    const emojiClasses = isSticky
+        ? "text-2xl mb-1"
+        : "text-4xl mb-2";
+
+    const titleClasses = isSticky
+        ? "font-semibold text-sm text-iguazu-dark hover:text-white"
+        : "font-bold text-lg text-iguazu-dark";
+
+    const descriptionClasses = isSticky
+        ? "text-iguazu-teal text-xs hover:text-white hidden md:block"
+        : "text-iguazu-teal text-sm";
+
+    return (
+        <footer id={isSticky ? "Infaltables-sticky" : "Infaltables"} className={containerClasses}>
+            <div className="container mx-auto px-4">
+                {showTitle && !isSticky && (
+                    <h2 className="text-3xl font-bold text-center text-iguazu-dark mb-8">{t('titulo-infaltables')}</h2>
+                )}
+                <div className={gridClasses}>
+                    <div className={cardClasses}>
+                        <div className={emojiClasses}>☀️</div>
+                        <h3 className={titleClasses}>{t('clima-titulo')}</h3>
+                        {!isSticky && <p className={descriptionClasses}>{t('clima-descripcion')}</p>}
+                    </div>
+                    <div className={cardClasses}>
+                        <div className={emojiClasses}>💲</div>
+                        <h3 className={titleClasses}>{t('moneda-titulo')}</h3>
+                        {!isSticky && <p className={descriptionClasses}>{t('moneda-descripcion')}</p>}
+                    </div>
+                    <div className={cardClasses}>
+                        <div className={emojiClasses}>🗺️</div>
+                        <h3 className={titleClasses}>{t('mapas-titulo')}</h3>
+                        {!isSticky && <p className={descriptionClasses}>{t('mapas-descripcion')}</p>}
+                    </div>
+                    <div className={cardClasses}>
+                        <div className={emojiClasses}>🎟️</div>
+                        <h3 className={titleClasses}>{t('entradas-titulo')}</h3>
+                        {!isSticky && <p className={descriptionClasses}>{t('entradas-descripcion')}</p>}
+                    </div>
+                    <div className={cardClasses}>
+                        <div className={emojiClasses}>🚌</div>
+                        <h3 className={titleClasses}>{t('transporte-titulo')}</h3>
+                        {!isSticky && <p className={descriptionClasses}>{t('transporte-descripcion')}</p>}
+                    </div>
+                    <div className={cardClasses}>
+                        <div className={emojiClasses}>👮🏽</div>
+                        <h3 className={titleClasses}>{t('seguridad-titulo')}</h3>
+                        {!isSticky && <p className={descriptionClasses}>{t('seguridad-descripcion')}</p>}
+                    </div>
+                </div>
+            </div>
+        </footer>
+    );
+}

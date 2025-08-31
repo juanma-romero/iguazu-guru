@@ -78,14 +78,12 @@ export default function Ciudades() {
     }));
   };
   return (
-    <div >    
+    <section id='ciudades' className='cities-section'>    
       {/* Sección adicional con información general */}
-      {/* <div className="mt-8 sm:mt-12 lg:mt-16 text-center px-2 sm:px-4"> */}
-        <div className="bg-iguazu-dark sm: p-4 sm:p-6 lg:p-8 max-w-4xl mx-auto">
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-3 sm:mb-4 leading-tight">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4 leading-tight">
             {t('Main.copyFootH2')}
           </h2>
-          <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-sm sm:text-base lg:text-lg text-gray-800 leading-relaxed max-w-3xl mx-auto">
             {t('Main.copyFootP')}
           </p>
           {/* Grid de ciudades */}
@@ -179,13 +177,7 @@ export default function Ciudades() {
             </div>
           </div>
         ))}
-      </div>
-        </div>
-      {/* </div> */}
-
-      
-
-      
-    </div>
+      </div>        
+    </section>
   );
 }
