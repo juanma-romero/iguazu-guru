@@ -7,6 +7,7 @@ import './globals.css'
 import Header from './components/header/Header'
 import { GoogleTagManager } from '@next/third-parties/google'
 import Footer from './components/footer/Footer';
+import { CurrencyProvider } from '../../context/CurrencyContext';
 
 type Params = Promise<{ locale: string }>;
 
@@ -62,13 +63,11 @@ export default async function LocaleLayout({
         <NextIntlClientProvider
          messages={messages}
         >
-          
-            
+          <CurrencyProvider>
               <Header />
               {children}
               <Footer />
-            
-           
+          </CurrencyProvider>
         </NextIntlClientProvider>
       </body>      
     </html>
