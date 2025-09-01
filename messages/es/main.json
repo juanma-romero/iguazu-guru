@@ -625,6 +625,22 @@
     "uv-very-high": "Muy alto",
     "uv-extreme": "Extremo",
     "last-updated": "Última actualización"
+  },
+  "MapModal": {
+    "title": "Mapa Interactivo",
+    "search-placeholder": "Buscar lugares en Foz y Puerto Iguazú...",
+    "place-not-found": "Lugar no encontrado. Intenta con otro nombre.",
+    "location-error": "Error al obtener tu ubicación. Verifica los permisos del navegador.",
+    "geolocation-not-supported": "Tu navegador no soporta geolocalización.",
+    "directions-error": "Error al calcular las direcciones.",
+    "get-directions": "Cómo llegar",
+    "clear-directions": "Limpiar ruta",
+    "directions": "Indicaciones",
+    "total-distance": "Distancia total",
+    "estimated-time": "Tiempo estimado",
+    "open": "Abierto",
+    "closed": "Cerrado",
+    "powered-by-google": "Desarrollado con Google Maps"
   }
   
     

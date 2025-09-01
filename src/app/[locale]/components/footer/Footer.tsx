@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import CurrencyConverter from './CurrencyConverter';
 import WeatherModal from './WeatherModal';
+import MapModal from './MapModal';
 
 interface FooterProps {
     isSticky?: boolean;
@@ -12,6 +13,7 @@ interface FooterProps {
 export default function Footer({ isSticky = true, showTitle = false }: FooterProps) {
     const t = useTranslations('MainNewHome');
     const [isWeatherModalOpen, setIsWeatherModalOpen] = useState(false);
+    const [isMapModalOpen, setIsMapModalOpen] = useState(false);
 
     const containerClasses = isSticky
         ? "fixed bottom-0 left-0 right-0 bg-white shadow-lg border-t border-gray-200 z-50 py-4"
@@ -53,7 +55,10 @@ export default function Footer({ isSticky = true, showTitle = false }: FooterPro
                         {!isSticky && <p className={descriptionClasses}>{t('clima-descripcion')}</p>}
                     </div>
                     <CurrencyConverter isSticky={isSticky} />
-                    <div className={cardClasses}>
+                    <div
+                        className={`${cardClasses} cursor-pointer`}
+                        onClick={() => setIsMapModalOpen(true)}
+                    >
                         <div className={emojiClasses}>🗺️</div>
                         <h3 className={titleClasses}>{t('mapas-titulo')}</h3>
                         {!isSticky && <p className={descriptionClasses}>{t('mapas-descripcion')}</p>}
@@ -80,6 +85,12 @@ export default function Footer({ isSticky = true, showTitle = false }: FooterPro
             <WeatherModal
                 isOpen={isWeatherModalOpen}
                 onClose={() => setIsWeatherModalOpen(false)}
+            />
+
+            {/* Map Modal */}
+            <MapModal
+                isOpen={isMapModalOpen}
+                onClose={() => setIsMapModalOpen(false)}
             />
         </footer>
     );
