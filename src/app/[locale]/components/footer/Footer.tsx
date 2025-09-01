@@ -1,5 +1,8 @@
 'use client'
+import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import CurrencyConverter from './CurrencyConverter';
+import WeatherModal from './WeatherModal';
 
 interface FooterProps {
     isSticky?: boolean;
@@ -8,6 +11,7 @@ interface FooterProps {
 
 export default function Footer({ isSticky = true, showTitle = false }: FooterProps) {
     const t = useTranslations('MainNewHome');
+    const [isWeatherModalOpen, setIsWeatherModalOpen] = useState(false);
 
     const containerClasses = isSticky
         ? "fixed bottom-0 left-0 right-0 bg-white shadow-lg border-t border-gray-200 z-50 py-4"
@@ -40,16 +44,15 @@ export default function Footer({ isSticky = true, showTitle = false }: FooterPro
                     <h2 className="text-3xl font-bold text-center text-iguazu-dark mb-8">{t('titulo-infaltables')}</h2>
                 )}
                 <div className={gridClasses}>
-                    <div className={cardClasses}>
+                    <div
+                        className={`${cardClasses} cursor-pointer`}
+                        onClick={() => setIsWeatherModalOpen(true)}
+                    >
                         <div className={emojiClasses}>☀️</div>
                         <h3 className={titleClasses}>{t('clima-titulo')}</h3>
                         {!isSticky && <p className={descriptionClasses}>{t('clima-descripcion')}</p>}
                     </div>
-                    <div className={cardClasses}>
-                        <div className={emojiClasses}>💲</div>
-                        <h3 className={titleClasses}>{t('moneda-titulo')}</h3>
-                        {!isSticky && <p className={descriptionClasses}>{t('moneda-descripcion')}</p>}
-                    </div>
+                    <CurrencyConverter isSticky={isSticky} />
                     <div className={cardClasses}>
                         <div className={emojiClasses}>🗺️</div>
                         <h3 className={titleClasses}>{t('mapas-titulo')}</h3>
@@ -72,6 +75,12 @@ export default function Footer({ isSticky = true, showTitle = false }: FooterPro
                     </div>
                 </div>
             </div>
+
+            {/* Weather Modal */}
+            <WeatherModal
+                isOpen={isWeatherModalOpen}
+                onClose={() => setIsWeatherModalOpen(false)}
+            />
         </footer>
     );
 }

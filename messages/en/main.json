@@ -610,6 +610,24 @@
     "faq-epoca-respuesta": "Spring (September to November) and autumn (March to May) offer pleasant weather and fewer crowds.",
     "faq-actividades-pregunta": "What activities can't I miss?",
     "faq-actividades-respuesta": "The boat ride near Devil's Throat, the walks along the trails and the panoramic views from both sides."
+  },
+  "WeatherModal": {
+    "title": "Current Weather",
+    "loading": "Loading weather data...",
+    "error": "Error loading weather data",
+    "retry": "Retry",
+    "feels-like": "Feels like",
+    "humidity": "Humidity",
+    "rain-probability": "Rain probability",
+    "wind": "Wind",
+    "visibility": "Visibility",
+    "uv-index": "UV Index",
+    "uv-low": "Low",
+    "uv-moderate": "Moderate",
+    "uv-high": "High",
+    "uv-very-high": "Very high",
+    "uv-extreme": "Extreme",
+    "last-updated": "Last updated"
   }
     
 }

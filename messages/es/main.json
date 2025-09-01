@@ -607,6 +607,24 @@
     "faq-epoca-respuesta": "La primavera (septiembre a noviembre) y el otoño (marzo a mayo) ofrecen un clima agradable y menos multitudes.",
     "faq-actividades-pregunta": "¿Qué actividades no me puedo perder?",
     "faq-actividades-respuesta": "El paseo en lancha cerca de la Garganta del Diablo, las caminatas por los senderos y las vistas panorámicas desde ambos lados."
+  },
+  "WeatherModal": {
+    "title": "Clima Actual",
+    "loading": "Cargando datos del clima...",
+    "error": "Error al cargar los datos del clima",
+    "retry": "Reintentar",
+    "feels-like": "Sensación térmica",
+    "humidity": "Humedad",
+    "rain-probability": "Prob. de lluvia",
+    "wind": "Viento",
+    "visibility": "Visibilidad",
+    "uv-index": "Índice UV",
+    "uv-low": "Bajo",
+    "uv-moderate": "Moderado",
+    "uv-high": "Alto",
+    "uv-very-high": "Muy alto",
+    "uv-extreme": "Extremo",
+    "last-updated": "Última actualización"
   }
   
     
