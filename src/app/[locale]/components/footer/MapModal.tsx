@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useCallback, useRef } from 'react';
+import React, { useState, useCallback, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import {
   APIProvider,
@@ -8,7 +8,6 @@ import {
   Pin,
   InfoWindow
 } from '@vis.gl/react-google-maps';
-
 interface MapModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -25,6 +24,11 @@ interface Place {
   photos?: any[];
   businessStatus?: string;
   openingHours?: any;
+  reviews?: any[];
+  website?: string;
+  phoneNumber?: string;
+  userRatingsTotal?: number;
+  vicinity?: string;
 }
 
 export default function MapModal({ isOpen, onClose }: MapModalProps) {
@@ -37,10 +41,17 @@ export default function MapModal({ isOpen, onClose }: MapModalProps) {
   const [userLocation, setUserLocation] = useState<google.maps.LatLngLiteral | null>(null);
   const [directions, setDirections] = useState<google.maps.DirectionsResult | null>(null);
   const [showDirections, setShowDirections] = useState(false);
+  const [activeFilter, setActiveFilter] = useState<string>('all');
+  const [searchResults, setSearchResults] = useState<Place[]>([]);
+  const [searchQuery, setSearchQuery] = useState<string>('');
+  const [autocompleteService, setAutocompleteService] = useState<google.maps.places.AutocompleteService | null>(null);
+  const [autocompletePredictions, setAutocompletePredictions] = useState<google.maps.places.AutocompletePrediction[]>([]);
+  const [showAutocomplete, setShowAutocomplete] = useState<boolean>(false);
 
   const mapRef = useRef<google.maps.Map | null>(null);
   const directionsServiceRef = useRef<google.maps.DirectionsService | null>(null);
   const directionsRendererRef = useRef<google.maps.DirectionsRenderer | null>(null);
+  const autocompleteRef = useRef<HTMLInputElement>(null);
 
   // Lugares de interés predefinidos en la zona
   const predefinedPlaces: Place[] = [
@@ -88,7 +99,20 @@ export default function MapModal({ isOpen, onClose }: MapModalProps) {
     const placesService = new google.maps.places.PlacesService(document.createElement('div'));
     const request = {
       placeId: place.place_id!,
-      fields: ['name', 'formatted_address', 'rating', 'price_level', 'types', 'photos', 'business_status', 'opening_hours']
+      fields: [
+        'name',
+        'formatted_address',
+        'rating',
+        'price_level',
+        'types',
+        'photos',
+        'business_status',
+        'opening_hours',
+        'reviews',
+        'website',
+        'formatted_phone_number',
+        'user_ratings_total'
+      ]
     };
 
     placesService.getDetails(request, (result, status) => {
@@ -103,7 +127,11 @@ export default function MapModal({ isOpen, onClose }: MapModalProps) {
           types: result.types,
           photos: result.photos,
           businessStatus: result.business_status,
-          openingHours: result.opening_hours
+          openingHours: result.opening_hours,
+          reviews: result.reviews,
+          website: result.website,
+          phoneNumber: result.formatted_phone_number,
+          userRatingsTotal: result.user_ratings_total
         };
 
         setSelectedPlace(placeDetails);
@@ -176,6 +204,97 @@ export default function MapModal({ isOpen, onClose }: MapModalProps) {
     setShowDirections(false);
   };
 
+  // Initialize autocomplete service
+  useEffect(() => {
+    if (window.google && window.google.maps && window.google.maps.places) {
+      setAutocompleteService(new window.google.maps.places.AutocompleteService());
+    }
+  }, []);
+
+  // Handle search input changes
+  const handleSearchInput = useCallback((value: string) => {
+    setSearchQuery(value);
+
+    if (value.length > 2 && autocompleteService) {
+      const request = {
+        input: value,
+        location: new window.google.maps.LatLng(mapCenter.lat, mapCenter.lng),
+        radius: 50000, // 50km radius
+        types: ['establishment'],
+        componentRestrictions: { country: ['ar', 'br', 'py'] }
+      };
+
+      autocompleteService.getPlacePredictions(request, (predictions, status) => {
+        if (status === window.google.maps.places.PlacesServiceStatus.OK && predictions) {
+          setAutocompletePredictions(predictions);
+          setShowAutocomplete(true);
+        } else {
+          setAutocompletePredictions([]);
+          setShowAutocomplete(false);
+        }
+      });
+    } else {
+      setAutocompletePredictions([]);
+      setShowAutocomplete(false);
+    }
+  }, [autocompleteService, mapCenter]);
+
+  // Handle place selection from autocomplete
+  const handleAutocompleteSelect = useCallback((prediction: google.maps.places.AutocompletePrediction) => {
+    // Get place details
+    const placesService = new window.google.maps.places.PlacesService(document.createElement('div'));
+    const request = {
+      placeId: prediction.place_id,
+      fields: [
+        'name',
+        'formatted_address',
+        'geometry',
+        'rating',
+        'price_level',
+        'types',
+        'photos',
+        'business_status',
+        'opening_hours',
+        'reviews',
+        'website',
+        'formatted_phone_number',
+        'user_ratings_total'
+      ]
+    };
+
+    placesService.getDetails(request, (result, status) => {
+      if (status === window.google.maps.places.PlacesServiceStatus.OK && result) {
+        const location = {
+          lat: result.geometry!.location!.lat(),
+          lng: result.geometry!.location!.lng()
+        };
+
+        const placeDetails: Place = {
+          id: prediction.place_id,
+          displayName: result.name || prediction.description,
+          location,
+          address: result.formatted_address || prediction.description,
+          rating: result.rating,
+          priceLevel: result.price_level ? '$'.repeat(result.price_level) : undefined,
+          types: result.types,
+          photos: result.photos,
+          businessStatus: result.business_status,
+          openingHours: result.opening_hours,
+          reviews: result.reviews,
+          website: result.website,
+          phoneNumber: result.formatted_phone_number,
+          userRatingsTotal: result.user_ratings_total
+        };
+
+        setSelectedPlace(placeDetails);
+        setMapCenter(location);
+        setSearchQuery(result.name || prediction.description);
+        setShowAutocomplete(false);
+        setShowDirections(false);
+      }
+    });
+  }, []);
+
   if (!isOpen) return null;
 
   return (
@@ -199,31 +318,135 @@ export default function MapModal({ isOpen, onClose }: MapModalProps) {
             </button>
           </div>
 
-          {/* Search Bar */}
-          <div className="mb-4">
+          {/* Search Bar with Autocomplete */}
+          <div className="mb-4 relative">
             <input
+              ref={autocompleteRef}
               type="text"
+              value={searchQuery}
               placeholder={t('search-placeholder')}
               className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-iguazu-teal focus:border-transparent"
+              onChange={(e) => handleSearchInput(e.target.value)}
+              onFocus={() => {
+                if (autocompletePredictions.length > 0) {
+                  setShowAutocomplete(true);
+                }
+              }}
+              onBlur={() => {
+                // Delay hiding to allow click on suggestions
+                setTimeout(() => setShowAutocomplete(false), 200);
+              }}
               onKeyDown={(e) => {
-                if (e.key === 'Enter') {
-                  // Simple search implementation - in a real app you'd want proper autocomplete
-                  const query = (e.target as HTMLInputElement).value;
-                  if (query.trim()) {
-                    // For now, just search for predefined places or show alert
-                    const foundPlace = predefinedPlaces.find(place =>
-                      place.displayName.toLowerCase().includes(query.toLowerCase())
-                    );
-                    if (foundPlace) {
-                      setSelectedPlace(foundPlace);
-                      setMapCenter(foundPlace.location);
-                    } else {
-                      alert(t('place-not-found'));
-                    }
+                if (e.key === 'Enter' && searchQuery.trim()) {
+                  // If no autocomplete suggestions, search for predefined places
+                  const foundPlace = predefinedPlaces.find(place =>
+                    place.displayName.toLowerCase().includes(searchQuery.toLowerCase())
+                  );
+                  if (foundPlace) {
+                    setSelectedPlace(foundPlace);
+                    setMapCenter(foundPlace.location);
+                    setShowAutocomplete(false);
+                  } else {
+                    alert(t('place-not-found'));
                   }
+                } else if (e.key === 'Escape') {
+                  setShowAutocomplete(false);
                 }
               }}
             />
+
+            {/* Autocomplete Dropdown */}
+            {showAutocomplete && autocompletePredictions.length > 0 && (
+              <div className="absolute top-full left-0 right-0 bg-white border border-gray-300 rounded-b-lg shadow-lg z-10 max-h-60 overflow-y-auto">
+                {autocompletePredictions.map((prediction, index) => (
+                  <div
+                    key={prediction.place_id}
+                    className="px-4 py-3 hover:bg-gray-50 cursor-pointer border-b border-gray-100 last:border-b-0"
+                    onClick={() => handleAutocompleteSelect(prediction)}
+                  >
+                    <div className="flex items-start">
+                      <div className="flex-1">
+                        <div className="font-medium text-gray-900 text-sm">
+                          {prediction.structured_formatting?.main_text || prediction.description}
+                        </div>
+                        <div className="text-xs text-gray-600 mt-1">
+                          {prediction.structured_formatting?.secondary_text || ''}
+                        </div>
+                      </div>
+                      <div className="ml-2 text-xs text-gray-400">
+                        📍
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Category Filters */}
+          <div className="mb-4">
+            <div className="flex flex-wrap gap-2">
+              <button
+                onClick={() => setActiveFilter('all')}
+                className={`px-3 py-1 text-sm rounded-full transition-colors ${
+                  activeFilter === 'all'
+                    ? 'bg-iguazu-teal text-white'
+                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                }`}
+              >
+                Todos
+              </button>
+              <button
+                onClick={() => setActiveFilter('restaurant')}
+                className={`px-3 py-1 text-sm rounded-full transition-colors ${
+                  activeFilter === 'restaurant'
+                    ? 'bg-iguazu-teal text-white'
+                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                }`}
+              >
+                🍽️ Restaurantes
+              </button>
+              <button
+                onClick={() => setActiveFilter('hotel')}
+                className={`px-3 py-1 text-sm rounded-full transition-colors ${
+                  activeFilter === 'hotel'
+                    ? 'bg-iguazu-teal text-white'
+                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                }`}
+              >
+                🏨 Hoteles
+              </button>
+              <button
+                onClick={() => setActiveFilter('tourist_attraction')}
+                className={`px-3 py-1 text-sm rounded-full transition-colors ${
+                  activeFilter === 'tourist_attraction'
+                    ? 'bg-iguazu-teal text-white'
+                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                }`}
+              >
+                🎭 Atracciones
+              </button>
+              <button
+                onClick={() => setActiveFilter('shopping')}
+                className={`px-3 py-1 text-sm rounded-full transition-colors ${
+                  activeFilter === 'shopping'
+                    ? 'bg-iguazu-teal text-white'
+                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                }`}
+              >
+                🛍️ Compras
+              </button>
+              <button
+                onClick={() => setActiveFilter('transport')}
+                className={`px-3 py-1 text-sm rounded-full transition-colors ${
+                  activeFilter === 'transport'
+                    ? 'bg-iguazu-teal text-white'
+                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                }`}
+              >
+                🚗 Transporte
+              </button>
+            </div>
           </div>
 
           {/* Map Container */}
@@ -266,48 +489,159 @@ export default function MapModal({ isOpen, onClose }: MapModalProps) {
                   </AdvancedMarker>
                 )}
 
-                {/* Info Window for Selected Place */}
+                {/* Enhanced Info Window for Selected Place */}
                 {selectedPlace && (
                   <InfoWindow
                     position={selectedPlace.location}
                     onCloseClick={() => setSelectedPlace(null)}
                   >
-                    <div className="p-4 max-w-sm">
-                      <h3 className="font-bold text-lg mb-2">{selectedPlace.displayName}</h3>
-                      <p className="text-sm text-gray-600 mb-2">{selectedPlace.address}</p>
+                    <div className="p-4 max-w-sm bg-white rounded-lg shadow-lg">
+                      {/* Photo Gallery */}
+                      {selectedPlace.photos && selectedPlace.photos.length > 0 && (
+                        <div className="mb-3">
+                          <img
+                            src={selectedPlace.photos[0].getUrl?.({ maxWidth: 300, maxHeight: 200 }) || ''}
+                            alt={selectedPlace.displayName}
+                            className="w-full h-32 object-cover rounded-lg"
+                            onError={(e) => {
+                              e.currentTarget.style.display = 'none';
+                            }}
+                          />
+                        </div>
+                      )}
 
-                      {selectedPlace.rating && (
-                        <div className="flex items-center mb-2">
-                          <span className="text-yellow-500 mr-1">⭐</span>
-                          <span className="text-sm">{selectedPlace.rating}/5</span>
+                      {/* Place Name and Basic Info */}
+                      <div className="mb-3">
+                        <h3 className="font-bold text-lg text-gray-900 mb-1">{selectedPlace.displayName}</h3>
+                        <p className="text-sm text-gray-600 mb-2">{selectedPlace.address}</p>
+
+                        {/* Rating and Price */}
+                        <div className="flex items-center justify-between mb-2">
+                          {selectedPlace.rating && (
+                            <div className="flex items-center">
+                              <span className="text-yellow-500 mr-1">⭐</span>
+                              <span className="text-sm font-medium">{selectedPlace.rating.toFixed(1)}</span>
+                              {selectedPlace.userRatingsTotal && (
+                                <span className="text-xs text-gray-500 ml-1">
+                                  ({selectedPlace.userRatingsTotal})
+                                </span>
+                              )}
+                            </div>
+                          )}
                           {selectedPlace.priceLevel && (
-                            <span className="text-sm text-gray-500 ml-2">{selectedPlace.priceLevel}</span>
+                            <span className="text-sm text-gray-600">{selectedPlace.priceLevel}</span>
+                          )}
+                        </div>
+
+                        {/* Business Status */}
+                        {selectedPlace.businessStatus && (
+                          <div className="mb-2">
+                            <span className={`inline-block px-2 py-1 text-xs rounded-full ${
+                              selectedPlace.businessStatus === 'OPERATIONAL'
+                                ? 'bg-green-100 text-green-800'
+                                : 'bg-red-100 text-red-800'
+                            }`}>
+                              {selectedPlace.businessStatus === 'OPERATIONAL' ? 'Abierto' : 'Cerrado'}
+                            </span>
+                          </div>
+                        )}
+
+                        {/* Place Types */}
+                        {selectedPlace.types && selectedPlace.types.length > 0 && (
+                          <div className="mb-2">
+                            <div className="flex flex-wrap gap-1">
+                              {selectedPlace.types.slice(0, 3).map((type, index) => (
+                                <span
+                                  key={index}
+                                  className="inline-block px-2 py-1 text-xs bg-gray-100 text-gray-700 rounded"
+                                >
+                                  {type.replace(/_/g, ' ')}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Contact Information */}
+                      {(selectedPlace.phoneNumber || selectedPlace.website) && (
+                        <div className="mb-3 space-y-1">
+                          {selectedPlace.phoneNumber && (
+                            <div className="flex items-center text-sm">
+                              <span className="text-gray-500 mr-2">📞</span>
+                              <a
+                                href={`tel:${selectedPlace.phoneNumber}`}
+                                className="text-iguazu-teal hover:underline"
+                              >
+                                {selectedPlace.phoneNumber}
+                              </a>
+                            </div>
+                          )}
+                          {selectedPlace.website && (
+                            <div className="flex items-center text-sm">
+                              <span className="text-gray-500 mr-2">🌐</span>
+                              <a
+                                href={selectedPlace.website}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-iguazu-teal hover:underline truncate"
+                              >
+                                {selectedPlace.website.replace(/^https?:\/\//, '')}
+                              </a>
+                            </div>
                           )}
                         </div>
                       )}
 
-                      {selectedPlace.businessStatus && (
-                        <p className="text-sm text-gray-600 mb-2">
-                          {selectedPlace.businessStatus === 'OPERATIONAL' ? t('open') : t('closed')}
-                        </p>
-                      )}
-
-                      <div className="flex gap-2 mt-3">
+                      {/* Action Buttons */}
+                      <div className="flex gap-2">
                         <button
                           onClick={() => getDirections(selectedPlace.location)}
-                          className="px-3 py-1 bg-iguazu-teal text-white text-sm rounded hover:bg-iguazu-dark transition-colors"
+                          className="flex-1 px-3 py-2 bg-iguazu-teal text-white text-sm rounded-lg hover:bg-iguazu-dark transition-colors flex items-center justify-center gap-1"
                         >
+                          <span>🧭</span>
                           {t('get-directions')}
                         </button>
                         {showDirections && (
                           <button
                             onClick={clearDirections}
-                            className="px-3 py-1 bg-gray-500 text-white text-sm rounded hover:bg-gray-600 transition-colors"
+                            className="px-3 py-2 bg-gray-500 text-white text-sm rounded-lg hover:bg-gray-600 transition-colors"
                           >
                             {t('clear-directions')}
                           </button>
                         )}
                       </div>
+
+                      {/* Reviews Preview */}
+                      {selectedPlace.reviews && selectedPlace.reviews.length > 0 && (
+                        <div className="mt-3 pt-3 border-t border-gray-200">
+                          <div className="flex items-center mb-2">
+                            <span className="text-sm font-medium text-gray-900">Reseñas recientes</span>
+                          </div>
+                          <div className="space-y-2">
+                            {selectedPlace.reviews.slice(0, 2).map((review: any, index: number) => (
+                              <div key={index} className="text-xs text-gray-600">
+                                <div className="flex items-center mb-1">
+                                  <span className="font-medium mr-2">{review.author_name}</span>
+                                  <div className="flex">
+                                    {[...Array(5)].map((_, i) => (
+                                      <span
+                                        key={i}
+                                        className={`text-xs ${
+                                          i < review.rating ? 'text-yellow-500' : 'text-gray-300'
+                                        }`}
+                                      >
+                                        ★
+                                      </span>
+                                    ))}
+                                  </div>
+                                </div>
+                                <p className="line-clamp-2">{review.text}</p>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                     </div>
                   </InfoWindow>
                 )}
