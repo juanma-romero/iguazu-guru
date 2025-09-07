@@ -35,21 +35,13 @@
     },
     "Metadata": {
       "title": "Iguazu Guru",
-      "description": "Toda la informacion que necesitas para tus dias en Cataratas, Puerto Iguazu, Foz do Iguaçu y Ciudad del Este."
+      "description": "Tu guia en Cataratas del Iguazu, Puerto Iguazu, Foz do Iguaçu y Ciudad del Este."
     },
     "LocaleSwitcher": {
       "label": "Cambiar idioma",
       "locale": "{locale, select, es {🇪🇸 Español} en {🇺🇸 English} pt {🇧🇷 Português} other {Idioma desconocido}}"
     },    
-    "conversor": {
-      "title": "Conversor de Monedas",
-      "label 1": "Monto",
-      "label 1 input": "Ingrese el monto",
-      "label 2": "De",
-      "label 3": "A",
-      "button": "Convertir",
-      "tasaCambio": "Tasa de cambio"
-    },
+    
     "ArgCatfaqs": [
         {
             "pregunta": "Tarifas",
@@ -384,11 +376,6 @@
             }
         }
     ],
-    "footer":{
-      "boton1":"Clima",
-      "boton2":"Cambio",
-      "boton3":"Mapa"
-    },    
     "legal": {
           "h1": "Política de Privacidad",
           "h2-1": "1. Responsable del Tratamiento",
@@ -555,16 +542,7 @@
         "h2-7-p1": "Para cualquier consulta relacionada con este aviso legal, puedes contactarnos a través de:",
         "h2-7-contact": "Correo electrónico:"
 },
-"Navigation": {
-    "previous": "Ciudad anterior",
-    "next": "Próxima ciudad"
-  },
-  "Currency": {
-    "select-currency": "Seleccionar moneda"
-  },
-  "ciudad":{
-    "botonBack": "Volver a Inicio"
-  },
+
     "MainNewHome": {
     "h1": "Tu Guia en Iguazú",
     "pregunta-a-ia": "Preguntale al Guru!",
@@ -641,8 +619,5 @@
     "open": "Abierto",
     "closed": "Cerrado",
     "powered-by-google": "Desarrollado con Google Maps"
-  }
-  
-    
-  
-  }
+  }  
+}

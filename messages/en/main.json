@@ -35,20 +35,11 @@
   },
   "Metadata": {
     "title": "Iguazu Guru",
-    "description": "All the information you need for your days in Cataratas, Puerto Iguazu, Foz do Iguaçu and Ciudad del Este."
+    "description": "your guide in Iguazu Falls, Puerto Iguazu, Foz do Iguaçu and Ciudad del Este."
   },
   "LocaleSwitcher": {
     "label": "Change language",
     "locale": "{locale, select, es {🇪🇸 Español} en {🇺🇸 English} pt {🇧🇷 Português} other {Idioma desconocido}}"
-  },
-  "conversor": {
-    "title": "Currency Converter",
-    "label 1": "Amount",
-    "label 1 input": "Enter the amount",
-    "label 2": "From",
-    "label 3": "To",
-    "button": "Convert",
-    "tasaCambio": "Exchange Rate"
   },
   "ArgCatfaqs": [
     {
@@ -384,12 +375,6 @@
       }
     }
   ],
-  "footer": {
-    "boton1": "Weather",
-    "boton2": "Change",
-    "boton3": "Map"
-  },
-  
 "legal": {
       "h1": "Privacy Policy",
       "h2-1": "1. Data Controller",
@@ -558,17 +543,7 @@
   "h2-7-p1": "For any questions related to this legal notice, you can contact us through:",
   "h2-7-contact": "Email:"
 },
-"Navigation": {
-    "previous": "Previous city",
-    "next": "Next city"
-  },
-  "Currency": {
-    "select-currency": "Select currency"
-  },
-  "ciudad":{
-    "botonBack": "To Home"
-  },
-  "MainNewHome": {
+"MainNewHome": {
     "h1": "Your Guide in Iguazú",
     "pregunta-a-ia":"Ask the Guru!",
     "ai-search-input":"Eg: Do I need a passport to cross into Brazil?",
@@ -628,6 +603,22 @@
     "uv-very-high": "Very high",
     "uv-extreme": "Extreme",
     "last-updated": "Last updated"
+  },
+  "MapModal": {
+    "title": "Interactive Map",
+    "search-placeholder": "Search places in Foz and Puerto Iguazú...",
+    "place-not-found": "Place not found. Try another name.",
+    "location-error": "Error getting your location. Check browser permissions.",
+    "geolocation-not-supported": "Your browser does not support geolocation.",
+    "directions-error": "Error calculating directions.",
+    "get-directions": "Get directions",
+    "clear-directions": "Clear route",
+    "directions": "Directions",
+    "total-distance": "Total distance",
+    "estimated-time": "Estimated time",
+    "open": "Open",
+    "closed": "Closed",
+    "powered-by-google": "Powered by Google Maps"
   }
     
 }

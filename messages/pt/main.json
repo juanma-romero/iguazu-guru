@@ -38,21 +38,13 @@
 },
 "Metadata": {
       "title": "Iguazu Guru",
-      "description": "Todas as informações que você precisa para seus dias em Cataratas, Puerto Iguazú, Foz do Iguaçu e Ciudad del Este."
+      "description": "Seu guia em Cataratas, Puerto Iguazú, Foz do Iguaçu e Ciudad del Este."
 },
 "LocaleSwitcher": {
       "label": "Mudar idioma",
       "locale": "{locale, select, es {🇪🇸 Español} en {🇺🇸 English} pt {🇧🇷 Português} other {Idioma desconocido}}"
 },    
-"conversor": {
-      "title": "Conversor de Moedas",
-      "label 1": "Valor",
-      "label 1 input": "Insira o valor",
-      "label 2": "De",
-      "label 3": "Para",
-      "button": "Converter",
-      "tasaCambio": "Taxa de câmbio"
-},
+
 "ArgCatfaqs": [
         {
             "pregunta": "Tarifas",
@@ -387,12 +379,8 @@
             }
         }
     ],
-"footer":{
-      "boton1":"Tempo",
-      "boton2":"Troca",
-      "boton3":"Mapa"
-},
-    "legal": {
+
+"legal": {
       "h1": "Política de Privacidade",
       "h2-1": "1. Responsável pelo Tratamento",
       "h2-1-p1": "Nome:",
@@ -559,17 +547,7 @@
   "h2-7-p1": "Para qualquer questão relacionada a este aviso legal, você pode nos contatar através de:",
   "h2-7-contact": "E-mail:"
 },
-"Navigation": {
-    "previous": "Cidade anterior",
-    "next": "Próxima cidade"
-  },
-  "Currency": {
-    "select-currency": "Selecione a moeda"
-  },
-  "ciudad":{
-    "botonBack": "Voltar"
-  },
-  "MainNewHome": {
+"MainNewHome": {
     "h1": "Seu guia em Iguaçu",
     "pregunta-a-ia":"Pergunte ao Guru!",
     "ai-search-input":"Ex: preciso de passaporte para cruzar a fronteira?",
@@ -611,6 +589,40 @@
     "faq-epoca-respuesta": "A primavera (setembro a novembro) e o outono (março a maio) oferecem clima agradável e menos multidões.",
     "faq-actividades-pregunta": "Quais atividades não posso perder?",
     "faq-actividades-respuesta": "O passeio de barco perto da Garganta do Diabo, as caminhadas pelas trilhas e as vistas panorâmicas de ambos os lados."
+  },
+  "WeatherModal": {
+    "title": "Clima Atual",
+    "loading": "Carregando dados do clima...",
+    "error": "Erro ao carregar dados do clima",
+    "retry": "Tentar novamente",
+    "feels-like": "Sensação térmica",
+    "humidity": "Umidade",
+    "rain-probability": "Probabilidade de chuva",
+    "wind": "Vento",
+    "visibility": "Visibilidade",
+    "uv-index": "Índice UV",
+    "uv-low": "Baixo",
+    "uv-moderate": "Moderate",
+    "uv-high": "Alto",
+    "uv-very-high": "Muito alto",
+    "uv-extreme": "Extremo",
+    "last-updated": "Última atualização"
+  },
+  "MapModal": {
+    "title": "Mapa Interativo",
+    "search-placeholder": "Pesquisar lugares em Foz e Puerto Iguazú...",
+    "place-not-found": "Local não encontrado. Tente com outro nome.",
+    "location-error": "Erro ao obter sua localização. Verifique as permissões do navegador.",
+    "geolocation-not-supported": "Seu navegador não suporta geolocalização.",
+    "directions-error": "Erro ao calcular as direções.",
+    "get-directions": "Como chegar",
+    "clear-directions": "Limpar rota",
+    "directions": "Direções",
+    "total-distance": "Distância total",
+    "estimated-time": "Tempo estimado",
+    "open": "Aberto",
+    "closed": "Fechado",
+    "powered-by-google": "Desenvolvido com Google Maps"
   }
   
 }

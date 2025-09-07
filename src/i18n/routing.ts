@@ -14,7 +14,7 @@ export const routing = defineRouting({
     '/cde': '/cde'
   },
   // Used when no locale matches
-  defaultLocale: 'en'
+  defaultLocale: 'pt'
 }) 
 
 export type Locale = (typeof routing.locales)[number]

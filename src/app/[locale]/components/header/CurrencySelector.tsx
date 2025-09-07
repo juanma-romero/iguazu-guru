@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { useCurrency } from '../../../../context/CurrencyContext'
-import Image from 'next/image'
+import paisesData from '../../../../../public/paises/paises.json'
 
 interface Currency {
   name: string
@@ -23,7 +23,7 @@ export default function CurrencySelector() {
 
   if (loading) {
     return (
-      <div className="flex items-center space-x-2 px-3 py-2 bg-white rounded-md border border-gray-200">
+      <div className="flex items-center space-x-2 px-3 py-2 bg-gray-50 rounded-md border border-iguazu-teal">
         <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-iguazu-teal"></div>
         <span className="text-sm text-gray-600">Cargando...</span>
       </div>
@@ -32,7 +32,7 @@ export default function CurrencySelector() {
 
   if (error) {
     return (
-      <div className="flex items-center space-x-2 px-3 py-2 bg-white rounded-md border border-red-200">
+      <div className="flex items-center space-x-2 px-3 py-2 bg-gray-50 rounded-md border border-red-200">
         <span className="text-sm text-red-600">Error de monedas</span>
       </div>
     )
@@ -42,18 +42,14 @@ export default function CurrencySelector() {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-2 px-3 py-2 bg-white rounded-md border border-gray-200 hover:border-iguazu-teal transition-colors duration-200 min-w-[120px]"
+        className="flex items-center space-x-2 px-3 py-2 bg-gray-50 rounded-md border border-iguazu-teal transition-colors duration-200 min-w-[120px] cursor-pointer"
         aria-label="Seleccionar moneda"
       >
         {/* Flag icon */}
         {currentCurrencyData && (
-          <Image
-            src={`/paises/${currentCurrencyData.countryCode}.svg`}
-            alt={`Bandera ${currentCurrencyData.name}`}
-            width={20}
-            height={15}
-            className="rounded-sm"
-          />
+          <span className="text-lg">
+            {paisesData[currentCurrencyData.countryCode as keyof typeof paisesData] || '🏳️'}
+          </span>
         )}
 
         {/* Currency code */}
@@ -94,13 +90,9 @@ export default function CurrencySelector() {
                 }`}
               >
                 {/* Flag icon */}
-                <Image
-                  src={`/paises/${currency.countryCode}.svg`}
-                  alt={`Bandera ${currency.name}`}
-                  width={24}
-                  height={18}
-                  className="rounded-sm"
-                />
+                <span className="text-lg">
+                  {paisesData[currency.countryCode as keyof typeof paisesData] || '🏳️'}
+                </span>
 
                 {/* Currency info */}
                 <div className="flex-1 min-w-0">
