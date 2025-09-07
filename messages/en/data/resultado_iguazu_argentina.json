@@ -1,0 +1,47 @@
+{
+  "atracciones": [
+    {
+      "nombre_atraccion": "Parque Nacional Iguazú",
+      "descripcion_corta": "National park on the Argentine side of Iguazu Falls, which houses the Devil's Throat and numerous trails.",
+      "horarios": [
+        {
+          "dias": [1, 2, 3, 4, 5, 6, 0],
+          "apertura": "08:00",
+          "cierre": "18:00",
+          "nota": "Open every day"
+        }
+      ],
+      "precios": [
+        {
+          "tipo_ticket": "General",
+          "moneda": "ARS",
+          "valor": 30000,
+          "nota": null
+        },
+        {
+          "tipo_ticket": "Mercosur Resident",
+          "moneda": "ARS",
+          "valor": 15000,
+          "nota": null
+        },
+        {
+          "tipo_ticket": "National Resident",
+          "moneda": "ARS",
+          "valor": 10000,
+          "nota": null
+        }
+      ],
+      "ubicacion": "Puerto Iguazú, Argentina",
+      "latitud": -25.6953,
+      "longitud": -54.4367,
+      "contacto": {
+        "whatsapp": null,
+        "telefono": null,
+        "email": "info@iguazuargentina.com"
+      },
+      "tips": "Bring insect repellent, comfortable shoes and sunscreen. The park offers spectacular views of the waterfalls.",
+      "como_llegar": "From Puerto Iguazú: Local bus line or taxi. From airport: Organized transfer. Parking available at the park.",
+      "web_oficial_tickets": "https://ventaweb.apn.gob.ar/reserva/inicio?dp=02"
+    }
+  ]
+}

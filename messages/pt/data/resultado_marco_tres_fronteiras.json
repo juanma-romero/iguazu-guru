@@ -1,0 +1,47 @@
+{
+  "atracciones": [
+    {
+      "nombre_atraccion": "Marco das Três Fronteiras",
+      "descripcion_corta": "Um marco onde se encontram as fronteiras da Argentina, Brasil e Paraguai. Oferece espetáculos culturais e vistas dos rios Iguaçu e Paraná.",
+      "horarios": [
+        {
+          "dias": [2, 3, 4, 5, 6, 0],
+          "apertura": "13:30",
+          "cierre": "21:00",
+          "nota": "Horário de terça a domingo"
+        }
+      ],
+      "precios": [
+        {
+          "tipo_ticket": "Adulto Geral",
+          "moneda": "BRL",
+          "valor": 55,
+          "nota": "Inclui Fundo Iguaçu R$ 3"
+        },
+        {
+          "tipo_ticket": "Reduzido (Crianças 6-11 anos, Maiores 60+, Estudantes)",
+          "moneda": "BRL",
+          "valor": 29,
+          "nota": "Inclui Fundo Iguaçu R$ 3"
+        },
+        {
+          "tipo_ticket": "Residentes de Foz do Iguaçu",
+          "moneda": "BRL",
+          "valor": 0,
+          "nota": "Isento com comprovante de residência"
+        }
+      ],
+      "ubicacion": "Foz do Iguaçu, Brasil",
+      "latitud": -25.5889,
+      "longitud": -54.5889,
+      "contacto": {
+        "whatsapp": "+55 45 99149 6336",
+        "telefono": null,
+        "email": "contato@marcodastresfronteiras.com.br"
+      },
+      "tips": "Visite ao entardecer para desfrutar do espetáculo cultural e do pôr do sol. O local oferece vistas privilegiadas das três fronteiras.",
+      "como_llegar": "De Foz do Iguaçu: Ônibus urbano ou táxi. Do aeroporto: Transfer privado recomendado. Estacionamento gratuito disponível.",
+      "web_oficial_tickets": "https://marcodastresfronteiras.com.br/"
+    }
+  ]
+}

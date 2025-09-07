@@ -1,0 +1,47 @@
+{
+  "atracciones": [
+    {
+      "nombre_atraccion": "Parque Nacional Iguazú",
+      "descripcion_corta": "Parque nacional no lado argentino das Cataratas do Iguaçu, que abriga a Garganta do Diabo e numerosos trilhos.",
+      "horarios": [
+        {
+          "dias": [1, 2, 3, 4, 5, 6, 0],
+          "apertura": "08:00",
+          "cierre": "18:00",
+          "nota": "Aberto todos os dias"
+        }
+      ],
+      "precios": [
+        {
+          "tipo_ticket": "Geral",
+          "moneda": "ARS",
+          "valor": 30000,
+          "nota": null
+        },
+        {
+          "tipo_ticket": "Residente Mercosul",
+          "moneda": "ARS",
+          "valor": 15000,
+          "nota": null
+        },
+        {
+          "tipo_ticket": "Residente Nacional",
+          "moneda": "ARS",
+          "valor": 10000,
+          "nota": null
+        }
+      ],
+      "ubicacion": "Puerto Iguazú, Argentina",
+      "latitud": -25.6953,
+      "longitud": -54.4367,
+      "contacto": {
+        "whatsapp": null,
+        "telefono": null,
+        "email": "info@iguazuargentina.com"
+      },
+      "tips": "Leve repelente de insetos, calçado confortável e protetor solar. O parque oferece vistas espetaculares das cataratas.",
+      "como_llegar": "De Puerto Iguazú: Ônibus linha local ou táxi. Do aeroporto: Transfer organizado. Estacionamento disponível no parque.",
+      "web_oficial_tickets": "https://ventaweb.apn.gob.ar/reserva/inicio?dp=02"
+    }
+  ]
+}

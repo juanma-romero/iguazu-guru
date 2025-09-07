@@ -1,0 +1,199 @@
+{
+  "atracciones": [
+    {
+      "nombre_atraccion": "Cataratas do Iguaçu - Parque Nacional do Iguaçu",
+      "descripcion_corta": "Parque nacional en el lado brasileño de las Cataratas del Iguazú, que ofrece vistas panorámicas de las cataratas.",
+      "horarios": [
+        {
+          "dias": [1, 2, 3, 4, 5, 6, 0],
+          "apertura": "09:00",
+          "cierre": "16:00",
+          "nota": "Horario de Lunes a Domingo"
+        }
+      ],
+      "precios": [
+        {
+          "tipo_ticket": "Brasileiro/Mercosul",
+          "moneda": "BRL",
+          "valor": 105,
+          "nota": null
+        },
+        {
+          "tipo_ticket": "Estrangeiro",
+          "moneda": "BRL",
+          "valor": 117,
+          "nota": null
+        }
+      ],
+      "ubicacion": "Foz do Iguaçu, Brasil",
+      "latitud": -25.6953,
+      "longitud": -54.4367,
+      "contacto": {
+        "whatsapp": "+55 45 3521 4438",
+        "telefono": "+55 45 3521 4400",
+        "email": "contato@catarataspni.com.br"
+      },
+      "tips": "Lleve repelente de insectos, calzado cómodo y protector solar. El parque ofrece vistas espectaculares de las cataratas.",
+      "como_llegar": "Desde Foz do Iguaçu: Autobús urbano línea 120. Desde aeropuerto: Transfer oficial del parque. Estacionamiento amplio disponible.",
+      "web_oficial_tickets": "https://tickets.cataratasdoiguacu.com.br/",
+      "paseos": [
+        {
+          "nombre_atraccion": "Trilha das Cataratas",
+          "descripcion_corta": "La ruta tradicional de las Cataratas de Iguazú, una de las 7 Maravillas Naturales del Mundo, comienza en el Centro de Visitantes.",
+          "horarios": [
+            {
+              "dias": [1, 2, 3, 4, 5, 6, 0],
+              "apertura": "09:00",
+              "cierre": "16:00",
+              "nota": "Abierto todos los días"
+            }
+          ],
+          "precios": [
+            {
+              "tipo_ticket": "Incluido en el ingreso del parque",
+              "moneda": null,
+              "valor": null,
+              "nota": null
+            }
+          ],
+          "ubicacion": "Parque Nacional do Iguaçu, Brasil",
+          "latitud": -25.6953,
+          "longitud": -54.4367,
+          "contacto": null,
+          "tips": null,
+          "web_oficial_tickets": null
+        },
+        {
+          "nombre_atraccion": "Trilha do Poço Preto",
+          "descripcion_corta": "Tiene nueve kilómetros de longitud y atraviesa la Mata Atlántica, con opciones de senderismo y ciclismo.",
+          "horarios": [
+            {
+              "dias": [1, 2, 3, 4, 5, 6, 0],
+              "apertura": "09:00",
+              "cierre": "15:00",
+              "nota": "Horarios de senderismo 9:00 AM a 12:00 PM, ciclismo 9:00 AM a 3:00 PM"
+            }
+          ],
+          "precios": [
+            {
+              "tipo_ticket": "Incluido en el ingreso del parque",
+              "moneda": null,
+              "valor": null,
+              "nota": null
+            }
+          ],
+          "ubicacion": "Parque Nacional do Iguaçu, Brasil",
+          "latitud": -25.6953,
+          "longitud": -54.4367,
+          "contacto": null,
+          "tips": null,
+          "web_oficial_tickets": null
+        },
+        {
+          "nombre_atraccion": "Trilha das Bananeiras",
+          "descripcion_corta": "La ruta de 1.3 kilómetros conduce a las orillas del río Iguazú, donde se encuentra el Espaço Taupá.",
+          "horarios": [
+            {
+              "dias": [1, 2, 3, 4, 5, 6, 0],
+              "apertura": "09:00",
+              "cierre": "16:00",
+              "nota": "Abierto todos los días"
+            }
+          ],
+          "precios": [
+            {
+              "tipo_ticket": "Incluido en el ingreso del parque",
+              "moneda": null,
+              "valor": null,
+              "nota": null
+            }
+          ],
+          "ubicacion": "Parque Nacional do Iguaçu, Brasil",
+          "latitud": -25.6953,
+          "longitud": -54.4367,
+          "contacto": null,
+          "tips": null,
+          "web_oficial_tickets": null
+        },
+        {
+          "nombre_atraccion": "Trilha Ytepopo",
+          "descripcion_corta": "Con 5 kilómetros de extensión, ofrece un recorrido deslumbrante a lo largo de la margen del río Iguazú.",
+          "horarios": [
+            {
+              "dias": [1, 2, 3, 4, 5, 6, 0],
+              "apertura": "09:00",
+              "cierre": "14:30",
+              "nota": "Abierto todos los días"
+            }
+          ],
+          "precios": [
+            {
+              "tipo_ticket": "Incluido en el ingreso del parque",
+              "moneda": null,
+              "valor": null,
+              "nota": null
+            }
+          ],
+          "ubicacion": "Parque Nacional do Iguaçu, Brasil",
+          "latitud": -25.6953,
+          "longitud": -54.4367,
+          "contacto": null,
+          "tips": null,
+          "web_oficial_tickets": null
+        },
+        {
+          "nombre_atraccion": "Ciclovia das Cataratas",
+          "descripcion_corta": "Nuevo recorrido pavimentado de 11.6 kilómetros para paseos en bicicleta.",
+          "horarios": [
+            {
+              "dias": [1, 2, 3, 4, 5, 6, 0],
+              "apertura": "09:00",
+              "cierre": "16:00",
+              "nota": "Abierto todos los días"
+            }
+          ],
+          "precios": [
+            {
+              "tipo_ticket": "Incluido en el ingreso del parque",
+              "moneda": null,
+              "valor": null,
+              "nota": null
+            }
+          ],
+          "ubicacion": "Parque Nacional do Iguaçu, Brasil",
+          "latitud": -25.6953,
+          "longitud": -54.4367,
+          "contacto": null,
+          "tips": null,
+          "web_oficial_tickets": null
+        },
+        {
+          "nombre_atraccion": "Circuito São João",
+          "descripcion_corta": "Con 1.9 kilómetros de extensión, contempla una ruta inmersa en la Mata Atlántica.",
+          "horarios": [
+            {
+              "dias": [1, 2, 3, 4, 5, 6, 0],
+              "apertura": "09:00",
+              "cierre": "16:00",
+              "nota": "Abierto todos los días"
+            }
+          ],
+          "precios": [
+            {
+              "tipo_ticket": "Incluido en el ingreso del parque",
+              "moneda": null,
+              "valor": null,
+              "nota": null
+            }
+          ],
+          "ubicacion": "Parque Nacional do Iguaçu, Brasil",
+          "latitud": -25.6953,
+          "longitud": -54.4367,
+          "contacto": null,
+          "tips": null,
+          "web_oficial_tickets": null
+        }
+      ]
+    }
+  ]
+}

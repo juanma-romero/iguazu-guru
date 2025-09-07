@@ -1,0 +1,35 @@
+{
+  "atracciones": [
+    {
+      "nombre_atraccion": "Parque das Aves",
+      "descripcion_corta": "A zoo and bird sanctuary near Iguazu Falls, focused on the conservation of Atlantic Forest species.",
+      "horarios": [
+        {
+          "dias": [1, 2, 3, 4, 5, 6, 0],
+          "apertura": "08:30",
+          "cierre": "16:30",
+          "nota": "Open every day"
+        }
+      ],
+      "precios": [
+        {
+          "tipo_ticket": "General",
+          "moneda": "BRL",
+          "valor": 90,
+          "nota": null
+        }
+      ],
+      "ubicacion": "Foz do Iguaçu, Brasil",
+      "latitud": -25.6000,
+      "longitud": -54.4833,
+      "contacto": {
+        "whatsapp": "+55 45 3529-8282",
+        "telefono": null,
+        "email": "atendimento@parquedasaves.com.br"
+      },
+      "tips": "Bring insect repellent, comfortable shoes and sunscreen. The park offers spectacular views of the Atlantic Forest birds.",
+      "como_llegar": "From Foz do Iguaçu: Bus line 115 or taxi. From airport: Private transfer. Free parking at the facilities.",
+      "web_oficial_tickets": "https://ingressos.parquedasaves.com.br/#/produto/3063"
+    }
+  ]
+}

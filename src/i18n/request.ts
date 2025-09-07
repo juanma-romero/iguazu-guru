@@ -16,6 +16,10 @@ export default getRequestConfig(async ({requestLocale}) => {
     ...(await import(`../../messages/${locale}/foz.json`)).default,
     ...(await import(`../../messages/${locale}/puerto.json`)).default,
     ...(await import(`../../messages/${locale}/cde.json`)).default,
+    ...(await import(`../../messages/${locale}/data/resultado_cataratas_brasil.json`)).default,
+    ...(await import(`../../messages/${locale}/data/resultado_iguazu_argentina.json`)).default,
+    ...(await import(`../../messages/${locale}/data/resultado_marco_tres_fronteiras.json`)).default,
+    ...(await import(`../../messages/${locale}/data/resultado_parque_das_aves.json`)).default,
   }
 
   

@@ -1,0 +1,47 @@
+{
+  "atracciones": [
+    {
+      "nombre_atraccion": "Marco das Três Fronteiras",
+      "descripcion_corta": "A landmark where the borders of Argentina, Brazil and Paraguay meet. It offers cultural shows and views of the Iguazu and Paraná rivers.",
+      "horarios": [
+        {
+          "dias": [2, 3, 4, 5, 6, 0],
+          "apertura": "13:30",
+          "cierre": "21:00",
+          "nota": "Tuesday to Sunday schedule"
+        }
+      ],
+      "precios": [
+        {
+          "tipo_ticket": "General Adult",
+          "moneda": "BRL",
+          "valor": 55,
+          "nota": "Includes Fundo Iguaçu R$ 3"
+        },
+        {
+          "tipo_ticket": "Reduced (Children 6-11 years, Seniors 60+, Students)",
+          "moneda": "BRL",
+          "valor": 29,
+          "nota": "Includes Fundo Iguaçu R$ 3"
+        },
+        {
+          "tipo_ticket": "Residentes de Foz do Iguaçu",
+          "moneda": "BRL",
+          "valor": 0,
+          "nota": "Exempt with proof of residence"
+        }
+      ],
+      "ubicacion": "Foz do Iguaçu, Brasil",
+      "latitud": -25.5889,
+      "longitud": -54.5889,
+      "contacto": {
+        "whatsapp": "+55 45 99149 6336",
+        "telefono": null,
+        "email": "contato@marcodastresfronteiras.com.br"
+      },
+      "tips": "Visit in the afternoon to enjoy the cultural show and sunset. The place offers privileged views of the three borders.",
+      "como_llegar": "From Foz do Iguaçu: Urban bus or taxi. From airport: Private transfer recommended. Free parking available.",
+      "web_oficial_tickets": "https://marcodastresfronteiras.com.br/"
+    }
+  ]
+}
