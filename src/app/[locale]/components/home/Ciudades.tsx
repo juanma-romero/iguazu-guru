@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image'
 import {Link} from '../../../../i18n/routing'
+import paisesData from '../../../../../public/paises/paises.json'
 
 interface CategoryData {
   dondeIr: string[];
@@ -14,7 +15,14 @@ interface CityData {
   foz: CategoryData;
   puerto: CategoryData;
   cde: CategoryData;
-} 
+}
+
+// Helper function to get emoji from flag path
+const getFlagEmoji = (flagPath: string) => {
+  // Extract country code from path like '/paises/br.svg' -> 'br'
+  const countryCode = flagPath.split('/').pop()?.split('.')[0] || '';
+  return paisesData[countryCode as keyof typeof paisesData] || '🏳️';
+};
 
 export default function Ciudades() {
   const t = useTranslations();
@@ -95,15 +103,11 @@ export default function Ciudades() {
             <div className={`bg-gradient-to-r ${city.color} p-4 sm:p-5 lg:p-6 text-white`}>
               <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-1 sm:mb-2">{city.title}</h2>
               <div className="flex items-center space-x-2">
-                <Image
-                  src={city.flag}
-                  alt={`${city.location} flag`}
-                  width={20} // Tamaño base para optimización (corresponde a sm:w-5)
-                  height={20} // Tamaño base para optimización (corresponde a sm:h-5)
-                  className="w-4 h-4 sm:w-5 sm:h-5 rounded-full border-2 border-white" // Clases para tamaño responsivo y forma redonda
-                />
+                <span className="w-4 h-4 sm:w-5 sm:h-5 text-lg flex items-center justify-center rounded-full border-2 border-white">
+                  {getFlagEmoji(city.flag)}
+                </span>
                 <p className="text-xs sm:text-sm opacity-90">{city.location}</p>
-              </div> 
+              </div>
             </div>
 
             {/* Imagen */}

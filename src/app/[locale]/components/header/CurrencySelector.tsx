@@ -78,7 +78,7 @@ export default function CurrencySelector() {
           />
 
           {/* Dropdown content */}
-          <div className="absolute right-0 mt-2 w-56 bg-white rounded-md shadow-lg border border-gray-200 z-20 max-h-64 overflow-y-auto">
+          <div className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-56 md:w-56 md:right-0 md:left-auto md:transform-none bg-white rounded-md shadow-lg border border-gray-200 z-20 max-h-64 overflow-y-auto">
             {currencies.map((currency) => (
               <button
                 key={currency.code}
