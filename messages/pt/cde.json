@@ -1,0 +1,115 @@
+{
+  "NombreCde": "Ciudad del Este",
+  "subTitleCde":"cidade",
+  "dondeIrCde": {
+    "0": {
+      "name": "Saltos del Monday",
+      "image": "/attractions/monday.jpg",
+      "description": "Cachoeiras impressionantes cercadas por vegetação exuberante.",
+      "price": {
+        "value": 12,
+        "Mercosur": 9,
+        "currency": "USD",
+        "notes": "Entrada geral"
+      },
+      "openingHours": "7:00 - 17:00",
+      "location": "Presidente Franco, perto de Ciudad del Este",
+      "rating": 4.3
+    },
+    "1": {
+      "name": "Shopping Paris",
+      "image": "/attractions/ShoParis.jpg",
+      "description": "Shopping center contemporâneo com 4 andares de lojas e restaurantes, além de uma sala de jogos de alta tecnologia.",
+      "price": {
+        "value": 0,
+        "currency": "PYG",
+        "notes": "Entrada gratuita"
+      },
+      "openingHours": "9:00 - 19:00",
+      "location": "Centro de Ciudad del Este",
+      "rating": 4
+    }
+  },
+  "alojamientoCde": {
+    "0": {
+      "name": "Río Hotel by Bourbon Ciudad del Este",
+      "image": "/attractions/hotelBourbonCDE.jpg",
+      "description": "Hotel de negócios moderno com excelente localização.",
+      "price": {
+        "value": 650000,
+        "currency": "PYG",
+        "notes": "Preço por noite, quarto standard"
+      },
+      "amenities": ["Piscina", "Academia", "Restaurante", "Wi-Fi"],
+      "location": "Centro de Ciudad del Este",
+      "rating": 4.4
+    },
+    "1": {
+      "name": "Howard Johnson Ciudad del Este",
+      "image": "/attractions/howardCDE.avif",
+      "description": "Hotel confortável ideal para viajantes de negócios e turistas.",
+      "price": {
+        "value": 550000,
+        "currency": "PYG",
+        "notes": "Preço por noite, quarto standard"
+      },
+      "amenities": ["Piscina", "Restaurante", "Wi-Fi", "Estacionamento"],
+      "location": "Centro de Ciudad del Este",
+      "rating": 4.2
+    }
+  },
+  "gastronomiaCde": {
+    "0": {
+      "name": "Sushi Hokkai CDE",
+      "image": "/attractions/hakkoi.jpg",
+      "description": "Autêntica cozinha japonesa, popular pelo seu sushi fresco.",
+      "price": {
+        "value": 150000,
+        "currency": "PYG",
+        "notes": "Preço médio por pessoa"
+      },
+      "cuisine": "Restaurant japones",
+      "location": ["Shopping Mona Lisa","Capitão Bar"],
+      "rating": 4.3
+    },
+    "1": {
+      "name": "Beirute Restaurante Libanes",
+      "image": "/attractions/beirut.jpg",
+      "description": "Uma explosão de sabores que o transportará para o Oriente Médio.",
+      "price": {
+        "value": 130000,
+        "currency": "PYG",
+        "notes": "Preço médio por pessoa"
+      },
+      "cuisine": "Restaurant Arabe",
+      "location": "F9MQ+GV8, Abay, Cd. del Este 100135",
+      "rating": 4.5
+    }
+  },
+  "seccionesCde": {
+    "dondeIr": {
+      "titulo": "Onde Ir",
+      "descripcion": "Descubra os atrativos mais destacados de Ciudad del Este"
+    },
+    "alojamiento": {
+      "titulo": "Hospedagem",
+      "descripcion": "Encontre o lugar perfeito para sua estadia em Ciudad del Este"
+    },
+    "gastronomia": {
+      "titulo": "Gastronomia",
+      "descripcion": "Aproveite a deliciosa comida paraguaia em Ciudad del Este"
+    }
+  },
+  "etiquetasCde": {
+    "precio": "Preço:",
+    "horarios": "Horários:",
+    "ubicacion": "Localização:",
+    "servicios": "Serviços:",
+    "cocina": "Cozinha:"
+  },
+  "botonesCde": {
+    "verMas": "Ver Mais",
+    "reservar": "Reservar",
+    "verMenu": "Ver Cardápio"
+  }
+}

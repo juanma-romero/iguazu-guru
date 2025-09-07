@@ -1,0 +1,115 @@
+{
+  "NombrePuerto": "Puerto Iguazu",
+  "subTitlePuerto":"nice harbor",
+  "dondeIrPuerto": {
+    "0": {
+      "name": "Cataratas del Iguazú",
+      "image": "/attractions/cataArriba1100.jpg",
+      "description": "One of the natural wonders of the world with impressive waterfalls.",
+      "price": {
+        "value": 45000,
+        "residents": 15000,
+        "currency": "ARS",
+        "notes": "The second consecutive day of visit entitles you to a 50% discount."
+      },
+      "openingHours": "7:00 - 18:00",
+      "location": "Parque Nacional Iguazú",
+      "rating": 5
+    },
+    "1": {
+      "name": "Hito Tres Fronteras",
+      "image": "/attractions/hitoArg.jpg",
+      "description": "Point where the borders of Argentina, Brazil and Paraguay meet.",
+      "price": {
+        "value": 0,
+        "currency": "ARS",
+        "notes": "Free access"
+      },
+      "openingHours": "24 horas",
+      "location": "Puerto Iguazú",
+      "rating": 4
+    }
+  },
+  "alojamientoPuerto": {
+    "0": {
+      "name": "Gran Meliá Iguazú",
+      "image": "/attractions/melia.avif",
+      "description": "Luxurious hotel overlooking the Iguazu Falls.",
+      "price": {
+        "value": 613,
+        "currency": "USD",
+        "notes": "Price per night, standard room"
+      },
+      "amenities": ["Gym", "Spa", "Infinity pool", "Restaurant"],
+      "location": "Parque Nacional Iguazú",
+      "rating": 5
+    },
+    "1": {
+      "name": "O2 Hotel Iguazú",
+      "image": "/images/hotels/arg/o2Ext1.jpg",
+      "description": "Elegant rooms in a sophisticated hotel with a restaurant and a rooftop pool, plus a spa, gym and bar.",
+      "price": {
+        "value": 149,
+        "currency": "USD",
+        "notes": "Price per night, standard room"
+      },
+      "amenities": ["Gym", "Pool", "Spa", "Buffet Breakfast"],
+      "location": "Paraguay 546, N3370 Puerto Iguazú, Misiones, Argentina",
+      "rating": 4.5
+    }
+  },
+  "gastronomiaPuerto": {
+    "0": {
+      "name": "La Rueda 1975",
+      "image": "/attractions/laRueda1975.jpg",
+      "description": "Traditional Argentine restaurant with excellent meats and fish.",
+      "price": {
+        "value": 20000,
+        "currency": "ARS",
+        "notes": "Average price per person"
+      },
+      "cuisine": "Argentina",
+      "location": "Centro de Puerto Iguazú",
+      "rating": 4.7
+    },
+    "1": {
+      "name": "Aqva Restaurant",
+      "image": "/attractions/aqva.jpg",
+      "description": "Contemporary cuisine with local products and river views.",
+      "price": {
+        "value": 20000,
+        "currency": "ARS",
+        "notes": "Average price per person"
+      },
+      "cuisine": "Internacional/Fusion",
+      "location": "Costanera, Puerto Iguazú",
+      "rating": 4.5
+    }
+  },
+  "seccionesPuerto": {
+    "dondeIr": {
+      "titulo": "Where to Go",
+      "descripcion": "Discover the most fascinating places in Puerto Iguazú"
+    },
+    "alojamiento": {
+      "titulo": "Accommodation",
+      "descripcion": "Find the perfect place for your stay in Puerto Iguazú"
+    },
+    "gastronomia": {
+      "titulo": "Gastronomy",
+      "descripcion": "Enjoy delicious Argentine food in Puerto Iguazú"
+    }
+  },
+  "etiquetasPuerto": {
+    "precio": "Price:",
+    "horarios": "Hours:",
+    "ubicacion": "Location:",
+    "servicios": "Services:",
+    "cocina": "Cuisine:"
+  },
+  "botonesPuerto": {
+    "verMas": "See More",
+    "reservar": "Book",
+    "verMenu": "View Menu"
+  }
+}

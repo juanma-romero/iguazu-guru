@@ -1,11 +1,19 @@
 
 import Image from 'next/image';
-import ciudades from '../../../../messages/es/ciudades.json';
 import { useTranslations } from 'next-intl';
 
 export default function Foz() {
-    const t = useTranslations('foz');
-    const fozData = ciudades.foz;
+    const t = useTranslations();    
+    // Helper function to convert translation objects to arrays
+    const getItemsArray = (section: any) => {
+        if (!section) return [];
+        return Object.values(section);
+    };
+
+    // Get translated data
+    const dondeIrItems = getItemsArray(t.raw('dondeIrFoz'));
+    const alojamientoItems = getItemsArray(t.raw('alojamientoFoz'));
+    const gastronomiaItems = getItemsArray(t.raw('gastronomiaFoz'));
 
     const renderStars = (rating: number) => {
         return Array.from({ length: 5 }, (_, i) => (
@@ -25,9 +33,9 @@ export default function Foz() {
             {/* Hero Section */}
             <section className="bg-gradient-to-r from-iguazu-teal to-iguazu-dark text-white py-16 md:py-24">
                 <div className="container mx-auto px-4 text-center">
-                    <h1 className="text-4xl md:text-6xl font-bold mb-4">{t('Nombre')}</h1>
+                    <h1 className="text-4xl md:text-6xl font-bold mb-4">{t('NombreFoz')}</h1>
                     <p className="text-xl md:text-2xl max-w-3xl mx-auto">
-                        {t('subTitle')}
+                        {t('subTitleFoz')}
                     </p>
                 </div>
             </section>
@@ -35,12 +43,12 @@ export default function Foz() {
             {/* Dónde Ir Section */}
             <section className="py-12 md:py-16 bg-white">
                 <div className="container mx-auto px-4">
-                    <h2 className="text-3xl font-bold text-center text-iguazu-dark mb-2">Dónde Ir</h2>
+                    <h2 className="text-3xl font-bold text-center text-iguazu-dark mb-2">{t('seccionesFoz.dondeIr.titulo')}</h2>
                     <p className="text-center text-iguazu-teal mb-8 max-w-2xl mx-auto">
-                        Explora los lugares más fascinantes de Foz do Iguaçu
+                        {t('seccionesFoz.dondeIr.descripcion')}
                     </p>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                        {Object.values(fozData.dondeIr).map((item: any, index) => (
+                        {dondeIrItems.map((item: any, index) => (
                             <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                                 <div className="relative h-48">
                                     <Image
@@ -58,16 +66,16 @@ export default function Foz() {
                                         <span className="ml-2 text-sm text-gray-600">({item.rating})</span>
                                     </div>
                                     <div className="text-sm text-gray-600 mb-2">
-                                        <strong>Precio:</strong> {formatPrice(item.price)}
+                                        <strong>{t('etiquetasFoz.precio')}</strong> {formatPrice(item.price)}
                                     </div>
                                     <div className="text-sm text-gray-600 mb-2">
-                                        <strong>Horarios:</strong> {item.openingHours}
+                                        <strong>{t('etiquetasFoz.horarios')}</strong> {item.openingHours}
                                     </div>
                                     <div className="text-sm text-gray-600 mb-4">
-                                        <strong>Ubicación:</strong> {item.location}
+                                        <strong>{t('etiquetasFoz.ubicacion')}</strong> {item.location}
                                     </div>
                                     <button className="w-full bg-iguazu-teal hover:bg-opacity-90 text-white font-bold py-2 px-4 rounded-md transition">
-                                        Ver Más
+                                        {t('botonesFoz.verMas')}
                                     </button>
                                 </div>
                             </div>
@@ -79,12 +87,12 @@ export default function Foz() {
             {/* Alojamiento Section */}
             <section className="py-12 md:py-16 bg-gray-50">
                 <div className="container mx-auto px-4">
-                    <h2 className="text-3xl font-bold text-center text-iguazu-dark mb-2">Alojamiento</h2>
+                    <h2 className="text-3xl font-bold text-center text-iguazu-dark mb-2">{t('seccionesFoz.alojamiento.titulo')}</h2>
                     <p className="text-center text-iguazu-teal mb-8 max-w-2xl mx-auto">
-                        Encuentra el lugar perfecto para tu estadía en Foz do Iguaçu
+                        {t('seccionesFoz.alojamiento.descripcion')}
                     </p>
                     <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-                        {Object.values(fozData.alojamiento).map((item: any, index) => (
+                        {alojamientoItems.map((item: any, index) => (
                             <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                                 <div className="relative h-48">
                                     <Image
@@ -102,13 +110,13 @@ export default function Foz() {
                                         <span className="ml-2 text-sm text-gray-600">({item.rating})</span>
                                     </div>
                                     <div className="text-sm text-gray-600 mb-2">
-                                        <strong>Precio:</strong> {formatPrice(item.price)}
+                                        <strong>{t('etiquetasFoz.precio')}</strong> {formatPrice(item.price)}
                                     </div>
                                     <div className="text-sm text-gray-600 mb-3">
-                                        <strong>Ubicación:</strong> {item.location}
+                                        <strong>{t('etiquetasFoz.ubicacion')}</strong> {item.location}
                                     </div>
                                     <div className="mb-4">
-                                        <strong className="text-sm text-gray-700">Servicios:</strong>
+                                        <strong className="text-sm text-gray-700">{t('etiquetasFoz.servicios')}</strong>
                                         <div className="flex flex-wrap gap-1 mt-1">
                                             {item.amenities.map((amenity: string, amenityIndex: number) => (
                                                 <span key={amenityIndex} className="bg-iguazu-teal bg-opacity-10 text-iguazu-teal text-xs px-2 py-1 rounded">
@@ -118,7 +126,7 @@ export default function Foz() {
                                         </div>
                                     </div>
                                     <button className="w-full bg-iguazu-teal hover:bg-opacity-90 text-white font-bold py-2 px-4 rounded-md transition">
-                                        Reservar
+                                        {t('botonesFoz.reservar')}
                                     </button>
                                 </div>
                             </div>
@@ -130,12 +138,12 @@ export default function Foz() {
             {/* Gastronomía Section */}
             <section className="py-12 md:py-16 bg-white">
                 <div className="container mx-auto px-4">
-                    <h2 className="text-3xl font-bold text-center text-iguazu-dark mb-2">Gastronomía</h2>
+                    <h2 className="text-3xl font-bold text-center text-iguazu-dark mb-2">{t('seccionesFoz.gastronomia.titulo')}</h2>
                     <p className="text-center text-iguazu-teal mb-8 max-w-2xl mx-auto">
-                        Disfruta de la deliciosa comida brasileña en Foz do Iguaçu
+                        {t('seccionesFoz.gastronomia.descripcion')}
                     </p>
                     <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-                        {Object.values(fozData.gastronomia).map((item: any, index) => (
+                        {gastronomiaItems.map((item: any, index) => (
                             <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                                 <div className="relative h-48">
                                     <Image
@@ -153,16 +161,16 @@ export default function Foz() {
                                         <span className="ml-2 text-sm text-gray-600">({item.rating})</span>
                                     </div>
                                     <div className="text-sm text-gray-600 mb-2">
-                                        <strong>Precio:</strong> {formatPrice(item.price)}
+                                        <strong>{t('etiquetasFoz.precio')}</strong> {formatPrice(item.price)}
                                     </div>
                                     <div className="text-sm text-gray-600 mb-2">
-                                        <strong>Cocina:</strong> {item.cuisine}
+                                        <strong>{t('etiquetasFoz.cocina')}</strong> {item.cuisine}
                                     </div>
                                     <div className="text-sm text-gray-600 mb-4">
-                                        <strong>Ubicación:</strong> {item.location}
+                                        <strong>{t('etiquetasFoz.ubicacion')}</strong> {item.location}
                                     </div>
                                     <button className="w-full bg-iguazu-teal hover:bg-opacity-90 text-white font-bold py-2 px-4 rounded-md transition">
-                                        Ver Menú
+                                        {t('botonesFoz.verMenu')}
                                     </button>
                                 </div>
                             </div>
