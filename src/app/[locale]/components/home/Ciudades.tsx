@@ -37,6 +37,7 @@ export default function Ciudades() {
   const cities = [
     {
       key: 'foz' as const,
+      route: 'foz-do-iguacu',
       title: t('cards.foz.title'),
       location: t('cards.foz.location'),
       flag: '/paises/br.svg',
@@ -45,6 +46,7 @@ export default function Ciudades() {
     },
     {
       key: 'puerto' as const,
+      route: 'puerto-iguazu',
       title: t('cards.puerto.title'),
       location: t('cards.puerto.location'),
       flag: '/paises/ar.svg',
@@ -53,6 +55,7 @@ export default function Ciudades() {
     },
     {
       key: 'cde' as const,
+      route: 'cidade-de-leste',
       title: t('cards.cde.title'),
       location: t('cards.cde.location'),
       flag: '/paises/py.svg',
@@ -172,7 +175,9 @@ export default function Ciudades() {
               </div>
 
               {/* Botón de explorar */}
-              <Link href={`/${city.key}`}>
+              <Link href={city.route === 'foz-do-iguacu' ? '/cidades/foz-do-iguacu' :
+                        city.route === 'puerto-iguazu' ? '/cidades/puerto-iguazu' :
+                        '/cidades/cidade-de-leste'}>
                 <button className="w-full mt-4 sm:mt-6 bg-gradient-to-r from-yellow-600 to-yellow-700 text-white py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg text-sm sm:text-base font-semibold hover:from-yellow-700 hover:to-yellow-800 transition-all duration-300 transform hover:scale-105">
                   {t('Main.Button-More')} {city.title}
                 </button>

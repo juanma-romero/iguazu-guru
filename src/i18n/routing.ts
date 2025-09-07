@@ -8,10 +8,10 @@ export const routing = defineRouting({
   // A list of all pathnames that are supported
   pathnames: {
     '/': '/',
-    '/legal': '/legal', 
-    '/foz': '/foz',
-    '/puerto': '/puerto',
-    '/cde': '/cde'
+    '/legal': '/legal',
+    '/cidades/foz-do-iguacu': '/cidades/foz-do-iguacu',
+    '/cidades/puerto-iguazu': '/cidades/puerto-iguazu',
+    '/cidades/cidade-de-leste': '/cidades/cidade-de-leste'
   },
   // Used when no locale matches
   defaultLocale: 'pt'

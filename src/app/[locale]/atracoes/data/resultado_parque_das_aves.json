@@ -1,0 +1,35 @@
+{
+  "atracciones": [
+    {
+      "nombre_atraccion": "Parque das Aves",
+      "descripcion_corta": "Un zoológico y santuario de aves cerca de las Cataratas del Iguazú, enfocado en la conservación de especies de la Mata Atlántica.",
+      "horarios": [
+        {
+          "dias": [1, 2, 3, 4, 5, 6, 0],
+          "apertura": "08:30",
+          "cierre": "16:30",
+          "nota": "Abierto todos los días"
+        }
+      ],
+      "precios": [
+        {
+          "tipo_ticket": "General",
+          "moneda": "BRL",
+          "valor": 90,
+          "nota": null
+        }
+      ],
+      "ubicacion": "Foz do Iguaçu, Brasil",
+      "latitud": -25.6000,
+      "longitud": -54.4833,
+      "contacto": {
+        "whatsapp": "+55 45 3529-8282",
+        "telefono": null,
+        "email": "atendimento@parquedasaves.com.br"
+      },
+      "tips": "Lleve repelente de insectos, calzado cómodo y protector solar. El parque ofrece vistas espectaculares de las aves de la Mata Atlántica.",
+      "como_llegar": "Desde Foz do Iguaçu: Autobús línea 115 o taxi. Desde aeropuerto: Transfer privado. Estacionamiento gratuito en las instalaciones.",
+      "web_oficial_tickets": "https://ingressos.parquedasaves.com.br/#/produto/3063"
+    }
+  ]
+}
