@@ -1,4 +1,10 @@
+import { useTranslations } from "next-intl";
+
 const ScheduleDisplay = ({ horarios }) => {
+
+  {/* Prueba next-intl */}
+  const t = useTranslations();
+
   if (!horarios || horarios.length === 0) return null;
 
   const getDaysText = (days) => {
@@ -10,7 +16,12 @@ const ScheduleDisplay = ({ horarios }) => {
   return (
     <div>
       <h3 className="font-semibold text-gray-700 mb-2">🕒 Horarios</h3>
+      {/* Prueba next-intl */}
+        <p>{t('atraccionesBrasil.nombre_atraccion')}</p>
       <div className="space-y-2">
+
+        
+
         {horarios.map((horario, index) => (
           <div key={index} className="text-sm">
             <p className="text-gray-600">{getDaysText(horario.dias)}</p>

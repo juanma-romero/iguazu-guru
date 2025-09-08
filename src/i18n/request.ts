@@ -20,9 +20,13 @@ export default getRequestConfig(async ({requestLocale}) => {
     ...(await import(`../../messages/${locale}/data/resultado_iguazu_argentina.json`)).default,
     ...(await import(`../../messages/${locale}/data/resultado_marco_tres_fronteiras.json`)).default,
     ...(await import(`../../messages/${locale}/data/resultado_parque_das_aves.json`)).default,
+    ...(await import(`../../messages/${locale}/data/principal.json`)).default,
   }
 
-  
+  // 👇 AQUÍ ES DONDE LO IMPRIMES
+  //console.log(`\n--- 🌎 TRADUCCIONES UNIFICADAS PARA EL IDIOMA: [${locale}] ---`);
+  //console.log(JSON.stringify(messages, null, 2)); // `null, 2` formatea el JSON para que sea legible
+  //console.log("--- FIN DE LAS TRADUCCIONES ---\n");
   return {
     locale,
     messages

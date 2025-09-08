@@ -1,6 +1,8 @@
 import { Link } from '@/i18n/navigation'
+import { useTranslations } from 'next-intl';
 
 export default function AttractionLayout({ children, title, backUrl = '/atracoes' }) {
+  const t = useTranslations();
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Header con navegación */}
@@ -29,7 +31,7 @@ export default function AttractionLayout({ children, title, backUrl = '/atracoes
         {children}
       </main>
 
-      {/* Footer */}
+      {/* Footer 
       <footer className="bg-gray-800 text-white py-6 mt-12">
         <div className="container mx-auto px-4 text-center">
           <p className="text-gray-400">
@@ -37,6 +39,7 @@ export default function AttractionLayout({ children, title, backUrl = '/atracoes
           </p>
         </div>
       </footer>
+      */}
     </div>
   )
 }
