@@ -41,7 +41,19 @@
       },
       "tips": "Visite al atardecer para disfrutar del espectáculo cultural y la puesta de sol. El lugar ofrece vistas privilegiadas de las tres fronteras.",
       "como_llegar": "Desde Foz do Iguaçu: Autobús urbano o taxi. Desde aeropuerto: Transfer privado recomendado. Estacionamiento gratuito disponible.",
-      "web_oficial_tickets": "https://marcodastresfronteiras.com.br/"
+      "web_oficial_tickets": "https://marcodastresfronteiras.com.br/",
+      "horariosTitulo": "Horarios",
+      "preciosTitulo": "Precios",
+      "ubicacionComoLlegarTitulo": "Ubicación y Cómo Llegar",
+      "ubicacionSubtitulo": "Ubicación",
+      "coordenadasLabel": "Coordenadas:",
+      "comoLlegarSubtitulo": "Cómo Llegar",
+      "tipsTitulo": "Tips para Visitantes",
+      "contactoTitulo": "Contacto",
+      "emailLabel": "Email:",
+      "telefonoLabel": "Teléfono:",
+      "whatsappLabel": "WhatsApp:",
+      "comprarTicketsBtn": "Comprar Tickets Oficiales"
     }
   ]
 }

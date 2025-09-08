@@ -13,7 +13,10 @@ export const routing = defineRouting({
     '/cidades/puerto-iguazu': '/cidades/puerto-iguazu',
     '/cidades/cidade-de-leste': '/cidades/cidade-de-leste',
     '/atracoes':'/atracoes',
-    
+    '/atracoes/cataratas-argentina':'/atracoes/cataratas-argentina',
+    '/atracoes/cataratas-brasil':'/atracoes/cataratas-brasil',
+    '/atracoes/marco-tres-fronteiras':'/atracoes/marco-tres-fronteiras',
+    '/atracoes/parque_das_aves':'/atracoes/parque_das_aves',
   },
   // Used when no locale matches
   defaultLocale: 'pt'

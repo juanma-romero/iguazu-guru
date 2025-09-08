@@ -29,7 +29,19 @@
       },
       "tips": "Leve repelente de insetos, calçado confortável e protetor solar. O parque oferece vistas espetaculares das aves da Mata Atlântica.",
       "como_llegar": "De Foz do Iguaçu: Ônibus linha 115 ou táxi. Do aeroporto: Transfer privado. Estacionamento gratuito nas instalações.",
-      "web_oficial_tickets": "https://ingressos.parquedasaves.com.br/#/produto/3063"
+      "web_oficial_tickets": "https://ingressos.parquedasaves.com.br/#/produto/3063",
+      "horariosTitulo": "Horários",
+      "preciosTitulo": "Preços",
+      "ubicacionComoLlegarTitulo": "Localização e Como Chegar",
+      "ubicacionSubtitulo": "Localização",
+      "coordenadasLabel": "Coordenadas:",
+      "comoLlegarSubtitulo": "Como Chegar",
+      "tipsTitulo": "Dicas para Visitantes",
+      "contactoTitulo": "Contato",
+      "emailLabel": "Email:",
+      "telefonoLabel": "Telefone:",
+      "whatsappLabel": "WhatsApp:",
+      "comprarTicketsBtn": "Comprar Ingressos Oficiais"
     }
   ]
 }

@@ -41,7 +41,19 @@
       },
       "tips": "Visit in the afternoon to enjoy the cultural show and sunset. The place offers privileged views of the three borders.",
       "como_llegar": "From Foz do Iguaçu: Urban bus or taxi. From airport: Private transfer recommended. Free parking available.",
-      "web_oficial_tickets": "https://marcodastresfronteiras.com.br/"
+      "web_oficial_tickets": "https://marcodastresfronteiras.com.br/",
+      "horariosTitulo": "Schedules",
+      "preciosTitulo": "Prices",
+      "ubicacionComoLlegarTitulo": "Location and How to Get There",
+      "ubicacionSubtitulo": "Location",
+      "coordenadasLabel": "Coordinates:",
+      "comoLlegarSubtitulo": "How to Get There",
+      "tipsTitulo": "Visitor Tips",
+      "contactoTitulo": "Contact",
+      "emailLabel": "Email:",
+      "telefonoLabel": "Phone:",
+      "whatsappLabel": "WhatsApp:",
+      "comprarTicketsBtn": "Buy Official Tickets"
     }
   ]
 }

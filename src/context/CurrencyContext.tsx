@@ -40,9 +40,9 @@ const CURRENCIES: Currency[] = [
 // Default currency
 const DEFAULT_CURRENCY = 'USD'
 
-// API configuration
+// API configuration 
 const API_KEY = process.env.NEXT_PUBLIC_EXCHANGE_RATE_API_KEY
-const API_BASE_URL = 'https://v6.exchangerate-api.com/v6'
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL
 
 const CurrencyContext = createContext<CurrencyContextType | undefined>(undefined)
 

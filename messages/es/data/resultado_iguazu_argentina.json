@@ -41,7 +41,19 @@
       },
       "tips": "Lleve repelente de insectos, calzado cómodo y protector solar. El parque ofrece vistas espectaculares de las cataratas.",
       "como_llegar": "Desde Puerto Iguazú: Autobús línea local o taxi. Desde aeropuerto: Transfer organizado. Estacionamiento disponible en el parque.",
-      "web_oficial_tickets": "https://ventaweb.apn.gob.ar/reserva/inicio?dp=02"
+      "web_oficial_tickets": "https://ventaweb.apn.gob.ar/reserva/inicio?dp=02",
+      "horariosTitulo": "Horarios",
+      "preciosTitulo": "Precios",
+      "ubicacionComoLlegarTitulo": "Ubicación y Cómo Llegar",
+      "ubicacionSubtitulo": "Ubicación",
+      "coordenadasLabel": "Coordenadas:",
+      "comoLlegarSubtitulo": "Cómo Llegar",
+      "tipsTitulo": "Tips para Visitantes",
+      "contactoTitulo": "Contacto",
+      "emailLabel": "Email:",
+      "telefonoLabel": "Teléfono:",
+      "whatsappLabel": "WhatsApp:",
+      "comprarTicketsBtn": "Comprar Tickets Oficiales"
     }
   ]
 }

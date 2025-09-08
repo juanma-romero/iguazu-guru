@@ -41,7 +41,19 @@
       },
       "tips": "Bring insect repellent, comfortable shoes and sunscreen. The park offers spectacular views of the waterfalls.",
       "como_llegar": "From Puerto Iguazú: Local bus line or taxi. From airport: Organized transfer. Parking available at the park.",
-      "web_oficial_tickets": "https://ventaweb.apn.gob.ar/reserva/inicio?dp=02"
+      "web_oficial_tickets": "https://ventaweb.apn.gob.ar/reserva/inicio?dp=02",
+      "horariosTitulo": "Schedules",
+      "preciosTitulo": "Prices",
+      "ubicacionComoLlegarTitulo": "Location and How to Get There",
+      "ubicacionSubtitulo": "Location",
+      "coordenadasLabel": "Coordinates:",
+      "comoLlegarSubtitulo": "How to Get There",
+      "tipsTitulo": "Visitor Tips",
+      "contactoTitulo": "Contact",
+      "emailLabel": "Email:",
+      "telefonoLabel": "Phone:",
+      "whatsappLabel": "WhatsApp:",
+      "comprarTicketsBtn": "Buy Official Tickets"
     }
   ]
 }

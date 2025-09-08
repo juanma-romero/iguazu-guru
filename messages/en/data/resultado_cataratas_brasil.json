@@ -36,6 +36,18 @@
       "tips": "Bring insect repellent, comfortable shoes and sunscreen. The park offers spectacular views of the waterfalls.",
       "como_llegar": "From Foz do Iguaçu: Urban bus line 120. From airport: Official park transfer. Ample parking available.",
       "web_oficial_tickets": "https://tickets.cataratasdoiguacu.com.br/",
+      "horariosTitulo": "Schedules",
+      "preciosTitulo": "Prices",
+      "ubicacionComoLlegarTitulo": "Location and How to Get There",
+      "ubicacionSubtitulo": "Location",
+      "coordenadasLabel": "Coordinates:",
+      "comoLlegarSubtitulo": "How to Get There",
+      "tipsTitulo": "Visitor Tips",
+      "contactoTitulo": "Contact",
+      "emailLabel": "Email:",
+      "telefonoLabel": "Phone:",
+      "whatsappLabel": "WhatsApp:",
+      "comprarTicketsBtn": "Buy Official Tickets",
       "paseos": [
         {
           "nombre_atraccion": "Trilha das Cataratas",
