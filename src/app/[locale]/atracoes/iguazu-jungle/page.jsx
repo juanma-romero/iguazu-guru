@@ -3,6 +3,6 @@ export default function MarcoTresFronteirasPage() {
   
 
   return (
-    <h1>3 fronteiras</h1>
+    <h1>jungle</h1>
   )
 }

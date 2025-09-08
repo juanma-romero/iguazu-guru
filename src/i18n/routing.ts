@@ -11,7 +11,9 @@ export const routing = defineRouting({
     '/legal': '/legal',
     '/cidades/foz-do-iguacu': '/cidades/foz-do-iguacu',
     '/cidades/puerto-iguazu': '/cidades/puerto-iguazu',
-    '/cidades/cidade-de-leste': '/cidades/cidade-de-leste'
+    '/cidades/cidade-de-leste': '/cidades/cidade-de-leste',
+    '/atracoes':'/atracoes',
+    
   },
   // Used when no locale matches
   defaultLocale: 'pt'
