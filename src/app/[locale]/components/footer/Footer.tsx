@@ -73,11 +73,13 @@ export default function Footer({ isSticky = true, showTitle = false }: FooterPro
                         <h3 className={titleClasses}>{t('transporte-titulo')}</h3>
                         {!isSticky && <p className={descriptionClasses}>{t('transporte-descripcion')}</p>}
                     </div>
+{/*
                     <div className={cardClasses}>
                         <div className={emojiClasses}>👮🏽</div>
                         <h3 className={titleClasses}>{t('seguridad-titulo')}</h3>
                         {!isSticky && <p className={descriptionClasses}>{t('seguridad-descripcion')}</p>}
                     </div>
+*/}
                 </div>
             </div>
 
