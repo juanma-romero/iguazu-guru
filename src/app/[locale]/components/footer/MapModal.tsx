@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useCallback, useRef, useEffect } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import {
   APIProvider,
@@ -44,8 +44,7 @@ export default function MapModal({ isOpen, onClose }: MapModalProps) {
   const [activeFilter, setActiveFilter] = useState<string>('all');
   const [searchResults, setSearchResults] = useState<Place[]>([]);
   const [searchQuery, setSearchQuery] = useState<string>('');
-  const [autocompleteService, setAutocompleteService] = useState<google.maps.places.AutocompleteService | null>(null);
-  const [autocompletePredictions, setAutocompletePredictions] = useState<google.maps.places.AutocompletePrediction[]>([]);
+  const [autocompletePredictions, setAutocompletePredictions] = useState<google.maps.places.AutocompleteSuggestion[]>([]);
   const [showAutocomplete, setShowAutocomplete] = useState<boolean>(false);
 
   const mapRef = useRef<google.maps.Map | null>(null);
@@ -204,95 +203,103 @@ export default function MapModal({ isOpen, onClose }: MapModalProps) {
     setShowDirections(false);
   };
 
-  // Initialize autocomplete service
-  useEffect(() => {
-    if (window.google && window.google.maps && window.google.maps.places) {
-      setAutocompleteService(new window.google.maps.places.AutocompleteService());
-    }
-  }, []);
+
 
   // Handle search input changes
-  const handleSearchInput = useCallback((value: string) => {
+  const handleSearchInput = useCallback(async (value: string) => {
     setSearchQuery(value);
 
-    if (value.length > 2 && autocompleteService) {
-      const request = {
-        input: value,
-        location: new window.google.maps.LatLng(mapCenter.lat, mapCenter.lng),
-        radius: 50000, // 50km radius
-        types: ['establishment'],
-        componentRestrictions: { country: ['ar', 'br', 'py'] }
-      };
+    if (value.length > 2) {
+      try {
+        const request: google.maps.places.AutocompleteRequest = {
+          input: value,
+          locationBias: {
+            center: { lat: mapCenter.lat, lng: mapCenter.lng },
+            radius: 30000 // 30km radius
+          },
+          includedPrimaryTypes: ['establishment'],
+          includedRegionCodes: ['AR', 'BR', 'PY']
+        };
 
-      autocompleteService.getPlacePredictions(request, (predictions, status) => {
-        if (status === window.google.maps.places.PlacesServiceStatus.OK && predictions) {
-          setAutocompletePredictions(predictions);
+        const response = await google.maps.places.AutocompleteSuggestion.fetchAutocompleteSuggestions(request);
+
+        if (response.suggestions && response.suggestions.length > 0) {
+          setAutocompletePredictions(response.suggestions);
           setShowAutocomplete(true);
         } else {
           setAutocompletePredictions([]);
           setShowAutocomplete(false);
         }
-      });
+      } catch (error) {
+        console.error('Error fetching autocomplete suggestions:', error);
+        setAutocompletePredictions([]);
+        setShowAutocomplete(false);
+      }
     } else {
       setAutocompletePredictions([]);
       setShowAutocomplete(false);
     }
-  }, [autocompleteService, mapCenter]);
+  }, [mapCenter]);
 
   // Handle place selection from autocomplete
-  const handleAutocompleteSelect = useCallback((prediction: google.maps.places.AutocompletePrediction) => {
-    // Get place details
-    const placesService = new window.google.maps.places.PlacesService(document.createElement('div'));
-    const request = {
-      placeId: prediction.place_id,
-      fields: [
-        'name',
-        'formatted_address',
-        'geometry',
-        'rating',
-        'price_level',
-        'types',
-        'photos',
-        'business_status',
-        'opening_hours',
-        'reviews',
-        'website',
-        'formatted_phone_number',
-        'user_ratings_total'
-      ]
-    };
+  const handleAutocompleteSelect = useCallback(async (suggestion: google.maps.places.AutocompleteSuggestion) => {
+    if (!suggestion.placePrediction) return;
 
-    placesService.getDetails(request, (result, status) => {
-      if (status === window.google.maps.places.PlacesServiceStatus.OK && result) {
-        const location = {
-          lat: result.geometry!.location!.lat(),
-          lng: result.geometry!.location!.lng()
-        };
+    try {
+      const place = await suggestion.placePrediction.toPlace();
+      await place.fetchFields({
+        fields: [
+          'id',
+          'displayName',
+          'formattedAddress',
+          'location',
+          'rating',
+          'priceLevel',
+          'types',
+          'photos',
+          'businessStatus',
+          'regularOpeningHours',
+          'reviews',
+          'websiteURI',
+          'nationalPhoneNumber',
+          'userRatingCount'
+        ]
+      });
 
-        const placeDetails: Place = {
-          id: prediction.place_id,
-          displayName: result.name || prediction.description,
-          location,
-          address: result.formatted_address || prediction.description,
-          rating: result.rating,
-          priceLevel: result.price_level ? '$'.repeat(result.price_level) : undefined,
-          types: result.types,
-          photos: result.photos,
-          businessStatus: result.business_status,
-          openingHours: result.opening_hours,
-          reviews: result.reviews,
-          website: result.website,
-          phoneNumber: result.formatted_phone_number,
-          userRatingsTotal: result.user_ratings_total
-        };
+      if (!place.location) return;
 
-        setSelectedPlace(placeDetails);
-        setMapCenter(location);
-        setSearchQuery(result.name || prediction.description);
-        setShowAutocomplete(false);
-        setShowDirections(false);
-      }
-    });
+      const location = {
+        lat: place.location.lat(),
+        lng: place.location.lng()
+      };
+
+      const placeDetails: Place = {
+        id: place.id || '',
+        displayName: place.displayName || suggestion.placePrediction.text?.text || '',
+        location,
+        address: place.formattedAddress || suggestion.placePrediction.text?.text || '',
+        rating: place.rating || undefined,
+        priceLevel: place.priceLevel ? '$'.repeat(Number(place.priceLevel)) : undefined,
+        types: place.types || undefined,
+        photos: place.photos || undefined,
+        businessStatus: place.businessStatus || undefined,
+        openingHours: place.regularOpeningHours || undefined,
+        reviews: place.reviews || undefined,
+        website: place.websiteURI || undefined,
+        phoneNumber: place.nationalPhoneNumber || undefined,
+        userRatingsTotal: place.userRatingCount || undefined
+      };
+
+
+
+      setSelectedPlace(placeDetails);
+      setMapCenter(location);
+      setSearchQuery(place.displayName || suggestion.placePrediction.text?.text || '');
+      setShowAutocomplete(false);
+      setShowDirections(false);
+    } catch (error) {
+      console.error('Error fetching place details:', error);
+    }
   }, []);
 
   if (!isOpen) return null;
@@ -358,19 +365,19 @@ export default function MapModal({ isOpen, onClose }: MapModalProps) {
             {/* Autocomplete Dropdown */}
             {showAutocomplete && autocompletePredictions.length > 0 && (
               <div className="absolute top-full left-0 right-0 bg-white border border-gray-300 rounded-b-lg shadow-lg z-10 max-h-60 overflow-y-auto">
-                {autocompletePredictions.map((prediction, index) => (
+                {autocompletePredictions.map((suggestion, index) => (
                   <div
-                    key={prediction.place_id}
+                    key={suggestion.placePrediction?.placeId || index}
                     className="px-4 py-3 hover:bg-gray-50 cursor-pointer border-b border-gray-100 last:border-b-0"
-                    onClick={() => handleAutocompleteSelect(prediction)}
+                    onClick={() => handleAutocompleteSelect(suggestion)}
                   >
                     <div className="flex items-start">
                       <div className="flex-1">
                         <div className="font-medium text-gray-900 text-sm">
-                          {prediction.structured_formatting?.main_text || prediction.description}
+                          {suggestion.placePrediction?.mainText?.text || suggestion.placePrediction?.text?.text || ''}
                         </div>
                         <div className="text-xs text-gray-600 mt-1">
-                          {prediction.structured_formatting?.secondary_text || ''}
+                          {suggestion.placePrediction?.secondaryText?.text || ''}
                         </div>
                       </div>
                       <div className="ml-2 text-xs text-gray-400">
@@ -451,11 +458,11 @@ export default function MapModal({ isOpen, onClose }: MapModalProps) {
 
           {/* Map Container */}
           <div className="flex-1 relative rounded-lg overflow-hidden">
-            <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!}>
+            <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!} libraries={['places']}>
               <Map
-                mapId="iguazu-map"
+                mapId={process.env.NEXT_PUBLIC_GOOGLE_MAPS_MAP_ID}
                 defaultCenter={mapCenter}
-                defaultZoom={12}
+                zoom={14}
                 gestureHandling="greedy"
                 disableDefaultUI={false}
                 className="w-full h-full"
@@ -497,10 +504,10 @@ export default function MapModal({ isOpen, onClose }: MapModalProps) {
                   >
                     <div className="p-4 max-w-sm bg-white rounded-lg shadow-lg">
                       {/* Photo Gallery */}
-                      {selectedPlace.photos && selectedPlace.photos.length > 0 && (
+                      {selectedPlace.photos && selectedPlace.photos.length > 0 && selectedPlace.photos[0] && (
                         <div className="mb-3">
                           <img
-                            src={selectedPlace.photos[0].getUrl?.({ maxWidth: 300, maxHeight: 200 }) || ''}
+                            src={`https://places.googleapis.com/v1/${selectedPlace.photos[0].name}/media?maxWidthPx=400&maxHeightPx=300&key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`}
                             alt={selectedPlace.displayName}
                             className="w-full h-32 object-cover rounded-lg"
                             onError={(e) => {
@@ -622,7 +629,7 @@ export default function MapModal({ isOpen, onClose }: MapModalProps) {
                             {selectedPlace.reviews.slice(0, 2).map((review: any, index: number) => (
                               <div key={index} className="text-xs text-gray-600">
                                 <div className="flex items-center mb-1">
-                                  <span className="font-medium mr-2">{review.author_name}</span>
+                                  <span className="font-medium mr-2">{review.authorAttribution?.displayName || 'Usuario'}</span>
                                   <div className="flex">
                                     {[...Array(5)].map((_, i) => (
                                       <span

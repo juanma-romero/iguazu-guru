@@ -17,6 +17,8 @@ export const routing = defineRouting({
     '/atracoes/cataratas-brasil':'/atracoes/cataratas-brasil',
     '/atracoes/marco-tres-fronteiras':'/atracoes/marco-tres-fronteiras',
     '/atracoes/parque_das_aves':'/atracoes/parque_das_aves',
+    '/blog':'/blog',
+    '/blog/[slug]':'/blog/[slug]',
   },
   // Used when no locale matches
   defaultLocale: 'pt'
