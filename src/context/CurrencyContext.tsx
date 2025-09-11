@@ -42,7 +42,7 @@ const DEFAULT_CURRENCY = 'USD'
 
 // API configuration 
 const API_KEY = process.env.NEXT_PUBLIC_EXCHANGE_RATE_API_KEY
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL
+//const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL
 
 const CurrencyContext = createContext<CurrencyContextType | undefined>(undefined)
 
@@ -64,7 +64,7 @@ export function CurrencyProvider({ children }: { children: ReactNode }) {
       setLoading(true)
       setError(null)
 
-      const response = await fetch(`${API_BASE_URL}/${API_KEY}/latest/${baseCurrency}`)
+      const response = await fetch(`https://v6.exchangerate-api.com/v6/${API_KEY}/latest/${baseCurrency}`)
 
       if (!response.ok) {
         throw new Error(`API request failed: ${response.status}`)
