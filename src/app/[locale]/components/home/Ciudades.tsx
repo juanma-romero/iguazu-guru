@@ -101,10 +101,10 @@ export default function Ciudades() {
   return (
     <section id='ciudades' className='cities-section'>    
       {/* Sección adicional con información general */}
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4 leading-tight">
+          <h2 className="text-4xl pt-8 md:text-5xl font-extrabold mb-4 text-center">
             {t('Main.copyFootH2')}
           </h2>
-          <p className="text-sm sm:text-base lg:text-lg text-gray-800 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-center text-gray-800 leading-relaxed max-w-3xl mx-auto mb-8">
             {t('Main.copyFootP')}
           </p>
           {/* Carrusel de ciudades */}

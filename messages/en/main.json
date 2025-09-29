@@ -1,4 +1,10 @@
 {
+  "Header": {    
+    "link-attractions": "Attractions",
+    "link-cities": "Cities",
+    "link-blog": "Blog",
+    "link-faqs": "FAQs"
+  },
   "Main": {
     "Button-More": "See more",
     "side1": "Where to go",
