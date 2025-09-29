@@ -1,10 +1,6 @@
 {
 "Main": {
-    "title": "Informações sobre Cataratas do Iguaçu, mapas, clima, hotéis e mais",
-    "subTitle": "Descubra as três cidades que compõem o coração turístico das Cataratas do Iguaçu.",       
-    "Text": "Tudo sobre Foz do Iguaçu, Puerto Iguazú e Ciudad del Este. Acomodações, gastronomia, atividades, transporte",     
-    "Show welcome":"Mostrar bem-vindo",
-    "Button-More": "Mais",
+    "Button-More": "Ver mais",
       "side1":"Onde ir",
       "side2": "Acomodação",
       "side3": "O que facer",
@@ -38,7 +34,7 @@
 },
 "Metadata": {
       "title": "Iguazu Guru",
-      "description": "Seu guia em Cataratas, Puerto Iguazú, Foz do Iguaçu e Ciudad del Este."
+      "description": "Seu guia em Cataratas, Puerto Iguazú, Foz do Iguaçu e Cidade do leste."
 },
 "LocaleSwitcher": {
       "label": "Mudar idioma",
@@ -548,7 +544,7 @@
   "h2-7-contact": "E-mail:"
 },
 "MainNewHome": {
-    "h1": "Seu guia em Iguaçu",
+    "h1": "Guia das Cataratas do Iguaçu",
     "pregunta-a-ia":"Pergunte ao Guru!",
     "ai-search-input":"Ex: preciso de passaporte para cruzar a fronteira?",
     "ai-search-button": "Perguntar",
@@ -563,16 +559,17 @@
     "entradas-descripcion": "Preços e compra",
     "transporte-titulo": "Transporte",
     "transporte-descripcion": "Ônibus e serviços de transporte",
-    "seguridad-titulo": "Segurança",
-    "seguridad-descripcion": "Dicas",
-    "atracciones-titulo": "Maravilha da Natureza",
+    "seguridad-titulo": "Emergência",
+    "seguridad-descripcion": "Números de telefone e locais úteis em caso de emergência",
+    "atracciones-titulo": "Visite. Sienta una Maravilla de la Naturaleza",
     "atracciones-descripcion": "Declarada uma das 7 Maravilhas Naturais do Mundo Moderno",
-    "lado-argentino-titulo": "Lado Argentino 🇦🇷",
-    "lado-argentino-descripcion": "Circuitos, Garganta do Diabo e passeios de barco. A experiência imersiva.",
-    "lado-brasileno-titulo": "Lado Brasileiro 🇧🇷",
-    "lado-brasileno-descripcion": "As melhores vistas panorâmicas e contato próximo com a natureza.",
+    "atracciones-descripcion2":"Caminhe entre suas cachoeiras e aprecie toda sua grandiosidade de longe, visite os dois lados do parque",
+    "lado-argentino-titulo": "A experiência imersiva 🇦🇷",
+    "lado-argentino-descripcion": "Parque Nacional Iguazú - lado argentino.",
+    "lado-brasileno-titulo": "As melhores vistas panorâmicas 🇧🇷",
+    "lado-brasileno-descripcion": " Parque Nacional do Iguaçu.",
     "ver-mas": "Ver mais",
-    "blog-titulo": "Blog e Dicas de Viagem",
+    "blog-titulo": "Dicas de Viagem",
     "blog-descripcion": "Artigos, guias e dicas para aproveitar ao máximo sua visita.",
     "como-llegar-titulo": "Como chegar",
     "como-llegar-descripcion": "Opções de transporte da Argentina, Brasil e Paraguai.",

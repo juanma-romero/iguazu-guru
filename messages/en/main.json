@@ -1,10 +1,6 @@
 {
   "Main": {
-    "title": "Information about Iguazu Falls, maps, weather, hotels and more",
-    "subTitle": "Discover the three cities  that make up the tourist heart of Iguazu Falls.",      
-    "Text": "All about Foz do Iguaçu, Puerto Iguazú and Ciudad del Este. Accommodations, gastronomy, activities, transportation",
-    "Show welcome":"Show welcome",
-    "Button-More": "More",
+    "Button-More": "See more",
     "side1": "Where to go",
     "side2": "Accommodation",
     "side3": "Things to do",
@@ -35,7 +31,7 @@
   },
   "Metadata": {
     "title": "Iguazu Guru",
-    "description": "your guide in Iguazu Falls, Puerto Iguazu, Foz do Iguaçu and Ciudad del Este."
+    "description": "Guide in Iguazu Falls, Puerto Iguazu, Foz do Iguaçu and Ciudad del Este."
   },
   "LocaleSwitcher": {
     "label": "Change language",
@@ -544,7 +540,7 @@
   "h2-7-contact": "Email:"
 },
 "MainNewHome": {
-    "h1": "Your Guide in Iguazú",
+    "h1": "Iguazu Falls Guide",
     "pregunta-a-ia":"Ask the Guru!",
     "ai-search-input":"Eg: Do I need a passport to cross into Brazil?",
     "ai-search-button":"Ask",
@@ -559,16 +555,17 @@
     "entradas-descripcion": "Prices and purchase",
     "transporte-titulo": "Transport",
     "transporte-descripcion": "Buses and transport services",
-    "seguridad-titulo": "Security",
-    "seguridad-descripcion": "Tips",
-    "atracciones-titulo": "Wonder of Nature",
+    "seguridad-titulo": "Emergencies",
+    "seguridad-descripcion": "Useful phone numbers and locations in case of emergency",
+    "atracciones-titulo": "Visit. Experience a Marvel of Nature",
     "atracciones-descripcion": "Declared one of the New 7 Wonders of Nature",
-    "lado-argentino-titulo": "Argentine Side 🇦🇷",
-    "lado-argentino-descripcion": "Circuits, Devil's Throat and boat rides. The immersive experience.",
-    "lado-brasileno-titulo": "Brazilian Side 🇧🇷",
-    "lado-brasileno-descripcion": "The best panoramic views and close contact with nature.",
+    "atracciones-descripcion2":"Walk among its waterfalls and also appreciate all its grandeur from a distance, visit both sides of the park",
+    "lado-argentino-titulo": "The immersive experience 🇦🇷",
+    "lado-argentino-descripcion": "Iguazu  National Park - Argentinian side.",
+    "lado-brasileno-titulo": "The best panoramic views 🇧🇷",
+    "lado-brasileno-descripcion": "Iguaçu National Park - Brasilian side.",
     "ver-mas": "See more",
-    "blog-titulo": "Blog and Travel Tips",
+    "blog-titulo": "Travel Tips",
     "blog-descripcion": "Articles, guides and tips to make the most of your visit.",
     "como-llegar-titulo": "How to get there",
     "como-llegar-descripcion": "Transportation options from Argentina, Brazil and Paraguay.",

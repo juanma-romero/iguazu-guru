@@ -4,6 +4,16 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image'
 import {Link} from '../../../../i18n/routing'
 import paisesData from '../../../../../public/paises/paises.json'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, A11y } from 'swiper/modules';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+// Import custom styles
+import styles from './Ciudades.module.css';
 
 interface CategoryData {
   dondeIr: string[];
@@ -97,11 +107,39 @@ export default function Ciudades() {
           <p className="text-sm sm:text-base lg:text-lg text-gray-800 leading-relaxed max-w-3xl mx-auto">
             {t('Main.copyFootP')}
           </p>
-          {/* Grid de ciudades */}
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-7xl mx-auto px-2 sm:px-4">
-        
-        {cities.map((city) => (
-          <div key={city.key} className="bg-gray-800 rounded-xl sm:rounded-2xl overflow-hidden shadow-xl sm:shadow-2xl hover:transform hover:scale-105 transition-all duration-300 mx-auto w-full max-w-sm md:max-w-none">
+          {/* Carrusel de ciudades */}
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 relative">
+        <Swiper
+          modules={[Navigation, Pagination, A11y]}
+          spaceBetween={16}
+          slidesPerView={1}
+          navigation={{
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          }}
+          pagination={{
+            el: '.swiper-pagination',
+            clickable: true,
+          }}
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 24,
+            },
+            1280: {
+              slidesPerView: 3,
+              spaceBetween: 32,
+            },
+          }}
+          className={styles.citiesSwiper}
+        >
+          {cities.map((city) => (
+            <SwiperSlide key={city.key}>
+              <div className="bg-gray-800 rounded-xl sm:rounded-2xl overflow-hidden shadow-xl sm:shadow-2xl hover:transform hover:scale-105 transition-all duration-300 mx-auto w-full max-w-sm md:max-w-none">
             {/* Header de la tarjeta */}
             <div className={`bg-gradient-to-r ${city.color} p-4 sm:p-5 lg:p-6 text-white`}>
               <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-1 sm:mb-2">{city.title}</h2>
@@ -185,8 +223,15 @@ export default function Ciudades() {
               
             </div>
           </div>
-        ))}
-      </div>        
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        {/* Controles de navegación */}
+        <div className="swiper-button-prev !text-yellow-600 !w-10 !h-10 after:!text-lg"></div>
+        <div className="swiper-button-next !text-yellow-600 !w-10 !h-10 after:!text-lg"></div>
+        <div className="swiper-pagination !bottom-0 mt-6"></div>
+      </div>
     </section>
   );
 }

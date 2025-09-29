@@ -20,8 +20,7 @@ export default function Header() {
             <nav className="hidden md:flex main-nav">
                 <ul className="flex items-center space-x-6">
                     <li><a href="#atracciones" className="text-iguazu-teal hover:text-iguazu-green font-medium transition-colors">Atracciones</a></li>
-                    <li><a href="#itinerario-ia" className="text-iguazu-teal hover:text-iguazu-green font-medium transition-colors">✨ Itinerario IA</a></li>
-                    <li><a href="#clima" className="text-iguazu-teal hover:text-iguazu-green font-medium transition-colors">Datos Clave</a></li>
+                    <li><a href="#itinerario-ia" className="text-iguazu-teal hover:text-iguazu-green font-medium transition-colors">Ciudades</a></li>
                     <li><a href="#blog" className="text-iguazu-teal hover:text-iguazu-green font-medium transition-colors">Blog</a></li>
                 </ul>
             </nav>

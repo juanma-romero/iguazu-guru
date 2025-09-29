@@ -1,10 +1,6 @@
 {
     "Main": { 
-      "title": "Informacion de Cataratas de Iguazu, mapas, clima, hoteles y mas",
-      "subTitle": "Descubre las tres ciudades que conforman el corazón turístico de las Cataratas del Iguazú",   
-      "Text":"Todo sobre Foz do Iguaçu, Puerto Iguazú y Ciudad del Este. Alojamientos, gastronomía, actividades, transporte",     
-      "Show welcome":"Mostrar bienvenida",
-      "Button-More": "Ver más",
+        "Button-More": "Ver Mas",
       "side1":"Adonde ir",
       "side2": "Hospedaje",
       "side3": "Que hacer",
@@ -35,7 +31,7 @@
     },
     "Metadata": {
       "title": "Iguazu Guru",
-      "description": "Tu guia en Cataratas del Iguazu, Puerto Iguazu, Foz do Iguaçu y Ciudad del Este."
+      "description": "Guia en Cataratas del Iguazu, Puerto Iguazu, Foz do Iguaçu y Ciudad del Este."
     },
     "LocaleSwitcher": {
       "label": "Cambiar idioma",
@@ -493,7 +489,7 @@
               
               "h2-8": "8. Más Información:",
               "h2-8-p1": "Si tienes alguna pregunta sobre nuestra política de cookies, puedes ponerte en contacto con nosotros en manager@iguazu.guru."
-    },
+    },    
     "ModalInicio": {
         "title": "Políticas de Privacidad y Cookies",
         "description": "Este sitio utiliza cookies para mejorar su experiencia. Al continuar navegando, acepta nuestra política de privacidad y el uso de cookies.",
@@ -544,7 +540,7 @@
 },
 
     "MainNewHome": {
-    "h1": "Tu Guia en Iguazú",
+    "h1": "Guia de Cataratas del Iguazú",
     "pregunta-a-ia": "Preguntale al Guru!",
     "ai-search-input": "Ej: ¿Necesito pasaporte para cruzar a Brasil?",
     "ai-search-button": "Preguntar",
@@ -559,16 +555,17 @@
     "entradas-descripcion": "Precios y compra",
     "transporte-titulo": "Transporte",
     "transporte-descripcion": "Buses y servicios de transporte",
-    "seguridad-titulo": "Seguridad",
-    "seguridad-descripcion": "Tips",
-    "atracciones-titulo": "Maravilla de la naturaleza",
+    "seguridad-titulo": "Emergencias",
+    "seguridad-descripcion": "Telefonos y ubicaciones utiles para casos de emergencia",
+    "atracciones-titulo": "Visite. Sienta una Maravilla de la Naturaleza",
     "atracciones-descripcion": "Declarada una de las 7 Maravillas Natulares del Mundo Moderno",
-    "lado-argentino-titulo": "Lado Argentino 🇦🇷",
-    "lado-argentino-descripcion": "Circuitos, Garganta del Diablo y paseos en lancha. La experiencia inmersiva.",
-    "lado-brasileno-titulo": "Lado Brasileño 🇧🇷",
-    "lado-brasileno-descripcion": "Las mejores vistas panorámicas y el contacto cercano con la naturaleza.",
+    "atracciones-descripcion2":"Camina entre sus saltos de agua y tambien aprecia toda su grandeza desde la distancia, visita ambos lados del parque",
+    "lado-argentino-titulo": "La experiencia inmersiva 🇦🇷",
+    "lado-argentino-descripcion": "Parque Nacional Iguazú - lado argentino. ",
+    "lado-brasileno-titulo": "Las mejores vistas panorámicas 🇧🇷",
+    "lado-brasileno-descripcion": "Parque Nacional Iguaçu - lado brasilero.",
     "ver-mas": "Ver más",
-    "blog-titulo": "Blog y Consejos de Viaje",
+    "blog-titulo": "Consejos de Viaje",
     "blog-descripcion": "Artículos, guías y tips para que aprobeches mas tu estadia.",
     "como-llegar-titulo": "Cómo llegar",
     "como-llegar-descripcion": "Opciones de transporte desde Argentina, Brasil y Paraguay.",

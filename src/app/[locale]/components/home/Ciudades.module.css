@@ -1,0 +1,63 @@
+/* Estilos personalizados para el carrusel de ciudades */
+.citiesSwiper {
+  padding-bottom: 3rem;
+}
+
+.citiesSwiper .swiper-button-prev,
+.citiesSwiper .swiper-button-next {
+  color: #dc2626 !important;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 50%;
+  width: 40px !important;
+  height: 40px !important;
+  margin-top: -20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.citiesSwiper .swiper-button-prev:hover,
+.citiesSwiper .swiper-button-next:hover {
+  background: rgba(220, 38, 38, 0.1);
+  transform: scale(1.1);
+}
+
+.citiesSwiper .swiper-button-prev::after,
+.citiesSwiper .swiper-button-next::after {
+  font-size: 16px !important;
+  font-weight: bold;
+}
+
+.citiesSwiper .swiper-pagination {
+  bottom: 0 !important;
+  margin-top: 2rem;
+}
+
+.citiesSwiper .swiper-pagination-bullet {
+  background: #d1d5db;
+  opacity: 0.5;
+  width: 8px;
+  height: 8px;
+  margin: 0 4px;
+  transition: all 0.3s ease;
+}
+
+.citiesSwiper .swiper-pagination-bullet-active {
+  background: #d97706;
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .citiesSwiper .swiper-button-prev,
+  .citiesSwiper .swiper-button-next {
+    width: 32px !important;
+    height: 32px !important;
+    margin-top: -16px;
+  }
+
+  .citiesSwiper .swiper-button-prev::after,
+  .citiesSwiper .swiper-button-next::after {
+    font-size: 14px !important;
+  }
+}
