@@ -21,8 +21,8 @@ export default function Blog() {
                         <a href="#" className="inline-block bg-iguazu-teal hover:bg-opacity-90 text-white font-bold py-2 px-4 rounded-md transition">{t('leer-mas')}</a>
                     </div>
                     <div className="card bg-white p-6 rounded-lg shadow-lg">
-                        <h3 className="text-xl font-bold text-iguazu-dark mb-2">{t('consejos-seguridad-titulo')}</h3>
-                        <p className="text-iguazu-teal mb-4">{t('consejos-seguridad-descripcion')}</p>
+                        <h3 className="text-xl font-bold text-iguazu-dark mb-2">{t('docus-titulo')}</h3>
+                        <p className="text-iguazu-teal mb-4">{t('docus-descripcion')}</p>
                         <a href="#" className="inline-block bg-iguazu-teal hover:bg-opacity-90 text-white font-bold py-2 px-4 rounded-md transition">{t('leer-mas')}</a>
                     </div>
                 </div>

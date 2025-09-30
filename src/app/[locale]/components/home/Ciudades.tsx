@@ -228,8 +228,8 @@ export default function Ciudades() {
         </Swiper>
 
         {/* Controles de navegación */}
-        <div className="swiper-button-prev !text-yellow-600 !w-10 !h-10 after:!text-lg"></div>
-        <div className="swiper-button-next !text-yellow-600 !w-10 !h-10 after:!text-lg"></div>
+        <div className="swiper-button-prev after:!text-lg"></div>
+        <div className="swiper-button-next after:!text-lg"></div>
         <div className="swiper-pagination !bottom-0 mt-6"></div>
       </div>
     </section>

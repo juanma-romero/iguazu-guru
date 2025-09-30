@@ -136,7 +136,7 @@ export default function Foz() {
             </section>
 
             {/* Gastronomía Section */}
-            <section className="py-12 md:py-16 bg-white">
+            <section className="py-12 mb-6 md:py-16 bg-white">
                 <div className="container mx-auto px-4">
                     <h2 className="text-3xl font-bold text-center text-iguazu-dark mb-2">{t('seccionesFoz.gastronomia.titulo')}</h2>
                     <p className="text-center text-iguazu-teal mb-8 max-w-2xl mx-auto">

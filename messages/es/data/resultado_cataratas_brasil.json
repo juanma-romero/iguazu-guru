@@ -1,5 +1,6 @@
 {
-  "atraccionesCataBrasil": [
+  "atraccionesCataBrasil":
+   [
     {
       "nombre_atraccion": "Cataratas do Iguaçu - Parque Nacional do Iguaçu",
       "descripcion_corta": "Parque nacional en el lado brasileño de las Cataratas del Iguazú, que ofrece vistas panorámicas de las cataratas.",
@@ -36,6 +37,18 @@
       "tips": "Lleve repelente de insectos, calzado cómodo y protector solar. El parque ofrece vistas espectaculares de las cataratas.",
       "como_llegar": "Desde Foz do Iguaçu: Autobús urbano línea 120. Desde aeropuerto: Transfer oficial del parque. Estacionamiento amplio disponible.",
       "web_oficial_tickets": "https://tickets.cataratasdoiguacu.com.br/",
+      "horariosTitulo": "Horarios",
+      "preciosTitulo": "Precios",
+      "ubicacionComoLlegarTitulo": "Locacion y como llegar",
+      "ubicacionSubtitulo": "Location",
+      "coordenadasLabel": "Coordinadas:",
+      "comoLlegarSubtitulo": "Como llegar",
+      "tipsTitulo": "tips para visitantes",
+      "contactoTitulo": "Contacto",
+      "emailLabel": "Email:",
+      "telefonoLabel": "Telefono:",
+      "whatsappLabel": "WhatsApp:",
+      "comprarTicketsBtn": "Compre tikets oficiales",
       "paseos": [
         {
           "nombre_atraccion": "Trilha das Cataratas",

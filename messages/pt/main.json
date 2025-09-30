@@ -1,4 +1,19 @@
 {
+    "Header": {    
+    "link-attractions": "Atrações",
+    "link-cities": "Cidades",
+    "link-blog": "Blog",
+    "link-faqs": "FAQs",
+    "link_atracc_1":"Todas as atrações",
+    "link_atracc_2":"Cataratas del Iguazu (ARG)",
+    "link_atracc_3":"Cataratas do Iguaçu (BR)",
+    "link_atracc_4":"Marco das Três Fronteiras",
+    "link_atracc_5":"Parque das aves",
+    "link_atracc_6":"Iguazú Jungle",
+    "link_ciudad_1":"Cidade do Leste",
+    "link_ciudad_2":"Foz do Iguaçu",
+    "link_ciudad_3":"Puerto Iguazú"
+  },
 "Main": {
     "Button-More": "Ver mais",
       "side1":"Onde ir",
@@ -34,7 +49,7 @@
 },
 "Metadata": {
       "title": "Iguazu Guru",
-      "description": "Seu guia em Cataratas, Puerto Iguazú, Foz do Iguaçu e Cidade do leste."
+      "description": "Seu guia em Cataratas, Puerto Iguazú, Foz do Iguaçu e Cidade do Leste."
 },
 "LocaleSwitcher": {
       "label": "Mudar idioma",
@@ -567,16 +582,16 @@
     "lado-argentino-titulo": "A experiência imersiva 🇦🇷",
     "lado-argentino-descripcion": "Parque Nacional Iguazú - lado argentino.",
     "lado-brasileno-titulo": "As melhores vistas panorâmicas 🇧🇷",
-    "lado-brasileno-descripcion": " Parque Nacional do Iguaçu.",
+    "lado-brasileno-descripcion": " Parque Nacional do Iguaçu - lado brasileiro.",
     "ver-mas": "Ver mais",
-    "blog-titulo": "Dicas de Viagem",
+    "blog-titulo": "Guias de viagem",
     "blog-descripcion": "Artigos, guias e dicas para aproveitar ao máximo sua visita.",
     "como-llegar-titulo": "Como chegar",
     "como-llegar-descripcion": "Opções de transporte da Argentina, Brasil e Paraguai.",
     "mejores-epocas-titulo": "Melhores épocas",
     "mejores-epocas-descripcion": "Clima, multidões e preços de acordo com a temporada.",
-    "consejos-seguridad-titulo": "Dicas de segurança",
-    "consejos-seguridad-descripcion": "Recomendações para aproveitar sem preocupações.",
+    "docus-titulo": "Documentação necessária",
+    "docus-descripcion": "Documentação para seus dias em Iguaçu.",
     "leer-mas": "Ler mais",
     "faq-titulo": "Perguntas Frequentes",
     "faq-descripcion": "Respostas às dúvidas mais comuns dos viajantes.",

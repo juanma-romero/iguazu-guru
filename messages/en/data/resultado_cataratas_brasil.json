@@ -1,5 +1,6 @@
 {
-  "atraccionesCataBrasil": [
+  "atraccionesCataBrasil": 
+  [
     {
       "nombre_atraccion": "Cataratas do Iguaçu - Parque Nacional do Iguaçu",
       "descripcion_corta": "National park on the Brazilian side of Iguazu Falls, offering panoramic views of the waterfalls.",
@@ -36,6 +37,7 @@
       "tips": "Bring insect repellent, comfortable shoes and sunscreen. The park offers spectacular views of the waterfalls.",
       "como_llegar": "From Foz do Iguaçu: Urban bus line 120. From airport: Official park transfer. Ample parking available.",
       "web_oficial_tickets": "https://tickets.cataratasdoiguacu.com.br/",
+      
       "horariosTitulo": "Schedules",
       "preciosTitulo": "Prices",
       "ubicacionComoLlegarTitulo": "Location and How to Get There",

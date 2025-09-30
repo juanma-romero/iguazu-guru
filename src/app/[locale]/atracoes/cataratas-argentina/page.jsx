@@ -79,7 +79,7 @@ export default function CataratasArgentinaPage() {
       </section>
 
       {/* Tips y Contacto */}
-      <section className="py-12 md:py-16 bg-gray-50">
+      <section className="py-12 mb-6 md:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             <div className="bg-white rounded-lg shadow-lg p-6">
