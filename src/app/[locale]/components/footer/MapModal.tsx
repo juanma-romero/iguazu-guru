@@ -391,6 +391,7 @@ export default function MapModal({ isOpen, onClose }: MapModalProps) {
           </div>
 
           {/* Category Filters */}
+          {/*
           <div className="mb-4">
             <div className="flex flex-wrap gap-2">
               <button
@@ -455,7 +456,7 @@ export default function MapModal({ isOpen, onClose }: MapModalProps) {
               </button>
             </div>
           </div>
-
+            */}
           {/* Map Container */}
           <div className="flex-1 relative rounded-lg overflow-hidden">
             <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!} libraries={['places']}>

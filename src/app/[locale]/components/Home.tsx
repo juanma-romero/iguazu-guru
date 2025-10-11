@@ -1,4 +1,4 @@
-import Hero from './home/Hero';
+//import Hero from './home/Hero';
 import Atracciones from './home/Atracciones';
 import Ciudades from './home/Ciudades';
 import Blog from './home/Blog';

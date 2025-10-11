@@ -20,6 +20,8 @@ export const routing = defineRouting({
     '/atracoes/iguazu-jungle':'/atracoes/iguazu-jungle',
     '/blog':'/blog',
     '/blog/[slug]':'/blog/[slug]',
+    '/guias':'/guias',
+    '/guias/documentacao':'/guias/documentacao',
   },
   // Used when no locale matches
   defaultLocale: 'pt'

@@ -1,9 +1,10 @@
-'use client' 
+'use client'
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import CurrencyConverter from './CurrencyConverter';
 import WeatherModal from './WeatherModal';
 import MapModal from './MapModal';
+import EntradasModal from './EntradasModal';
 
 interface FooterProps {
     isSticky?: boolean;
@@ -14,6 +15,7 @@ export default function Footer({ isSticky = true, showTitle = false }: FooterPro
     const t = useTranslations('MainNewHome');
     const [isWeatherModalOpen, setIsWeatherModalOpen] = useState(false);
     const [isMapModalOpen, setIsMapModalOpen] = useState(false);
+    const [isEntradasModalOpen, setIsEntradasModalOpen] = useState(false);
 
     const containerClasses = isSticky
         ? "fixed bottom-0 left-0 right-0 bg-white shadow-lg border-t border-gray-200 z-50 py-4"
@@ -63,7 +65,10 @@ export default function Footer({ isSticky = true, showTitle = false }: FooterPro
                         <h3 className={titleClasses}>{t('mapas-titulo')}</h3>
                         {!isSticky && <p className={descriptionClasses}>{t('mapas-descripcion')}</p>}
                     </div>
-                    <div className={cardClasses}>
+                    <div
+                        className={`${cardClasses} cursor-pointer`}
+                        onClick={() => setIsEntradasModalOpen(true)}
+                    >
                         <div className={emojiClasses}>🎟️</div>
                         <h3 className={titleClasses}>{t('entradas-titulo')}</h3>
                         {!isSticky && <p className={descriptionClasses}>{t('entradas-descripcion')}</p>}
@@ -94,6 +99,9 @@ export default function Footer({ isSticky = true, showTitle = false }: FooterPro
                 isOpen={isMapModalOpen}
                 onClose={() => setIsMapModalOpen(false)}
             />
+
+            {/* Entradas Modal */}
+            {isEntradasModalOpen && <EntradasModal onClose={() => setIsEntradasModalOpen(false)} />}
         </footer>
     );
 }

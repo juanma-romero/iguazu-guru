@@ -22,6 +22,7 @@ export default getRequestConfig(async ({requestLocale}) => {
     ...(await import(`../../messages/${locale}/data/resultado_parque_das_aves.json`)).default,
     ...(await import(`../../messages/${locale}/data/principal.json`)).default,
     ...(await import(`../../messages/${locale}/guias/guia_cruza_frontera.json`)).default,
+    ...(await import(`../../messages/${locale}/guias/entradas_atracciones.json`)).default,
   }
 
   // 👇 AQUÍ ES DONDE LO IMPRIMES

@@ -58,7 +58,7 @@ export default async function LocaleLayout({
       </head>
       <GoogleTagManager gtmId="GTM-MF9ZBXB2" />
       <body
-        className={`${raleway.className}  "bg-iguazu-light text-iguazu-dark"`}
+        className={`${raleway.className}  "bg-iguazu-light text-iguazu-dark overflow-x-hidden" `}
       >
         <NextIntlClientProvider
          messages={messages}

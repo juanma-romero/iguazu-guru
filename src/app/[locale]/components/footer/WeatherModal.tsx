@@ -78,7 +78,9 @@ export default function WeatherModal({ isOpen, onClose }: WeatherModalProps) {
             <div className="space-y-6">
               {/* Main Weather Info */}
               <div className="text-center">
+                {/*
                 {weatherData.weatherCondition.iconBaseUri && (
+                  
                   <img
                     src={getWeatherIconUrl(weatherData.weatherCondition.iconBaseUri, weatherData.weatherCondition.type)}
                     alt={weatherData.weatherCondition.description.text}
@@ -90,6 +92,7 @@ export default function WeatherModal({ isOpen, onClose }: WeatherModalProps) {
                     }}
                   />
                 )}
+                  */}
                 <div className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
                   {Math.round(weatherData.temperature.degrees)}°{weatherData.temperature.unit === 'CELSIUS' ? 'C' : 'F'}
                 </div>

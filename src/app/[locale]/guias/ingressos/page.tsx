@@ -1,3 +1,3 @@
 export default function Ingresso() {
-    return <div>Transporte</div>;
+    return <div>Ingressos</div>;
 }
