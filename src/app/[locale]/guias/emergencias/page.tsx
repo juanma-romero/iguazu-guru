@@ -38,7 +38,7 @@ export default function GuiaEmergencias() {
                             </thead>
                             <tbody>
                                 {countries.includes('argentina') &&
-                                // @ts-ignore
+                                
                                 t.raw('contactos-emergencias.argentina').map((contact: { 'servicio-emergencias': string; 'numero-emergencias': string }, index: number) => (
                                     <tr key={index} className="border-b border-gray-200 hover:bg-gray-50">
                                         <td className="py-3 px-4 font-semibold">{contact['servicio-emergencias']}</td>
