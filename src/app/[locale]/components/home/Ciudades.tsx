@@ -99,7 +99,7 @@ export default function Ciudades() {
     }));
   };
   return (
-    <section id='ciudades' className='cities-section'>    
+    <section id='ciudades' className='cities-section px-2'>    
       {/* Sección adicional con información general */}
           <h2 className="text-4xl pt-8 md:text-5xl font-extrabold mb-4 text-center">
             {t('Main.copyFootH2')}

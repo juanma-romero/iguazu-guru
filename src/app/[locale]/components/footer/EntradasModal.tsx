@@ -69,7 +69,9 @@ const EntradasModal: React.FC<EntradasModalProps> = ({ onClose }) => {
     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center p-4">
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl w-full max-w-4xl max-h-[90vh] overflow-y-auto p-6">
         <div className="flex justify-between items-center border-b pb-3 mb-4">
-          <h2 className="text-2xl font-bold text-gray-800 dark:text-white">{t('titulo-modal-entradas')}</h2>
+          <h2 className="text-2xl font-bold text-gray-800 dark:text-white">{t('texto-modal-entradas')}</h2>
+          {/* <p className='text-gray-800 dark:text-white'>{t('texto-modal-entradas')}</p> */}
+          <p className='text-gray-800 dark:text-white'>{t('texto-advertencia-modal-entradas')}</p>
           <button onClick={onClose} className="text-gray-500 hover:text-gray-800 dark:hover:text-white text-2xl">&times;</button>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

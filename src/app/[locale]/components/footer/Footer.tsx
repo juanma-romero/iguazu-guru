@@ -18,7 +18,7 @@ export default function Footer({ isSticky = true, showTitle = false }: FooterPro
     const [isEntradasModalOpen, setIsEntradasModalOpen] = useState(false);
 
     const containerClasses = isSticky
-        ? "fixed bottom-0 left-0 right-0 bg-white shadow-lg border-t border-gray-200 z-50 py-4"
+        ? "fixed bottom-0 left-0 right-0 bg-white shadow-lg border-t border-gray-200 z-50 py-4 mt-8"
         : "quick-info py-12 md:py-16";
 
     const gridClasses = isSticky
@@ -43,7 +43,7 @@ export default function Footer({ isSticky = true, showTitle = false }: FooterPro
 
     return (
         <footer id={isSticky ? "Infaltables-sticky" : "Infaltables"} className={containerClasses}>
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto px-4 ">
                 {showTitle && !isSticky && (
                     <h2 className="text-3xl font-bold text-center text-iguazu-dark mb-8">{t('titulo-infaltables')}</h2>
                 )}

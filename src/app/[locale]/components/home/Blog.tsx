@@ -1,5 +1,6 @@
 'use client'
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation'
 
 export default function Blog() {
     const t = useTranslations('MainNewHome');
@@ -23,7 +24,7 @@ export default function Blog() {
                     <div className="card bg-white p-6 rounded-lg shadow-lg">
                         <h3 className="text-xl font-bold text-iguazu-dark mb-2">{t('docus-titulo')}</h3>
                         <p className="text-iguazu-teal mb-4">{t('docus-descripcion')}</p>
-                        <a href="#" className="inline-block bg-iguazu-teal hover:bg-opacity-90 text-white font-bold py-2 px-4 rounded-md transition">{t('leer-mas')}</a>
+                        <Link href="/guias/documentacao" className="inline-block bg-iguazu-teal hover:bg-opacity-90 text-white font-bold py-2 px-4 rounded-md transition">{t('leer-mas')}</Link>
                     </div>
                 </div>
             </div>

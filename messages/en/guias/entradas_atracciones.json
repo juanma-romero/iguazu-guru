@@ -1,5 +1,7 @@
 {
     "titulo-modal-entradas":"Tickets Table",
+    "texto-modal-entradas":"Ticket cost and official link.",
+    "texto-advertencia-modal-entradas":"Click on name attraction redirects the official page",
     "campos": {
         "ent-titulo": "Attraction",
         "ent-pais": "Country",

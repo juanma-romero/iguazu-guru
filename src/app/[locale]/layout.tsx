@@ -65,7 +65,9 @@ export default async function LocaleLayout({
         >
           <CurrencyProvider>
               <Header />
-              {children}
+              <div className="pb-32">
+                {children}
+              </div>
               <Footer />
           </CurrencyProvider>
         </NextIntlClientProvider>

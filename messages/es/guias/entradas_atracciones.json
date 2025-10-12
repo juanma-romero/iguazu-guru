@@ -1,5 +1,7 @@
 {
     "titulo-modal-entradas":"Tabla Entradas",
+    "texto-modal-entradas":"Costo entradas y Link oficial.",
+    "texto-advertencia-modal-entradas":"Click en nombre atraccion redirige a pagina oficial",
     "campos": {
         "ent-titulo": "Atracción",
         "ent-pais": "País",
