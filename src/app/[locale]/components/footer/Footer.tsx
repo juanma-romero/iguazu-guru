@@ -5,6 +5,7 @@ import CurrencyConverter from './CurrencyConverter';
 import WeatherModal from './WeatherModal';
 import MapModal from './MapModal';
 import EntradasModal from './EntradasModal';
+import EmergenciasModal from './EmergenciasModal';
 
 interface FooterProps {
     isSticky?: boolean;
@@ -16,6 +17,7 @@ export default function Footer({ isSticky = true, showTitle = false }: FooterPro
     const [isWeatherModalOpen, setIsWeatherModalOpen] = useState(false);
     const [isMapModalOpen, setIsMapModalOpen] = useState(false);
     const [isEntradasModalOpen, setIsEntradasModalOpen] = useState(false);
+    const [isEmergenciasModalOpen, setIsEmergenciasModalOpen] = useState(false);
 
     const containerClasses = isSticky
         ? "fixed bottom-0 left-0 right-0 bg-white shadow-lg border-t border-gray-200 z-50 py-4 mt-8"
@@ -79,7 +81,10 @@ export default function Footer({ isSticky = true, showTitle = false }: FooterPro
                         {!isSticky && <p className={descriptionClasses}>{t('transporte-descripcion')}</p>}
                     </div>
 
-                    <div className={cardClasses}>
+                    <div
+                        className={`${cardClasses} cursor-pointer`}
+                        onClick={() => setIsEmergenciasModalOpen(true)}
+                    >
                         <div className={emojiClasses}>🚨</div>
                         <h3 className={titleClasses}>{t('seguridad-titulo')}</h3>
                         {!isSticky && <p className={descriptionClasses}>{t('seguridad-descripcion')}</p>}
@@ -102,6 +107,12 @@ export default function Footer({ isSticky = true, showTitle = false }: FooterPro
 
             {/* Entradas Modal */}
             {isEntradasModalOpen && <EntradasModal onClose={() => setIsEntradasModalOpen(false)} />}
+
+            {/* Emergencias Modal */}
+            <EmergenciasModal
+                isOpen={isEmergenciasModalOpen}
+                onClose={() => setIsEmergenciasModalOpen(false)}
+            />
         </footer>
     );
 }

@@ -1,0 +1,44 @@
+{
+    "titulo-emergencias": "Guía de Emergencias en la Triple Frontera",
+    "modal-titulo-emergencias": "Contactos Rápidos de Emergencia",
+    "modal-link-guia-completa": "Ver Guía de Emergencias Completa",
+    "intro-titulo-emergencias": "Información Vital para tu Seguridad",
+    "intro-parrafo1-emergencias": "Viajar por la Triple Frontera es una experiencia increíble, pero es fundamental estar preparado para cualquier imprevisto. Guardar estos números de emergencia puede marcar la diferencia en una situación crítica.",
+    "intro-parrafo2-emergencias": "A continuación, encontrarás una lista de contactos esenciales para Argentina, Brasil y Paraguay. Te recomendamos guardarlos en tu teléfono o tener una copia a mano durante tu estadía.",
+    "argentina-titulo-emergencias": "Puerto Iguazú, Argentina",
+    "brasil-titulo-emergencias": "Foz do Iguaçu, Brasil",
+    "paraguay-titulo-emergencias": "Ciudad del Este, Paraguay",
+    "tabla-th-servicio-emergencias": "Servicio",
+    "tabla-th-contacto-emergencias": "Número de Contacto",
+    "tabla-th-servico-br-emergencias": "Serviço",
+    "tabla-th-contato-br-emergencias": "Número de Contato",
+    "recomendaciones-titulo-emergencias": "Recomendaciones Adicionales",
+    "recomendaciones-consulados-strong-emergencias": "Consulados:",
+    "recomendaciones-consulados-p-emergencias": "Ten a mano la información de contacto del consulado de tu país. Pueden ser de gran ayuda en caso de pérdida de documentos o problemas legales.",
+    "recomendaciones-seguro-strong-emergencias": "Seguro de Viaje:",
+    "recomendaciones-seguro-p-emergencias": "Asegúrate de tener un seguro de viaje con cobertura médica internacional. Guarda el número de póliza y el teléfono de asistencia en un lugar accesible.",
+    "recomendaciones-contactos-strong-emergencias": "Contactos Personales:",
+    "recomendaciones-contactos-p-emergencias": "Informa a un familiar o amigo sobre tu itinerario y mantén un contacto de emergencia guardado en tu teléfono como \"AA (nombre)\".",
+    "contactos-emergencias": {
+        "argentina": [
+            { "servicio-emergencias": "Policía", "numero-emergencias": "101 / +54 3757 420-024" },
+            { "servicio-emergencias": "Emergencia Médica (Hospital)", "numero-emergencias": "107 / +54 3757 420-185" },
+            { "servicio-emergencias": "Bomberos", "numero-emergencias": "100 / +54 3757 420-111" },
+            { "servicio-emergencias": "Defensa Civil", "numero-emergencias": "103" },
+            { "servicio-emergencias": "Policía Turística", "numero-emergencias": "+54 3757 420-555" }
+        ],
+        "brasil": [
+            { "servicio-emergencias": "Policía Militar", "numero-emergencias": "190" },
+            { "servicio-emergencias": "SAMU (Emergencia Médica)", "numero-emergencias": "192" },
+            { "servicio-emergencias": "Bomberos", "numero-emergencias": "193" },
+            { "servicio-emergencias": "Policía Civil", "numero-emergencias": "197" },
+            { "servicio-emergencias": "Policía Turística (DEATUR)", "numero-emergencias": "+55 45 3521-4200" }
+        ],
+        "paraguay": [
+            { "servicio-emergencias": "Policía Nacional", "numero-emergencias": "911" },
+            { "servicio-emergencias": "Emergencias Médicas (SEME)", "numero-emergencias": "141" },
+            { "servicio-emergencias": "Bomberos Voluntarios", "numero-emergencias": "132" },
+            { "servicio-emergencias": "SENATUR (Asistencia al Turista)", "numero-emergencias": "+595 21 441-530" }
+        ]
+    }
+}

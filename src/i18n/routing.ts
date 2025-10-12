@@ -22,6 +22,7 @@ export const routing = defineRouting({
     '/blog/[slug]':'/blog/[slug]',
     '/guias':'/guias',
     '/guias/documentacao':'/guias/documentacao',
+    '/guias/emergencias':'/guias/emergencias',
   },
   // Used when no locale matches
   defaultLocale: 'pt'
