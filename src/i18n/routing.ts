@@ -7,13 +7,26 @@ export const routing = defineRouting({
  
   // A list of all pathnames that are supported
   pathnames: {
-    '/': '/'
-    
+    '/': '/',
+    '/legal': '/legal',
+    '/cidades/foz-do-iguacu': '/cidades/foz-do-iguacu',
+    '/cidades/puerto-iguazu': '/cidades/puerto-iguazu',
+    '/cidades/cidade-de-leste': '/cidades/cidade-de-leste',
+    '/atracoes':'/atracoes',
+    '/atracoes/cataratas-argentina':'/atracoes/cataratas-argentina',
+    '/atracoes/cataratas-brasil':'/atracoes/cataratas-brasil',
+    '/atracoes/marco-tres-fronteiras':'/atracoes/marco-tres-fronteiras',
+    '/atracoes/parque-das-aves':'/atracoes/parque-das-aves',
+    '/atracoes/iguazu-jungle':'/atracoes/iguazu-jungle',
+    '/blog':'/blog',
+    '/blog/[slug]':'/blog/[slug]',
+    '/guias':'/guias',
+    '/guias/documentacao':'/guias/documentacao',
+    '/guias/emergencias':'/guias/emergencias',
   },
   // Used when no locale matches
-  defaultLocale: 'en'
-});
- 
+  defaultLocale: 'pt'
+}) 
 
 export type Locale = (typeof routing.locales)[number]
 

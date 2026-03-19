@@ -1,0 +1,15 @@
+{
+    "i18n-ally.localesPaths": [
+        "messages",
+        "src/i18n"
+    ],
+    "i18n-ally.keystyle": "flat",
+    "i18n-ally.extract.ignored": [
+        " Iguazu Guru"
+    ],
+    "i18n-ally.extract.ignoredByFiles": {
+        "src\\app\\[locale]\\legal\\privacidad.tsx": [
+            " Iguazu Guru"
+        ]
+    }
+}

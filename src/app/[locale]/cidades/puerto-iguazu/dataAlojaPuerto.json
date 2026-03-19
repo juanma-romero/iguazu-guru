@@ -1,0 +1,242 @@
+[
+    { 
+        "name": "places/ChIJMUpDKTGS9pQRK3FWPOa85YM",
+        "formattedAddress": "C. Bonpland 110, N3370 Puerto Iguazú, Misiones, Argentina",
+        "location": {
+            "latitude": -25.5986225,
+            "longitude": -54.5735728
+        },
+        "rating": 3.9,
+        "link":"https://ellibertador-hotel.com.ar/",
+        "displayName": {
+            "text": "Hotel El Libertador",
+            "languageCode": "en"
+        },
+        "editorialSummary": {
+            "text": "Straightforward property offering a restaurant & an outdoor pool, plus breakfast.",
+            "languageCode": "en"
+        },
+        "photos": 
+            {
+                "1":"/images/hotels/arg/libertadorExt1.jpg",
+                "2":"/images/hotels/arg/libertadorInt1.jpg",
+                "3":"/images/hotels/arg/libertadorInt2.jpg"
+            }
+    },
+    {
+        "name": "places/ChIJw1LFITSS9pQRMKXdgD0Smtg",
+        "formattedAddress": "Av. Córdoba 148, N3370 Puerto Iguazú, Misiones, Argentina",
+        "location": {
+            "latitude": -25.5992094,
+            "longitude": -54.570526099999995
+        },
+        "rating": 4.5,
+        "link":"https://www.hotelsaintgeorge.com/",
+        "displayName": {
+            "text": "Hotel Saint George",
+            "languageCode": "en"
+        },
+        "editorialSummary": {
+            "text": "Laid-back rooms & suites in a casual property offering a restaurant, a spa & an outdoor pool.",
+            "languageCode": "en"
+        },
+        "photos": 
+            {
+                "1":"/images/hotels/arg/stgeorgeExt1.webp",
+                "2":"/images/hotels/arg/stgeorgeExt2.jpg",
+                "3":"/images/hotels/arg/stgeorgeInt1.jpg"
+            }
+    },
+    {
+        "name": "places/ChIJmar1jyKS9pQR9mII8RL01Hk",
+        "formattedAddress": "Av. Tres Fronteras 650, N3370 Puerto Iguazú, Misiones, Argentina",
+        "location": {
+            "latitude": -25.5956866,
+            "longitude": -54.5868158
+        },
+        "rating": 4.2,
+        "link":"https://www.raicesesturion.com/",
+        "displayName": {
+            "text": "Raíces Esturión Iguazú",
+            "languageCode": "en"
+        },
+        "editorialSummary": {
+            "text": "Laid-back hotel offering casual rooms, plus a stylish eatery, an outdoor pool & a tennis court.",
+            "languageCode": "en"
+        },
+        "photos": 
+            {
+                "1":"/images/hotels/arg/raicesExt1.avif",
+                "2":"/images/hotels/arg/raicesExt2.avif",
+                "3":"/images/hotels/arg/raicesInt1.avif"
+            }
+    },
+    {
+        "name": "places/ChIJu9ImXzKS9pQRfGzsUQEFeeY",
+        "formattedAddress": "Yapeyú 88, N3370GQB Puerto Iguazú, Misiones, Argentina",
+        "location": {
+            "latitude": -25.593768299999997,
+            "longitude": -54.5691263
+        },
+        "rating": 4.4,
+        "link":"https://www.amerian.com/destinos/merit-iguazu-hotel/",
+        "displayName": {
+            "text": "Merit Hotel Iguazú",
+            "languageCode": "en"
+        },
+        "editorialSummary": {
+            "text": "Contemporary hotel offering a rooftop pool, a bar & a TV lounge, plus free Wi-Fi & parking.",
+            "languageCode": "en"
+        },
+        "photos": 
+            {
+                "1":"/images/hotels/arg/meritExt1.jpeg",
+                "2":"/images/hotels/arg/meritInt1.avif",
+                "3":"/images/hotels/arg/meritInt2.jpg"
+            }
+    },
+    {
+        "name": "places/ChIJrfVHQ6uT9pQRHXgoCdpzUNk",
+        "formattedAddress": "Paraguay 546, N3370 Puerto Iguazú, Misiones, Argentina",
+        "location": {
+            "latitude": -25.594191499999997,
+            "longitude": -54.574996999999996
+        },
+        "rating": 4.6,
+        "link":"https://www.o2hoteliguazu.com/",
+        "displayName": {
+            "text": "O2 Hotel Iguazú",
+            "languageCode": "es"
+        },
+        "editorialSummary": {
+            "text": "Stylish rooms in a polished hotel with a restaurant & a rooftop pool, plus a spa, a gym & a bar.",
+            "languageCode": "en"
+        },
+        "photos": 
+            {
+                "1":"/images/hotels/arg/o2Ext1.jpg",
+                "2":"/images/hotels/arg/o2Ext2.webp",
+                "3":"/images/hotels/arg/o2Int1.jpeg"
+            }
+    },
+    {
+        "name": "places/ChIJIdwM3a-T9pQROpi-Vw5UQlA",
+        "formattedAddress": "Batalla Mbororé s/n, Reserva Selva Iryapú, Lote 05,, N3370 Puerto Iguazu, Misiones, Argentina",
+        "location": {
+            "latitude": -25.6094723,
+            "longitude": -54.555852099999996
+        },
+        "rating": 4.7,
+        "link":"",
+        "displayName": {
+            "text": "Falls Iguazu Hotel & Spa",
+            "languageCode": "en"
+        },
+        "editorialSummary": {
+            "text": "Polished retreat featuring a buffet restaurant & a spa, plus an outdoor pool & jungle views.",
+            "languageCode": "en"
+        },
+        "photos": 
+            {
+                "1":"/images/hotels/bra/mabuExt1.jpg",
+                "2":"/images/hotels/bra/mabuInt1.jpeg",
+                "3":"/images/hotels/bra/mabuInt2.jpeg"
+            }
+    },
+    {
+        "name": "places/ChIJMVp4ZLGT9pQRzYf1YQuzTQM",
+        "formattedAddress": "Reserva Natural IRIATÚ s/n, N3370 Puerto Iguazú, Misiones, Argentina",
+        "location": {
+            "latitude": -25.6070633,
+            "longitude": -54.55976
+        },
+        "rating": 3.6,
+        "link":"",
+        "displayName": {
+            "text": "Rainforest Hotel Selva",
+            "languageCode": "en"
+        },
+        "editorialSummary": {
+            "text": "Striking hotel in a jungle, offering relaxed rooms, a glass-enclosed restaurant & an outdoor pool.",
+            "languageCode": "en"
+        },
+        "photos": 
+            {
+                "1":"/images/hotels/bra/mabuExt1.jpg",
+                "2":"/images/hotels/bra/mabuInt1.jpeg",
+                "3":"/images/hotels/bra/mabuInt2.jpeg"
+            }
+    },
+    {
+        "name": "places/ChIJ_7ACXaiT9pQRCjj-8sP7eVI",
+        "formattedAddress": "Ruta 12 Km 3.5, N3370 Puerto Iguazú, Misiones, Argentina",
+        "location": {
+            "latitude": -25.616656799999998,
+            "longitude": -54.5557361
+        },
+        "rating": 4.2,
+        "link":"",
+        "displayName": {
+            "text": "Marcopolo Suites Iguazu",
+            "languageCode": "en"
+        },
+        "editorialSummary": {
+            "text": "Unfussy rooms in a down-to-earth hotel offering a restaurant/bar & an outdoor pool.",
+            "languageCode": "en"
+        },
+        "photos": 
+            {
+                "1":"/images/hotels/bra/mabuExt1.jpg",
+                "2":"/images/hotels/bra/mabuInt1.jpeg",
+                "3":"/images/hotels/bra/mabuInt2.jpeg"
+            }
+    },
+    {
+        "name": "places/ChIJ59NZmr-T9pQRAhOS1aT4pqk",
+        "formattedAddress": "Selva Iryapú s/n, N3370 Puerto Iguazú, Misiones, Argentina",
+        "location": {
+            "latitude": -25.596601999999997,
+            "longitude": -54.545521
+        },
+        "rating": 4.6,
+        "link":"",
+        "displayName": {
+            "text": "Loi Suites Iguazú Hotel",
+            "languageCode": "es"
+        },
+        "editorialSummary": {
+            "text": "Upscale rooms & suites in a plush hotel offering fine dining, a spa & a pool bar, plus river views.",
+            "languageCode": "en"
+        },
+        "photos": 
+            {
+                "1":"/images/hotels/bra/mabuExt1.jpg",
+                "2":"/images/hotels/bra/mabuInt1.jpeg",
+                "3":"/images/hotels/bra/mabuInt2.jpeg"
+            }
+    },
+    {
+        "name": "places/ChIJd-3_4xKT9pQRO_bvZGc3bUU",
+        "formattedAddress": "RN12, N3370 Puerto Iguazú, Misiones, Argentina",
+        "location": {
+            "latitude": -25.6241389,
+            "longitude": -54.549371699999995
+        },
+        "rating": 4.3,
+        "link":"",
+        "displayName": {
+            "text": "Complejo Turistico Americano",
+            "languageCode": "es"
+        },
+        "editorialSummary": {
+            "text": "Down-to-earth hotel with simple rooms, a buffet restaurant & an outdoor pool, plus a soccer field.",
+            "languageCode": "en"
+        },
+        "photos": 
+            {
+                "1":"/images/hotels/bra/mabuExt1.jpg",
+                "2":"/images/hotels/bra/mabuInt1.jpeg",
+                "3":"/images/hotels/bra/mabuInt2.jpeg"
+            }
+    }
+]

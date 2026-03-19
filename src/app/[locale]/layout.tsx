@@ -2,14 +2,12 @@ import {NextIntlClientProvider} from 'next-intl';
 import {getMessages, getTranslations} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
-import { ExchangeRateProvider } from '@/context/ExchangeRateContext'
 import { Raleway   } from "next/font/google"
 import './globals.css'
-import Footer from './components/footer/Footer';
 import Header from './components/header/Header'
-import { CurrencyProvider } from '@/context/CurrencyContext';
 import { GoogleTagManager } from '@next/third-parties/google'
-
+import Footer from './components/footer/Footer';
+import { CurrencyProvider } from '../../context/CurrencyContext';
 
 type Params = Promise<{ locale: string }>;
 
@@ -17,8 +15,6 @@ const raleway = Raleway({
   variable: "--font-raleway",
   subsets: ["latin"],
 })
-
-
  
 export async function generateMetadata({ params }: { params: Params }) {
   const { locale } = await params;
@@ -55,25 +51,25 @@ export default async function LocaleLayout({
       <head>
       <link
           rel="icon"
-          href="/favicon.png"
+          href="/oldYaguarSinBackground.png"
           type="image/png"
           sizes="32"
         />
       </head>
       <GoogleTagManager gtmId="GTM-MF9ZBXB2" />
       <body
-        className={`${raleway.className}  bg-[#1A3131] flex flex-col justify-between min-h-screen`}
+        className={`${raleway.className}  "bg-iguazu-light text-iguazu-dark overflow-x-hidden" `}
       >
         <NextIntlClientProvider
          messages={messages}
         >
-          <CurrencyProvider >
-            <ExchangeRateProvider>
+          <CurrencyProvider>
               <Header />
-              {children}
+              <div className="pb-32">
+                {children}
+              </div>
               <Footer />
-            </ExchangeRateProvider>
-            </CurrencyProvider>
+          </CurrencyProvider>
         </NextIntlClientProvider>
       </body>      
     </html>

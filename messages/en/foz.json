@@ -1,0 +1,115 @@
+{
+  "NombreFoz": "Foz do Iguaçu",
+  "subTitleFoz": "Discover the magic of Iguazu Falls from the Brazilian side",
+  "dondeIrFoz": {
+    "0": {
+      "name": "Cataratas do Iguaçu",
+      "image": "/arribaBrasil.webp",
+      "description": "The Brazilian side offers panoramic views of the falls.",
+      "price": {
+        "value": 117,
+        "currency": "BRL",
+        "notes": "Price for foreign adults"
+      },
+      "openingHours": "9:00 - 16:00",
+      "location": "Parque Nacional do Iguaçu",
+      "rating": 5
+    },
+    "1": {
+      "name": "Parque das Aves",
+      "image": "/attractions/parque-640w.webp",
+      "description": "Natural sanctuary with more than 150 species of birds.",
+      "price": {
+        "value": 90,
+        "residents": 45,
+        "currency": "BRL",
+        "notes": "General admission"
+      },
+      "openingHours": "8:30 - 16:30",
+      "location": "Av. das Cataratas, Foz do Iguaçu",
+      "rating": 4.8
+    }
+  },
+  "alojamientoFoz": {
+    "0": {
+      "name": "Belmond Hotel das Cataratas",
+      "image": "/attractions/belmond.webp",
+      "description": "Luxury hotel inside the National Park, with exclusive access to the falls.",
+      "price": {
+        "value": 760,
+        "currency": "USD",
+        "notes": "Price per night, standard room"
+      },
+      "amenities": ["Pool", "Spa", "Gourmet restaurant", "VIP access to the falls"],
+      "location": "Dentro del Parque Nacional do Iguaçu",
+      "rating": 4.9
+    },
+    "1": {
+      "name": "Wish Foz do Iguaçu",
+      "image": "/attractions/iguassu-resort-jacuzzi.jpg",
+      "description": "Modern hotel with excellent facilities and service.",
+      "price": {
+        "value": 167,
+        "currency": "USD",
+        "notes": "Price per night, standard room"
+      },
+      "amenities": ["Pool", "Gym", "Restaurant", "Wi-Fi"],
+      "location": "Centro de Foz do Iguaçu",
+      "rating": 4.6
+    }
+  },
+  "gastronomiaFoz": {
+    "0": {
+      "name": "Restaurante Porto Canoas",
+      "image": "/attractions/portoCanoas.png",
+      "description": "Restaurant inside the National Park with spectacular views.",
+      "price": {
+        "value": 120,
+        "currency": "BRL",
+        "notes": "Average price per person"
+      },
+      "cuisine": "Brasileña/Internacional",
+      "location": "Parque Nacional do Iguaçu",
+      "rating": 4.5
+    },
+    "1": {
+      "name": "Churrascaria do Gaúcho",
+      "image": "/attractions/doGaucho.jpg",
+      "description": "Authentic Brazilian churrascaria with grilled meats.",
+      "price": {
+        "value": 95,
+        "currency": "BRL",
+        "notes": "Buffet per person"
+      },
+      "cuisine": "Brasileña/Churrasco",
+      "location": "Centro de Foz do Iguaçu",
+      "rating": 4.6
+    }
+  },
+  "seccionesFoz": {
+    "dondeIr": {
+      "titulo": "Where to Go",
+      "descripcion": "Explore the most fascinating places in Foz do Iguaçu"
+    },
+    "alojamiento": {
+      "titulo": "Accommodation",
+      "descripcion": "Find the perfect place for your stay in Foz do Iguaçu"
+    },
+    "gastronomia": {
+      "titulo": "Gastronomy",
+      "descripcion": "Enjoy delicious Brazilian food in Foz do Iguaçu"
+    }
+  },
+  "etiquetasFoz": {
+    "precio": "Price:",
+    "horarios": "Hours:",
+    "ubicacion": "Location:",
+    "servicios": "Services:",
+    "cocina": "Cuisine:"
+  },
+  "botonesFoz": {
+    "verMas": "See More",
+    "reservar": "Book",
+    "verMenu": "View Menu"
+  }
+}

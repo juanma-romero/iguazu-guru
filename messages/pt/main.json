@@ -1,0 +1,640 @@
+{
+    "Header": {    
+    "link-attractions": "Atrações",
+    "link-cities": "Cidades",
+    "link-blog": "Blog",
+    "link-faqs": "FAQs",
+    "link_atracc_1":"Todas as atrações",
+    "link_atracc_2":"Cataratas del Iguazu (ARG)",
+    "link_atracc_3":"Cataratas do Iguaçu (BR)",
+    "link_atracc_4":"Marco das Três Fronteiras",
+    "link_atracc_5":"Parque das aves",
+    "link_atracc_6":"Iguazú Jungle",
+    "link_ciudad_1":"Cidade do Leste",
+    "link_ciudad_2":"Foz do Iguaçu",
+    "link_ciudad_3":"Puerto Iguazú"
+  },
+"Main": {
+    "Button-More": "Ver mais",
+      "side1":"Onde ir",
+      "side2": "Acomodação",
+      "side3": "O que facer",
+      "copyFootH2": "Três Países, Uma Experiência Única",
+      "copyFootP": "Explore a região trinacional das Cataratas do Iguaçu, onde Argentina, Brasil e Paraguai se encontram para lhe oferecer uma experiência turística incomparável. Cada cidade tem sua própria personalidade e atrações únicas que complementam a majestade das cataratas.",
+      "sections": {
+        "dondeIr": "Onde ir",
+        "alojamiento": "Acomodação",
+        "gastronomia": "O que facer"
+      } 
+},
+"cards": {
+  "foz":{
+    "title": "Foz do Iguaçu",
+    "location": "Paraná, Brasil",
+    "description": "Foz do Iguaçu é uma cidade no estado do Paraná, Brasil. Está localizada na região sudoeste do país, na fronteira com a Argentina e o Paraguai. É conhecida por ser a porta de entrada para as Cataratas do Iguaçu, uma das atrações naturais mais importantes do mundo."
+     
+  },
+  "puerto":{
+    "title": "Puerto Iguazú",
+    "location": "Misiones, Argentina",
+    "description": "Puerto Iguazú é uma cidade na província de Misiones, Argentina. Está localizada na região nordeste do país, na fronteira com o Brasil e o Paraguai. É conhecida por ser a porta de entrada para as Cataratas do Iguaçu, uma das atrações naturais mais importantes do mundo."
+    
+  },
+  "cde":{
+    "title": "Ciudad del Este",
+    "location": "Alto Paraná, Paraguay",
+    "description": "Ciudad del Este é uma cidade no Paraguai, localizada no Departamento de Alto Paraná, na fronteira com o Brasil e a Argentina. Faz parte da Área da Tríplice Fronteira, que é considerada um dos centros comerciais e turísticos mais importantes da América do Sul."
+    
+  }
+},
+"Metadata": {
+      "title": "Iguazu Guru",
+      "description": "Seu guia em Cataratas, Puerto Iguazú, Foz do Iguaçu e Cidade do Leste."
+},
+"LocaleSwitcher": {
+      "label": "Mudar idioma",
+      "locale": "{locale, select, es {🇪🇸 Español} en {🇺🇸 English} pt {🇧🇷 Português} other {Idioma desconocido}}"
+},    
+
+"ArgCatfaqs": [
+        {
+            "pregunta": "Tarifas",
+            "respuesta": {
+                "descuento": "O segundo dia consecutivo de visita dá direito a 50% de desconto.",
+                "tarifas": [
+                    {
+                        "concepto": "Tarifa Geral",
+                        "descripcion": "VISITANTES NÃO RESIDENTES NA ARGENTINA",
+                        "precio": 45000
+                    },
+                    {
+                        "concepto": "Residentes Nacionais",
+                        "descripcion": null,
+                        "precio": 15000
+                    },
+                    {
+                        "concepto": "Residentes Provinciais",
+                        "descripcion": "ADULTOS E CRIANÇAS",
+                        "precio": 5000
+                    },
+                    {
+                        "concepto": "Isentos",
+                        "descripcion": "Aposentados e pensionistas nacionais, Menores de 6 anos, Visitantes com deficiência, Veteranos de Guerra das Malvinas, Residentes Locais.",
+                        "precio": "Grátis"
+                    },
+                    {
+                        "concepto": "Passeio da Lua Cheia - Adulto",
+                        "descripcion": null,
+                        "precio": 90000
+                    },
+                    {
+                        "concepto": "Passeio da Lua Cheia - Crianças",
+                        "descripcion": "DE 6 A 12 ANOS",
+                        "precio": 45000
+                    },
+                    {
+                        "concepto": "Passeio da Lua Cheia - Crianças",
+                        "descripcion": "ATÉ 5 ANOS",
+                        "precio": "Grátis"
+                    },
+                    {
+                        "concepto": "Estudantes",
+                        "descripcion": "É necessária comprovação de matrícula regular.",
+                        "precio": 7000
+                    }
+                ],
+                "info_adicional": "Ao final do primeiro dia de visita, revalide seu ingresso para obter um desconto de 50% para o segundo dia consecutivo. É necessário apresentar um documento de identidade ou passaporte válido. O endereço de residência no documento de identidade determina o valor do ingresso. Para estudantes, aposentados e pessoas com deficiência, deve ser apresentada documentação comprobatória válida e atual.",
+                "compra_entrada": "https://www.argentina.gob.ar/parquesnacionales/iguazu/tickets",
+                "boleteria": "Você também pode adquirir o bilhete de entrada nas bilheterias da entrada do Parque em dinheiro (em pesos argentinos), com cartão de crédito ou débito.",
+                "estacionamiento": {
+                    "titulo": "Estacionamento por dia",
+                    "precios": [
+                        {
+                            "concepto": "Ciclomotores e Motos",
+                            "precio": 3000
+                        },
+                        {
+                            "concepto": "Automóveis",
+                            "precio": 6000
+                        },
+                        {
+                            "concepto": "Vans",
+                            "precio": 10000
+                        },
+                        {
+                            "concepto": "Ônibus e Autoportantes",
+                            "precio": 12000
+                        },
+                        {
+                            "concepto": "Veículos Locais",
+                            "precio": 3000
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "pregunta": "Informações Práticas",
+            "respuesta": {
+                "preguntas_frecuentes": [
+                    {
+                        "numero": "1",
+                        "pregunta": "Como chegar a Puerto Iguazú?",
+                        "respuesta": {
+                            "desde_buenos_aires": [
+                                "Aeroparque Jorge Newbery > Aeroporto Internacional Cataratas Del Iguazú",
+                                "Aeroporto Internacional de Ezeiza > Aeroporto Internacional Cataratas Del Iguazú",
+                                "Aeroporto El Palomar > Aeroporto Internacional Cataratas Del Iguazú",
+                                "Ônibus da Rodoviária de Retiro > Terminal rodoviário da cidade de Puerto Iguazú",
+                                "Veículos particulares pela RN 14"
+                            ],
+                            "desde_foz_do_iguacu": [
+                                "Terminal Rodoviário Internacional de Foz do Iguaçu > Terminal rodoviário da cidade de Puerto Iguazú",
+                                "Veículos particulares pela Ponte Internacional Tancredo Neves"
+                            ],
+                            "desde_ciudad_del_este": [
+                                "Terminal Rodoviário Ciudad del Este > Terminal rodoviário da cidade de Puerto Iguazú",
+                                "Veículos particulares pela Ponte Internacional da Amizade"
+                            ]
+                        }
+                    },
+                    {
+                        "numero": "2",
+                        "pregunta": "Dias e horários de funcionamento",
+                        "respuesta": "O Parque está aberto todos os dias na temporada de verão, das 7h às 18h, incluindo feriados e dias de chuva."
+                    },
+                    {
+                        "numero": "3",
+                        "pregunta": "Como chegar ao Parque",
+                        "respuesta": "Endereço: Parque Nacional do Iguaçu: Rota 101 Km 142, N3370 Puerto Iguazú, Misiones, Argentina. Coordenadas: 25°31′05″S 54°08′00″W / -25.518056, -54.133333. Transporte público: A empresa Río Uruguay oferece serviços que partem do Marco Três Fronteiras e do Terminal Rodoviário de Puerto Iguazú (anunciado na placa como Cataratas). As transferências estão disponíveis a cada 20 minutos, todos os dias do ano. Você também pode optar por vir de carro particular ou táxi. Nas noites do Passeio da Lua Cheia, os ônibus oferecem um serviço especial que parte do terminal rodoviário de Iguazú. Consulte os horários e tarifas lá. Automóvel: Você pode chegar de Puerto Iguazú pela Av. Victoria Aguirre, RN 12, RN 101, Acesso a Cataratas. Lembre-se sempre de respeitar os limites de velocidade e a vida selvagem ao entrar na área protegida!"
+                    },
+                    {
+                        "numero": "4",
+                        "pregunta": "Como compro um ingresso para entrar?",
+                        "respuesta": "Atualmente, os ingressos são comprados somente com antecedência pela web, em https://iguazuargentina.com/tickets/es/ Lá você escolhe o horário e o dia que deseja vir."
+                    },
+                    {
+                        "numero": "5",
+                        "pregunta": "É obrigatório contratar um guia para visitar o Parque?",
+                        "respuesta": "Não, não é obrigatório contratar um guia para visitar o Parque. De qualquer forma, recomendamos que você solicite um guia na entrada do Parque ao chegar, para aproveitar mais sua visita."
+                    },
+                    {
+                        "numero": "6",
+                        "pregunta": "Quais protocolos ou medidas obrigatórias devo cumprir durante a minha visita?",
+                        "respuesta": "• Não alimente nem toque nos animais do Parque! • Siga as instruções da equipe do parque, sinalização e respeite as normas de segurança. Preste atenção ao caminhar. • Circule apenas em rotas autorizadas. • Seja respeitoso com o meio ambiente e não deixe lixo no parque."
+                    },
+                    {
+                        "numero": "7",
+                        "pregunta": "Perdi um objeto no Parque, como posso encontrá-lo?",
+                        "respuesta": "Se você perdeu um objeto no Parque, deve entrar em contato com Achados e Perdidos do Centro de Operações Cataratas (COC), localizado na entrada. Você também pode entrar em contato pelo telefone +543757420180 ou enviando um e-mail para coc@apn.gob.ar"
+                    },
+                    {
+                        "numero": "8",
+                        "pregunta": "Quais são as maneiras de percorrer o parque?",
+                        "respuesta": "De Iguazú Argentina, recomendamos que você organize sua visita ao Parque com um mínimo de dois dias, para aproveitar as atividades e atrações que o Parque oferece. Dia 1 Circuito Superior + Garganta do Diabo + Trem Ecológico da Selva + Restaurante La Selva Tempo médio do passeio: 5 horas. Dia 2 Para o seu segundo dia de visita, recomendamos as seguintes opções: 1) Circuito Inferior Este passeio permite que você entre nas profundezas da selva paranaense para vivenciar momentos únicos. Tempo médio do passeio: 1 hora e 30 minutos. 2) Passeio da Grande Aventura Para contratar esta excursão, você deve consultar iguazujungle.com Tempo médio do passeio: 2 horas e 30 minutos. Dia 3 1) Trilha Macuco + Salto Arrechea. Tempo médio do passeio: 2 horas e 30 minutos. 2) Passeio Ecológico Para fazer esta excursão, você deve consultar iguazujungle.com Tempo médio do passeio: 30 min. Esclarecimento: você pode fazer os passeios com ou sem guia e escolher os passeios que deseja fazer a cada dia. Passeio da Lua Cheia Se a sua visita coincidir com os dias de lua cheia, convidamos você a conhecer as Cataratas e a selva de uma forma única com o nosso Passeio da Lua Cheia. Este passeio dura aproximadamente 3 horas e você tem a opção de contratar o serviço de jantar separadamente, que é fornecido no Restaurante La Selva do Parque."
+                    },
+                    {
+                        "numero": "9",
+                        "pregunta": "Posso agendar minha viagem em um feriado ou dia chuvoso?",
+                        "respuesta": "O Parque está aberto todos os dias, mesmo que chova ou seja feriado."
+                    },
+                    {
+                        "numero": "10",
+                        "pregunta": "Existe algum tipo de assistência médica?",
+                        "respuesta": "O parque possui um serviço de assistência médica e de enfermagem para primeiros socorros, com serviço de ambulância na Estação Central e Estação Garganta."
+                    },
+                    {
+                        "numero": "11",
+                        "pregunta": "Como é o clima na cidade de Puerto Iguazú?",
+                        "respuesta": "A cidade de Puerto Iguazú tem um clima subtropical sem estação seca, o que incentiva você a visitá-la durante todo o ano devido às suas temperaturas quentes. O mês mais quente é dezembro, enquanto as temperaturas mais baixas ocorrem em junho e julho, durante a estação de inverno."
+                    },
+                    {
+                        "numero": "12",
+                        "pregunta": "Devo trazer alguma proteção especial?",
+                        "respuesta": "Para fazer sua visita, recomendamos: - Use repelente de mosquitos, protetor solar e um chapéu para se proteger do sol e dos insetos. - Use roupas e sapatos confortáveis ​​adequados para caminhar (uma capa de chuva pode ser útil para proteger seus pertences) - Mantenha-se hidratado durante todo o passeio para evitar fadiga e possíveis desmaios."
+                    },
+                    {
+                        "numero": "13",
+                        "pregunta": "Como devo me adaptar à vida dentro do Parque?",
+                        "respuesta": "É importante que você não toque ou alimente os animais do Parque, pois são espécies selvagens e devemos respeitar seus hábitos. Siga as instruções do guia que acompanha você durante o passeio e circule exclusivamente por locais abertos ao público (passarelas e trilhas). Recomendamos que você leia os sinais informativos do Parque para desfrutar de uma visita melhor e aprender informações sobre a flora e a fauna do local."
+                    },
+                    {
+                        "numero": "14",
+                        "pregunta": "Posso sacar dinheiro (pesos argentinos) no Parque?",
+                        "respuesta": "Há um caixa eletrônico Link no Parque."
+                    }
+                ],
+                "caracteristicas": {
+                    "horario": "Todos os dias do ano, das 7h30 às 18h.",
+                    "atracciones": "Centro de Visitantes | Trem Ecológico da Selva | Trilha Verde | Caminhada Inferior | Caminhada Superior | Garganta do Diabo | Trilha Macuco",
+                    "documentacion": "Você deve apresentar um documento de identidade ou passaporte válido. O endereço de residência no documento de identidade determina o valor do ingresso.",
+                    "descuento_segundo_dia": "Ao final do primeiro dia da sua visita, revalide seu ingresso para obter um desconto de 50% no valor do seu ingresso para o segundo dia consecutivo."
+                }
+            }
+        },
+        {
+            "pregunta": "Serviços",
+            "respuesta": {
+                "transporte": [
+                    {
+                        "titulo": "Transporte",
+                        "servicios": [
+                            {
+                                "descripcion": "Estacionamento com serviço de carregamento de bateria e serviço mecânico leve",
+                                "ubicacion": "Em frente ao Portal de Acesso"
+                            },
+                            {
+                                "descripcion": "Transporte público: ônibus de linha Río Uruguay e serviço de táxi Atti",
+                                "ubicacion": "Portal de Acesso"
+                            }
+                        ]
+                    },
+                    {
+                        "titulo": "Outro",
+                        "servicios": [
+                            {
+                                "descripcion": "Trem Ecológico da Selva (com vagões adaptados para cadeiras de rodas e carrinhos de bebê)",
+                                "ubicacion": "Estações de Trem"
+                            },
+                            {
+                                "descripcion": "Serviço de transporte gratuito para idosos ou pessoas com deficiência",
+                                "ubicacion": "Portal de Acesso | Estação Central e Cataratas"
+                            }
+                        ]
+                    }
+                ],
+                "ninos": [
+                    {
+                        "titulo": "Crianças",
+                        "servicios": [
+                            {
+                                "descripcion": "Aluguel de carrinhos de bebê para bebês de 0 a 2 anos",
+                                "ubicacion": "Portal de Acesso | Estação Central | Estação Cataratas"
+                            }
+                        ]
+                    },
+                    {
+                        "titulo": "Outro",
+                        "servicios": [
+                            {
+                                "descripcion": "Parquinho",
+                                "ubicacion": "Em frente ao Restaurante La Selva"
+                            }
+                        ]
+                    }
+                ],
+                "seguridad": [
+                    {
+                        "titulo": "Segurança",
+                        "servicios": [
+                            {
+                                "descripcion": "Aluguel de armários",
+                                "ubicacion": "Portal de Acesso"
+                            },
+                            {
+                                "descripcion": "Canis gratuitos para animais de estimação",
+                                "ubicacion": "Em frente ao Portal de Acesso"
+                            }
+                        ]
+                    },
+                    {
+                        "titulo": "Outro",
+                        "servicios": [
+                            {
+                                "descripcion": "Caixa eletrônico (LINK)",
+                                "ubicacion": "Portal de Acesso"
+                            },
+                            {
+                                "descripcion": "Achados e Perdidos COC (Centro de Operações Cataratas)",
+                                "ubicacion": "tel: +543757420180/ email: coc@apn.gob.ar"
+                            }
+                        ]
+                    }
+                ],
+                "personal": [
+                    {
+                        "titulo": "Pessoal",
+                        "servicios": [
+                            {
+                                "descripcion": "Banheiros acessíveis",
+                                "ubicacion": "Portal de Acesso | Pátio de Serviço | Estações de Trem | Bar 2 Hermanas"
+                            },
+                            {
+                                "descripcion": "Chuveiros ao ar livre",
+                                "ubicacion": "Estações de Trem"
+                            }
+                        ]
+                    },
+                    {
+                        "titulo": "Outro",
+                        "servicios": [
+                            {
+                                "descripcion": "Atendimento médico e de enfermagem para primeiros socorros, com serviço de ambulância",
+                                "ubicacion": "Estação Central | Estação Cataratas"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "pregunta": "Dicas",
+            "respuesta": {
+                "avisos": [
+                    "Não toque nem alimente os animais do Parque, eles são animais selvagens.",
+                    "Circule exclusivamente por locais abertos ao público (passarelas e trilhas).",
+                    "O Parque dispõe de serviço Wi-Fi gratuito e carregamento de celulares.",
+                    "Beba bastante água ao longo do dia.",
+                    "Use repelente de insetos e protetor solar em todos os momentos.",
+                    "Leia e respeite a sinalização indicativa do Parque para desfrutar de uma melhor visita.",
+                    "Use roupas e calçados confortáveis para caminhadas.",
+                    "Recomenda-se o uso de bonés, óculos de sol e capas de chuva para tornar a sua visita mais agradável."
+                ],
+                "parrafo_avisos": "Descobrir o Parque a cada passo é viver emoções intensas. Para que a sua visita seja segura, agradável e repleta de experiências inesquecíveis, aqui encontrará algumas dicas úteis",
+                "consejos": [
+                    {
+                        "titulo": "Planeie a sua visita em dois dias",
+                        "descripcion": "O passeio mais conhecido é a Garganta do Diabo, mas existem outros passeios emocionantes no Parque como o Passeio Inferior ou a Trilha Macuco, para dedicar tempo a percorrer, desfrutando de cada detalhe da natureza.",
+                        "link": "https://iguazuargentina.com/es/travesias",
+                        "link_text": "Travessias sugeridas"
+                    },
+                    {
+                        "titulo": "Comece o seu dia percorrendo o Passeio Inferior",
+                        "descripcion": "Aproveite a brisa refrescante do Salto Bossetti, é uma experiência emocionante: uma caminhada nas primeiras horas do dia com toda a energia disponível para vivenciar os saltos e cascatas de água de perto.",
+                        "link": "https://iguazuargentina.com/es/paseoinferior",
+                        "link_text": "Passeio Inferior"
+                    },
+                    {
+                        "titulo": "Faça uma pausa para almoçar, desfrutar de um lanche ou hidratar-se",
+                        "descripcion": "Aproveite as áreas de descanso do Parque, rodeadas de verde (um ambiente natural único, numa paisagem maravilhosa para respirar ar puro e descansar)."
+                    },
+                    {
+                        "titulo": "Visite o Centro de Visitantes",
+                        "descripcion": "Para conhecer a flora, a fauna e a história das Cataratas do Iguaçu, antes de realizar os passeios ao vivo e em direto, para vivenciar mais intensamente a magia do Parque.",
+                        "link": "https://iguazuargentina.com/es/centrodevisitante",
+                        "link_text": "Centro de Visitantes"
+                    },
+                    {
+                        "titulo": "Preste atenção a tudo o que o rodeia no Parque",
+                        "descripcion": "Com os sentidos apurados para experimentar a vida como nunca antes. O Parque é o habitat de uma variedade de espécies de flora e fauna: entre os galhos de árvores de grande porte pode encontrar aves únicas no mundo, ver macacos-prego ou cutias entre a vegetação, entre muitas outras espécies.",
+                        "link": "https://iguazuargentina.com/es/paseoalaluzdelaluna",
+                        "link_text": "Travessias sugeridas"
+                    },
+                    {
+                        "titulo": "Se a sua viagem coincidir com a lua cheia, aproveite o Passeio da Lua Cheia",
+                        "descripcion": "A lua e as estrelas guiá-lo-ão até à Varanda da Garganta do Diabo, onde poderá maravilhar-se perante um manto de água prateada que cai com um caudal de 2.000 m3 por minuto.",
+                        "link": "https://iguazuargentina.com/es/paseoalaluzdelaluna",
+                        "link_text": "Passeio à Luz da Lua"
+                    }
+                ]
+            }
+        }
+    ],
+
+"legal": {
+      "h1": "Política de Privacidade",
+      "h2-1": "1. Responsável pelo Tratamento",
+      "h2-1-p1": "Nome:",
+      "h2-1-p2": "Contato:",
+      "h2-1-p3": "Somos responsáveis pelo tratamento dos dados pessoais que você nos fornece.",
+      
+      "h2-2": "2. Dados que Coletamos",
+      "h2-2-p1": "Coletamos os seguintes tipos de dados pessoais:",
+      "h2-2-li-1": "Dados de navegação: endereço IP, tipo de dispositivo, navegador, páginas visitadas, tempo de permanência.",
+      
+      "h2-3": "3. Finalidades do Tratamento",
+      "h2-3-p1": "Utilizamos as informações coletadas para as seguintes finalidades:",
+      "h2-3-li-1-strong": "Marketing:",
+      "h2-3-li-1": "Analisar as páginas visitadas pelos usuários para compreender seus interesses e oferecer conteúdo e publicidade relevantes.",
+      "h2-3-li-2-strong": "Melhoria de Serviços:",
+      "h2-3-li-2": "Utilizar os dados de navegação para identificar áreas de melhoria em nosso site e otimizar a experiência do usuário.",
+      "h2-3-li-3-strong": "Estatísticas:",
+      "h2-3-li-3": "Gerar relatórios estatísticos agregados sobre o uso do site para avaliar seu desempenho e planejar futuras melhorias.",
+      "h2-3-li-4-strong": "Obrigação Legal:",
+      "h2-3-li-4": "Cumprir com as obrigações legais que nos sejam aplicáveis.",
+      
+      "h2-4": "4. Base Legal para o Tratamento",
+      "h2-4-p1": "A base legal para o tratamento dos seus dados pessoais é o consentimento. Ao visitar nosso site, você concorda que coletemos e utilizemos seus dados de navegação de acordo com esta política de privacidade.",
+      
+      "h2-5": "5. Destinatários dos Dados",
+      "h2-5-p1": "Compartilhamos seus dados com os seguintes destinatários:",
+      "h2-5-li-1-strong": "Serviços de análise web:",
+      "h2-5-li-1": "Utilizamos provedores de serviços de análise web para analisar o tráfego do nosso site e entender como os usuários interagem com ele. Esses provedores podem ter acesso aos seus dados de navegação.",
+      
+      "h2-6": "6. Transferências Internacionais de Dados",
+      "h2-6-p1": "Não realizamos transferências internacionais de dados para fora do Espaço Econômico Europeu (EEE).",
+      
+      "h2-7": "7. Período de Conservação dos Dados",
+      "h2-7-p1": "Conservaremos os dados de contato para marketing pelo tempo necessário para cumprir as finalidades descritas nesta política, ou até que você retire seu consentimento. Uma vez retirado o seu consentimento, eliminaremos seus dados de contato dos nossos sistemas.",
+      
+      "h2-8": "8. Direitos dos Usuários",
+      "h2-8-p1": "Você tem os seguintes direitos em relação aos seus dados pessoais:",
+      "h2-8-li-1-strong": "Direito de acesso:",
+      "h2-8-li-1": "Direito de obter confirmação de que estamos tratando seus dados e de acessá-los.",
+      "h2-8-li-2-strong": "Direito de retificação:",
+      "h2-8-li-2": "Direito de corrigir dados inexatos ou incompletos.",
+      "h2-8-li-3-strong": "Direito de exclusão (direito ao esquecimento):",
+      "h2-8-li-3": "Direito de solicitar a eliminação dos seus dados em determinadas circunstâncias.",
+      "h2-8-li-4-strong": "Direito à limitação do tratamento:",
+      "h2-8-li-4": "Direito de restringir o tratamento dos seus dados em determinadas circunstâncias.",
+      "h2-8-li-5-strong": "Direito de oposição:",
+      "h2-8-li-5": "Direito de se opor ao tratamento dos seus dados em determinadas circunstâncias.",
+      "h2-8-li-6-strong": "Direito de retirar o consentimento:",
+      "h2-8-li-6": "Direito de retirar seu consentimento a qualquer momento, quando o tratamento se basear no consentimento.",
+      "h2-8-p2": "Você pode exercer seus direitos enviando um e-mail para manager@iguazu.guru.",
+      "h2-8-p3": "Você também tem o direito de apresentar uma reclamação à autoridade de proteção de dados local se acreditar que violamos seus direitos de proteção de dados.",
+      
+      "h2-9": "9. Medidas de Segurança",
+      "h2-9-p1": "Implementamos medidas de segurança técnicas e organizacionais apropriadas para proteger seus dados pessoais contra acessos não autorizados, perdas, alterações ou destruições.",
+      
+      "h2-10": "10. Atualização da Política de Privacidade",
+      "h2-10-p1": "Reservamo-nos o direito de modificar esta política de privacidade a qualquer momento. As alterações serão publicadas em nosso site. Recomendamos que você revise esta política periodicamente para estar ciente de quaisquer atualizações."
+},
+    
+"cookies": {
+          "h1": "Política de Cookies da Iguazu Guru",
+          "intro": "Esta política de cookies explica o que são cookies, como os utilizamos em nosso site Iguazu Guru (doravante, \"o site\"), e como você pode gerenciá-los.",
+          
+          "h2-1": "1. O que são cookies?",
+          "h2-1-p1": "Cookies são pequenos arquivos de texto que são armazenados em seu computador ou dispositivo móvel quando você visita um site. Os cookies são amplamente utilizados para que os sites funcionem de maneira mais eficiente, bem como para fornecer informações aos proprietários do site.",
+          
+          "h2-2": "2. Como utilizamos os cookies?",
+          "h2-2-p1": "Utilizamos cookies pelas seguintes razões:",
+          "h2-2-li-1-strong": "Cookies essenciais/necessários:",
+          "h2-2-li-1": "Estes cookies são essenciais para que você possa navegar pelo site e usar suas funcionalidades, como acessar áreas seguras do site. Sem estes cookies, não poderíamos fornecer certos serviços que você solicita.",
+          "h2-2-li-2-strong": "Cookies de desempenho/análise:",
+          "h2-2-li-2": "Estes cookies coletam informações sobre como você usa nosso site, por exemplo, quais páginas visita com mais frequência e se recebe mensagens de erro das páginas da web. Estes dados nos ajudam a melhorar o funcionamento do nosso site. Utilizamos o Google Analytics para este propósito. Estes cookies geralmente são anônimos e não identificam um usuário individual.",
+          "h2-2-li-3-strong": "Cookies de funcionalidade:",
+          "h2-2-li-3": "Estes cookies permitem que o site lembre as escolhas que você faz (como seu idioma ou a região em que você está) e forneça recursos aprimorados e mais personalizados.",
+          "h2-2-li-4-strong": "Cookies de publicidade/marketing:",
+          "h2-2-li-4": "Estes cookies são usados para mostrar anúncios que sejam mais relevantes para você e seus interesses. Eles também são usados para limitar o número de vezes que você vê um anúncio e para ajudar a medir a eficácia de uma campanha publicitária.",
+          
+          "h2-3": "3. Tipos de Cookies que Utilizamos:",
+          "h2-3-p1": "A seguir, está uma lista dos cookies que utilizamos em nosso site, junto com sua finalidade e duração:",
+          "table-header-1": "Cookie",
+          "table-header-2": "Nome do Provedor",
+          "table-header-3": "Propósito",
+          "table-header-4": "Duração",
+          "table-header-5": "Tipo",
+          
+          "cookie-1-purpose": "Usado para distinguir usuários.",
+          "cookie-1-duration": "2 anos",
+          "cookie-1-type": "Desempenho",
+          
+          "cookie-2-purpose": "Usado para distinguir usuários.",
+          "cookie-2-duration": "24 horas",
+          "cookie-2-type": "Desempenho",
+          
+          "cookie-3-purpose": "Usado para limitar a taxa de solicitação. Se o Google Analytics for implementado através do Google Tag Manager, este cookie será chamado dc_gtm.",
+          "cookie-3-duration": "1 minuto",
+          "cookie-3-type": "Desempenho",
+          
+          "h2-4": "4. Cookies de Terceiros:",
+          "h2-4-p1": "Além de nossos próprios cookies, também podemos usar cookies de terceiros. Estes cookies são estabelecidos por um domínio diferente do nosso site. Por exemplo, utilizamos o Google Analytics para nos ajudar a analisar o uso do nosso site. Estes cookies de terceiros estão sujeitos às políticas de privacidade de seus respectivos provedores.",
+          
+          "h2-5": "5. Como você pode gerenciar os cookies?",
+          "h2-5-p1": "Você tem várias opções para gerenciar cookies:",
+          "h2-5-li-1-strong": "Configurações do Navegador:",
+          "h2-5-li-1": "A maioria dos navegadores da web permite que você controle os cookies através de suas configurações. Você pode bloquear todos os cookies, aceitar apenas cookies próprios ou excluir cookies existentes. Consulte a documentação do seu navegador para obter instruções sobre como gerenciar cookies. Aqui estão links para instruções para alguns navegadores comuns:",
+          "h2-5-li-2-strong": "Ferramentas de Consentimento de Cookies:",
+          "h2-5-li-2": "Implementamos ferramentas de gerenciamento de cookies para que você possa escolher quais categorias de cookies aceita ou rejeita.",
+          "h2-5-li-3-strong": "Ferramentas de Exclusão Voluntária (Opt-out):",
+          "h2-5-li-3": "Alguns provedores de cookies de terceiros oferecem ferramentas de exclusão voluntária que permitem evitar que eles coletem informações sobre você. Por exemplo, você pode se excluir do Google Analytics aqui:",
+          
+          "h2-6": "6. Consequências de Desabilitar os Cookies:",
+          "h2-6-p1": "Se você optar por desabilitar os cookies, é possível que algumas partes do nosso site não funcionem corretamente ou que sua experiência de usuário seja afetada.",
+          
+          "h2-7": "7. Alterações nesta Política de Cookies:",
+          "h2-7-p1": "Podemos atualizar esta política de cookies periodicamente. Notificaremos você sobre quaisquer alterações significativas publicando a nova política em nosso site. Recomendamos que você revise esta política periodicamente para estar ciente de quaisquer atualizações.",
+          
+          "h2-8": "8. Mais Informações:",
+          "h2-8-p1": "Se você tiver alguma dúvida sobre nossa política de cookies, pode entrar em contato conosco pelo e-mail manager@iguazu.guru."
+},
+"ModalInicio": {
+    "title": "Políticas de Privacidade e Cookies",
+    "description": "Este site utiliza cookies para melhorar sua experiência. Ao continuar navegando, você aceita nossa política de privacidade e o uso de cookies.",
+    "reject": "Recusar",
+    "accept": "Aceitar",
+    "legalInfo": "Ver Informação Legal Completa"
+},
+"PaginaLegal": {
+    "title": "Informação Legal",
+    "subtitle": "Política de Privacidade",
+    "preview1":"Informações sobre como coletamos, utilizamos e protegemos seus dados pessoais quando utiliza nossos serviços.",
+    "subtitle2": "Política de Cookies",
+    "preview2":"Informações sobre como utilizamos cookies e tecnologias semelhantes em nosso site.",
+    "subtitle3": "Termos e Condições",
+    "preview3":"Informações sobre os termos e condições gerais que regulam o uso dos nossos serviços.",
+    "botonHome": "Voltar ao Início"
+  },
+  "Aviso": {
+  "h1": "Aviso Legal",
+  "intro": "Este aviso legal regula o uso do site Iguazu Guru, que oferece informações turísticas sobre a área das Cataratas do Iguaçu e a Tríplice Fronteira entre Argentina, Brasil e Paraguai.",
+  
+  "h2-1": "1. Informações do Titular",
+  "h2-1-p1": "Iguazu Guru é uma empresa dedicada a fornecer informações turísticas sobre a área das Cataratas do Iguaçu e a Tríplice Fronteira. Estamos localizados em Ciudad del Este, Paraguai.",
+  
+  "h2-2": "2. Finalidade do Site",
+  "h2-2-p1": "Este site tem as seguintes finalidades:",
+  "h2-2-li-1": "Fornecer informações turísticas atualizadas sobre a área das Cataratas do Iguaçu.",
+  "h2-2-li-2": "Oferecer guias e dicas para visitantes da Tríplice Fronteira entre Argentina, Brasil e Paraguai.",
+  "h2-2-li-3": "Fornecer ferramentas úteis para turistas, como conversores de moeda e previsões meteorológicas.",
+  
+  "h2-3": "3. Termos de Uso",
+  "h2-3-p1": "O acesso a este site é gratuito. As informações fornecidas são apenas para fins informativos e não constituem aconselhamento profissional ou jurídico. Não nos responsabilizamos por decisões tomadas com base nas informações fornecidas neste site.",
+  
+  "h2-4": "4. Propriedade Intelectual",
+  "h2-4-p1": "Todos os conteúdos do site (textos, fotografias, gráficos, imagens, tecnologia, software, links, etc.) são propriedade do Iguazu Guru ou foram cedidos pelos seus legítimos proprietários. É proibida sua reprodução, distribuição ou modificação sem autorização expressa.",
+  
+  "h2-5": "5. Links para Terceiros",
+  "h2-5-p1": "Este site pode conter links para sites de terceiros. Não temos controle sobre o conteúdo de tais sites e não assumimos responsabilidade por quaisquer perdas ou danos que possam resultar do uso desses links.",
+  "h2-5-p2": "A inclusão destes links não implica recomendação, aprovação ou associação com seus operadores.",
+  
+  "h2-6": "6. Modificações",
+  "h2-6-p1": "Iguazu Guru se reserva o direito de modificar este aviso legal a qualquer momento.",
+  "h2-6-p2": "As alterações entrarão em vigor a partir do momento em que forem publicadas no site, sendo responsabilidade do usuário revisar periodicamente seu conteúdo.",
+  
+  "h2-7": "7. Contato",
+  "h2-7-p1": "Para qualquer questão relacionada a este aviso legal, você pode nos contatar através de:",
+  "h2-7-contact": "E-mail:"
+},
+"MainNewHome": {
+    "h1": "Guia das Cataratas do Iguaçu",
+    "pregunta-a-ia":"Pergunte ao Guru!",
+    "ai-search-input":"Ex: preciso de passaporte para cruzar a fronteira?",
+    "ai-search-button": "Perguntar",
+    "titulo-infaltables":"Informações importantes",
+    "clima-titulo": "Clima",
+    "clima-descripcion": "Ver previsão",
+    "moneda-titulo": "Moeda",
+    "moneda-descripcion": "Taxa de câmbio",
+    "mapas-titulo": "Mapas",
+    "mapas-descripcion": "Mapas interativos",
+    "entradas-titulo": "Ingressos",
+    "entradas-descripcion": "Preços e compra",
+    "transporte-titulo": "Transporte",
+    "transporte-descripcion": "Ônibus e serviços de transporte",
+    "seguridad-titulo": "Emergência",
+    "seguridad-descripcion": "Números de telefone e locais úteis em caso de emergência",
+    "atracciones-titulo": "Visite. Sienta una Maravilla de la Naturaleza",
+    "atracciones-descripcion": "Declarada uma das 7 Maravilhas Naturais do Mundo Moderno",
+    "atracciones-descripcion2":"Caminhe entre suas cachoeiras e aprecie toda sua grandiosidade de longe, visite os dois lados do parque",
+    "lado-argentino-titulo": "A experiência imersiva 🇦🇷",
+    "lado-argentino-descripcion": "Parque Nacional Iguazú - lado argentino.",
+    "lado-brasileno-titulo": "As melhores vistas panorâmicas 🇧🇷",
+    "lado-brasileno-descripcion": " Parque Nacional do Iguaçu - lado brasileiro.",
+    "ver-mas": "Ver mais",
+    "blog-titulo": "Guias de viagem",
+    "blog-descripcion": "Artigos, guias e dicas para aproveitar ao máximo sua visita.",
+    "como-llegar-titulo": "Como chegar",
+    "como-llegar-descripcion": "Opções de transporte da Argentina, Brasil e Paraguai.",
+    "mejores-epocas-titulo": "Melhores épocas",
+    "mejores-epocas-descripcion": "Clima, multidões e preços de acordo com a temporada.",
+    "docus-titulo": "Documentação necessária",
+    "docus-descripcion": "Documentação para seus dias em Iguaçu.",
+    "leer-mas": "Ler mais",
+    "faq-titulo": "Perguntas Frequentes",
+    "faq-descripcion": "Respostas às dúvidas mais comuns dos viajantes.",
+    "faq-visa-pregunta": "Preciso de visto para visitar as Cataratas do Iguaçu?",
+    "faq-visa-respuesta": "Depende da sua nacionalidade. Verifique os requisitos específicos para Argentina, Brasil e Paraguai.",
+    "faq-epoca-pregunta": "Qual é a melhor época para visitar?",
+    "faq-epoca-respuesta": "A primavera (setembro a novembro) e o outono (março a maio) oferecem clima agradável e menos multidões.",
+    "faq-actividades-pregunta": "Quais atividades não posso perder?",
+    "faq-actividades-respuesta": "O passeio de barco perto da Garganta do Diabo, as caminhadas pelas trilhas e as vistas panorâmicas de ambos os lados."
+  },
+  "WeatherModal": {
+    "title": "Clima Atual",
+    "loading": "Carregando dados do clima...",
+    "error": "Erro ao carregar dados do clima",
+    "retry": "Tentar novamente",
+    "feels-like": "Sensação térmica",
+    "humidity": "Umidade",
+    "rain-probability": "Probabilidade de chuva",
+    "wind": "Vento",
+    "visibility": "Visibilidade",
+    "uv-index": "Índice UV",
+    "uv-low": "Baixo",
+    "uv-moderate": "Moderate",
+    "uv-high": "Alto",
+    "uv-very-high": "Muito alto",
+    "uv-extreme": "Extremo",
+    "last-updated": "Última atualização"
+  },
+  "MapModal": {
+    "title": "Mapa Interativo",
+    "search-placeholder": "Pesquisar lugares em Foz e Puerto Iguazú...",
+    "place-not-found": "Local não encontrado. Tente com outro nome.",
+    "location-error": "Erro ao obter sua localização. Verifique as permissões do navegador.",
+    "geolocation-not-supported": "Seu navegador não suporta geolocalização.",
+    "directions-error": "Erro ao calcular as direções.",
+    "get-directions": "Como chegar",
+    "clear-directions": "Limpar rota",
+    "directions": "Direções",
+    "total-distance": "Distância total",
+    "estimated-time": "Tempo estimado",
+    "open": "Aberto",
+    "closed": "Fechado",
+    "powered-by-google": "Desenvolvido com Google Maps"
+  }
+  
+}
